@@ -165,7 +165,7 @@ function Research() {
             in high-stakes screening tasks.
           </p>
           <a
-            href="https://osf.io/preprints/osf/ypm76_v1"
+            href="https://osf.io/a69yh/files/vj95h"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-7 inline-flex items-center gap-2 bg-terracotta text-offwhite px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-terracotta/90 transition-colors"
