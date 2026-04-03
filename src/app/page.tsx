@@ -122,7 +122,7 @@ const layers = [
     number: 2,
     layer: "Routing & Orchestration Layer",
     product: "LetsBegin",
-    status: "Building",
+    status: "In Development",
     description:
       "Getting the human in the loop isn\u2019t enough\u00a0\u2014 it matters when, how, and in what form. This layer manages the handoff: sequencing decisions, surfacing one thing at a time, and routing based on confidence and complexity. Designed around human attention and cognitive capacity, so the human who receives the task can actually do it well. Current application: human-adaptive task orchestration for agentic workflows.",
   },
@@ -130,7 +130,7 @@ const layers = [
     number: 3,
     layer: "Trust & Governance Layer",
     product: "Value Compass",
-    status: "Building",
+    status: "In Development",
     description:
       "Trust in AI systems has to be earned, not assumed. This layer makes AI behavior legible\u00a0\u2014 measuring alignment between how a system acts and the values of the people and organisations relying on it. So the right tool gets used in the right situation, with the right expectations. Current application: trust evaluation framework for AI tool selection.",
   },
