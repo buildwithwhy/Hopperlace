@@ -114,6 +114,7 @@ const layers = [
     layer: "Knowledge & Evaluation Layer",
     product: "Evidence Synthesis",
     status: "Early pilots",
+    href: "https://www.evidencesynthesisai.com/",
     description:
       "AI systems need to know what they don\u2019t know. This layer builds the evaluation infrastructure for appropriate deferral\u00a0\u2014 measuring not just accuracy but when the AI should stop and hand off. Current application: human-in-the-loop systematic review screening.",
   },
@@ -190,6 +191,31 @@ function WhatWeBuild() {
                 <p className="mt-4 text-sm text-text-muted leading-relaxed">
                   {layer.description}
                 </p>
+                {layer.href && (
+                  <a
+                    href={layer.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-teal-light hover:text-navy transition-colors"
+                  >
+                    Learn more
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      className="mt-px"
+                    >
+                      <path
+                        d="M5 3h8v8m0-8L5 11"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                )}
               </div>
             </div>
           ))}
@@ -310,10 +336,10 @@ function Contact() {
           Interested in our research or exploring collaboration?
         </p>
         <a
-          href="mailto:research@hopperlace.ai"
+          href="mailto:hello@hopperlace.ai"
           className="mt-6 inline-block text-lg font-medium text-navy hover:text-teal-light transition-colors"
         >
-          research@hopperlace.ai
+          hello@hopperlace.ai
         </a>
       </div>
     </section>
