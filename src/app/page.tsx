@@ -222,7 +222,7 @@ function Research() {
 
 const team = [
   {
-    name: "Yu-Yu Shen",
+    name: "Yuyu Shen",
     role: "Co-founder",
     bio: "Research and engineering at the intersection of AI evaluation and human decision-making. Focused on building infrastructure that makes AI systems accountable to the people who rely on them.",
   },
