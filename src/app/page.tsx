@@ -46,7 +46,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="pt-40 pb-24 px-6">
+    <section className="pt-40 pb-6 px-6">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl sm:text-5xl font-semibold text-navy leading-tight tracking-tight">
           Human-adaptive AI.
@@ -67,17 +67,14 @@ function Hero() {
 
 function Thesis() {
   return (
-    <section className="pb-24 px-6">
+    <section className="pb-24 pt-6 px-6">
       <div className="max-w-3xl mx-auto">
         <p className="text-lg sm:text-xl text-text-muted leading-relaxed">
           Humans are still relevant in the places that matter most in the AI
-          age. High stake situations mean human accountability. Current model
-          capabilities mean real limits. Both mean someone still has to be in
-          the loop&nbsp;&mdash; and that loop has to actually work. Hopperlace
-          builds AI that knows when to act and how to step back. That reads its
-          own uncertainty. That brings the human in at the right moment, not too
-          often, not too late, and not in a way that burns them out before the
-          decision that counts. Better safety. Better and faster AI too.
+          age. High stakes mean human accountability. Current model capabilities
+          mean real limits. Both mean someone still has to be in the
+          loop&nbsp;&mdash; and that loop has to actually work. Better safety.
+          Better and faster AI too.
         </p>
       </div>
     </section>
