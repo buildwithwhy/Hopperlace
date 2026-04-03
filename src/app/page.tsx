@@ -24,7 +24,7 @@ function Nav() {
         </a>
         <div className="hidden sm:flex items-center gap-8 text-sm text-text-muted">
           <a href="#products" className="hover:text-navy transition-colors">
-            The Problem
+            Architecture
           </a>
           <a href="#research" className="hover:text-navy transition-colors">
             Research
@@ -106,57 +106,91 @@ function Thesis() {
   );
 }
 
-/* ─── What We Build ─── */
+/* ─── The Architecture ─── */
 
-const products = [
+const layers = [
   {
-    name: "Evidence Synthesis",
+    number: 1,
+    layer: "Knowledge & Evaluation Layer",
+    product: "Evidence Synthesis",
     status: "Early pilots",
     description:
-      "Human-in-the-loop AI for systematic review screening. Combines large language models with structured human oversight to accelerate evidence synthesis while preserving methodological rigor.",
+      "AI systems need to know what they don\u2019t know. This layer builds the evaluation infrastructure for appropriate deferral\u00a0\u2014 measuring not just accuracy but when the AI should stop and hand off. Current application: human-in-the-loop systematic review screening.",
   },
   {
-    name: "LetsBegin",
+    number: 2,
+    layer: "Routing & Orchestration Layer",
+    product: "LetsBegin",
     status: "Building",
     description:
-      "Human-adaptive task orchestration. Dynamically routes decisions between AI and human agents based on confidence, complexity, and stakes — ensuring the right actor handles each step.",
+      "Getting the human in the loop isn\u2019t enough\u00a0\u2014 it matters when, how, and in what form. This layer manages the handoff: sequencing decisions, surfacing one thing at a time, and routing based on confidence and complexity. Designed around human attention and cognitive capacity, so the human who receives the task can actually do it well. Current application: human-adaptive task orchestration for agentic workflows.",
   },
   {
-    name: "ValueCompass",
+    number: 3,
+    layer: "Trust & Governance Layer",
+    product: "Value Compass",
     status: "Building",
     description:
-      "Trust evaluation for AI tools. Measures alignment between AI system behavior and organizational values through structured, repeatable assessment frameworks.",
+      "Trust in AI systems has to be earned, not assumed. This layer makes AI behavior legible\u00a0\u2014 measuring alignment between how a system acts and the values of the people and organisations relying on it. So the right tool gets used in the right situation, with the right expectations. Current application: trust evaluation framework for AI tool selection.",
   },
 ];
 
 function WhatWeBuild() {
   return (
     <section id="products" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <h2 className="text-sm font-medium text-terracotta uppercase tracking-widest">
-          The problem
+          The architecture
         </h2>
         <p className="mt-3 text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
-          Infrastructure for the human-AI boundary
-        </p>
-        <p className="mt-4 text-text-muted">
           Three layers. One architecture.
         </p>
-        <div className="mt-12 grid gap-8 sm:grid-cols-3">
-          {products.map((product) => (
-            <div
-              key={product.name}
-              className="border border-warm-gray rounded-xl p-7 hover:border-teal-light/40 transition-colors"
-            >
-              <div className="flex items-center justify-between">
-                <h3 className="font-semibold text-navy">{product.name}</h3>
-                <span className="text-xs font-medium text-amber bg-amber/10 px-2.5 py-1 rounded-full">
-                  {product.status}
-                </span>
+        <div className="mt-14 flex flex-col">
+          {layers.map((layer, i) => (
+            <div key={layer.product}>
+              {/* Connector */}
+              {i > 0 && (
+                <div className="flex items-center py-4 pl-5">
+                  <div className="w-px h-10 bg-teal-light/30" />
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    className="ml-[-6px] mt-10 text-teal-light/50"
+                  >
+                    <path
+                      d="M6 0v10M2 6l4 4 4-4"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              )}
+              {/* Layer card */}
+              <div className="border border-warm-gray rounded-xl p-7 hover:border-teal-light/40 transition-colors">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-xs font-medium text-teal-light uppercase tracking-widest">
+                      Layer {layer.number}
+                    </p>
+                    <h3 className="mt-1 text-lg font-semibold text-navy">
+                      {layer.layer}
+                    </h3>
+                    <p className="mt-0.5 text-sm text-text-muted">
+                      {layer.product}
+                    </p>
+                  </div>
+                  <span className="text-xs font-medium text-amber bg-amber/10 px-2.5 py-1 rounded-full shrink-0">
+                    {layer.status}
+                  </span>
+                </div>
+                <p className="mt-4 text-sm text-text-muted leading-relaxed">
+                  {layer.description}
+                </p>
               </div>
-              <p className="mt-4 text-sm text-text-muted leading-relaxed">
-                {product.description}
-              </p>
             </div>
           ))}
         </div>
@@ -223,8 +257,8 @@ function Research() {
 const team = [
   {
     name: "Yuyu Shen",
-    role: "Co-founder",
-    bio: "Research and engineering at the intersection of AI evaluation and human decision-making. Focused on building infrastructure that makes AI systems accountable to the people who rely on them.",
+    role: "Founder",
+    bio: "Ex data scientist and seasoned AI-native product leader turned founder\u00a0\u2014 most recently in HR, fintech, and enterprise tech. Building Hopperlace because there\u2019s a gap I couldn\u2019t ignore: we\u2019re building AI evaluation and orchestration systems as if the human isn\u2019t in the picture. They are and will continue to be in many places. And that changes everything about how those systems should be designed.",
   },
 ];
 
