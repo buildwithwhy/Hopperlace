@@ -3,6 +3,7 @@ export default function Home() {
     <main>
       <Nav />
       <Hero />
+      <Thesis />
       <WhatWeBuild />
       <Research />
       <Team />
@@ -23,7 +24,7 @@ function Nav() {
         </a>
         <div className="hidden sm:flex items-center gap-8 text-sm text-text-muted">
           <a href="#products" className="hover:text-navy transition-colors">
-            Products
+            The Problem
           </a>
           <a href="#research" className="hover:text-navy transition-colors">
             Research
@@ -84,6 +85,27 @@ function Hero() {
   );
 }
 
+/* ─── Thesis ─── */
+
+function Thesis() {
+  return (
+    <section className="pb-24 px-6">
+      <div className="max-w-3xl mx-auto">
+        <p className="text-lg sm:text-xl text-text-muted leading-relaxed">
+          Humans are still relevant in the places that matter most in the AI
+          age. High stake situations mean human accountability. Current model
+          capabilities mean real limits. Both mean someone still has to be in
+          the loop&nbsp;&mdash; and that loop has to actually work. Hopperlace
+          builds AI that knows when to act and how to step back. That reads its
+          own uncertainty. That brings the human in at the right moment, not too
+          often, not too late, and not in a way that burns them out before the
+          decision that counts. Better safety. Better and faster AI too.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 /* ─── What We Build ─── */
 
 const products = [
@@ -112,12 +134,15 @@ function WhatWeBuild() {
     <section id="products" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-sm font-medium text-terracotta uppercase tracking-widest">
-          What we build
+          The problem
         </h2>
         <p className="mt-3 text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
           Infrastructure for the human-AI boundary
         </p>
-        <div className="mt-14 grid gap-8 sm:grid-cols-3">
+        <p className="mt-4 text-text-muted">
+          Three layers. One architecture.
+        </p>
+        <div className="mt-12 grid gap-8 sm:grid-cols-3">
           {products.map((product) => (
             <div
               key={product.name}
@@ -201,11 +226,6 @@ const team = [
     role: "Co-founder",
     bio: "Research and engineering at the intersection of AI evaluation and human decision-making. Focused on building infrastructure that makes AI systems accountable to the people who rely on them.",
   },
-  {
-    name: "Co-founder",
-    role: "Co-founder",
-    bio: "Bringing deep expertise in orchestration and systems design to the challenge of trustworthy AI deployment. Committed to building tools that respect human agency.",
-  },
 ];
 
 function Team() {
@@ -218,7 +238,7 @@ function Team() {
         <p className="mt-3 text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
           Who we are
         </p>
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 max-w-3xl">
+        <div className="mt-14 max-w-md">
           {team.map((person) => (
             <div key={person.name}>
               <div className="w-16 h-16 rounded-full bg-warm-gray flex items-center justify-center text-navy font-semibold text-lg">
