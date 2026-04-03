@@ -5,6 +5,7 @@ export default function Home() {
       <Hero />
       <Thesis />
       <WhatWeBuild />
+      <PilotCTA />
       <Research />
       <Team />
       <Contact />
@@ -57,29 +58,6 @@ function Hero() {
           systems that know when to act and when to defer&nbsp;&mdash; making the
           human-AI boundary measurable, auditable, and trustworthy.
         </p>
-        <div className="mt-10">
-          <a
-            href="#research"
-            className="inline-flex items-center gap-2 bg-navy text-offwhite px-6 py-3 rounded-lg text-sm font-medium hover:bg-navy-light transition-colors"
-          >
-            Read the paper
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              className="mt-px"
-            >
-              <path
-                d="M3 8h10m0 0L9 4m4 4L9 12"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
       </div>
     </section>
   );
@@ -220,6 +198,29 @@ function WhatWeBuild() {
             </div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── Pilot CTA ─── */
+
+function PilotCTA() {
+  return (
+    <section className="pb-24 px-6">
+      <div className="max-w-3xl mx-auto border border-warm-gray rounded-xl p-8 text-center">
+        <p className="text-lg font-medium text-navy">
+          Running a systematic review team?
+        </p>
+        <p className="mt-2 text-text-muted">
+          We&rsquo;re onboarding early pilots.
+        </p>
+        <a
+          href="mailto:hello@hopperlace.ai"
+          className="mt-5 inline-flex items-center gap-2 bg-terracotta text-offwhite px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-terracotta/90 transition-colors"
+        >
+          Get in touch
+        </a>
       </div>
     </section>
   );
