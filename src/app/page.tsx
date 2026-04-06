@@ -284,6 +284,11 @@ const team = [
     role: "Founder",
     bio: "Ex data scientist and seasoned AI-native product leader turned founder\u00a0\u2014 most recently in HR, fintech, and enterprise tech. Building Hopperlace because there\u2019s a gap I couldn\u2019t ignore: we\u2019re building AI evaluation and orchestration systems as if the human isn\u2019t in the picture. They are and will continue to be in many places. And that changes everything about how those systems should be designed.",
   },
+  {
+    name: "Martin",
+    role: "Co-founder, Evidence Synthesis",
+    bio: "MPH with distinction. Background in evidence-based health improvement and systematic review evidence synthesis. Brings the passion for better public outcomes and domain expertise to ensure Evidence Synthesis AI works with the right rigour and goal.",
+  },
 ];
 
 function Team() {
@@ -296,7 +301,7 @@ function Team() {
         <p className="mt-3 text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
           Who we are
         </p>
-        <div className="mt-14 max-w-md">
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 max-w-3xl">
           {team.map((person) => (
             <div key={person.name}>
               <div className="w-16 h-16 rounded-full bg-warm-gray flex items-center justify-center text-navy font-semibold text-lg">
