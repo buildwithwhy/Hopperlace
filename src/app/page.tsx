@@ -306,6 +306,7 @@ function Team() {
             <div key={person.name}>
               <div className="w-16 h-16 rounded-full bg-warm-gray flex items-center justify-center text-navy font-semibold text-lg">
                 {person.name
+                  .split(",")[0]
                   .split(" ")
                   .map((n) => n[0])
                   .join("")}
