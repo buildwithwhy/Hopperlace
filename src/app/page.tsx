@@ -55,8 +55,9 @@ function Hero() {
         </h1>
         <p className="mt-6 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl">
           Hopperlace builds evaluation and orchestration infrastructure for AI
-          systems that know when to act and when to defer&nbsp;&mdash; making the
-          human-AI boundary measurable, auditable, and trustworthy.
+          systems that know when to act, when to defer, and how to hand off
+          well&nbsp;&mdash; making the human-AI boundary measurable, auditable,
+          and trustworthy.
         </p>
       </div>
     </section>
