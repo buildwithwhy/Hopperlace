@@ -282,7 +282,7 @@ const team = [
   {
     name: "Yuyu Shen",
     role: "Founder",
-    bio: "Ex data scientist and seasoned AI-native product leader turned founder\u00a0\u2014 most recently in HR, fintech, and enterprise tech. Building Hopperlace because there\u2019s a gap I couldn\u2019t ignore: we\u2019re building AI evaluation and orchestration systems as if the human isn\u2019t in the picture. They are and will continue to be in many places. And that changes everything about how those systems should be designed.",
+    bio: "AI product leader with a decade building production AI systems across fintech, enterprise software, and consumer technology\u00a0\u2014 at Meta, Walmart, Beamery, Cleo, and others. Founded Hopperlace to close a gap that kept surfacing: we\u2019re deploying AI in high-stakes contexts without the evaluation infrastructure to know when it\u2019s actually safe to trust. That changes everything about how those systems should be designed.",
   },
   {
     name: "Martin Walker, MPH",
