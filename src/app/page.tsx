@@ -285,9 +285,9 @@ const team = [
     bio: "Ex data scientist and seasoned AI-native product leader turned founder\u00a0\u2014 most recently in HR, fintech, and enterprise tech. Building Hopperlace because there\u2019s a gap I couldn\u2019t ignore: we\u2019re building AI evaluation and orchestration systems as if the human isn\u2019t in the picture. They are and will continue to be in many places. And that changes everything about how those systems should be designed.",
   },
   {
-    name: "Martin",
+    name: "Martin Walker, MPH",
     role: "Co-founder, Evidence Synthesis",
-    bio: "MPH with distinction. Background in evidence-based health improvement and systematic review evidence synthesis. Brings the passion for better public outcomes and domain expertise to ensure Evidence Synthesis AI works with the right rigour and goal.",
+    bio: "Background in evidence-based health improvement and systematic review evidence synthesis. Brings the passion for better public outcomes and domain experience to ensure Evidence Synthesis AI works with the right rigour and goal.",
   },
 ];
 
