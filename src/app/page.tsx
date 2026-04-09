@@ -1,3 +1,5 @@
+import NavInner from "@/components/NavInner";
+
 export default function Home() {
   return (
     <main>
@@ -17,30 +19,9 @@ export default function Home() {
 /* ─── Navigation ─── */
 
 function Nav() {
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-offwhite/90 backdrop-blur-sm border-b border-warm-gray/50">
-      <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="text-navy font-semibold text-lg tracking-tight">
-          Hopperlace
-        </a>
-        <div className="hidden sm:flex items-center gap-8 text-sm text-text-muted">
-          <a href="#products" className="hover:text-navy transition-colors">
-            Architecture
-          </a>
-          <a href="#research" className="hover:text-navy transition-colors">
-            Research
-          </a>
-          <a href="#team" className="hover:text-navy transition-colors">
-            Team
-          </a>
-          <a href="#contact" className="hover:text-navy transition-colors">
-            Contact
-          </a>
-        </div>
-      </div>
-    </nav>
-  );
+  return <NavInner />;
 }
+
 
 /* ─── Hero ─── */
 
