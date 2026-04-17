@@ -5,7 +5,6 @@ export default function Home() {
     <main>
       <Nav />
       <Hero />
-      <Thesis />
       <WhatWeBuild />
       <PilotCTA />
       <Research />
@@ -27,7 +26,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="pt-40 pb-6 px-6">
+    <section className="pt-40 pb-24 px-6">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl sm:text-5xl font-semibold text-navy leading-tight tracking-tight">
           Human-adaptive AI.
@@ -35,28 +34,11 @@ function Hero() {
           <span className="text-teal-light">Trustworthy by design.</span>
         </h1>
         <p className="mt-6 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl">
-          Hopperlace builds evaluation and orchestration infrastructure for AI
-          systems that know when to act, when to defer, and how to hand off
-          well&nbsp;&mdash; making AI more trustworthy and more effective at the
-          same time.
-        </p>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Thesis ─── */
-
-function Thesis() {
-  return (
-    <section className="pb-24 pt-6 px-6">
-      <div className="max-w-3xl mx-auto">
-        <p className="text-lg sm:text-xl text-text-muted leading-relaxed">
-          Humans are still relevant in the places that matter most in the AI
-          age. High stakes mean human accountability. Current model capabilities
-          mean real limits. Both mean someone still has to be in the
-          loop&nbsp;&mdash; and that loop has to actually work. Better safety.
-          Better and faster AI too.
+          Hopperlace builds the infrastructure AI systems need to know when to
+          act, when to defer, and how to coordinate with humans on high-stakes
+          decisions&nbsp;&mdash; across evidence synthesis, clinical decision
+          support, legal reasoning, and the other domains where confident errors
+          are most costly.
         </p>
       </div>
     </section>
