@@ -26,7 +26,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="pt-40 pb-24 px-6">
+    <section className="pt-36 pb-16 px-6">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl sm:text-5xl font-semibold text-navy leading-tight tracking-tight">
           Human-adaptive AI.
@@ -77,7 +77,7 @@ const layers = [
 
 function WhatWeBuild() {
   return (
-    <section id="products" className="py-24 px-6">
+    <section id="products" className="pt-8 pb-20 px-6">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-sm font-medium text-terracotta uppercase tracking-widest">
           The architecture
@@ -168,7 +168,7 @@ function WhatWeBuild() {
 
 function FirstApplication() {
   return (
-    <section className="py-24 px-6 bg-warm-gray/30 border-y border-warm-gray/50">
+    <section className="py-20 px-6 bg-warm-gray/30 border-y border-warm-gray/50">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-sm font-medium text-terracotta uppercase tracking-widest">
           Our first application
@@ -235,7 +235,7 @@ function FirstApplication() {
 
 function Research() {
   return (
-    <section id="research" className="py-24 px-6 bg-navy">
+    <section id="research" className="py-20 px-6 bg-navy">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-sm font-medium text-terracotta uppercase tracking-widest">
           Research
@@ -301,7 +301,7 @@ const team = [
 
 function Team() {
   return (
-    <section id="team" className="py-24 px-6">
+    <section id="team" className="py-20 px-6">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-sm font-medium text-terracotta uppercase tracking-widest">
           Team
@@ -336,7 +336,7 @@ function Team() {
 
 function Contact() {
   return (
-    <section id="contact" className="py-24 px-6 border-t border-warm-gray">
+    <section id="contact" className="py-20 px-6 border-t border-warm-gray">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-sm font-medium text-terracotta uppercase tracking-widest">
           Contact
