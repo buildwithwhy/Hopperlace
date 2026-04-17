@@ -6,7 +6,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <WhatWeBuild />
-      <PilotCTA />
+      <FirstApplication />
       <Research />
       <Team />
       <Contact />
@@ -164,24 +164,68 @@ function WhatWeBuild() {
   );
 }
 
-/* ─── Pilot CTA ─── */
+/* ─── Our First Application ─── */
 
-function PilotCTA() {
+function FirstApplication() {
   return (
-    <section className="pb-24 px-6">
-      <div className="max-w-3xl mx-auto border border-warm-gray rounded-xl p-8 text-center">
-        <p className="text-lg font-medium text-navy">
-          Running a systematic review team?
+    <section className="py-24 px-6 bg-warm-gray/30 border-y border-warm-gray/50">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-sm font-medium text-terracotta uppercase tracking-widest">
+          Our first application
+        </h2>
+        <p className="mt-3 text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
+          Deference-aware evaluation for systematic review
         </p>
-        <p className="mt-2 text-text-muted">
-          We&rsquo;re onboarding early pilots.
+        <p className="mt-8 text-text-muted leading-relaxed">
+          We chose screening deliberately. Within the evidence synthesis
+          workflow, screening is the sub-task where deference-aware evaluation
+          creates the most value&nbsp;&mdash; an overconfident AI screener
+          corrupts every downstream step of the review, while an overly cautious
+          one wipes out the time savings that justify using AI at all. Screening
+          is the test case that proves the evaluation layer works in production.
         </p>
-        <a
-          href="mailto:hello@hopperlace.ai"
-          className="mt-5 inline-flex items-center gap-2 bg-terracotta text-offwhite px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-terracotta/90 transition-colors"
-        >
-          Get in touch
-        </a>
+        <p className="mt-6 text-text-muted leading-relaxed">
+          Evidence Synthesis AI handles the confident decisions
+          autonomously&nbsp;&mdash; the clear includes, the clear
+          excludes&nbsp;&mdash; and surfaces only the genuinely ambiguous studies
+          for human review. The time savings come from the AI acting decisively
+          where it&rsquo;s well-calibrated to be right; the evidence quality is
+          protected by the system knowing when it isn&rsquo;t. Every decision
+          comes with the reasoning behind it. Reviewers can override at any
+          point. Every action is logged.
+        </p>
+        <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          <a
+            href="mailto:hello@hopperlace.ai?subject=Evidence%20Synthesis%20pilot"
+            className="inline-flex items-center justify-center gap-2 bg-navy text-offwhite px-6 py-3 rounded-lg text-sm font-medium hover:bg-navy-light transition-colors"
+          >
+            Running a systematic review team? We&rsquo;re onboarding early
+            pilots.
+          </a>
+          <a
+            href="https://www.evidencesynthesisai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 border border-navy text-navy px-6 py-3 rounded-lg text-sm font-medium hover:bg-navy hover:text-offwhite transition-colors"
+          >
+            Learn more about Evidence Synthesis AI
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 16 16"
+              fill="none"
+              className="mt-px"
+            >
+              <path
+                d="M3 8h10m0 0L9 4m4 4L9 12"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   );
