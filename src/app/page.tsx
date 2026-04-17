@@ -55,7 +55,7 @@ const layers = [
     status: "Early pilots",
     href: "https://www.evidencesynthesisai.com/",
     description:
-      "AI systems need to know what they don\u2019t know. This layer builds the evaluation infrastructure for appropriate deferral\u00a0\u2014 measuring not just accuracy but when the AI should stop and hand off. Current application: human-in-the-loop systematic review screening.",
+      "AI systems need to know what they don\u2019t know. This layer builds the evaluation infrastructure for appropriate deferral\u00a0\u2014 measuring not just accuracy but when the AI should stop and hand off. Applicable to any domain where AI confidence is decision-consequential: clinical triage, legal discovery, content moderation, scientific review. Current live application: systematic review screening.",
   },
   {
     number: 2,
@@ -63,7 +63,7 @@ const layers = [
     product: "LetsBegin",
     status: "In Development",
     description:
-      "Getting the human in the loop isn\u2019t enough\u00a0\u2014 it matters when, how, and in what form. This layer manages the handoff: sequencing decisions, surfacing one thing at a time, and routing based on confidence and complexity. Designed around human attention and cognitive capacity, so the human who receives the task can actually do it well. Current application: human-adaptive task orchestration for agentic workflows.",
+      "Getting the human in the loop isn\u2019t enough\u00a0\u2014 it matters when, how, and in what form. This layer manages the handoff: sequencing decisions, surfacing one thing at a time, and routing based on confidence and complexity. Designed around human attention and cognitive capacity, so the human who receives the task can actually do it well. Applicable to any human-AI workflow where attention is the bottleneck.",
   },
   {
     number: 3,
@@ -71,7 +71,7 @@ const layers = [
     product: "Value Compass",
     status: "In Development",
     description:
-      "Trust in AI systems has to be earned, not assumed. This layer makes AI behavior legible\u00a0\u2014 measuring alignment between how a system acts and the values of the people and organisations relying on it. So the right tool gets used in the right situation, with the right expectations. Current application: trust evaluation framework for AI tool selection.",
+      "Trust in AI systems has to be earned, not assumed. This layer makes AI behavior legible\u00a0\u2014 measuring alignment between how a system acts and the values of the people and organisations relying on it, so the right tool gets used in the right situation, with the right expectations. Applicable wherever AI tool selection and trust calibration matter.",
   },
 ];
 
