@@ -233,6 +233,17 @@ function FirstApplication() {
 
 /* ─── Research ─── */
 
+const papers = [
+  {
+    title: "Deference-Aware Evaluation for Human-in-the-Loop AI Systems",
+    meta: "White Paper \u00b7 March 2026 \u00b7 Hopperlace Research \u00b7 DOI: 10.17605/OSF.IO/A69YH",
+    description:
+      "A framework for evaluating AI systems not just on accuracy, but also on their capacity to recognise the limits of their own competence and defer to human judgement when appropriate. The paper identifies two failure modes that standard accuracy metrics conflate\u00a0\u2014 penalised conservatism and genuine confident errors\u00a0\u2014 and introduces deference-aware metrics that distinguish them. Validated across nine frontier models and 258 systematic review studies. The methodology is domain-general; systematic review is the first application.",
+    href: "https://osf.io/a69yh/files/vj95h",
+    linkLabel: "Read on OSF",
+  },
+];
+
 function Research() {
   return (
     <section id="research" className="py-20 px-6 bg-navy">
@@ -240,44 +251,46 @@ function Research() {
         <h2 className="text-sm font-medium text-terracotta uppercase tracking-widest">
           Research
         </h2>
-        <div className="mt-8 border border-offwhite/10 rounded-xl p-8 sm:p-10">
-          <p className="text-xs font-medium text-offwhite/50 uppercase tracking-widest">
-            White Paper &middot; March 2026
-          </p>
-          <h3 className="mt-4 text-xl sm:text-2xl font-semibold text-offwhite leading-snug">
-            Deference-Aware Evaluation for Human-in-the-Loop AI Systems
-          </h3>
-          <p className="mt-2 text-sm text-offwhite/60">Hopperlace Research</p>
-          <p className="mt-5 text-offwhite/70 text-sm leading-relaxed">
-            We introduce a framework for evaluating AI systems not just on
-            accuracy, but on their capacity to recognize the limits of their own
-            competence and appropriately defer to human judgment. The paper
-            presents deference-aware metrics and demonstrates their application
-            in high-stakes screening tasks.
-          </p>
-          <a
-            href="https://osf.io/a69yh/files/vj95h"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-7 inline-flex items-center gap-2 bg-terracotta text-offwhite px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-terracotta/90 transition-colors"
-          >
-            Read on OSF
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 16 16"
-              fill="none"
-              className="mt-px"
+        <div className="mt-8 flex flex-col gap-8">
+          {papers.map((paper) => (
+            <div
+              key={paper.title}
+              className="border border-offwhite/10 rounded-xl p-8 sm:p-10"
             >
-              <path
-                d="M5 3h8v8m0-8L5 11"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </a>
+              <p className="text-xs font-medium text-offwhite/50 uppercase tracking-widest">
+                {paper.meta}
+              </p>
+              <h3 className="mt-4 text-xl sm:text-2xl font-semibold text-offwhite leading-snug">
+                {paper.title}
+              </h3>
+              <p className="mt-5 text-offwhite/70 text-sm leading-relaxed">
+                {paper.description}
+              </p>
+              <a
+                href={paper.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-7 inline-flex items-center gap-2 bg-terracotta text-offwhite px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-terracotta/90 transition-colors"
+              >
+                {paper.linkLabel}
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  className="mt-px"
+                >
+                  <path
+                    d="M5 3h8v8m0-8L5 11"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>
