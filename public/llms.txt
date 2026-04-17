@@ -1,0 +1,48 @@
+# Hopperlace
+
+> Human-adaptive AI. Trustworthy by design.
+
+Hopperlace builds the infrastructure AI systems need to know when to act, when to defer, and how to coordinate with humans on high-stakes decisions — across evidence synthesis, clinical decision support, legal reasoning, and the other domains where confident errors are most costly.
+
+## Architecture
+
+Hopperlace's infrastructure has three layers:
+
+### Layer 1: Knowledge & Evaluation Layer (Evidence Synthesis)
+AI systems need to know what they don't know. This layer builds the evaluation infrastructure for appropriate deferral — measuring not just accuracy but when the AI should stop and hand off. Applicable to any domain where AI confidence is decision-consequential: clinical triage, legal discovery, content moderation, scientific review. Current live application: systematic review screening.
+
+### Layer 2: Routing & Orchestration Layer (LetsBegin)
+Getting the human in the loop isn't enough — it matters when, how, and in what form. This layer manages the handoff: sequencing decisions, surfacing one thing at a time, and routing based on confidence and complexity. Designed around human attention and cognitive capacity, so the human who receives the task can actually do it well. Applicable to any human-AI workflow where attention is the bottleneck.
+
+### Layer 3: Trust & Governance Layer (Value Compass)
+Trust in AI systems has to be earned, not assumed. This layer makes AI behavior legible — measuring alignment between how a system acts and the values of the people and organisations relying on it, so the right tool gets used in the right situation, with the right expectations. Applicable wherever AI tool selection and trust calibration matter.
+
+## First Application: Evidence Synthesis AI
+
+We chose screening deliberately. Within the evidence synthesis workflow, screening is the sub-task where deference-aware evaluation creates the most value — an overconfident AI screener corrupts every downstream step of the review, while an overly cautious one wipes out the time savings that justify using AI at all.
+
+Evidence Synthesis AI handles the confident decisions autonomously — the clear includes, the clear excludes — and surfaces only the genuinely ambiguous studies for human review.
+
+- Website: https://www.evidencesynthesisai.com/
+- Status: Early pilots
+
+## Research
+
+### Deference-Aware Evaluation for Human-in-the-Loop AI Systems
+- Type: White Paper
+- Date: March 2026
+- Authors: Hopperlace Research
+- DOI: 10.17605/OSF.IO/A69YH
+- Link: https://osf.io/a69yh/files/vj95h
+
+A framework for evaluating AI systems not just on accuracy, but also on their capacity to recognise the limits of their own competence and defer to human judgement when appropriate. The paper identifies two failure modes that standard accuracy metrics conflate — penalised conservatism and genuine confident errors — and introduces deference-aware metrics that distinguish them. Validated across nine frontier models and 258 systematic review studies. The methodology is domain-general; systematic review is the first application.
+
+## Team
+
+- Yuyu Shen — Founder. AI product leader with a decade building production AI systems across fintech, enterprise software, and consumer technology — at Meta, Walmart, Beamery, Cleo, and others.
+- Martin Walker, MPH — Co-founder, Evidence Synthesis. Background in evidence-based health improvement and systematic review evidence synthesis.
+
+## Contact
+
+- Email: hello@hopperlace.ai
+- Website: https://hopperlace.ai

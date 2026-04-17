@@ -1,17 +1,61 @@
 import NavInner from "@/components/NavInner";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "Hopperlace",
+      url: "https://hopperlace.ai",
+      description:
+        "Hopperlace builds the infrastructure AI systems need to know when to act, when to defer, and how to coordinate with humans on high-stakes decisions.",
+      email: "hello@hopperlace.ai",
+      founder: {
+        "@type": "Person",
+        name: "Yuyu Shen",
+      },
+      sameAs: ["https://www.evidencesynthesisai.com/"],
+    },
+    {
+      "@type": "WebSite",
+      name: "Hopperlace",
+      url: "https://hopperlace.ai",
+    },
+    {
+      "@type": "ScholarlyArticle",
+      name: "Deference-Aware Evaluation for Human-in-the-Loop AI Systems",
+      author: { "@type": "Organization", name: "Hopperlace Research" },
+      datePublished: "2026-03",
+      url: "https://osf.io/a69yh/files/vj95h",
+      identifier: {
+        "@type": "PropertyValue",
+        propertyID: "DOI",
+        value: "10.17605/OSF.IO/A69YH",
+      },
+      description:
+        "A framework for evaluating AI systems not just on accuracy, but also on their capacity to recognise the limits of their own competence and defer to human judgement when appropriate.",
+    },
+  ],
+};
+
 export default function Home() {
   return (
-    <main>
-      <Nav />
-      <Hero />
-      <WhatWeBuild />
-      <FirstApplication />
-      <Research />
-      <Team />
-      <Contact />
-      <Footer />
-    </main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main>
+        <Nav />
+        <Hero />
+        <WhatWeBuild />
+        <FirstApplication />
+        <Research />
+        <Team />
+        <Contact />
+        <Footer />
+      </main>
+    </>
   );
 }
 
