@@ -8,7 +8,7 @@ const jsonLd = {
       name: "Hopperlace",
       url: "https://hopperlace.ai",
       description:
-        "Hopperlace builds the infrastructure AI systems need to know when to act, when to defer, and how to coordinate with humans on high-stakes decisions.",
+        "Evaluation and orchestration infrastructure for AI systems that know when to hand off, design the handoff well, and keep their behaviour consistent with their stated values.",
       email: "hello@hopperlace.ai",
       founder: {
         "@type": "Person",
@@ -33,7 +33,7 @@ const jsonLd = {
         value: "10.17605/OSF.IO/A69YH",
       },
       description:
-        "A framework for evaluating AI systems not just on accuracy, but also on their capacity to recognise the limits of their own competence and defer to human judgement when appropriate.",
+        "A framework for evaluating AI systems on their capacity to recognise the limits of their own competence and defer when appropriate, alongside standard accuracy. The paper identifies two failure modes that conventional metrics conflate, penalised conservatism and genuine confident errors, and introduces deference-aware metrics that distinguish them. The framework is validated across nine frontier models and 258 systematic review studies.",
     },
   ],
 };
@@ -73,16 +73,20 @@ function Hero() {
     <section className="pt-36 pb-16 px-6">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl sm:text-5xl font-semibold text-navy leading-tight tracking-tight">
-          Human-adaptive AI.
+          AI that hands off well.
           <br />
           <span className="text-teal-light">Trustworthy by design.</span>
         </h1>
         <p className="mt-6 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl">
-          Hopperlace builds the infrastructure AI systems need to know when to
-          act, when to defer, and how to coordinate with humans on high-stakes
-          decisions&nbsp;&mdash; across evidence synthesis, clinical decision
-          support, legal reasoning, and the other domains where confident errors
-          are most costly.
+          Any system that puts AI in the loop has to get three things right:
+          knowing when to hand off, handing off well, and keeping its stated
+          values consistent with its behaviour. Hopperlace builds the
+          evaluation and orchestration infrastructure that makes this possible.
+          Our focus right now is high-stakes domains like evidence synthesis,
+          clinical decision support, and legal reasoning, where overconfident
+          AI carries the most immediate cost. The same gap matters everywhere
+          AI makes routine decisions, because small unchecked calls add up to a
+          gradual erosion of human control.
         </p>
       </div>
     </section>
@@ -99,7 +103,7 @@ const layers = [
     status: "Early pilots",
     href: "https://www.evidencesynthesisai.com/",
     description:
-      "AI systems need to know what they don\u2019t know. This layer builds the evaluation infrastructure for appropriate deferral\u00a0\u2014 measuring not just accuracy but when the AI should stop and hand off. Applicable to any domain where AI confidence is decision-consequential: clinical triage, legal discovery, content moderation, scientific review. Current live application: systematic review screening.",
+      "This layer evaluates whether AI systems recognise the limits of their own competence and defer when they should. Most accuracy metrics penalise hesitation, which is the wrong incentive when overconfidence carries real cost. Deference-aware evaluation credits considered deferral as correct and separates it from genuine confident errors. The methodology generalises to clinical triage, legal discovery, content moderation, and scientific review. The first live application is systematic review screening.",
   },
   {
     number: 2,
@@ -107,7 +111,7 @@ const layers = [
     product: "LetsBegin",
     status: "In Development",
     description:
-      "Getting the human in the loop isn\u2019t enough\u00a0\u2014 it matters when, how, and in what form. This layer manages the handoff: sequencing decisions, surfacing one thing at a time, and routing based on confidence and complexity. Designed around human attention and cognitive capacity, so the human who receives the task can actually do it well. Applicable to any human-AI workflow where attention is the bottleneck.",
+      "The handoff is where most AI workflows succeed or break. This layer sequences decisions, surfaces one task at a time, and routes based on confidence and complexity, so whoever receives the task has the context, timing, and format they need to act on it. The same design applies when the recipient is another agent or a tool, not just a human.",
   },
   {
     number: 3,
@@ -115,7 +119,7 @@ const layers = [
     product: "Value Compass",
     status: "In Development",
     description:
-      "Trust in AI systems has to be earned, not assumed. This layer makes AI behavior legible\u00a0\u2014 measuring alignment between how a system acts and the values of the people and organisations relying on it, so the right tool gets used in the right situation, with the right expectations. Applicable wherever AI tool selection and trust calibration matter.",
+      "Trust in an AI system comes from seeing how it behaves, measured against the values it claims. This layer makes the gap between stated values and observed behaviour visible, so users and organisations can match tools to situations and calibrate their expectations accordingly. It applies wherever AI selection and trust have real consequences.",
   },
 ];
 
@@ -126,9 +130,6 @@ function WhatWeBuild() {
         <h2 className="text-sm font-medium text-terracotta uppercase tracking-widest">
           The architecture
         </h2>
-        <p className="mt-3 text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
-          Three layers. One architecture.
-        </p>
         <div className="mt-14 flex flex-col">
           {layers.map((layer, i) => (
             <div key={layer.product}>
@@ -221,22 +222,22 @@ function FirstApplication() {
           Deference-aware evaluation for systematic review
         </p>
         <p className="mt-8 text-text-muted leading-relaxed">
-          We chose screening deliberately. Within the evidence synthesis
-          workflow, screening is the sub-task where deference-aware evaluation
-          creates the most value&nbsp;&mdash; an overconfident AI screener
-          corrupts every downstream step of the review, while an overly cautious
-          one wipes out the time savings that justify using AI at all. Screening
-          is the test case that proves the evaluation layer works in production.
+          We chose screening deliberately. Within the systematic review
+          workflow, it&rsquo;s the sub-task where deference-aware evaluation
+          pays off most, because an overconfident screener corrupts every
+          downstream step of the review while an overly cautious one wipes out
+          the time savings that justify using AI at all. Screening sits between
+          those failure modes, which makes it the right test case for whether
+          the evaluation layer works in production.
         </p>
         <p className="mt-6 text-text-muted leading-relaxed">
-          Evidence Synthesis AI handles the confident decisions
-          autonomously&nbsp;&mdash; the clear includes, the clear
-          excludes&nbsp;&mdash; and surfaces only the genuinely ambiguous studies
-          for human review. The time savings come from the AI acting decisively
-          where it&rsquo;s well-calibrated to be right; the evidence quality is
-          protected by the system knowing when it isn&rsquo;t. Every decision
-          comes with the reasoning behind it. Reviewers can override at any
-          point. Every action is logged.
+          Evidence Synthesis AI handles the confident decisions on its own
+          (the clear includes and excludes) and surfaces only the genuinely
+          ambiguous studies for human review. The time savings come from
+          acting decisively where the AI is well-calibrated, while evidence
+          quality is protected by the system recognising when it isn&rsquo;t.
+          Reviewers see the reasoning behind every decision, can override any
+          of them, and have a full audit log of what the system did.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
           <a
@@ -282,7 +283,7 @@ const papers = [
     title: "Deference-Aware Evaluation for Human-in-the-Loop AI Systems",
     meta: "White Paper \u00b7 March 2026 \u00b7 Hopperlace Research \u00b7 DOI: 10.17605/OSF.IO/A69YH",
     description:
-      "A framework for evaluating AI systems not just on accuracy, but also on their capacity to recognise the limits of their own competence and defer to human judgement when appropriate. The paper identifies two failure modes that standard accuracy metrics conflate\u00a0\u2014 penalised conservatism and genuine confident errors\u00a0\u2014 and introduces deference-aware metrics that distinguish them. Validated across nine frontier models and 258 systematic review studies. The methodology is domain-general; systematic review is the first application.",
+      "A framework for evaluating AI systems on their capacity to recognise the limits of their own competence and defer when appropriate, alongside standard accuracy. The paper identifies two failure modes that conventional metrics conflate, penalised conservatism and genuine confident errors, and introduces deference-aware metrics that distinguish them. The framework is validated across nine frontier models and 258 systematic review studies. The methodology applies across domains, and systematic review is the first deployment.",
     href: "https://osf.io/a69yh/files/vj95h",
     linkLabel: "Read on OSF",
   },
@@ -347,7 +348,7 @@ const team = [
   {
     name: "Yuyu Shen",
     role: "Founder",
-    bio: "AI product leader with a decade building production AI systems across fintech, enterprise software, and consumer technology\u00a0\u2014 at Meta, Walmart, Beamery, Cleo, and others. Founded Hopperlace to close a gap that kept surfacing: we\u2019re deploying AI in high-stakes contexts without the evaluation infrastructure to know when it\u2019s actually safe to trust. That changes everything about how those systems should be designed.",
+    bio: "AI product leader with a decade building production AI systems across fintech, enterprise software, and consumer technology, at Meta, Walmart, Beamery, Cleo, and others. Founded Hopperlace to close a gap that kept appearing in the work: AI gets deployed in high-stakes contexts without the evaluation infrastructure needed to know when its outputs can actually be trusted. That gap shapes how Hopperlace builds.",
   },
   {
     name: "Martin Walker, MPH",

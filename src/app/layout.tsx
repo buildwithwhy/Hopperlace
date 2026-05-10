@@ -3,9 +3,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hopperlace.ai"),
-  title: "Hopperlace — Human-adaptive AI. Trustworthy by design.",
+  title: "Hopperlace — AI that hands off well.",
   description:
-    "Hopperlace builds the infrastructure AI systems need to know when to act, when to defer, and how to coordinate with humans on high-stakes decisions — across evidence synthesis, clinical decision support, legal reasoning, and the other domains where confident errors are most costly.",
+    "Evaluation and orchestration infrastructure for AI systems that know when to hand off, design the handoff well, and keep their behaviour consistent with their stated values.",
   keywords: [
     "AI evaluation",
     "human-in-the-loop",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Hopperlace" }],
   creator: "Hopperlace",
   openGraph: {
-    title: "Hopperlace — Human-adaptive AI. Trustworthy by design.",
+    title: "Hopperlace — AI that hands off well.",
     description:
-      "Evaluation and orchestration infrastructure for AI systems that know when to act, when to defer, and how to hand off well.",
+      "Evaluation and orchestration infrastructure for AI systems that know when to hand off, design the handoff well, and keep their behaviour consistent with their stated values.",
     url: "https://hopperlace.ai",
     siteName: "Hopperlace",
     type: "website",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Hopperlace — Human-adaptive AI. Trustworthy by design.",
+    title: "Hopperlace — AI that hands off well.",
     description:
-      "Evaluation and orchestration infrastructure for AI systems that know when to act, when to defer, and how to hand off well.",
+      "Evaluation and orchestration infrastructure for AI systems that know when to hand off, design the handoff well, and keep their behaviour consistent with their stated values.",
   },
   alternates: {
     canonical: "https://hopperlace.ai",
