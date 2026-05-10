@@ -82,6 +82,8 @@ function Hero() {
           knowing when to hand off, handing off well, and keeping its stated
           values consistent with its behaviour. Hopperlace builds the
           evaluation and orchestration infrastructure that makes this possible.
+        </p>
+        <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl">
           Our focus right now is high-stakes domains like evidence synthesis,
           clinical decision support, and legal reasoning, where overconfident
           AI carries the most immediate cost. The same gap matters everywhere
