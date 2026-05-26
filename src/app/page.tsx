@@ -86,9 +86,10 @@ function Hero() {
         <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl">
           Our focus right now is high-stakes domains like evidence synthesis,
           clinical decision support, and legal reasoning, where overconfident
-          AI carries the most immediate cost. The same gap matters everywhere
-          AI makes routine decisions, because small unchecked calls add up to a
-          gradual erosion of human control.
+          AI carries the most immediate cost. As AI systems become more
+          capable and autonomous, they hand off more often, to other agents as
+          much as to people, which is why the handoff problem matters as much
+          for advanced AI as for systems in production today.
         </p>
       </div>
     </section>
@@ -113,7 +114,7 @@ const layers = [
     product: "LetsBegin",
     status: "In Development",
     description:
-      "The handoff is where most AI workflows succeed or break. This layer sequences decisions, surfaces one task at a time, and routes based on confidence and complexity, so whoever receives the task has the context, timing, and format they need to act on it. The same design applies when the recipient is another agent or a tool, not just a human.",
+      "The handoff is where most AI workflows succeed or break. In multi-agent systems, coordination and handoff breakdowns between agents are already one of the largest categories of failure. This layer sequences decisions, surfaces one task at a time, and routes based on confidence and complexity, so whoever receives the task has the context, timing, and format they need to act on it. The same design applies when the recipient is another agent or a tool, not just a human.",
   },
   {
     number: 3,
@@ -284,6 +285,7 @@ const papers = [
   {
     title: "Deference-Aware Evaluation for Human-in-the-Loop AI Systems",
     meta: "White Paper \u00b7 March 2026 \u00b7 Hopperlace Research \u00b7 DOI: 10.17605/OSF.IO/A69YH",
+    meta2: "Accepted as a poster \u00b7 Workshop on Technical AI Governance Research (TAIGR), ICML 2026",
     description:
       "A framework for evaluating AI systems on their capacity to recognise the limits of their own competence and defer when appropriate, alongside standard accuracy. The paper identifies two failure modes that conventional metrics conflate, penalised conservatism and genuine confident errors, and introduces deference-aware metrics that distinguish them. The framework is validated across nine frontier models and 258 systematic review studies. The methodology applies across domains, and systematic review is the first deployment.",
     href: "https://osf.io/a69yh/files/vj95h",
@@ -307,6 +309,11 @@ function Research() {
               <p className="text-xs font-medium text-offwhite/50 uppercase tracking-widest">
                 {paper.meta}
               </p>
+              {paper.meta2 && (
+                <p className="mt-1 text-xs font-medium text-offwhite/50 uppercase tracking-widest">
+                  {paper.meta2}
+                </p>
+              )}
               <h3 className="mt-4 text-xl sm:text-2xl font-semibold text-offwhite leading-snug">
                 {paper.title}
               </h3>
