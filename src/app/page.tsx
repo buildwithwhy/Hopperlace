@@ -113,8 +113,26 @@ const layers = [
     layer: "Routing & Orchestration Layer",
     product: "LetsBegin",
     status: "In Development",
-    description:
-      "The handoff is where most AI workflows succeed or break. In multi-agent systems, coordination and handoff breakdowns between agents are already one of the largest categories of failure. This layer sequences decisions, surfaces one task at a time, and routes based on confidence and complexity, so whoever receives the task has the context, timing, and format they need to act on it. The same design applies when the recipient is another agent or a tool, not just a human.",
+    description: (
+      <>
+        The handoff is where most AI workflows succeed or break. In
+        multi-agent systems, breakdowns in coordination between agents
+        account for{" "}
+        <a
+          href="https://arxiv.org/abs/2503.13657"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 decoration-teal-light/60 hover:text-navy hover:decoration-teal-light transition-colors"
+        >
+          roughly a third of observed failures
+        </a>
+        . This layer sequences decisions, surfaces one task at a time, and
+        routes based on confidence and complexity, so whoever receives the
+        task has the context, timing, and format they need to act on it. The
+        same design applies when the recipient is another agent or a tool,
+        not just a human.
+      </>
+    ),
   },
   {
     number: 3,
@@ -225,6 +243,13 @@ function FirstApplication() {
           Deference-aware evaluation for systematic review
         </p>
         <p className="mt-8 text-text-muted leading-relaxed">
+          Systematic reviews sit at the top of the evidence hierarchy, and
+          each one is a major undertaking. Nearly 80 are published every day,
+          the average review takes more than a year from registration to
+          publication, and title and abstract screening is the single largest
+          time sink in that process.
+        </p>
+        <p className="mt-6 text-text-muted leading-relaxed">
           We chose screening deliberately. Within the systematic review
           workflow, it&rsquo;s the sub-task where deference-aware evaluation
           pays off most, because an overconfident screener corrupts every
@@ -232,6 +257,20 @@ function FirstApplication() {
           the time savings that justify using AI at all. Screening sits between
           those failure modes, which makes it the right test case for whether
           the evaluation layer works in production.
+        </p>
+        <p className="mt-6 text-text-muted leading-relaxed">
+          Research on AI screening confirms the risk is real. Accuracy that
+          holds up on one review can{" "}
+          <a
+            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12012331/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 decoration-teal-light/60 hover:text-navy hover:decoration-teal-light transition-colors"
+          >
+            drop sharply on the next
+          </a>
+          , which is why screening needs an evaluation layer that knows when
+          its own judgments can be trusted.
         </p>
         <p className="mt-6 text-text-muted leading-relaxed">
           Evidence Synthesis AI handles the confident decisions on its own
