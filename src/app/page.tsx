@@ -25,15 +25,15 @@ const jsonLd = {
       "@type": "ScholarlyArticle",
       name: "Deference-Aware Evaluation for Human-in-the-Loop AI Systems",
       author: { "@type": "Organization", name: "Hopperlace Research" },
-      datePublished: "2026-03",
-      url: "https://osf.io/a69yh/files/vj95h",
+      datePublished: "2026-05",
+      url: "https://osf.io/a69yh/",
       identifier: {
         "@type": "PropertyValue",
         propertyID: "DOI",
         value: "10.17605/OSF.IO/A69YH",
       },
       description:
-        "A framework for evaluating AI systems on their capacity to recognise the limits of their own competence and defer when appropriate, alongside standard accuracy. The paper identifies two failure modes that conventional metrics conflate, penalised conservatism and genuine confident errors, and introduces deference-aware metrics that distinguish them. The framework is validated across nine frontier models and 258 systematic review studies.",
+        "A framework for evaluating AI systems on their capacity to recognise the limits of their own competence and defer when appropriate, alongside standard accuracy. The paper identifies two failure modes that conventional metrics conflate — penalised conservatism and genuine confident errors — and introduces deference-aware metrics that distinguish them. A cross-domain audit of six frontier models across five medical domains (2,729 studies, 16,374 screening decisions) shows that no single model is uniformly safe, and isolates a structural class of failures that calibration, ensembling, and model scaling cannot fix. The methodology applies across domains, and systematic review screening is the first deployment.",
     },
   ],
 };
@@ -106,7 +106,7 @@ const layers = [
     status: "Early pilots",
     href: "https://www.evidencesynthesisai.com/",
     description:
-      "This layer evaluates whether AI systems recognise the limits of their own competence and defer when they should. Most accuracy metrics penalise hesitation, which is the wrong incentive when overconfidence carries real cost. Deference-aware evaluation credits considered deferral as correct and separates it from genuine confident errors. The methodology generalises to clinical triage, legal discovery, content moderation, and scientific review. The first live application is systematic review screening.",
+      "This layer evaluates whether AI systems recognise the limits of their own competence and defer when they should. Most accuracy metrics penalise hesitation, which is the wrong incentive when overconfidence carries real cost. Deference-aware evaluation credits considered deferral as correct, separates it from genuine confident errors, and surfaces a structural class of errors that no amount of model scaling or ensembling will fix. The methodology generalises to clinical triage, legal discovery, content moderation, and scientific review. The first live application is systematic review screening.",
   },
   {
     number: 2,
@@ -259,18 +259,10 @@ function FirstApplication() {
           the evaluation layer works in production.
         </p>
         <p className="mt-6 text-text-muted leading-relaxed">
-          Research on AI screening confirms the risk is real. Accuracy that
-          holds up on one review can{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12012331/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-2 decoration-teal-light/60 hover:text-navy hover:decoration-teal-light transition-colors"
-          >
-            drop sharply on the next
-          </a>
-          , which is why screening needs an evaluation layer that knows when
-          its own judgments can be trusted.
+          Our own cross-domain audit confirms the risk is real: a model&rsquo;s
+          confident-error rate can swing more than eightfold from one review to
+          the next, which is why screening needs an evaluation layer that knows
+          when its own judgments can be trusted.
         </p>
         <p className="mt-6 text-text-muted leading-relaxed">
           Evidence Synthesis AI handles the confident decisions on its own
@@ -323,11 +315,11 @@ function FirstApplication() {
 const papers = [
   {
     title: "Deference-Aware Evaluation for Human-in-the-Loop AI Systems",
-    meta: "White Paper \u00b7 March 2026 \u00b7 Hopperlace Research \u00b7 DOI: 10.17605/OSF.IO/A69YH",
+    meta: "White Paper \u00b7 May 2026 \u00b7 Hopperlace Research \u00b7 DOI: 10.17605/OSF.IO/A69YH",
     meta2: "Accepted as a poster \u00b7 Workshop on Technical AI Governance Research (TAIGR), ICML 2026",
     description:
-      "A framework for evaluating AI systems on their capacity to recognise the limits of their own competence and defer when appropriate, alongside standard accuracy. The paper identifies two failure modes that conventional metrics conflate, penalised conservatism and genuine confident errors, and introduces deference-aware metrics that distinguish them. The framework is validated across nine frontier models and 258 systematic review studies. The methodology applies across domains, and systematic review is the first deployment.",
-    href: "https://osf.io/a69yh/files/vj95h",
+      "A framework for evaluating AI systems on their capacity to recognise the limits of their own competence and defer when appropriate, alongside standard accuracy. The paper identifies two failure modes that conventional metrics conflate — penalised conservatism and genuine confident errors — and introduces deference-aware metrics that distinguish them. A cross-domain audit of six frontier models across five medical domains (2,729 studies, 16,374 screening decisions) shows that no single model is uniformly safe, and isolates a structural class of failures that calibration, ensembling, and model scaling cannot fix. The methodology applies across domains, and systematic review screening is the first deployment.",
+    href: "https://osf.io/a69yh/",
     linkLabel: "Read on OSF",
   },
 ];
