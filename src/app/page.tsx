@@ -86,10 +86,10 @@ function Hero() {
         <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl">
           Our focus right now is high-stakes domains like evidence synthesis,
           clinical decision support, and legal reasoning, where overconfident
-          AI carries the most immediate cost. As AI systems become more
-          capable and autonomous, they hand off more often, to other agents as
-          much as to people, which is why the handoff problem matters as much
-          for advanced AI as for systems in production today.
+          AI carries the most immediate cost. The same gap matters everywhere
+          AI makes routine decisions. Small unchecked calls compound, and a
+          system making more decisions than anyone can verify loses the trust
+          people place in it well before any single failure becomes visible.
         </p>
       </div>
     </section>
