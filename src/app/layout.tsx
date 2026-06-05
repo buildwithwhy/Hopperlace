@@ -1,29 +1,30 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const description =
+  "Trustworthy AI for high-stakes evidence review. Built on deference-aware evaluation, for systematic review teams and pharmacovigilance / drug-safety teams.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://hopperlace.ai"),
-  title: "Hopperlace — AI that hands off well.",
-  description:
-    "Evaluation and orchestration infrastructure for AI systems that know when to hand off, design the handoff well, and keep their behaviour consistent with their stated values.",
+  title: "Hopperlace — Trustworthy AI for high-stakes evidence review.",
+  description,
   keywords: [
-    "AI evaluation",
-    "human-in-the-loop",
-    "AI orchestration",
-    "deference-aware evaluation",
-    "AI safety",
-    "AI trust",
+    "trustworthy AI",
+    "evidence review",
     "systematic review",
-    "evidence synthesis",
-    "human-AI coordination",
-    "AI infrastructure",
+    "pharmacovigilance",
+    "drug safety",
+    "literature monitoring",
+    "deference-aware evaluation",
+    "human-in-the-loop AI",
+    "AI evaluation",
+    "AI trust",
   ],
   authors: [{ name: "Hopperlace" }],
   creator: "Hopperlace",
   openGraph: {
-    title: "Hopperlace — AI that hands off well.",
-    description:
-      "Evaluation and orchestration infrastructure for AI systems that know when to hand off, design the handoff well, and keep their behaviour consistent with their stated values.",
+    title: "Hopperlace — Trustworthy AI for high-stakes evidence review.",
+    description,
     url: "https://hopperlace.ai",
     siteName: "Hopperlace",
     type: "website",
@@ -31,9 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Hopperlace — AI that hands off well.",
-    description:
-      "Evaluation and orchestration infrastructure for AI systems that know when to hand off, design the handoff well, and keep their behaviour consistent with their stated values.",
+    title: "Hopperlace — Trustworthy AI for high-stakes evidence review.",
+    description,
   },
   alternates: {
     canonical: "https://hopperlace.ai",

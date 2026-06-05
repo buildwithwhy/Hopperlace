@@ -3,11 +3,14 @@
 import { useState } from "react";
 
 const links = [
-  { href: "#products", label: "Architecture" },
+  { href: "#product", label: "Product" },
+  { href: "#how-it-works", label: "How it works" },
   { href: "#research", label: "Research" },
   { href: "#team", label: "Team" },
-  { href: "#contact", label: "Contact" },
 ];
+
+const ctaHref =
+  "mailto:hello@hopperlace.ai?subject=Evidence%20Synthesis%20pilot";
 
 export default function NavInner() {
   const [open, setOpen] = useState(false);
@@ -30,6 +33,12 @@ export default function NavInner() {
               {link.label}
             </a>
           ))}
+          <a
+            href={ctaHref}
+            className="inline-flex items-center justify-center bg-navy text-offwhite px-4 py-2 rounded-lg text-sm font-medium hover:bg-navy-light transition-colors"
+          >
+            Start a pilot
+          </a>
         </div>
 
         {/* Mobile hamburger */}
@@ -63,6 +72,13 @@ export default function NavInner() {
               {link.label}
             </a>
           ))}
+          <a
+            href={ctaHref}
+            onClick={() => setOpen(false)}
+            className="mt-4 inline-flex items-center justify-center bg-navy text-offwhite px-4 py-2 rounded-lg text-sm font-medium hover:bg-navy-light transition-colors"
+          >
+            Start a pilot
+          </a>
         </div>
       )}
     </nav>

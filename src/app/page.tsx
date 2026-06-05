@@ -8,7 +8,7 @@ const jsonLd = {
       name: "Hopperlace",
       url: "https://hopperlace.ai",
       description:
-        "Evaluation and orchestration infrastructure for AI systems that know when to hand off, design the handoff well, and keep their behaviour consistent with their stated values.",
+        "Trustworthy AI for high-stakes evidence review. Serving systematic review teams and pharmacovigilance / drug-safety teams, built on deference-aware evaluation.",
       email: "hello@hopperlace.ai",
       founder: {
         "@type": "Person",
@@ -48,10 +48,14 @@ export default function Home() {
       <main>
         <Nav />
         <Hero />
-        <WhatWeBuild />
-        <FirstApplication />
+        <StatStrip />
+        <Problem />
+        <HowItWorks />
+        <WhyTrust />
+        <WhoItsFor />
         <Research />
         <Team />
+        <BiggerPicture />
         <Contact />
         <Footer />
       </main>
@@ -65,221 +69,33 @@ function Nav() {
   return <NavInner />;
 }
 
-
 /* ─── Hero ─── */
 
 function Hero() {
   return (
     <section className="pt-36 pb-16 px-6">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl font-semibold text-navy leading-tight tracking-tight">
-          AI that hands off well.
-          <br />
-          <span className="text-teal-light">Trustworthy by design.</span>
+        <p className="text-sm font-medium text-terracotta uppercase tracking-widest">
+          Trustworthy AI for high-stakes work — starting with evidence
+        </p>
+        <h1 className="mt-5 text-4xl sm:text-5xl font-semibold text-navy leading-tight tracking-tight">
+          Trustworthy AI for high-stakes{" "}
+          <span className="text-teal-light">evidence review.</span>
         </h1>
         <p className="mt-6 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl">
-          Any system that puts AI in the loop has to get three things right:
-          knowing when to hand off, handing off well, and keeping its stated
-          values consistent with its behaviour. Hopperlace builds the
-          evaluation and orchestration infrastructure that makes this possible.
-        </p>
-        <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl">
-          Our focus right now is high-stakes domains like evidence synthesis,
-          clinical decision support, and legal reasoning, where overconfident
-          AI carries the most immediate cost. The same gap matters everywhere
-          AI makes routine decisions. Small unchecked calls compound, and a
-          system making more decisions than anyone can verify loses the trust
-          people place in it well before any single failure becomes visible.
-        </p>
-      </div>
-    </section>
-  );
-}
-
-/* ─── The Architecture ─── */
-
-const layers = [
-  {
-    number: 1,
-    layer: "Knowledge & Evaluation Layer",
-    product: "Evidence Synthesis",
-    status: "Early pilots",
-    href: "https://www.evidencesynthesisai.com/",
-    description:
-      "This layer evaluates whether AI systems recognise the limits of their own competence and defer when they should. Most accuracy metrics penalise hesitation, which is the wrong incentive when overconfidence carries real cost. Deference-aware evaluation credits considered deferral as correct, separates it from genuine confident errors, and surfaces a structural class of errors that no amount of model scaling or ensembling will fix. The methodology generalises to clinical triage, legal discovery, content moderation, and scientific review. The first live application is systematic review screening.",
-  },
-  {
-    number: 2,
-    layer: "Routing & Orchestration Layer",
-    product: "LetsBegin",
-    status: "In Development",
-    description: (
-      <>
-        The handoff is where most AI workflows succeed or break. In
-        multi-agent systems, breakdowns in coordination between agents
-        account for{" "}
-        <a
-          href="https://arxiv.org/abs/2503.13657"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline underline-offset-2 decoration-teal-light/60 hover:text-navy hover:decoration-teal-light transition-colors"
-        >
-          roughly a third of observed failures
-        </a>
-        . This layer sequences decisions, surfaces one task at a time, and
-        routes based on confidence and complexity, so whoever receives the
-        task has the context, timing, and format they need to act on it. The
-        same design applies when the recipient is another agent or a tool,
-        not just a human.
-      </>
-    ),
-  },
-  {
-    number: 3,
-    layer: "Trust & Governance Layer",
-    product: "Value Compass",
-    status: "In Development",
-    description:
-      "Trust in an AI system comes from seeing how it behaves, measured against the values it claims. This layer makes the gap between stated values and observed behaviour visible, so users and organisations can match tools to situations and calibrate their expectations accordingly. It applies wherever AI selection and trust have real consequences.",
-  },
-];
-
-function WhatWeBuild() {
-  return (
-    <section id="products" className="pt-8 pb-20 px-6">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-sm font-medium text-terracotta uppercase tracking-widest">
-          The architecture
-        </h2>
-        <div className="mt-14 flex flex-col">
-          {layers.map((layer, i) => (
-            <div key={layer.product}>
-              {/* Connector */}
-              {i > 0 && (
-                <div className="flex items-center py-4 pl-5">
-                  <div className="w-px h-10 bg-teal-light/30" />
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    className="ml-[-6px] mt-10 text-teal-light/50"
-                  >
-                    <path
-                      d="M6 0v10M2 6l4 4 4-4"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-              )}
-              {/* Layer card */}
-              <div className="border border-warm-gray rounded-xl p-7 hover:border-teal-light/40 transition-colors">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-xs font-medium text-teal-light uppercase tracking-widest">
-                      Layer {layer.number}
-                    </p>
-                    <h3 className="mt-1 text-lg font-semibold text-navy">
-                      {layer.layer}
-                    </h3>
-                    <p className="mt-0.5 text-sm text-text-muted">
-                      {layer.product}
-                    </p>
-                  </div>
-                  <span className="text-xs font-medium text-amber bg-amber/10 px-2.5 py-1 rounded-full shrink-0">
-                    {layer.status}
-                  </span>
-                </div>
-                <p className="mt-4 text-sm text-text-muted leading-relaxed">
-                  {layer.description}
-                </p>
-                {layer.href && (
-                  <a
-                    href={layer.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-teal-light hover:text-navy transition-colors"
-                  >
-                    Learn more
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      className="mt-px"
-                    >
-                      <path
-                        d="M5 3h8v8m0-8L5 11"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </a>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Our First Application ─── */
-
-function FirstApplication() {
-  return (
-    <section className="py-20 px-6 bg-warm-gray/30 border-y border-warm-gray/50">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-sm font-medium text-terracotta uppercase tracking-widest">
-          Our first application
-        </h2>
-        <p className="mt-3 text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
-          Deference-aware evaluation for systematic review
-        </p>
-        <p className="mt-8 text-text-muted leading-relaxed">
-          Systematic reviews sit at the top of the evidence hierarchy, and
-          each one is a major undertaking. Nearly 80 are published every day,
-          the average review takes more than a year from registration to
-          publication, and title and abstract screening is the single largest
-          time sink in that process.
-        </p>
-        <p className="mt-6 text-text-muted leading-relaxed">
-          We chose screening deliberately. Within the systematic review
-          workflow, it&rsquo;s the sub-task where deference-aware evaluation
-          pays off most, because an overconfident screener corrupts every
-          downstream step of the review while an overly cautious one wipes out
-          the time savings that justify using AI at all. Screening sits between
-          those failure modes, which makes it the right test case for whether
-          the evaluation layer works in production.
-        </p>
-        <p className="mt-6 text-text-muted leading-relaxed">
-          Our own cross-domain audit confirms the risk is real: a model&rsquo;s
-          confident-error rate can swing more than eightfold from one review to
-          the next, which is why screening needs an evaluation layer that knows
-          when its own judgments can be trusted.
-        </p>
-        <p className="mt-6 text-text-muted leading-relaxed">
-          Evidence Synthesis AI handles the confident decisions on its own
-          (the clear includes and excludes) and surfaces only the genuinely
-          ambiguous studies for human review. The time savings come from
-          acting decisively where the AI is well-calibrated, while evidence
-          quality is protected by the system recognising when it isn&rsquo;t.
-          Reviewers see the reasoning behind every decision, can override any
-          of them, and have a full audit log of what the system did.
+          Evidence Synthesis AI screens studies the way a careful expert would —
+          deciding confidently where the call is clear, flagging the genuine
+          judgment calls for a human, and logging its reasoning for every
+          decision. Built for the teams who can&rsquo;t afford a confident
+          mistake: systematic reviewers, and the drug-safety groups monitoring
+          literature for adverse events.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
           <a
             href="mailto:hello@hopperlace.ai?subject=Evidence%20Synthesis%20pilot"
             className="inline-flex items-center justify-center gap-2 bg-navy text-offwhite px-6 py-3 rounded-lg text-sm font-medium hover:bg-navy-light transition-colors"
           >
-            Running a systematic review team? We&rsquo;re onboarding early
-            pilots.
+            Onboard as an early pilot
           </a>
           <a
             href="https://www.evidencesynthesisai.com/"
@@ -287,7 +103,7 @@ function FirstApplication() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 border border-navy text-navy px-6 py-3 rounded-lg text-sm font-medium hover:bg-navy hover:text-offwhite transition-colors"
           >
-            Learn more about Evidence Synthesis AI
+            See the product
             <svg
               width="14"
               height="14"
@@ -296,7 +112,7 @@ function FirstApplication() {
               className="mt-px"
             >
               <path
-                d="M3 8h10m0 0L9 4m4 4L9 12"
+                d="M5 3h8v8m0-8L5 11"
                 stroke="currentColor"
                 strokeWidth="1.5"
                 strokeLinecap="round"
@@ -310,15 +126,258 @@ function FirstApplication() {
   );
 }
 
-/* ─── Research ─── */
+/* ─── Stat strip ─── */
+
+const stats = [
+  {
+    figure: "~80",
+    label: "systematic reviews published every day",
+  },
+  {
+    figure: ">1 yr",
+    label: "average review, from registration to publication",
+  },
+  {
+    figure: "8×",
+    label: "swing in a model's confident-error rate between reviews",
+  },
+];
+
+function StatStrip() {
+  return (
+    <section className="py-10 px-6 border-y border-warm-gray/60">
+      <div className="max-w-5xl mx-auto grid gap-8 sm:grid-cols-3">
+        {stats.map((s) => (
+          <div key={s.label}>
+            <p className="text-3xl sm:text-4xl font-semibold text-navy tracking-tight">
+              {s.figure}
+            </p>
+            <p className="mt-2 text-sm text-text-muted leading-relaxed">
+              {s.label}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/* ─── 01 Problem ─── */
+
+function Problem() {
+  return (
+    <section className="py-20 px-6">
+      <div className="max-w-3xl mx-auto">
+        <p className="text-xs font-medium text-teal-light uppercase tracking-widest">
+          01 · The problem
+        </p>
+        <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
+          Screening is the bottleneck. It&rsquo;s also the trap.
+        </h2>
+        <p className="mt-8 text-text-muted leading-relaxed">
+          Title-and-abstract screening is the single largest time sink in
+          evidence work. The obvious fix is to automate it — but a naive AI
+          screener makes high-stakes review worse, not faster. An overconfident
+          one corrupts every downstream step. An over-cautious one wipes out
+          the time savings that justified using AI at all. The question was
+          never whether AI can screen. It&rsquo;s whether you can trust how it
+          decides — and prove it afterwards.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+/* ─── 02 How it works ─── */
+
+const mechanics = [
+  {
+    n: "1",
+    title: "Handles the confident calls on its own",
+    body: "Clear includes and excludes decided automatically where the system is well-calibrated.",
+  },
+  {
+    n: "2",
+    title: "Surfaces only the genuine judgment calls",
+    body: "Ambiguous studies are routed to a human, so reviewer attention goes where it actually matters.",
+  },
+  {
+    n: "3",
+    title: "Shows the reasoning behind every decision",
+    body: "Each include, exclude, or deferral comes with the rationale the system used to get there.",
+  },
+  {
+    n: "4",
+    title: "Override anything, audit everything",
+    body: "Reviewers can change any decision, and the full log is the trail regulators expect.",
+  },
+];
+
+function HowItWorks() {
+  return (
+    <section id="how-it-works" className="py-20 px-6 border-t border-warm-gray">
+      <div className="max-w-3xl mx-auto">
+        <p className="text-xs font-medium text-teal-light uppercase tracking-widest">
+          02 · How it works
+        </p>
+        <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
+          Decisive where it&rsquo;s sure. Careful where it isn&rsquo;t.
+        </h2>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+          {mechanics.map((m) => (
+            <div
+              key={m.n}
+              className="border border-warm-gray rounded-xl p-6 hover:border-teal-light/40 transition-colors"
+            >
+              <p className="text-xs font-medium text-teal-light uppercase tracking-widest">
+                {m.n}
+              </p>
+              <h3 className="mt-2 font-semibold text-navy">{m.title}</h3>
+              <p className="mt-3 text-sm text-text-muted leading-relaxed">
+                {m.body}
+              </p>
+            </div>
+          ))}
+        </div>
+        <a
+          href="https://www.evidencesynthesisai.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-teal-light hover:text-navy transition-colors"
+        >
+          See the full product
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 16 16"
+            fill="none"
+            className="mt-px"
+          >
+            <path
+              d="M3 8h10m0 0L9 4m4 4L9 12"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </section>
+  );
+}
+
+/* ─── 03 Why you can trust it (emphasis) ─── */
+
+const validation = [
+  { figure: "6", label: "frontier models" },
+  { figure: "5", label: "medical domains" },
+  { figure: "2,729", label: "studies" },
+  { figure: "16,374", label: "screening decisions" },
+];
+
+function WhyTrust() {
+  return (
+    <section
+      id="product"
+      className="py-24 px-6 bg-warm-gray/30 border-y border-warm-gray/50"
+    >
+      <div className="max-w-3xl mx-auto">
+        <p className="text-xs font-medium text-terracotta uppercase tracking-widest">
+          03 · Why you can trust it
+        </p>
+        <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-navy tracking-tight leading-tight">
+          Built on deference-aware evaluation.
+        </h2>
+        <p className="mt-8 text-lg text-text-muted leading-relaxed">
+          Most AI metrics reward confident answers and penalise hesitation — the
+          wrong incentive when overconfidence carries real cost. Deference-aware
+          evaluation measures whether a system recognises the limits of its own
+          competence and steps back when it should. It credits considered
+          deferral as correct, separates it from genuine confident error, and
+          surfaces a class of failures that more data and bigger models
+          won&rsquo;t fix.
+        </p>
+        <div className="mt-12 border border-warm-gray rounded-xl bg-offwhite p-7 sm:p-8">
+          <p className="text-xs font-medium text-teal-light uppercase tracking-widest">
+            Validation
+          </p>
+          <p className="mt-3 text-base sm:text-lg text-navy leading-relaxed">
+            Validated across 6 frontier models and 5 medical domains — 2,729
+            studies, 16,374 screening decisions.
+          </p>
+          <div className="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-6">
+            {validation.map((v) => (
+              <div key={v.label}>
+                <p className="text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
+                  {v.figure}
+                </p>
+                <p className="mt-1 text-xs text-text-muted leading-relaxed">
+                  {v.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── 04 Who it's for ─── */
+
+const audiences = [
+  {
+    name: "Systematic review teams",
+    body: "Title-and-abstract screening without the year-long grind, with an audit trail that holds up to peer scrutiny.",
+  },
+  {
+    name: "Pharmacovigilance",
+    body: "Continuous literature monitoring for adverse events, with the documented decision trail regulators expect.",
+  },
+  {
+    name: "Research consultancies",
+    body: "Evidence work at speed, with rigour you can defend to a client or regulator.",
+  },
+];
+
+function WhoItsFor() {
+  return (
+    <section className="py-20 px-6">
+      <div className="max-w-5xl mx-auto">
+        <p className="text-xs font-medium text-teal-light uppercase tracking-widest">
+          04 · Who it&rsquo;s for
+        </p>
+        <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
+          The teams who can&rsquo;t afford a confident mistake.
+        </h2>
+        <div className="mt-12 grid gap-5 sm:grid-cols-3">
+          {audiences.map((a) => (
+            <div
+              key={a.name}
+              className="border border-warm-gray rounded-xl p-6 hover:border-teal-light/40 transition-colors"
+            >
+              <h3 className="font-semibold text-navy">{a.name}</h3>
+              <p className="mt-3 text-sm text-text-muted leading-relaxed">
+                {a.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── 05 Research ─── */
 
 const papers = [
   {
     title: "Deference-Aware Evaluation for Human-in-the-Loop AI Systems",
-    meta: "White Paper \u00b7 May 2026 \u00b7 Hopperlace Research \u00b7 DOI: 10.17605/OSF.IO/A69YH",
-    meta2: "Accepted as a poster \u00b7 Workshop on Technical AI Governance Research (TAIGR), ICML 2026",
+    meta: "White Paper · 2026 · Hopperlace Research · DOI: 10.17605/OSF.IO/A69YH",
+    meta2: "Poster · Workshop on Technical AI Governance Research (TAIGR), ICML 2026",
     description:
-      "A framework for evaluating AI systems on their capacity to recognise the limits of their own competence and defer when appropriate, alongside standard accuracy. The paper identifies two failure modes that conventional metrics conflate — penalised conservatism and genuine confident errors — and introduces deference-aware metrics that distinguish them. A cross-domain audit of six frontier models across five medical domains (2,729 studies, 16,374 screening decisions) shows that no single model is uniformly safe, and isolates a structural class of failures that calibration, ensembling, and model scaling cannot fix. The methodology applies across domains, and systematic review screening is the first deployment.",
+      "A framework for evaluating AI systems on their capacity to recognise the limits of their own competence and defer when appropriate, alongside standard accuracy. The paper identifies two failure modes that conventional metrics conflate — penalised conservatism and genuine confident errors — and introduces deference-aware metrics that distinguish them. A cross-domain audit of six frontier models across five medical domains (2,729 studies, 16,374 screening decisions) shows that no single model is uniformly safe, and isolates a structural class of failures that calibration, ensembling, and model scaling cannot fix.",
     href: "https://osf.io/a69yh/",
     linkLabel: "Read on OSF",
   },
@@ -328,9 +387,9 @@ function Research() {
   return (
     <section id="research" className="py-20 px-6 bg-navy">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-sm font-medium text-terracotta uppercase tracking-widest">
-          Research
-        </h2>
+        <p className="text-xs font-medium text-terracotta uppercase tracking-widest">
+          05 · Research
+        </p>
         <div className="mt-8 flex flex-col gap-8">
           {papers.map((paper) => (
             <div
@@ -376,24 +435,32 @@ function Research() {
               </a>
             </div>
           ))}
+          <div className="border-l-2 border-terracotta pl-6 py-2">
+            <p className="text-base sm:text-lg text-offwhite/90 leading-relaxed">
+              &ldquo;A model&rsquo;s confident-error rate can swing more than
+              eightfold from one review to the next — which is why screening
+              needs an evaluation layer that knows when its own judgments can be
+              trusted.&rdquo;
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-/* ─── Team ─── */
+/* ─── 06 Team ─── */
 
 const team = [
   {
-    name: "Yuyu Shen",
-    role: "Founder",
-    bio: "AI product leader with a decade building production AI systems across fintech, enterprise software, and consumer technology, at Meta, Walmart, Beamery, Cleo, and others. Founded Hopperlace to close a gap that kept appearing in the work: AI gets deployed in high-stakes contexts without the evaluation infrastructure needed to know when its outputs can actually be trusted. That gap shapes how Hopperlace builds.",
-  },
-  {
     name: "Martin Walker, MPH",
     role: "Co-founder, Evidence Synthesis",
-    bio: "Background in evidence-based health improvement and systematic review evidence synthesis. Brings the passion for better public outcomes and domain experience to ensure Evidence Synthesis AI works with the right rigour and goal.",
+    bio: "Background in evidence-based health and systematic review evidence synthesis; brings the domain experience that keeps the system honest about clinical reality.",
+  },
+  {
+    name: "Yuyu Shen",
+    role: "Founder",
+    bio: "A decade building production AI across Meta, Walmart, Beamery, and Cleo; founded Hopperlace to close a gap that kept reappearing — AI deployed in high-stakes work without the means to know when its outputs can be trusted.",
   },
 ];
 
@@ -401,12 +468,12 @@ function Team() {
   return (
     <section id="team" className="py-20 px-6">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-sm font-medium text-terracotta uppercase tracking-widest">
-          Team
-        </h2>
-        <p className="mt-3 text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
-          Who we are
+        <p className="text-xs font-medium text-teal-light uppercase tracking-widest">
+          06 · Team
         </p>
+        <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
+          Who we are
+        </h2>
         <div className="mt-14 grid gap-8 sm:grid-cols-2 max-w-3xl">
           {team.map((person) => (
             <div key={person.name}>
@@ -430,6 +497,38 @@ function Team() {
   );
 }
 
+/* ─── 07 The bigger picture ─── */
+
+function BiggerPicture() {
+  return (
+    <section className="py-20 px-6 bg-warm-gray/30 border-y border-warm-gray/50">
+      <div className="max-w-3xl mx-auto">
+        <p className="text-xs font-medium text-teal-light uppercase tracking-widest">
+          07 · The bigger picture
+        </p>
+        <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
+          The bigger picture
+        </h2>
+        <p className="mt-6 text-lg sm:text-xl text-text-muted leading-relaxed">
+          Behind the product is one conviction: you should be able to see who
+          and what stands behind an AI system before you rely on it — how it
+          behaves, and who makes and backs it.
+        </p>
+        <span className="mt-6 inline-flex items-center text-xs font-medium text-terracotta bg-terracotta/10 px-2.5 py-1 rounded-full">
+          Independent · public-interest
+        </span>
+        <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed">
+          That principle is why we build evidence tools that prove their own
+          trustworthiness. It&rsquo;s also why we&rsquo;re building Value
+          Compass — an independent project that brings together what&rsquo;s
+          known about who makes and funds AI tools, and the values they operate
+          by, so people can weigh that alongside whether a tool does the job.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 /* ─── Contact ─── */
 
 function Contact() {
@@ -443,10 +542,11 @@ function Contact() {
           Get in touch
         </p>
         <p className="mt-4 text-text-muted">
-          Interested in our research or exploring collaboration?
+          Running a systematic review or pharmacovigilance team? We&rsquo;re
+          onboarding early pilots.
         </p>
         <a
-          href="mailto:hello@hopperlace.ai"
+          href="mailto:hello@hopperlace.ai?subject=Evidence%20Synthesis%20pilot"
           className="mt-6 inline-block text-lg font-medium text-navy hover:text-teal-light transition-colors"
         >
           hello@hopperlace.ai
