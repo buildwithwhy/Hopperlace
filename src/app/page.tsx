@@ -83,19 +83,17 @@ function Hero() {
           Evaluation infrastructure for AI that{" "}
           <span className="text-teal-light">can&rsquo;t afford to be wrong.</span>
         </h1>
-        <p className="mt-6 text-base sm:text-lg italic text-text-muted/80 leading-relaxed max-w-2xl">
+        <p className="mt-6 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl">
           Hopperlace builds the evaluation layer that tells you when an AI
           system&rsquo;s outputs can be trusted — and when they can&rsquo;t. Our
           first product is in life sciences, where the cost of a confident
           mistake is highest.
         </p>
-        <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl">
-          Evidence Synthesis AI screens studies the way a careful expert would —
-          deciding confidently where the call is clear, flagging the genuine
-          judgment calls for a human, and logging its reasoning for every
-          decision. Built for the teams who can&rsquo;t afford a confident
-          mistake: systematic reviewers, and the drug-safety groups monitoring
-          literature for adverse events.
+        <p className="mt-5 text-base text-text-muted/80 leading-relaxed max-w-2xl">
+          Evidence Synthesis AI screens studies the way a careful expert would.
+          Built for the teams who can&rsquo;t afford a confident mistake:
+          systematic reviewers, and the drug-safety groups monitoring literature
+          for adverse events.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
           <a
@@ -460,14 +458,14 @@ function Research() {
 
 const team = [
   {
-    name: "Martin Walker, MPH",
-    role: "Co-founder, Evidence Synthesis",
-    bio: "Background in evidence-based health and systematic review evidence synthesis; brings the domain experience that keeps the system honest about clinical reality.",
-  },
-  {
     name: "Yuyu Shen",
     role: "Founder",
     bio: "A decade building production AI in regulated industries — fintech, employment, and consumer banking. Founded Hopperlace after recurring exposure to the same gap: AI deployed in high-stakes work without evaluation infrastructure capable of distinguishing trustworthy outputs from overconfident ones. Author of the deference-aware evaluation framework; poster at ICML 2026 TAIGR workshop.",
+  },
+  {
+    name: "Martin Walker, MPH",
+    role: "Co-founder, Evidence Synthesis",
+    bio: "Background in evidence-based health and systematic review evidence synthesis; brings the domain experience that keeps the system honest about clinical reality.",
   },
 ];
 
