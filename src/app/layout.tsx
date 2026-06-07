@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const description =
-  "Trustworthy AI for high-stakes evidence review. Built on deference-aware evaluation, for systematic review teams and pharmacovigilance / drug-safety teams.";
+  "Evaluation infrastructure for AI in high-stakes domains. Built on deference-aware evaluation, starting in life sciences — systematic review teams and pharmacovigilance / drug-safety teams.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hopperlace.ai"),
-  title: "Hopperlace — Trustworthy AI for high-stakes evidence review.",
+  title: "Hopperlace — Evaluation infrastructure for AI in high-stakes domains.",
   description,
   keywords: [
     "trustworthy AI",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Hopperlace" }],
   creator: "Hopperlace",
   openGraph: {
-    title: "Hopperlace — Trustworthy AI for high-stakes evidence review.",
+    title: "Hopperlace — Evaluation infrastructure for AI in high-stakes domains.",
     description,
     url: "https://hopperlace.ai",
     siteName: "Hopperlace",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Hopperlace — Trustworthy AI for high-stakes evidence review.",
+    title: "Hopperlace — Evaluation infrastructure for AI in high-stakes domains.",
     description,
   },
   alternates: {

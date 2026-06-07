@@ -76,13 +76,20 @@ function Hero() {
     <section className="pt-36 pb-16 px-6">
       <div className="max-w-3xl mx-auto">
         <p className="text-sm font-medium text-terracotta uppercase tracking-widest">
-          Trustworthy AI for high-stakes work — starting with evidence
+          Evaluation infrastructure for AI in high-stakes domains — starting
+          with life sciences
         </p>
         <h1 className="mt-5 text-4xl sm:text-5xl font-semibold text-navy leading-tight tracking-tight">
-          Trustworthy AI for high-stakes{" "}
-          <span className="text-teal-light">evidence review.</span>
+          Evaluation infrastructure for AI that{" "}
+          <span className="text-teal-light">can&rsquo;t afford to be wrong.</span>
         </h1>
-        <p className="mt-6 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl">
+        <p className="mt-6 text-base sm:text-lg italic text-text-muted/80 leading-relaxed max-w-2xl">
+          Hopperlace builds the evaluation layer that tells you when an AI
+          system&rsquo;s outputs can be trusted — and when they can&rsquo;t. Our
+          first product is in life sciences, where the cost of a confident
+          mistake is highest.
+        </p>
+        <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl">
           Evidence Synthesis AI screens studies the way a careful expert would —
           deciding confidently where the call is clear, flagging the genuine
           judgment calls for a human, and logging its reasoning for every
@@ -460,7 +467,7 @@ const team = [
   {
     name: "Yuyu Shen",
     role: "Founder",
-    bio: "A decade building production AI across Meta, Walmart, Beamery, and Cleo; founded Hopperlace to close a gap that kept reappearing — AI deployed in high-stakes work without the means to know when its outputs can be trusted.",
+    bio: "A decade building production AI in regulated industries — fintech, employment, and consumer banking. Founded Hopperlace after recurring exposure to the same gap: AI deployed in high-stakes work without evaluation infrastructure capable of distinguishing trustworthy outputs from overconfident ones. Author of the deference-aware evaluation framework; poster at ICML 2026 TAIGR workshop.",
   },
 ];
 
@@ -504,25 +511,28 @@ function BiggerPicture() {
     <section className="py-20 px-6 bg-warm-gray/30 border-y border-warm-gray/50">
       <div className="max-w-3xl mx-auto">
         <p className="text-xs font-medium text-teal-light uppercase tracking-widest">
-          07 · The bigger picture
+          07 · Where we go next
         </p>
         <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-navy tracking-tight">
-          The bigger picture
+          Where we go next
         </h2>
         <p className="mt-6 text-lg sm:text-xl text-text-muted leading-relaxed">
-          Behind the product is one conviction: you should be able to see who
-          and what stands behind an AI system before you rely on it — how it
-          behaves, and who makes and backs it.
+          Life sciences is where we start — systematic review and
+          pharmacovigilance are the domains where calibration failures have the
+          clearest downstream cost, and where the compliance trail is
+          non-negotiable. But the evaluation problem is domain-general.
         </p>
-        <span className="mt-6 inline-flex items-center text-xs font-medium text-terracotta bg-terracotta/10 px-2.5 py-1 rounded-full">
-          Independent · public-interest
-        </span>
         <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed">
-          That principle is why we build evidence tools that prove their own
-          trustworthiness. It&rsquo;s also why we&rsquo;re building Value
-          Compass — an independent project that brings together what&rsquo;s
-          known about who makes and funds AI tools, and the values they operate
-          by, so people can weigh that alongside whether a tool does the job.
+          The same failure mode — AI that doesn&rsquo;t know the limits of its
+          own competence — appears wherever consequential decisions rest on AI
+          outputs: legal research and contract review, safety-critical
+          engineering, financial and regulatory filings. Hopperlace&rsquo;s
+          methodology was designed from the ground up to travel across these
+          domains.
+        </p>
+        <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed">
+          We&rsquo;re building the infrastructure layer first. The beachhead
+          makes it real.
         </p>
       </div>
     </section>
@@ -543,7 +553,7 @@ function Contact() {
         </p>
         <p className="mt-4 text-text-muted">
           Running a systematic review or pharmacovigilance team? We&rsquo;re
-          onboarding early pilots.
+          onboarding early pilots. Investors and partners: hello@hopperlace.ai
         </p>
         <a
           href="mailto:hello@hopperlace.ai?subject=Evidence%20Synthesis%20pilot"
