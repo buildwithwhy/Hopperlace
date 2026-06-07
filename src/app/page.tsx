@@ -8,7 +8,7 @@ const jsonLd = {
       name: "Hopperlace",
       url: "https://hopperlace.ai",
       description:
-        "Trustworthy AI for high-stakes evidence review. Serving systematic review teams and pharmacovigilance / drug-safety teams, built on deference-aware evaluation.",
+        "Evaluation infrastructure for AI in high-stakes domains, built on deference-aware evaluation. Starting in life sciences — serving systematic review teams and pharmacovigilance / drug-safety teams.",
       email: "hello@hopperlace.ai",
       founder: {
         "@type": "Person",

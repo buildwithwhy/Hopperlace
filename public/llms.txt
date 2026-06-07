@@ -1,8 +1,8 @@
 # Hopperlace
 
-> Trustworthy AI for high-stakes evidence review.
+> Evaluation infrastructure for AI in high-stakes domains.
 
-Hopperlace builds trustworthy AI for high-stakes evidence review, serving two markets: systematic review teams and pharmacovigilance / drug-safety teams monitoring literature for adverse events. The product is Evidence Synthesis AI. The spine of the product is trust and governance: deference-aware evaluation, full reasoning per decision, and a complete audit trail.
+Hopperlace builds the evaluation layer that tells you when an AI system's outputs can be trusted — and when they can't. The methodology is domain-general, and the first product is in life sciences, where the cost of a confident mistake is highest: Evidence Synthesis AI, serving systematic review teams and pharmacovigilance / drug-safety teams monitoring literature for adverse events. The spine of the product is trust and governance: deference-aware evaluation, full reasoning per decision, and a complete audit trail.
 
 ## Product: Evidence Synthesis AI
 
@@ -46,13 +46,13 @@ Key finding: a model's confident-error rate can swing more than eightfold from o
 ## Team
 
 - Martin Walker, MPH — Co-founder, Evidence Synthesis. Background in evidence-based health and systematic review evidence synthesis; brings the domain experience that keeps the system honest about clinical reality.
-- Yuyu Shen — Founder. A decade building production AI across Meta, Walmart, Beamery, and Cleo; founded Hopperlace to close a gap that kept reappearing — AI deployed in high-stakes work without the means to know when its outputs can be trusted.
+- Yuyu Shen — Founder. A decade building production AI in regulated industries — fintech, employment, and consumer banking. Founded Hopperlace after recurring exposure to the same gap: AI deployed in high-stakes work without evaluation infrastructure capable of distinguishing trustworthy outputs from overconfident ones. Author of the deference-aware evaluation framework; poster at ICML 2026 TAIGR workshop.
 
-## The bigger picture
+## Where we go next
 
-Behind the product is one conviction: you should be able to see who and what stands behind an AI system before you rely on it — how it behaves, and who makes and backs it.
+Life sciences is where we start — systematic review and pharmacovigilance are the domains where calibration failures have the clearest downstream cost, and where the compliance trail is non-negotiable. But the evaluation problem is domain-general.
 
-That principle is why Hopperlace builds evidence tools that prove their own trustworthiness. It is also why we are building Value Compass — an independent public-interest project, not a Hopperlace commercial product, that brings together what's known about who makes and funds AI tools, and the values they operate by, so people can weigh that alongside whether a tool does the job.
+The same failure mode — AI that doesn't know the limits of its own competence — appears wherever consequential decisions rest on AI outputs: legal research and contract review, safety-critical engineering, financial and regulatory filings. Hopperlace's methodology was designed from the ground up to travel across these domains. We are building the infrastructure layer first; the beachhead makes it real.
 
 ## Contact
 
