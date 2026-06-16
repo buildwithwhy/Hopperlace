@@ -2,32 +2,32 @@
 
 > Evaluation infrastructure for AI in high-stakes domains.
 
-Hopperlace builds the evaluation layer that tells you when an AI system's outputs can be trusted — and when they can't. The methodology is domain-general, and the first product is in life sciences, where the cost of a confident mistake is highest: Evidence Synthesis AI, serving systematic review teams and pharmacovigilance / drug-safety teams monitoring literature for adverse events. The spine of the product is trust and governance: deference-aware evaluation, full reasoning per decision, and a complete audit trail.
+Hopperlace tells you when an AI system's decisions can be trusted and shows you why. We start where confident mistakes carry both societal and financial costs: high-stakes evidence work in life sciences. The first product is Evidence Synthesis AI, serving systematic review teams and pharmacovigilance / drug-safety teams monitoring literature for adverse events. The spine of the product is trust and governance: deference-aware evaluation, full reasoning per decision, and a complete audit trail.
 
 ## Product: Evidence Synthesis AI
 
-Evidence Synthesis AI screens studies the way a careful expert would — deciding confidently where the call is clear, flagging the genuine judgment calls for a human, and logging its reasoning for every decision.
+Evidence Synthesis AI screens studies the way a careful expert would — decisive when it's confident, careful when it's not.
 
 How it works:
 - Handles the confident calls on its own — clear includes and excludes decided automatically where well-calibrated.
-- Surfaces only the genuine judgment calls — ambiguous studies routed to a human.
+- Surfaces only the genuine judgment calls — ambiguous decisions routed to a human.
 - Shows the reasoning behind every decision.
-- Override anything, audit everything — full log, the trail regulators expect.
+- Override anything, audit everything — the full log of human and AI decisions is auditable.
 
 - Website: https://www.evidencesynthesisai.com/
 - Status: Early pilots
 
 ## Why you can trust it
 
-Built on deference-aware evaluation. Most AI metrics reward confident answers and penalise hesitation — the wrong incentive when overconfidence carries real cost. Deference-aware evaluation measures whether a system recognises the limits of its own competence and steps back when it should. It credits considered deferral as correct, separates it from genuine confident error, and surfaces a class of failures that more data and bigger models won't fix.
-
-Validated across 6 frontier models and 5 medical domains — 2,729 studies, 16,374 screening decisions.
+Validated across 6 frontier models and 5 medical domains — 2,729 studies, 16,374 screening decisions. No single model is uniformly safe; deference-aware evaluation is how you tell which decisions to trust.
+- 45× error-rate gap between the best and worst model on their most-confident decisions — 99.7% vs 87.6% accurate.
+- 3 independent metrics that converge on the same model ranking.
 
 ## Who it's for
 
 - Systematic review teams: title-and-abstract screening without the year-long grind, with an audit trail that holds up to peer scrutiny.
-- Pharmacovigilance teams: continuous literature monitoring for adverse events, with the documented decision trail regulators expect.
-- Research consultancies: evidence work at speed, with rigour you can defend to a client or regulator.
+- Pharmacovigilance / drug-safety teams: continuous literature monitoring for adverse events, with the documented decision trails.
+- Research consultancies: evidence work at speed, with rigour you can defend to clients.
 
 ## Research
 
@@ -39,20 +39,16 @@ Validated across 6 frontier models and 5 medical domains — 2,729 studies, 16,3
 - Link: https://osf.io/a69yh/
 - Also: Poster at the Workshop on Technical AI Governance Research (TAIGR), ICML 2026
 
-A framework for evaluating AI systems on their capacity to recognise the limits of their own competence and defer when appropriate, alongside standard accuracy. Identifies two failure modes that conventional metrics conflate — penalised conservatism and genuine confident errors — and introduces deference-aware metrics that distinguish them. A cross-domain audit of six frontier models across five medical domains (2,729 studies, 16,374 screening decisions) shows that no single model is uniformly safe, and isolates a structural class of failures that calibration, ensembling, and model scaling cannot fix.
-
 Key finding: a model's confident-error rate can swing more than eightfold from one review to the next — which is why screening needs an evaluation layer that knows when its own judgments can be trusted.
 
 ## Team
 
-- Martin Walker, MPH — Co-founder, Evidence Synthesis. Background in evidence-based health and systematic review evidence synthesis; brings the domain experience that keeps the system honest about clinical reality.
 - Yuyu Shen — Founder. A decade building production AI in regulated industries — fintech, employment, and consumer banking. Founded Hopperlace after recurring exposure to the same gap: AI deployed in high-stakes work without evaluation infrastructure capable of distinguishing trustworthy outputs from overconfident ones. Author of the deference-aware evaluation framework; poster at ICML 2026 TAIGR workshop.
+- Martin Walker, MPH — Co-founder, Evidence Synthesis. Background in evidence-based health and systematic review evidence synthesis; brings the domain experience that keeps the system honest about clinical reality. Resident AI skeptic.
 
 ## Where we go next
 
-Life sciences is where we start — systematic review and pharmacovigilance are the domains where calibration failures have the clearest downstream cost, and where the compliance trail is non-negotiable. But the evaluation problem is domain-general.
-
-The same failure mode — AI that doesn't know the limits of its own competence — appears wherever consequential decisions rest on AI outputs: legal research and contract review, safety-critical engineering, financial and regulatory filings. Hopperlace's methodology was designed from the ground up to travel across these domains. We are building the infrastructure layer first; the beachhead makes it real.
+Life sciences is where we start. But the problem of AI that doesn't know the limits of its own competence appears wherever consequential decisions rest on AI outputs. Hopperlace's methodology was built to travel.
 
 ## Contact
 
