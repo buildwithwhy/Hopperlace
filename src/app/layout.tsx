@@ -4,7 +4,7 @@ import "./globals.css";
 const title = "Hopperlace — AI stack evaluation & curation";
 
 const description =
-  "Hopperlace helps organisations choose and run the right AI stack — models and tools evaluated against your actual tasks, your risk profile, and the makers behind them. Plus AI architecture support and independent benchmarks.";
+  "Hopperlace helps organisations choose and run the right AI stack — AI models and tools evaluated against your actual tasks, your risk profile, and how well your team can use them. Plus AI architecture support and independent benchmarks.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hopperlace.ai"),

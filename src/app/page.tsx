@@ -8,7 +8,7 @@ const jsonLd = {
       "@id": "https://hopperlace.ai/#organization",
       name: "Hopperlace",
       url: "https://hopperlace.ai",
-      slogan: "Most AI stacks were never evaluated. Yours can be.",
+      slogan: "Choose your AI stack on evidence. Get a system you can defend.",
       knowsAbout: [
         "AI stack evaluation",
         "AI tool curation",
@@ -23,7 +23,7 @@ const jsonLd = {
         availableLanguage: "English",
       },
       description:
-        "Hopperlace helps organisations choose and run the right AI stack — models and tools evaluated against their actual tasks, their risk profile, and the trustworthiness of the makers behind them — and supports the architecture that puts the stack together.",
+        "Hopperlace helps organisations choose and run the right AI stack — AI models and tools evaluated against their actual tasks, their risk profile, and how well their team can use them — and supports the architecture that puts the stack together.",
       email: EMAIL,
       founder: {
         "@type": "Person",
@@ -255,16 +255,16 @@ function Hero() {
         &middot; independent benchmarks
       </p>
       <h1 id="hero-title" className="mb-9 max-w-[880px] font-serif text-[40px] leading-[1.08] font-normal tracking-[-0.015em] text-pretty wide:text-[62px]">
-        Most AI stacks were never evaluated.
+        Choose your AI stack on evidence.
         <br />
-        <span className="text-muted">Yours can be.</span>
+        <span className="text-muted">Get a system you can defend.</span>
       </h1>
       <div className="grid gap-10 wide:grid-cols-2 wide:items-end wide:gap-12">
         <p className="max-w-[520px] text-[18px] leading-[1.65] text-body text-pretty">
           Hopperlace helps organisations choose and run the right AI stack
-          &mdash; models and tools evaluated against your actual tasks, your
-          risk profile, and the trustworthiness of the makers behind them. Then
-          we help you put it together properly.
+          &mdash; AI models and tools evaluated against your actual tasks, your
+          risk profile, and how well your team can use them. Then we help you
+          put it all together properly.
         </p>
         <div className="flex flex-wrap items-center gap-3.5 wide:justify-self-end">
           <a
@@ -465,9 +465,10 @@ function Grounding() {
       <p className={label}>06 / GROUNDING</p>
       <div className="grid max-w-[680px] gap-8">
         <p className="font-serif text-[22px] leading-[1.55] font-normal text-ink text-pretty">
-          Our method comes from published research. The founder&rsquo;s work on
-          deference-aware evaluation was accepted at ICML&rsquo;s Technical AI
-          Governance workshop, 2026.
+          We hold our own work to research standards. The founder&rsquo;s
+          research on deference-aware evaluation was accepted at ICML&rsquo;s
+          Technical AI Governance workshop, 2026 &mdash; the evaluation method
+          we use here is held to the same rigor.
         </p>
         <div className="grid gap-8 text-[15px] leading-[1.6] text-body wide:grid-cols-2 wide:gap-12">
           <p>

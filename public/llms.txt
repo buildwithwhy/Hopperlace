@@ -1,8 +1,8 @@
 # Hopperlace
 
-> Most AI stacks were never evaluated. Yours can be.
+> Choose your AI stack on evidence. Get a system you can defend.
 
-Hopperlace helps organisations choose and run the right AI stack — models and tools evaluated against your actual tasks, your risk profile, and the trustworthiness of the makers behind them. Then we help you put it together properly.
+Hopperlace helps organisations choose and run the right AI stack — AI models and tools evaluated against your actual tasks, your risk profile, and how well your team can use them. Then we help you put it all together properly.
 
 Focus: AI stack evaluation & curation · AI architecture support · independent benchmarks.
 
@@ -39,7 +39,7 @@ We're building the benchmarks we wished existed: independent, task-grounded eval
 
 ## Grounding
 
-Our method comes from published research. The founder's work on deference-aware evaluation was accepted at ICML's Technical AI Governance workshop, 2026.
+We hold our own work to research standards. The founder's research on deference-aware evaluation was accepted at ICML's Technical AI Governance workshop, 2026 — the evaluation method we use here is held to the same rigor.
 
 ### Deference-Aware Evaluation for Human-in-the-Loop AI Systems
 - Author: Yuyu Shen

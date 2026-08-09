@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
 export const alt =
-  "Hopperlace — Most AI stacks were never evaluated. Yours can be.";
+  "Hopperlace — Choose your AI stack on evidence. Get a system you can defend.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -53,10 +53,10 @@ export default async function OpengraphImage() {
           }}
         >
           <div style={{ display: "flex" }}>
-            Most AI stacks were never evaluated.
+            Choose your AI stack on evidence.
           </div>
           <div style={{ display: "flex", color: "#767d83" }}>
-            Yours can be.
+            Get a system you can defend.
           </div>
         </div>
 
