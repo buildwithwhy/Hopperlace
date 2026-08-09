@@ -26,7 +26,7 @@
   --breakpoint-wide: 820px;
 }
 
-/* Base layer, so colour utilities on links still win. */
+/* Base layer, so color utilities on links still win. */
 @layer base {
   html {
     scroll-behavior: smooth;

@@ -23,7 +23,7 @@ const jsonLd = {
         availableLanguage: "English",
       },
       description:
-        "Hopperlace helps organisations choose and run the right AI stack — AI models and tools evaluated against their actual tasks, their risk profile, and how well their team can use them — and supports the architecture that puts the stack together.",
+        "Hopperlace helps organizations choose and run the right AI stack — AI models and tools evaluated against their actual tasks, their risk profile, and how well their team can use them — and supports the architecture that puts the stack together.",
       email: EMAIL,
       founder: {
         "@type": "Person",
@@ -38,7 +38,7 @@ const jsonLd = {
             "@type": "Service",
             name: "AI stack evaluation & curation",
             description:
-              "Evaluation of an existing AI stack against what an organisation actually needs, or curation of a new one from its tasks. Every recommendation rests on evaluation, not vendor claims.",
+              "Evaluation of an existing AI stack against what an organization actually needs, or curation of a new one from its tasks. Every recommendation rests on evaluation, not vendor claims.",
           },
         },
         {
@@ -83,7 +83,7 @@ const jsonLd = {
         value: "10.17605/OSF.IO/A69YH",
       },
       description:
-        "A framework for evaluating AI systems on their capacity to recognise the limits of their own competence and defer when appropriate, alongside standard accuracy. Accepted at the Technical AI Governance workshop, ICML 2026. The method underpins Hopperlace's evaluation practice.",
+        "A framework for evaluating AI systems on their capacity to recognize the limits of their own competence and defer when appropriate, alongside standard accuracy. Accepted at the Technical AI Governance workshop, ICML 2026. The method underpins Hopperlace's evaluation practice.",
     },
   ],
 };
@@ -147,7 +147,7 @@ const criteria = [
     heading: "Trust & reliability",
     body: (
       <>
-        Consistent behaviour under pressure. Systems that know their limits and
+        Consistent behavior under pressure. Systems that know their limits and
         hand off well &mdash; from makers with a record worth trusting.
       </>
     ),
@@ -261,7 +261,7 @@ function Hero() {
       </h1>
       <div className="grid gap-10 wide:grid-cols-2 wide:items-end wide:gap-12">
         <p className="max-w-[520px] text-[18px] leading-[1.65] text-body text-pretty">
-          Hopperlace helps organisations choose and run the right AI stack
+          Hopperlace helps organizations choose and run the right AI stack
           &mdash; AI models and tools evaluated against your actual tasks, your
           risk profile, and how well your team can use them. Then we help you
           put it all together properly.
@@ -481,7 +481,7 @@ function Grounding() {
           </p>
           <p>
             Hopperlace is a product company that starts with service. We also
-            build{" "}
+            built{" "}
             <a
               href="https://www.evidencesynthesisai.com/"
               className="text-accent underline underline-offset-2"

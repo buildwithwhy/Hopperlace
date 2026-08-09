@@ -2,7 +2,7 @@
 
 > Choose your AI stack on evidence. Get a system you can defend.
 
-Hopperlace helps organisations choose and run the right AI stack — AI models and tools evaluated against your actual tasks, your risk profile, and how well your team can use them. Then we help you put it all together properly.
+Hopperlace helps organizations choose and run the right AI stack — AI models and tools evaluated against your actual tasks, your risk profile, and how well your team can use them. Then we help you put it all together properly.
 
 Focus: AI stack evaluation & curation · AI architecture support · independent benchmarks.
 
@@ -25,7 +25,7 @@ Choosing right is half the work. We help with the other half — architecture, i
 ## Method: what every candidate is evaluated against
 
 1. Task-specific capability — performance measured on the work you actually do, not someone else's benchmark or a leaderboard average.
-2. Trust & reliability — consistent behaviour under pressure. Systems that know their limits and hand off well, from makers with a record worth trusting.
+2. Trust & reliability — consistent behavior under pressure. Systems that know their limits and hand off well, from makers with a record worth trusting.
 3. User experience — a stack your people will actually use well: clear, low-friction, and honest about what it's doing.
 
 ## Product: independent benchmarks, as a platform (in development)
@@ -54,7 +54,7 @@ We hold our own work to research standards. The founder's research on deference-
 
 ### Other work
 
-Hopperlace is a product company that starts with service. We also build Evidence Synthesis AI (https://www.evidencesynthesisai.com/), an AI screening product for systematic review and pharmacovigilance.
+Hopperlace is a product company that starts with service. We also built Evidence Synthesis AI (https://www.evidencesynthesisai.com/), an AI screening product for systematic review and pharmacovigilance.
 
 ## Contact
 

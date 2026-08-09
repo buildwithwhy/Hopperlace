@@ -50,7 +50,7 @@ Base element styles (`html`, `body`, `a`) in `globals.css` **must stay inside `@
 
 - Import alias `@/*` maps to `src/*` (e.g. `@/lib/links`).
 - Use HTML entities for apostrophes/quotes/dashes in JSX text (`&rsquo;`, `&ldquo;`, `&mdash;`) — existing copy does this throughout.
-- Copy uses British spelling (`organisations`, `behaviour`).
+- Copy uses US spelling (`organizations`, `behavior`, `recognize`). The design handoff in `design_handoff_hopperlace_landing/` is British throughout — convert when lifting copy from it.
 
 ## Design handoff
 
