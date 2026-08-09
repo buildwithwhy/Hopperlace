@@ -1,29 +1,31 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const title = "Hopperlace — AI stack evaluation & curation";
+
 const description =
-  "Evaluation infrastructure for AI in high-stakes domains. Built on deference-aware evaluation, starting in life sciences — systematic review teams and pharmacovigilance / drug-safety teams.";
+  "Hopperlace helps organisations choose and run the right AI stack — models and tools evaluated against your actual tasks, your risk profile, and the makers behind them. Plus AI architecture support and independent benchmarks.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hopperlace.ai"),
-  title: "Hopperlace — Evaluation infrastructure for AI in high-stakes domains.",
+  title,
   description,
   keywords: [
-    "trustworthy AI",
-    "evidence review",
-    "systematic review",
-    "pharmacovigilance",
-    "drug safety",
-    "literature monitoring",
-    "deference-aware evaluation",
-    "human-in-the-loop AI",
+    "AI stack evaluation",
+    "AI tool curation",
+    "AI architecture support",
+    "independent AI benchmarks",
     "AI evaluation",
-    "AI trust",
+    "AI procurement",
+    "model selection",
+    "deference-aware evaluation",
+    "trustworthy AI",
+    "AI strategy consulting",
   ],
   authors: [{ name: "Hopperlace" }],
   creator: "Hopperlace",
   openGraph: {
-    title: "Hopperlace — Evaluation infrastructure for AI in high-stakes domains.",
+    title,
     description,
     url: "https://hopperlace.ai",
     siteName: "Hopperlace",
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Hopperlace — Evaluation infrastructure for AI in high-stakes domains.",
+    title,
     description,
   },
   alternates: {
@@ -59,7 +61,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
       </head>

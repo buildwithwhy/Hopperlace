@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# Plain-text summary of this site, structured for LLMs
+# https://hopperlace.ai/llms.txt
+
 Sitemap: https://hopperlace.ai/sitemap.xml
