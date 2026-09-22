@@ -565,8 +565,8 @@ function Founder() {
           >
             Evidence Synthesis AI
           </a>
-          , a tool for screening research literature that refers uncertain
-          cases to human reviewers. Her research on deference-aware evaluation
+          , which helps research teams use AI to screen studies for
+          systematic reviews. Her research on deference-aware evaluation
           was accepted at the ICML
           2026 Technical AI Governance workshop. She holds CCA-F and CCA-P
           certifications and writes about technology, agency and better
