@@ -3,9 +3,18 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
 export const alt =
-  "Hopperlace — Choose your AI stack on evidence. Get a system you can defend.";
+  "Hopperlace — Choose AI for what you want to do, and what matters to you.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+
+/* Satori can't read the Tailwind theme, so the palette is repeated here. `ink`
+   and `paper` are the theme tokens; the two greys are the warm equivalents of
+   `muted` and `rule` at the contrast this dark card needs. Keep them in step
+   with the `@theme` block in globals.css. */
+const ink = "#1b1a18";
+const paper = "#f4f2ed";
+const mutedOnInk = "#8e8a82";
+const ruleOnInk = "#3a3833";
 
 const font = (file: string) =>
   readFile(join(process.cwd(), "src/app/fonts", file));
@@ -26,8 +35,8 @@ export default async function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#16181a",
-          color: "#f6f7f7",
+          backgroundColor: ink,
+          color: paper,
           padding: 72,
           fontFamily: "Source Serif 4",
         }}
@@ -49,14 +58,12 @@ export default async function OpengraphImage() {
             flexDirection: "column",
             fontSize: 58,
             lineHeight: 1.08,
-            letterSpacing: "-0.015em",
+            letterSpacing: "-0.02em",
           }}
         >
-          <div style={{ display: "flex" }}>
-            Choose your AI stack on evidence.
-          </div>
-          <div style={{ display: "flex", color: "#767d83" }}>
-            Get a system you can defend.
+          <div style={{ display: "flex" }}>Choose AI for what you want to do</div>
+          <div style={{ display: "flex", color: mutedOnInk }}>
+            &mdash; and what matters to you.
           </div>
         </div>
 
@@ -65,7 +72,7 @@ export default async function OpengraphImage() {
             style={{
               display: "flex",
               height: 1,
-              backgroundColor: "#3a3f44",
+              backgroundColor: ruleOnInk,
               marginBottom: 22,
             }}
           />
@@ -77,12 +84,11 @@ export default async function OpengraphImage() {
               fontWeight: 500,
               fontSize: 17,
               letterSpacing: "0.12em",
-              color: "#8b9298",
+              color: mutedOnInk,
             }}
           >
             <div style={{ display: "flex" }}>
-              AI STACK EVALUATION &amp; CURATION &middot; AI ARCHITECTURE
-              SUPPORT
+              INDEPENDENT TESTING &middot; COMPARISON &middot; INFORMED CHOICE
             </div>
             <div style={{ display: "flex" }}>HOPPERLACE.AI</div>
           </div>

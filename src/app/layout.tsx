@@ -1,26 +1,26 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const title = "Hopperlace — AI stack evaluation & curation";
+const title = "Hopperlace — AI tool comparison & values-based choice";
 
 const description =
-  "Hopperlace helps organizations choose and run the right AI stack — AI models and tools evaluated against your actual tasks, your risk profile, and how well your team can use them. Plus AI architecture support and independent benchmarks.";
+  "Hopperlace is building a better way to compare what AI tools can do, what they're like to use, and how they fit your values. Explore the values side today with ValueCompass; comparisons of tool capabilities and experience are in development.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hopperlace.ai"),
   title,
   description,
   keywords: [
-    "AI stack evaluation",
-    "AI tool curation",
-    "AI architecture support",
-    "independent AI benchmarks",
+    "AI tool comparison",
+    "compare AI tools",
+    "independent AI testing",
+    "values-based AI choice",
+    "ValueCompass",
     "AI evaluation",
-    "AI procurement",
+    "AI app builder comparison",
     "model selection",
     "deference-aware evaluation",
     "trustworthy AI",
-    "AI strategy consulting",
   ],
   authors: [{ name: "Hopperlace" }],
   creator: "Hopperlace",
