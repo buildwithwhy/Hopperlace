@@ -48,7 +48,7 @@ Three questions worth asking of any AI tool.
 
 Hopperlace was founded by Yuyu Shen, a statistically trained data scientist turned product manager with nearly a decade building and evaluating AI systems, including taking AI products from zero to one.
 
-Her research on deference-aware evaluation was accepted at the ICML 2026 Technical AI Governance workshop. She holds CCA-F and CCA-P certifications and writes about technology, agency and better decisions at https://buildwithwhy.com.
+She also built Evidence Synthesis AI (https://www.evidencesynthesisai.com/), a tool for screening research literature that refers uncertain cases to human reviewers. Her research on deference-aware evaluation was accepted at the ICML 2026 Technical AI Governance workshop. She holds CCA-F and CCA-P certifications and writes about technology, agency and better decisions at https://buildwithwhy.com.
 
 ### Deference-Aware Evaluation for Human-in-the-Loop AI Systems
 - Author: Yuyu Shen

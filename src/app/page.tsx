@@ -2,6 +2,7 @@ import Image from "next/image";
 import {
   BUILDWITHWHY_URL,
   EMAIL,
+  EVIDENCE_SYNTHESIS_URL,
   MAIL_HREF,
   VALUECOMPASS_URL,
 } from "@/lib/links";
@@ -36,7 +37,7 @@ const jsonLd = {
         name: "Yuyu Shen",
         jobTitle: "Founder",
       },
-      sameAs: [VALUECOMPASS_URL, BUILDWITHWHY_URL],
+      sameAs: [VALUECOMPASS_URL, BUILDWITHWHY_URL, EVIDENCE_SYNTHESIS_URL],
       makesOffer: [
         {
           "@type": "Offer",
@@ -557,7 +558,16 @@ function Founder() {
           zero to one.
         </p>
         <p className="text-[15px] leading-[1.6] text-body text-pretty">
-          Her research on deference-aware evaluation was accepted at the ICML
+          She also built{" "}
+          <a
+            href={EVIDENCE_SYNTHESIS_URL}
+            className="text-accent underline underline-offset-2"
+          >
+            Evidence Synthesis AI
+          </a>
+          , a tool for screening research literature that refers uncertain
+          cases to human reviewers. Her research on deference-aware evaluation
+          was accepted at the ICML
           2026 Technical AI Governance workshop. She holds CCA-F and CCA-P
           certifications and writes about technology, agency and better
           decisions at{" "}
