@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>@container (max-width: 860px){#top{grid-template-columns:minmax(0,1fr) !important}#hero-visual{border-left:0 !important;border-top:1px solid #1b1a18}}@container (max-width: 760px){#vc-card{grid-template-columns:minmax(0,1fr) !important}#vc-card > div + div{border-left:0 !important;border-top:1px solid #d5d1c8}#vc-preview{display:none !important}#vc-preview-m{display:block !important}}body{margin:0;background:#f4f2ed;font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased}a{color:oklch(0.45 0.09 250)}a:hover{opacity:.8}html{scroll-behavior:smooth}</style>
+</helmet>
+<div style="--paper:#f4f2ed;--tint:#ebe8e1;--panel:#fbfaf7;--ink:#1b1a18;--body:#4a4742;--muted:#75716a;--rule:#d5d1c8;--blue:oklch(0.45 0.09 250);--bluetint:oklch(0.93 0.025 250);--amber:oklch(0.45 0.09 70);--serif:'Source Serif 4',Georgia,serif;--sans:'IBM Plex Sans',sans-serif;--mono:'IBM Plex Mono',monospace;--g:clamp(20px,3.5cqw,48px);background:var(--paper);color:var(--ink);min-height:100vh;container-type:inline-size" data-screen-label="Hopperlace — consolidated homepage">
+
+  <header style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;padding:16px var(--g);border-bottom:1px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:10">
+    <a href="#top" style="text-decoration:none;color:var(--ink);font:600 19px var(--serif);letter-spacing:.01em;flex:1;white-space:nowrap">Hopperlace</a>
+    <nav style="display:flex;flex-wrap:wrap;gap:6px 22px;font:500 13px var(--sans)">
+      <a href="#valuecompass" style="text-decoration:none;color:var(--body)">ValueCompass</a>
+      <a href="#lab" style="text-decoration:none;color:var(--body)">What we’re building</a>
+      <a href="#approach" style="text-decoration:none;color:var(--body)">Approach</a>
+      <a href="Services.dc.html" style="text-decoration:none;color:var(--body)">Services</a>
+    </nav>
+    <a href="https://valuecompass.ai" style="text-decoration:none;font:500 13px var(--sans);color:var(--paper);background:var(--ink);padding:9px 16px;white-space:nowrap">Try ValueCompass ↗</a>
+  </header>
+
+  <section id="top" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:1px solid var(--ink)">
+    <div style="padding:clamp(48px,6cqw,88px) var(--g) clamp(40px,5cqw,64px);min-width:0">
+      <p style="margin:0 0 24px;font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--blue)">Independent testing · Comparison · Informed choice</p>
+      <h1 style="margin:0 0 24px;font:400 clamp(36px,4.4cqw,58px)/1.06 var(--serif);letter-spacing:-.02em;max-width:16ch;text-wrap:pretty">Choose AI for what you want to do — and what matters to you.</h1>
+      <p style="margin:0 0 14px;font:400 clamp(16px,1.4cqw,19px)/1.6 var(--sans);color:var(--body);max-width:50ch;text-wrap:pretty">We’re building Hopperlace to help you compare what AI tools can do, what they’re like to use, and how they fit your values.</p>
+      <p style="margin:0 0 28px;font:400 clamp(16px,1.4cqw,19px)/1.6 var(--sans);color:var(--body);max-width:50ch;text-wrap:pretty">Explore the values side today with ValueCompass. Comparisons of tool capabilities and experience are in development.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+        <a href="https://valuecompass.ai" style="text-decoration:none;font:500 15px var(--sans);color:var(--paper);background:var(--blue);padding:15px 26px">Try ValueCompass ↗</a>
+        <a href="#lab" style="text-decoration:none;font:500 15px var(--sans);color:var(--ink);border:1px solid var(--ink);padding:14px 26px">What we’re building ↓</a>
+      </div>
+    </div>
+    <div id="hero-visual" style="border-left:1px solid var(--ink);background:var(--tint);padding:clamp(20px,3cqw,36px) clamp(16px,2.5cqw,36px);min-width:0;display:grid;align-content:center">
+      <div style="border:1px solid var(--ink);background:var(--panel);min-width:0">
+        <div style="display:flex;justify-content:space-between;gap:12px;padding:10px 16px;border-bottom:1px solid var(--ink);font:500 11px var(--mono);letter-spacing:.1em"><span>VALUECOMPASS · VALUES-BASED COMPARISON</span><span style="color:var(--blue)">● LIVE</span></div>
+        <a href="assets/vc-01-choosing-priorities.png" target="_blank" rel="noopener" title="Open the full capture" style="display:block;min-width:0;background:#f8fafc"><img src="assets/vc-hero-priorities-v3.png" alt="ValueCompass: the question “Who am I empowering with this choice?” with two preferences ticked — a foundation or non-profit holds control of the company, and a public-purpose body has a documented economic stake or revenue share" style="display:block;width:100%;height:auto"></a>
+      </div>
+      <p style="margin:10px 0 0;font:400 12px/1.5 var(--sans);color:var(--muted)">Choosing priorities on valuecompass.ai, 22 Sep 2026. <a href="assets/vc-01-choosing-priorities.png" target="_blank" rel="noopener" style="color:var(--muted);text-underline-offset:2px">Open the full capture</a>.</p>
+    </div>
+  </section>
+
+  <section id="valuecompass" style="border-bottom:1px solid var(--ink);scroll-margin-top:60px">
+    <div style="padding:28px var(--g) 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;align-items:baseline">
+      <p style="margin:0;font:500 12px var(--mono);letter-spacing:.12em;color:var(--blue)">01 / VALUECOMPASS</p>
+      <p style="margin:0;font:400 13px var(--sans);color:var(--muted)">Opens valuecompass.ai. No account needed.</p>
+    </div>
+    <div style="padding:20px var(--g) clamp(32px,4cqw,48px)">
+      <article id="vc-card" style="border:1px solid var(--ink);background:var(--panel);display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);min-width:0">
+        <div style="padding:clamp(24px,3cqw,36px) clamp(18px,2.5cqw,32px);min-width:0;display:grid;align-content:center">
+          <h2 style="margin:0 0 14px;font:400 clamp(24px,2.4cqw,30px)/1.2 var(--serif);letter-spacing:-.015em;text-wrap:pretty">Explore the values behind your AI choices.</h2>
+          <p style="margin:0 0 12px;font:400 15px/1.6 var(--sans);color:var(--body);text-wrap:pretty">Who benefits from the money you spend on AI? What commitments do providers make to the people affected by their technology?</p>
+          <p style="margin:0 0 22px;font:400 15px/1.6 var(--sans);color:var(--body);text-wrap:pretty">ValueCompass helps you examine the companies behind AI products and compare options against your values. Explore ownership, control and documented commitments, with sources and clear gaps in the research.</p>
+          <a href="https://valuecompass.ai" style="justify-self:start;text-decoration:none;font:500 14px var(--sans);color:var(--paper);background:var(--blue);padding:12px 20px">Try ValueCompass ↗</a>
+        </div>
+        <div style="padding:clamp(16px,2cqw,24px) clamp(16px,2cqw,24px);background:var(--tint);border-left:1px solid var(--rule);min-width:0;display:grid;align-content:center;gap:10px">
+          <a href="assets/vc-03-evidence-on-the-cards.png" target="_blank" rel="noopener" style="position:relative;display:block;min-width:0;border:1px solid var(--rule);background:#f8fafc;text-decoration:none;color:var(--ink)">
+            <img id="vc-preview" src="assets/vc-cards-crop.png" alt="ValueCompass option cards for ChatGPT and Claude. Each shows who gets paid and what it runs on, documented alignment on nonprofit control with source links, and for Claude a separate ‘What we could not check’ note on the economic-stake question" style="display:block;width:100%;height:auto;max-height:440px;object-fit:contain;object-position:top;background:#f8fafc"><img id="vc-preview-m" src="assets/vc-card-claude.png" alt="ValueCompass option card for Claude: who gets paid and what it runs on, documented alignment on nonprofit control, and a separate ‘What we could not check’ note on the economic-stake question" style="display:none;width:100%;height:auto;background:#f8fafc">
+            <span style="position:absolute;right:10px;bottom:10px;font:500 12px var(--sans);color:var(--paper);background:var(--ink);padding:7px 12px;display:inline-flex;align-items:center;gap:6px;min-height:32px">View example ↗</span>
+          </a>
+          <p style="margin:0;font:400 13px/1.5 var(--sans);color:var(--body)">An example comparing nonprofit control and financial interests. Confirmed findings and unanswered questions appear separately.</p>
+          <p style="margin:0;font:400 12px/1.5 var(--sans);color:var(--muted)">Two of thirteen options shown; one on small screens. Full captures: <a href="assets/vc-02-seeing-the-advice.png" target="_blank" rel="noopener" style="color:var(--muted);text-underline-offset:2px">summary of what was found</a> · <a href="assets/vc-03-evidence-on-the-cards.png" target="_blank" rel="noopener" style="color:var(--muted);text-underline-offset:2px">evidence on the cards</a>.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="lab" style="border-bottom:1px solid var(--ink);background:var(--tint);scroll-margin-top:60px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr))">
+      <div style="padding:clamp(40px,5cqw,64px) var(--g)">
+        <p style="margin:0 0 20px;font:500 12px var(--mono);letter-spacing:.12em;color:var(--amber)">02 / WHAT WE’RE BUILDING — IN DEVELOPMENT</p>
+        <h2 style="margin:0 0 16px;font:400 clamp(28px,3cqw,38px)/1.2 var(--serif);letter-spacing:-.015em;max-width:22ch;text-wrap:pretty">Repeatable tests of AI tools on real tasks.</h2>
+        <p style="margin:0 0 14px;font:400 16px/1.65 var(--sans);color:var(--body);max-width:54ch;text-wrap:pretty">We’re developing repeatable tests of AI tools, starting with AI app builders. Each comparison will use the same tasks across several tools, with multiple runs to examine how results vary. We’ll combine automated tests with hands-on review to examine both the output and the experience of using each tool.</p>
+        <p style="margin:0;font:400 16px/1.65 var(--sans);color:var(--body);max-width:54ch;text-wrap:pretty">The aim is to bring these comparisons together with ValueCompass, so you can consider practical fit and values in the same decision.</p>
+      </div>
+      <div style="border-left:1px solid var(--ink);padding:clamp(28px,4cqw,48px) var(--g);display:grid;align-content:center;gap:10px;min-width:0">
+        <p style="margin:0;font:500 11px var(--mono);letter-spacing:.12em;color:var(--muted)">WHAT EACH COMPARISON WILL EXAMINE</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px">
+          <div style="border:1px solid var(--ink);background:var(--panel);padding:16px 18px;min-width:0">
+            <p style="margin:0 0 8px;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muted)">RESULTS</p>
+            <h3 style="margin:0 0 6px;font:500 18px/1.3 var(--serif)">Does it work?</h3>
+            <p style="margin:0;font:400 14px/1.5 var(--sans);color:var(--body);text-wrap:pretty">Does the output do what the task asked?</p>
+          </div>
+          <div style="border:1px solid var(--ink);background:var(--panel);padding:16px 18px;min-width:0">
+            <p style="margin:0 0 8px;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muted)">FIXES</p>
+            <h3 style="margin:0 0 6px;font:500 18px/1.3 var(--serif)">What needs fixing?</h3>
+            <p style="margin:0;font:400 14px/1.5 var(--sans);color:var(--body);text-wrap:pretty">What errors occur, and how many attempts does it take to resolve them?</p>
+          </div>
+          <div style="border:1px solid var(--ink);background:var(--panel);padding:16px 18px;min-width:0">
+            <p style="margin:0 0 8px;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muted)">TIME</p>
+            <h3 style="margin:0 0 6px;font:500 18px/1.3 var(--serif)">How long does it take?</h3>
+            <p style="margin:0;font:400 14px/1.5 var(--sans);color:var(--body);text-wrap:pretty">Time from the initial instructions to a usable result.</p>
+          </div>
+          <div style="border:1px solid var(--ink);background:var(--panel);padding:16px 18px;min-width:0">
+            <p style="margin:0 0 8px;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muted)">COST</p>
+            <h3 style="margin:0 0 6px;font:500 18px/1.3 var(--serif)">What does it cost?</h3>
+            <p style="margin:0;font:400 14px/1.5 var(--sans);color:var(--body);text-wrap:pretty">The cost of completing the task, including retries.</p>
+          </div>
+          <div style="border:1px solid var(--ink);background:var(--panel);padding:16px 18px;min-width:0">
+            <p style="margin:0 0 8px;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muted)">ASSISTANCE</p>
+            <h3 style="margin:0 0 6px;font:500 18px/1.3 var(--serif)">How much help does it need?</h3>
+            <p style="margin:0;font:400 14px/1.5 var(--sans);color:var(--body);text-wrap:pretty">The guidance and technical knowledge needed to reach a useful result.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach" style="padding:clamp(40px,5cqw,64px) var(--g);border-bottom:1px solid var(--ink);scroll-margin-top:60px">
+    <p style="margin:0 0 14px;font:500 12px var(--mono);letter-spacing:.12em;color:var(--blue)">03 / HOW WE APPROACH A CHOICE</p>
+    <h2 style="margin:0 0 36px;font:400 clamp(28px,3cqw,38px)/1.2 var(--serif);letter-spacing:-.015em;max-width:26ch;text-wrap:pretty">Three questions worth asking of any AI tool.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px">
+      <div style="border:1px solid var(--ink);background:var(--panel);padding:22px 20px">
+        <p style="margin:0 0 14px;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muted)">TASK</p>
+        <h3 style="margin:0 0 10px;font:500 21px/1.3 var(--serif)">Can it do the task?</h3>
+        <p style="margin:0;font:400 15px/1.6 var(--sans);color:var(--body);text-wrap:pretty">A tool’s strengths need to match the work you want to do.</p>
+      </div>
+      <div style="border:1px solid var(--ink);background:var(--panel);padding:22px 20px">
+        <p style="margin:0 0 14px;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muted)">EXPERIENCE</p>
+        <h3 style="margin:0 0 10px;font:500 21px/1.3 var(--serif)">What is it like to use?</h3>
+        <p style="margin:0;font:400 15px/1.6 var(--sans);color:var(--body);text-wrap:pretty">The setup and effort involved need to suit your skills and how you work.</p>
+      </div>
+      <div style="border:1px solid var(--ink);background:var(--panel);padding:22px 20px">
+        <p style="margin:0 0 14px;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muted)">VALUES</p>
+        <h3 style="margin:0 0 10px;font:500 21px/1.3 var(--serif)">Does it fit what matters to you?</h3>
+        <p style="margin:0;font:400 15px/1.6 var(--sans);color:var(--body);text-wrap:pretty">Your choice also supports the companies behind the tools, with their ownership, practices and commitments.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="founder" style="padding:clamp(40px,5cqw,64px) var(--g);border-bottom:1px solid var(--ink);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:24px var(--g)">
+    <div>
+      <p style="margin:0 0 20px;font:500 12px var(--mono);letter-spacing:.12em;color:var(--blue)">04 / FOUNDER</p>
+      <img src="assets/yuyu-shen.jpg" alt="Yuyu Shen" style="display:block;width:112px;height:112px;object-fit:cover;border:1px solid var(--ink)">
+    </div>
+    <div style="grid-column:span 2;display:grid;gap:18px;max-width:680px">
+      <p style="margin:0;font:400 clamp(19px,1.9cqw,23px)/1.5 var(--serif);text-wrap:pretty">Hopperlace was founded by <strong style="font-weight:600">Yuyu Shen</strong>, a statistically trained data scientist turned product manager with nearly a decade building and evaluating AI systems, including taking AI products from zero to one.</p>
+      <p style="margin:0;font:400 15px/1.6 var(--sans);color:var(--body);text-wrap:pretty">Her research on deference-aware evaluation was accepted at the ICML 2026 Technical AI Governance workshop. She holds CCA-F and CCA-P certifications and writes about technology, agency and better decisions at <a href="https://buildwithwhy.com" style="text-underline-offset:2px">buildwithwhy.com</a>.</p>
+    </div>
+  </section>
+
+  <section style="padding:clamp(28px,4cqw,44px) var(--g);border-bottom:1px solid var(--ink);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px var(--g);align-items:center">
+    <div>
+      <h2 style="margin:0 0 6px;font:400 clamp(22px,2.4cqw,28px)/1.3 var(--serif);letter-spacing:-.01em">Have a specific AI decision to make?</h2>
+      <p style="margin:0;font:400 15px/1.55 var(--sans);color:var(--body)">Hopperlace works with teams to compare options, test promising approaches and recommend what to use, build or investigate next.</p>
+    </div>
+    <a href="Services.dc.html" style="justify-self:start;text-decoration:none;font:500 15px var(--sans);color:var(--ink);border:1px solid var(--ink);padding:14px 24px">Services →</a>
+  </section>
+
+  <footer style="padding:28px var(--g) 40px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font:400 13px/1.5 var(--sans);color:var(--muted)">
+    <span>© 2026 Hopperlace · Independent. No placement fees, no sponsored results.</span>
+    <div style="display:flex;flex-wrap:wrap;gap:20px"><a href="https://valuecompass.ai" style="color:var(--muted);text-underline-offset:2px">valuecompass.ai</a><a href="https://buildwithwhy.com" style="color:var(--muted);text-underline-offset:2px">buildwithwhy.com</a><a href="mailto:hello@hopperlace.ai" style="color:var(--muted);text-underline-offset:2px">hello@hopperlace.ai</a></div>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>

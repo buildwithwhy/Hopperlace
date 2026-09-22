@@ -1,45 +1,54 @@
 # Hopperlace
 
-> Choose your AI stack on evidence. Get a system you can defend.
+> Choose AI for what you want to do — and what matters to you.
 
-Hopperlace helps organizations choose and run the right AI stack — AI models and tools evaluated against your actual tasks, your risk profile, and how well your team can use them. Then we help you put it all together properly.
+We're building Hopperlace to help you compare what AI tools can do, what they're like to use, and how they fit your values.
 
-Focus: AI stack evaluation & curation · AI architecture support · independent benchmarks.
+Explore the values side today with ValueCompass. Comparisons of tool capabilities and experience are in development.
 
-## The problem
+Focus: independent testing · comparison · informed choice.
 
-Hype, defaults, and vendor claims don't lead to the best AI stacks.
+## ValueCompass — available now (https://valuecompass.ai)
 
-The explosion of AI models and tools has outrun anyone's ability to evaluate them — so most AI stacks get chosen by chance and marketing. An evaluation asks hard questions: does this work on your tasks, within your risk profile, and can your team use it effectively?
+Explore the values behind your AI choices.
 
-## Services
+Who benefits from the money you spend on AI? What commitments do providers make to the people affected by their technology?
 
-### AI stack evaluation & curation — one discipline: evaluate, then curate
+ValueCompass helps you examine the companies behind AI products and compare options against your values. Explore ownership, control and documented commitments, with sources and clear gaps in the research.
 
-Most stacks grew by accretion — tools adopted over the years with no coherent strategy. We look at what you have against what you actually need: does each piece fit, is there something better, and what has to change. No stack yet? We start from your tasks and curate one. Either way, every recommendation rests on evaluation, not vendor claims.
+Opens valuecompass.ai. No account needed.
 
-### AI architecture support — put together to work as a whole
+## What we're building — in development
 
-Choosing right is half the work. We help with the other half — architecture, integration, and the handoffs between models, tools, and people — so the stack works as a system, not a pile of subscriptions.
+Repeatable tests of AI tools on real tasks.
 
-## Method: what every candidate is evaluated against
+We're developing repeatable tests of AI tools, starting with AI app builders. Each comparison will use the same tasks across several tools, with multiple runs to examine how results vary. We'll combine automated tests with hands-on review to examine both the output and the experience of using each tool.
 
-1. Task-specific capability — performance measured on the work you actually do, not someone else's benchmark or a leaderboard average.
-2. Trust & reliability — consistent behavior under pressure. Systems that know their limits and hand off well, from makers with a record worth trusting.
-3. User experience — a stack your people will actually use well: clear, low-friction, and honest about what it's doing.
+The aim is to bring these comparisons together with ValueCompass, so you can consider practical fit and values in the same decision.
 
-## Product: independent benchmarks, as a platform (in development)
+What each comparison will examine:
 
-We're building the benchmarks we wished existed: independent, task-grounded evaluations of AI models *and* tools — run by evaluators with no stake in the outcome. What our practice learns by hand, the platform will make repeatable.
+1. Results — does the output do what the task asked?
+2. Fixes — what errors occur, and how many attempts does it take to resolve them?
+3. Time — time from the initial instructions to a usable result.
+4. Cost — the cost of completing the task, including retries.
+5. Assistance — the guidance and technical knowledge needed to reach a useful result.
 
-- AI models and tools alike. Not just abstract model charts — how the tools and systems built around them perform in real environments.
-- Task-grounded. Scored against real work, using the same criteria as our evaluations: capability, trust & reliability, user experience.
-- Independent. No placement fees, no vendor sponsorship of results.
-- Status: early access, rolling out gradually.
+Note: these are planned evaluation dimensions, not published results. No benchmark dataset or automated lab exists yet.
 
-## Grounding
+## How we approach a choice
 
-We hold our own work to research standards. The founder's research on deference-aware evaluation was accepted at ICML's Technical AI Governance workshop, 2026 — the evaluation method we use here is held to the same rigor.
+Three questions worth asking of any AI tool.
+
+1. Can it do the task? A tool's strengths need to match the work you want to do.
+2. What is it like to use? The setup and effort involved need to suit your skills and how you work.
+3. Does it fit what matters to you? Your choice also supports the companies behind the tools, with their ownership, practices and commitments.
+
+## Founder
+
+Hopperlace was founded by Yuyu Shen, a statistically trained data scientist turned product manager with nearly a decade building and evaluating AI systems, including taking AI products from zero to one.
+
+She also built Evidence Synthesis AI (https://www.evidencesynthesisai.com/), a tool for screening research literature that refers uncertain cases to human reviewers. Her research on deference-aware evaluation was accepted at the ICML 2026 Technical AI Governance workshop. She holds CCA-F and CCA-P certifications and writes about technology, agency and better decisions at https://buildwithwhy.com.
 
 ### Deference-Aware Evaluation for Human-in-the-Loop AI Systems
 - Author: Yuyu Shen
@@ -48,17 +57,33 @@ We hold our own work to research standards. The founder's research on deference-
 - Link: https://osf.io/a69yh/
 - Venue: Technical AI Governance workshop, ICML 2026
 
-### Team
+## Services (https://hopperlace.ai/services)
 
-- Yuyu Shen — Founder. Statistically trained data scientist turned product manager, with more than a decade building and evaluating AI systems and products in fintech, employment, supply chain, and consumer banking. CCA-F certified (Certified Claude Architect – Foundational).
+Need help choosing an AI tool or testing an idea?
 
-### Other work
+Hopperlace works with teams to understand a workflow, compare options and test promising approaches. You get findings and a recommendation to help you decide what to use, what to build, or what to investigate next.
 
-Hopperlace is a product company that starts with service. We also built Evidence Synthesis AI (https://www.evidencesynthesisai.com/), an AI screening product for systematic review and pharmacovigilance.
+How it works:
+
+1. Understand — establish how the workflow operates today and what a better outcome would mean for your customers or business.
+2. Compare and test — test promising approaches on your tasks, building a prototype where useful.
+3. Explain and recommend — present the findings, trade-offs and recommended next steps.
+
+Questions this suits:
+
+- "Which of these AI tools should our team use for this work?"
+- "Is this model good enough for our use case, and how would we know?"
+- "Should we build this ourselves, buy it, or wait?"
+- "A vendor is claiming this works. Can we check before we sign?"
+
+What you get: projects end with findings, a recommendation and any agreed prototype or evaluation materials. Implementation and ongoing delivery remain with your team. You can reuse the evaluation tasks and criteria when your needs or the available tools change.
 
 ## Contact
 
 - Email: hello@hopperlace.ai
-- Consultations: mailto:hello@hopperlace.ai?subject=Consultation
-- Benchmark platform demo: mailto:hello@hopperlace.ai?subject=Benchmark platform demo
+- An AI decision: mailto:hello@hopperlace.ai?subject=An AI decision
 - Website: https://hopperlace.ai
+- Product: https://valuecompass.ai
+- Founder's writing: https://buildwithwhy.com
+
+Independent. No placement fees, no sponsored results.

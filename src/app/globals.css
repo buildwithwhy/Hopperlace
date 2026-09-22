@@ -2,28 +2,37 @@
 
 @theme {
   /* Surfaces */
-  --color-paper: #f6f7f7;
-  --color-tint: #eceef0;
+  --color-paper: #f4f2ed;
+  --color-tint: #ebe8e1;
+  --color-panel: #fbfaf7;
 
   /* Ink & text */
-  --color-ink: #16181a;
-  --color-body: #4c5257;
-  --color-muted: #767d83;
+  --color-ink: #1b1a18;
+  --color-body: #4a4742;
+  --color-muted: #75716a;
 
   /* Rules */
-  --color-rule: #cfd3d6;
-  --color-dark-rule: #3a3f44;
-  --color-dark-muted: #8b9298;
+  --color-rule: #d5d1c8;
 
-  /* Accent */
+  /* Accents */
   --color-accent: oklch(0.45 0.09 250);
+  --color-amber: oklch(0.45 0.09 70);
+
+  /* Backdrop behind product screenshots (ValueCompass' own canvas). */
+  --color-shot: #f8fafc;
 
   --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
 
-  /* Single breakpoint: below this the multi-column grids stack. */
-  --breakpoint-wide: 820px;
+  /* Three breakpoints, each owned by particular grids. They are not a scale —
+     every value is the width at which those grids stop working. `vc` and
+     `hero` come straight from the handoff's container queries; `split` is
+     where the handoff's auto-fit bands settle into two columns. Below each,
+     the band stacks and its vertical rule becomes a horizontal one. */
+  --breakpoint-vc: 761px; /* ValueCompass card splits 2fr / 3fr */
+  --breakpoint-split: 800px; /* Two- and three-column bands */
+  --breakpoint-hero: 861px; /* Hero text and product visual sit side by side */
 }
 
 /* Base layer, so color utilities on links still win. */
@@ -34,6 +43,10 @@
 
   body {
     font-family: var(--font-sans);
+    /* The handoff sets a line-height on every element that needs one and leaves
+       the rest at `normal`. Preflight's `line-height: 1.5` on `html` would add
+       a few px to every button, label and nav link — reset it here. */
+    line-height: normal;
     color: var(--color-ink);
     background-color: var(--color-paper);
     -webkit-font-smoothing: antialiased;
@@ -45,6 +58,6 @@
   }
 
   a:hover {
-    opacity: 0.82;
+    opacity: 0.8;
   }
 }
