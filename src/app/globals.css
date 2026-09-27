@@ -27,12 +27,13 @@
 
   /* Three breakpoints, each owned by particular grids. They are not a scale —
      every value is the width at which those grids stop working. `vc` and
-     `hero` come straight from the handoff's container queries; `split` is
-     where the handoff's auto-fit bands settle into two columns. Below each,
+     `hero` come straight from the handoff's container queries (760px and
+     900px); `split` is where the handoff's auto-fit bands settle into two
+     columns. Below each,
      the band stacks and its vertical rule becomes a horizontal one. */
   --breakpoint-vc: 761px; /* ValueCompass card splits 2fr / 3fr */
   --breakpoint-split: 800px; /* Two- and three-column bands */
-  --breakpoint-hero: 861px; /* Hero text and product visual sit side by side */
+  --breakpoint-hero: 901px; /* Hero text and the two part cards sit side by side */
 }
 
 /* Base layer, so color utilities on links still win. */

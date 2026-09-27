@@ -31,7 +31,7 @@ const label = "font-mono text-[12px] font-medium tracking-[0.12em] text-accent";
 
 const navLinks = [
   { href: VALUECOMPASS_URL, label: "ValueCompass ↗", current: false },
-  { href: "/#lab", label: "What we’re building", current: false },
+  { href: "/#testing", label: "Testing", current: false },
   { href: "/services", label: "Services", current: true },
 ];
 

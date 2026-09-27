@@ -19,6 +19,7 @@ const jsonLd = {
       knowsAbout: [
         "AI tool comparison",
         "Independent AI testing",
+        "AI app builders",
         "Values-based AI choice",
         "AI evaluation",
         "Deference-aware evaluation",
@@ -30,7 +31,7 @@ const jsonLd = {
         availableLanguage: "English",
       },
       description:
-        "Hopperlace is building a better way to compare what AI tools can do, what they are like to use, and how they fit your values. ValueCompass, its values-based comparison product, is available today; repeatable testing of AI tools on real tasks is in development.",
+        "Hopperlace is developing independent, hands-on comparisons of AI tools: testing them on the same tasks, checking their outputs, and recording the effort needed to get a usable result. ValueCompass, available today, adds research on the companies behind those tools: their ownership, dependencies and policies.",
       email: EMAIL,
       founder: {
         "@type": "Person",
@@ -60,7 +61,7 @@ const jsonLd = {
       operatingSystem: "Web",
       publisher: { "@id": "https://hopperlace.ai/#organization" },
       description:
-        "Choose the priorities that matter to you and compare AI options against them. ValueCompass examines the companies behind AI products — ownership, control and documented commitments — with sources behind the findings and clear gaps in the research.",
+        "ValueCompass helps you examine the companies behind AI products and compare options against your values. Explore ownership, control, dependencies and documented policies, with sources and clear gaps in the research.",
     },
     {
       "@type": "WebSite",
@@ -102,14 +103,15 @@ const jsonLd = {
 
 const gutter = "px-[clamp(20px,3.5vw,48px)]";
 const label = "font-mono text-[12px] font-medium tracking-[0.12em] text-accent";
+const smallLabel =
+  "font-mono text-[11px] font-medium tracking-[0.12em] text-muted";
 
 /* ─── Assets ───
    Real captures of valuecompass.ai supplied by the founder, 22 Sep 2026. The
-   `*-crop` / `*-v3` files are crops prepared for on-page use; the numbered
-   files are the full captures every preview links out to. */
+   `*-crop` files are crops prepared for on-page use; the numbered files are
+   the full captures the preview and caption link out to. */
 
 const shots = {
-  heroCrop: "/assets/vc-hero-priorities-v3.png",
   cardsCrop: "/assets/vc-cards-crop.png",
   claudeCard: "/assets/vc-card-claude.png",
   fullPriorities: "/assets/vc-01-choosing-priorities.png",
@@ -120,69 +122,57 @@ const shots = {
 /* ─── Content ─── */
 
 const navLinks = [
+  { href: "#testing", label: "Testing" },
   { href: "#valuecompass", label: "ValueCompass" },
-  { href: "#lab", label: "What we’re building" },
-  { href: "#approach", label: "Approach" },
+  { href: "#founder", label: "Founder" },
   { href: "/services", label: "Services" },
 ];
 
-const measures = [
+const scenarioScope = [
   {
-    label: "RESULTS",
-    heading: "Does it work?",
-    body: <>Does the output do what the task asked?</>,
+    heading: "Functional reliability",
+    body: "Booking and cancellation flows, including attempts to reserve the same slot.",
   },
   {
-    label: "FIXES",
-    heading: "What needs fixing?",
-    body: (
-      <>What errors occur, and how many attempts does it take to resolve them?</>
-    ),
+    heading: "Maintainability",
+    body: "Introducing a new requirement and checking that existing functionality still works.",
   },
   {
-    label: "TIME",
-    heading: "How long does it take?",
-    body: <>Time from the initial instructions to a usable result.</>,
+    heading: "User effort",
+    body: "Time, correction attempts and technical assistance needed to complete the task.",
   },
   {
-    label: "COST",
-    heading: "What does it cost?",
-    body: <>The cost of completing the task, including retries.</>,
-  },
-  {
-    label: "ASSISTANCE",
-    heading: "How much help does it need?",
-    body: (
-      <>The guidance and technical knowledge needed to reach a useful result.</>
-    ),
+    heading: "Portability",
+    body: "Exporting the project and assessing what is required to run it with another provider.",
   },
 ];
 
-const questions = [
+const recorded = [
   {
-    label: "TASK",
-    heading: "Can it do the task?",
-    body: <>A tool&rsquo;s strengths need to match the work you want to do.</>,
+    heading: "Does it work?",
+    body: "Whether the output does what the task asked.",
   },
   {
-    label: "EXPERIENCE",
-    heading: "What is it like to use?",
-    body: (
-      <>
-        The setup and effort involved need to suit your skills and how you work.
-      </>
-    ),
+    heading: "Fixes",
+    body: "What errors occur, and how many attempts it takes to resolve them.",
+  },
+  { heading: "Time", body: "From the initial instructions to a usable result." },
+  {
+    heading: "Cost",
+    body: "What it costs to complete the task, including retries.",
   },
   {
-    label: "VALUES",
-    heading: "Does it fit what matters to you?",
-    body: (
-      <>
-        Your choice also supports the companies behind the tools, with their
-        ownership, practices and commitments.
-      </>
-    ),
+    heading: "Assistance",
+    body: "The guidance and technical knowledge needed to reach a useful result.",
   },
+];
+
+const outcomes = [
+  "Options worth trying for your kind of task.",
+  "The circumstances in which each tool struggles.",
+  "The effort and expertise you should expect to contribute.",
+  "The evidence behind the advice, including example outputs.",
+  "The trade-offs that could change the recommendation.",
 ];
 
 export default function Home() {
@@ -195,9 +185,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Testing />
         <ValueCompass />
-        <Lab />
-        <Approach />
         <Founder />
         <ServicesInvitation />
       </main>
@@ -246,12 +235,12 @@ function Hero() {
     <section
       id="top"
       aria-labelledby="hero-title"
-      className="grid grid-cols-[minmax(0,1fr)] border-b border-ink hero:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
+      className="grid grid-cols-[minmax(0,1fr)] border-b border-ink hero:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]"
     >
       <div
-        className={`${gutter} min-w-0 pt-[clamp(48px,6vw,88px)] pb-[clamp(40px,5vw,64px)]`}
+        className={`${gutter} grid min-w-0 content-center pt-[clamp(44px,5.5vw,80px)] pb-[clamp(36px,4.5vw,56px)]`}
       >
-        <p className={`${label} mb-6 tracking-[0.14em] uppercase`}>
+        <p className={`${label} mb-[22px] tracking-[0.14em] uppercase`}>
           Independent testing &middot; Comparison &middot; Informed choice
         </p>
         <h1
@@ -260,71 +249,218 @@ function Hero() {
         >
           Choose AI for what you want to do &mdash; and what matters to you.
         </h1>
-        <p className="mb-3.5 max-w-[50ch] text-[clamp(16px,1.4vw,19px)] leading-[1.6] text-body text-pretty">
-          We&rsquo;re building Hopperlace to help you compare what AI tools can
-          do, what they&rsquo;re like to use, and how they fit your values.
+        <p className="mb-3.5 max-w-[52ch] text-[clamp(16px,1.4vw,19px)] leading-[1.6] text-body text-pretty">
+          We&rsquo;re developing independent, hands-on comparisons of AI tools:
+          testing them on the same tasks, checking their outputs, and recording
+          the effort needed to get a usable result.
         </p>
-        <p className="mb-7 max-w-[50ch] text-[clamp(16px,1.4vw,19px)] leading-[1.6] text-body text-pretty">
-          Explore the values side today with ValueCompass. Comparisons of tool
-          capabilities and experience are in development.
+        <p className="max-w-[52ch] text-[clamp(16px,1.4vw,19px)] leading-[1.6] text-body text-pretty">
+          ValueCompass, which you can use today, adds research on the companies
+          behind those tools: their ownership, dependencies and policies.
         </p>
-        <div className="flex flex-wrap items-center gap-3">
-          <a
-            href={VALUECOMPASS_URL}
-            className="bg-accent px-[26px] py-[15px] text-[15px] font-medium text-paper no-underline"
-          >
-            Try ValueCompass ↗
-          </a>
-          <a
-            href="#lab"
-            className="border border-ink px-[26px] py-3.5 text-[15px] font-medium text-ink no-underline"
-          >
-            What we&rsquo;re building ↓
-          </a>
-        </div>
       </div>
-      <div className="grid min-w-0 content-center border-t border-ink bg-tint px-[clamp(16px,2.5vw,36px)] py-[clamp(20px,3vw,36px)] hero:border-t-0 hero:border-l">
-        <div className="min-w-0 border border-ink bg-panel">
-          <div className="flex justify-between gap-3 border-b border-ink px-4 py-2.5 font-mono text-[11px] font-medium tracking-[0.1em]">
-            <span>VALUECOMPASS &middot; VALUES-BASED COMPARISON</span>
-            <span className="text-accent">● LIVE</span>
-          </div>
-          <a
-            href={shots.fullPriorities}
-            target="_blank"
-            rel="noopener"
-            title="Open the full capture"
-            className="block min-w-0 bg-shot"
-          >
-            <Image
-              src={shots.heroCrop}
-              alt="ValueCompass: the question “Who am I empowering with this choice?” with two preferences ticked — a foundation or non-profit holds control of the company, and a public-purpose body has a documented economic stake or revenue share"
-              width={1960}
-              height={665}
-              priority
-              sizes="(min-width: 861px) 50vw, 100vw"
-              className="block h-auto w-full"
-            />
-          </a>
-        </div>
-        <p className="mt-2.5 text-[12px] leading-[1.5] text-muted">
-          Choosing priorities on valuecompass.ai, 22 Sep 2026.{" "}
-          <a
-            href={shots.fullPriorities}
-            target="_blank"
-            rel="noopener"
-            className="text-muted underline underline-offset-2"
-          >
-            Open the full capture
-          </a>
-          .
+      <div
+        className={`${gutter} grid min-w-0 content-center gap-3 border-t border-ink bg-tint py-[clamp(24px,3vw,40px)] hero:border-t-0 hero:border-l`}
+      >
+        <p className={smallLabel}>TWO PARTS OF ONE DECISION</p>
+        <PartCard
+          name="TOOL TESTING"
+          status={<span className="text-amber">IN DEVELOPMENT</span>}
+          heading="Can it do your task, and what will it take?"
+          body="Find out which tools suit a particular task, and what effort, expertise and compromises each one involves."
+          action={
+            <a
+              href="#testing"
+              className="inline-block border border-ink px-[18px] py-[11px] text-[14px] font-medium text-ink no-underline"
+            >
+              Explore our testing approach ↓
+            </a>
+          }
+        />
+        <PartCard
+          name="VALUECOMPASS"
+          status={<span className="text-accent">● LIVE</span>}
+          heading="Who is behind it, and does that fit your values?"
+          body="Compare AI options on ownership, control and documented commitments, against the priorities you choose."
+          action={
+            <a
+              href={VALUECOMPASS_URL}
+              className="inline-block bg-accent px-[18px] py-3 text-[14px] font-medium text-paper no-underline"
+            >
+              Try ValueCompass ↗
+            </a>
+          }
+        />
+        <p className="mt-0.5 text-[13px] leading-[1.5] text-body text-pretty">
+          The aim is to bring these comparisons together with ValueCompass, so
+          you can consider practical fit and values in the same decision.
         </p>
       </div>
     </section>
   );
 }
 
-/* ─── 01 / ValueCompass ─── */
+function PartCard({
+  name,
+  status,
+  heading,
+  body,
+  action,
+}: {
+  name: string;
+  status: React.ReactNode;
+  heading: string;
+  body: string;
+  action: React.ReactNode;
+}) {
+  return (
+    <article className="min-w-0 border border-ink bg-panel">
+      <div className="flex justify-between gap-3 border-b border-rule px-[18px] py-2.5 font-mono text-[11px] font-medium tracking-[0.1em]">
+        <span>{name}</span>
+        {status}
+      </div>
+      <div className="px-[18px] pt-4 pb-[18px]">
+        <h2 className="mb-2 font-serif text-[clamp(19px,1.7vw,22px)] leading-[1.3] font-medium text-pretty">
+          {heading}
+        </h2>
+        <p className="mb-4 text-[14.5px] leading-[1.55] text-body text-pretty">
+          {body}
+        </p>
+        {action}
+      </div>
+    </article>
+  );
+}
+
+/* ─── 01 / Tool testing ─── */
+
+function Testing() {
+  return (
+    <section
+      id="testing"
+      aria-labelledby="testing-title"
+      className="scroll-mt-[60px] border-b border-ink"
+    >
+      <div className={`${gutter} border-b border-ink py-[clamp(40px,5vw,64px)]`}>
+        <p className="mb-5 font-mono text-[12px] font-medium tracking-[0.12em] text-amber">
+          01 / TOOL TESTING &mdash; IN DEVELOPMENT
+        </p>
+        <h2
+          id="testing-title"
+          className="mb-4 max-w-[22ch] font-serif text-[clamp(28px,3vw,38px)] leading-[1.2] font-normal tracking-[-0.015em] text-pretty"
+        >
+          See how AI tools perform on the work you need done.
+        </h2>
+        <p className="mb-3.5 max-w-[54ch] text-[16px] leading-[1.65] text-body text-pretty">
+          Our comparisons are meant to show which tools fit your work and
+          circumstances, and what you&rsquo;d be taking on with each.
+        </p>
+        <p className="mb-3.5 max-w-[54ch] text-[16px] leading-[1.65] text-body text-pretty">
+          To get there, several tools receive comparable tasks, each task is run
+          more than once, and we check the outputs independently rather than
+          relying on what the tool reports.
+        </p>
+        <p className="max-w-[54ch] text-[15px] leading-[1.6] text-muted">
+          Our first comparisons will focus on AI app builders.
+        </p>
+        <Scenario />
+      </div>
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))]">
+        <div className={`${gutter} min-w-0 py-[clamp(32px,4vw,48px)]`}>
+          <h3 className={`${smallLabel} mb-3`}>WHAT WE&rsquo;LL RECORD</h3>
+          <dl className="border-t border-ink">
+            {recorded.map((item) => (
+              <div
+                key={item.heading}
+                className="grid grid-cols-[minmax(110px,150px)_minmax(0,1fr)] gap-3.5 border-b border-rule py-3 text-[15px] leading-[1.5] text-body"
+              >
+                <dt className="font-semibold text-ink">{item.heading}</dt>
+                <dd>{item.body}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+        <div
+          className={`${gutter} min-w-0 border-t border-ink py-[clamp(32px,4vw,48px)] split:border-t-0 split:border-l`}
+        >
+          <h3 className={`${smallLabel} mb-3`}>WHAT YOU&rsquo;LL GET</h3>
+          <ul className="border-t border-ink">
+            {outcomes.map((outcome) => (
+              <li
+                key={outcome}
+                className="grid grid-cols-[20px_minmax(0,1fr)] gap-3 border-b border-rule py-3 text-[15px] leading-[1.5] text-body"
+              >
+                <span aria-hidden="true" className="font-mono text-[13px] text-muted">
+                  →
+                </span>
+                <span>{outcome}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Native <details>, so the disclosure works without client JavaScript. */
+function Scenario() {
+  return (
+    <details className="mt-6 min-w-0 max-w-[54ch] border border-dashed border-amber bg-panel">
+      <summary className="box-border flex min-h-11 cursor-pointer list-none items-center justify-between gap-3 px-[18px] py-3.5 [&::-webkit-details-marker]:hidden">
+        <span className="text-[14px] leading-[1.4] font-semibold text-ink">
+          Example test scenario:{" "}
+          <span className="font-normal">Building and maintaining a booking app</span>
+        </span>
+        <span aria-hidden="true" className="font-mono text-[13px] text-muted">
+          ↓
+        </span>
+      </summary>
+      <div className="grid gap-3.5 px-[18px] pb-[18px]">
+        <div className="grid gap-1">
+          <p className="font-mono text-[11px] font-medium tracking-[0.1em] text-muted">
+            DECISION
+          </p>
+          <p className="font-serif text-[16px] leading-[1.45] text-ink text-pretty">
+            Which AI app builder suits a small-business owner with limited
+            technical experience?
+          </p>
+        </div>
+        <div className="grid gap-1">
+          <p className="font-mono text-[11px] font-medium tracking-[0.1em] text-muted">
+            EVALUATION SCOPE
+          </p>
+          <ul className="border-b border-rule">
+            {scenarioScope.map((item) => (
+              <li
+                key={item.heading}
+                className="grid gap-0.5 border-t border-rule py-[9px]"
+              >
+                <strong className="text-[14px] leading-[1.4] font-semibold text-ink">
+                  {item.heading}
+                </strong>
+                <span className="text-[14px] leading-[1.55] text-body text-pretty">
+                  {item.body}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="grid gap-1">
+          <p className="font-mono text-[11px] font-medium tracking-[0.1em] text-muted">
+            INTENDED OUTCOME
+          </p>
+          <p className="text-[14.5px] leading-[1.55] text-body text-pretty">
+            A comparison of which tools suit this user, where specialist help is
+            needed, and the trade-offs involved.
+          </p>
+        </div>
+      </div>
+    </details>
+  );
+}
+
+/* ─── 02 / ValueCompass ─── */
 
 function ValueCompass() {
   return (
@@ -336,7 +472,7 @@ function ValueCompass() {
       <div
         className={`${gutter} flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 pt-7`}
       >
-        <p className={label}>01 / VALUECOMPASS</p>
+        <p className={label}>02 / VALUECOMPASS &mdash; AVAILABLE NOW</p>
         <p className="text-[13px] text-muted">
           Opens valuecompass.ai. No account needed.
         </p>
@@ -357,8 +493,8 @@ function ValueCompass() {
             <p className="mb-[22px] text-[15px] leading-[1.6] text-body text-pretty">
               ValueCompass helps you examine the companies behind AI products
               and compare options against your values. Explore ownership,
-              control and documented commitments, with sources and clear gaps in
-              the research.
+              control, dependencies and documented policies, with sources and
+              clear gaps in the research.
             </p>
             <a
               href={VALUECOMPASS_URL}
@@ -380,7 +516,7 @@ function ValueCompass() {
                 width={1998}
                 height={1590}
                 sizes="(min-width: 761px) 60vw, 100vw"
-                className="hidden h-auto max-h-[440px] w-full object-contain object-top vc:block"
+                className="hidden h-auto max-h-[420px] w-full object-contain object-top vc:block"
               />
               <Image
                 src={shots.claudeCard}
@@ -399,24 +535,18 @@ function ValueCompass() {
               Confirmed findings and unanswered questions appear separately.
             </p>
             <p className="text-[12px] leading-[1.5] text-muted">
-              Two of thirteen options shown; one on small screens. Full captures:{" "}
-              <a
-                href={shots.fullAdvice}
-                target="_blank"
-                rel="noopener"
-                className="text-muted underline underline-offset-2"
-              >
-                summary of what was found
-              </a>{" "}
+              Full captures:{" "}
+              <CaptureLink href={shots.fullPriorities}>
+                choosing priorities
+              </CaptureLink>{" "}
               &middot;{" "}
-              <a
-                href={shots.fullEvidence}
-                target="_blank"
-                rel="noopener"
-                className="text-muted underline underline-offset-2"
-              >
+              <CaptureLink href={shots.fullAdvice}>
+                summary of what was found
+              </CaptureLink>{" "}
+              &middot;{" "}
+              <CaptureLink href={shots.fullEvidence}>
                 evidence on the cards
-              </a>
+              </CaptureLink>
               .
             </p>
           </div>
@@ -426,120 +556,39 @@ function ValueCompass() {
   );
 }
 
-/* ─── 02 / What we're building ─── */
-
-function Lab() {
+function CaptureLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
   return (
-    <section
-      id="lab"
-      aria-labelledby="lab-title"
-      className="scroll-mt-[60px] border-b border-ink bg-tint"
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener"
+      className="text-muted underline underline-offset-2"
     >
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))]">
-        <div className={`${gutter} py-[clamp(40px,5vw,64px)]`}>
-          <p className="mb-5 font-mono text-[12px] font-medium tracking-[0.12em] text-amber">
-            02 / WHAT WE&rsquo;RE BUILDING &mdash; IN DEVELOPMENT
-          </p>
-          <h2
-            id="lab-title"
-            className="mb-4 max-w-[22ch] font-serif text-[clamp(28px,3vw,38px)] leading-[1.2] font-normal tracking-[-0.015em] text-pretty"
-          >
-            Repeatable tests of AI tools on real tasks.
-          </h2>
-          <p className="mb-3.5 max-w-[54ch] text-[16px] leading-[1.65] text-body text-pretty">
-            We&rsquo;re developing repeatable tests of AI tools, starting with
-            AI app builders. Each comparison will use the same tasks across
-            several tools, with multiple runs to examine how results vary.
-            We&rsquo;ll combine automated tests with hands-on review to examine
-            both the output and the experience of using each tool.
-          </p>
-          <p className="max-w-[54ch] text-[16px] leading-[1.65] text-body text-pretty">
-            The aim is to bring these comparisons together with ValueCompass, so
-            you can consider practical fit and values in the same decision.
-          </p>
-        </div>
-        <div
-          className={`${gutter} grid min-w-0 content-center gap-2.5 border-t border-ink py-[clamp(28px,4vw,48px)] split:border-t-0 split:border-l`}
-        >
-          <p className="font-mono text-[11px] font-medium tracking-[0.12em] text-muted">
-            WHAT EACH COMPARISON WILL EXAMINE
-          </p>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))] gap-2.5">
-            {measures.map((measure) => (
-              <div
-                key={measure.label}
-                className="min-w-0 border border-ink bg-panel px-[18px] py-4"
-              >
-                <p className="mb-2 font-mono text-[11px] font-medium tracking-[0.1em] text-muted">
-                  {measure.label}
-                </p>
-                <h3 className="mb-1.5 font-serif text-[18px] leading-[1.3] font-medium">
-                  {measure.heading}
-                </h3>
-                <p className="text-[14px] leading-[1.5] text-body text-pretty">
-                  {measure.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+      {children}
+    </a>
   );
 }
 
-/* ─── 03 / How we approach a choice ─── */
-
-function Approach() {
-  return (
-    <section
-      id="approach"
-      aria-labelledby="approach-title"
-      className={`${gutter} scroll-mt-[60px] border-b border-ink py-[clamp(40px,5vw,64px)]`}
-    >
-      <p className={`${label} mb-3.5`}>03 / HOW WE APPROACH A CHOICE</p>
-      <h2
-        id="approach-title"
-        className="mb-9 max-w-[26ch] font-serif text-[clamp(28px,3vw,38px)] leading-[1.2] font-normal tracking-[-0.015em] text-pretty"
-      >
-        Three questions worth asking of any AI tool.
-      </h2>
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))] gap-4">
-        {questions.map((question) => (
-          <div
-            key={question.label}
-            className="border border-ink bg-panel px-5 py-[22px]"
-          >
-            <p className="mb-3.5 font-mono text-[11px] font-medium tracking-[0.1em] text-muted">
-              {question.label}
-            </p>
-            <h3 className="mb-2.5 font-serif text-[21px] leading-[1.3] font-medium">
-              {question.heading}
-            </h3>
-            <p className="text-[15px] leading-[1.6] text-body text-pretty">
-              {question.body}
-            </p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-/* ─── 04 / Founder ─── */
+/* ─── 03 / Founder ─── */
 
 function Founder() {
   return (
     <section
       id="founder"
       aria-labelledby="founder-title"
-      className={`${gutter} grid grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))] gap-x-[var(--g)] gap-y-6 border-b border-ink py-[clamp(40px,5vw,64px)]`}
+      className={`${gutter} grid scroll-mt-[60px] grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))] gap-x-[var(--g)] gap-y-6 border-b border-ink py-[clamp(40px,5vw,64px)]`}
     >
       <h2 id="founder-title" className="sr-only">
         Founder
       </h2>
       <div>
-        <p className={`${label} mb-5`}>04 / FOUNDER</p>
+        <p className={`${label} mb-5`}>03 / FOUNDER</p>
         <Image
           src="/assets/yuyu-shen.jpg"
           alt="Yuyu Shen"
@@ -565,11 +614,10 @@ function Founder() {
           >
             Evidence Synthesis AI
           </a>
-          , which helps research teams use AI to screen studies for
-          systematic reviews. Her research on deference-aware evaluation
-          was accepted at the ICML
-          2026 Technical AI Governance workshop. She holds CCA-F and CCA-P
-          certifications and writes about technology, agency and better
+          , which helps research teams use AI to screen studies for systematic
+          reviews. Her research on deference-aware evaluation was accepted at
+          the ICML 2026 Technical AI Governance workshop. She holds CCA-F and
+          CCA-P certifications and writes about technology, agency and better
           decisions at{" "}
           <a
             href={BUILDWITHWHY_URL}
