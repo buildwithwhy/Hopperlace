@@ -2,11 +2,56 @@
 
 > Choose AI for what you want to do — and what matters to you.
 
-We're building Hopperlace to help you compare what AI tools can do, what they're like to use, and how they fit your values.
+We're developing independent, hands-on comparisons of AI tools: testing them on the same tasks, checking their outputs, and recording the effort needed to get a usable result.
 
-Explore the values side today with ValueCompass. Comparisons of tool capabilities and experience are in development.
+ValueCompass, which you can use today, adds research on the companies behind those tools: their ownership, dependencies and policies.
+
+The aim is to bring these comparisons together with ValueCompass, so you can consider practical fit and values in the same decision.
 
 Focus: independent testing · comparison · informed choice.
+
+## Two parts of one decision
+
+- Tool testing (in development): can it do your task, and what will it take? Find out which tools suit a particular task, and what effort, expertise and compromises each one involves.
+- ValueCompass (live, https://valuecompass.ai): who is behind it, and does that fit your values? Compare AI options on ownership, control and documented commitments, against the priorities you choose.
+
+## Tool testing — in development
+
+See how AI tools perform on the work you need done.
+
+Our comparisons are meant to show which tools fit your work and circumstances, and what you'd be taking on with each.
+
+To get there, several tools receive comparable tasks, each task is run more than once, and we check the outputs independently rather than relying on what the tool reports.
+
+Our first comparisons will focus on AI app builders.
+
+### Example test scenario: building and maintaining a booking app
+
+- Decision: which AI app builder suits a small-business owner with limited technical experience?
+- Evaluation scope:
+  - Functional reliability — booking and cancellation flows, including attempts to reserve the same slot.
+  - Maintainability — introducing a new requirement and checking that existing functionality still works.
+  - User effort — time, correction attempts and technical assistance needed to complete the task.
+  - Portability — exporting the project and assessing what is required to run it with another provider.
+- Intended outcome: a comparison of which tools suit this user, where specialist help is needed, and the trade-offs involved.
+
+### What we'll record
+
+1. Does it work? — whether the output does what the task asked.
+2. Fixes — what errors occur, and how many attempts it takes to resolve them.
+3. Time — from the initial instructions to a usable result.
+4. Cost — what it costs to complete the task, including retries.
+5. Assistance — the guidance and technical knowledge needed to reach a useful result.
+
+### What you'll get
+
+- Options worth trying for your kind of task.
+- The circumstances in which each tool struggles.
+- The effort and expertise you should expect to contribute.
+- The evidence behind the advice, including example outputs.
+- The trade-offs that could change the recommendation.
+
+Note: this describes planned testing, not published results. No comparisons have been published yet.
 
 ## ValueCompass — available now (https://valuecompass.ai)
 
@@ -14,35 +59,9 @@ Explore the values behind your AI choices.
 
 Who benefits from the money you spend on AI? What commitments do providers make to the people affected by their technology?
 
-ValueCompass helps you examine the companies behind AI products and compare options against your values. Explore ownership, control and documented commitments, with sources and clear gaps in the research.
+ValueCompass helps you examine the companies behind AI products and compare options against your values. Explore ownership, control, dependencies and documented policies, with sources and clear gaps in the research.
 
 Opens valuecompass.ai. No account needed.
-
-## What we're building — in development
-
-Repeatable tests of AI tools on real tasks.
-
-We're developing repeatable tests of AI tools, starting with AI app builders. Each comparison will use the same tasks across several tools, with multiple runs to examine how results vary. We'll combine automated tests with hands-on review to examine both the output and the experience of using each tool.
-
-The aim is to bring these comparisons together with ValueCompass, so you can consider practical fit and values in the same decision.
-
-What each comparison will examine:
-
-1. Results — does the output do what the task asked?
-2. Fixes — what errors occur, and how many attempts does it take to resolve them?
-3. Time — time from the initial instructions to a usable result.
-4. Cost — the cost of completing the task, including retries.
-5. Assistance — the guidance and technical knowledge needed to reach a useful result.
-
-Note: these are planned evaluation dimensions, not published results. No benchmark dataset or automated lab exists yet.
-
-## How we approach a choice
-
-Three questions worth asking of any AI tool.
-
-1. Can it do the task? A tool's strengths need to match the work you want to do.
-2. What is it like to use? The setup and effort involved need to suit your skills and how you work.
-3. Does it fit what matters to you? Your choice also supports the companies behind the tools, with their ownership, practices and commitments.
 
 ## Founder
 
