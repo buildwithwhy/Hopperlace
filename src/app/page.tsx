@@ -44,10 +44,20 @@ const jsonLd = {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "AI decision support",
+            name: "Develop and test an AI idea",
             description:
-              "Hopperlace works with teams to understand a workflow, compare options and test promising approaches. Engagements end with findings and a recommendation to help a team decide what to use, what to build, or what to investigate next.",
-            url: "https://hopperlace.ai/services",
+              "Work out what it should do, build it, and see whether it delivers. You receive a working prototype, findings from testing, and a practical recommendation for what to develop next.",
+            url: "https://hopperlace.ai/services#develop",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Improve an existing AI experience",
+            description:
+              "Find what is holding it back for real users, and test the changes. You receive a diagnosis supported by real examples, tested changes where agreed, and evidence of their effect.",
+            url: "https://hopperlace.ai/services#improve",
           },
         },
       ],

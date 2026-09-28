@@ -6,7 +6,6 @@
 export const EMAIL = "hello@hopperlace.ai";
 
 export const MAIL_HREF = `mailto:${EMAIL}`;
-export const DECISION_HREF = `mailto:${EMAIL}?subject=An%20AI%20decision`;
 
 /** ValueCompass — the values-based comparison product, live today. */
 export const VALUECOMPASS_URL = "https://valuecompass.ai";

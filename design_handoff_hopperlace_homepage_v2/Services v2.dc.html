@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>@container (max-width: 900px){#svc-hero{grid-template-columns:minmax(0,1fr) !important}#svc-hero > div + div{border-left:0 !important;border-top:1px solid #1b1a18}#flow{grid-template-columns:minmax(0,1fr) !important}#flow > li{border-left:0 !important;border-top:1px solid #d5d1c8}#flow > li:first-child{border-top:0}[data-arrow]{transform:rotate(90deg)}}@container (max-width: 760px){#offers{grid-template-columns:minmax(0,1fr) !important}#offers > article + article{border-left:0 !important;border-top:1px solid #1b1a18}#cases{grid-template-columns:minmax(0,1fr) !important}#founder-top{grid-template-columns:minmax(0,1fr) !important}}body{margin:0;background:#f4f2ed;font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased}a{color:oklch(0.45 0.09 250)}a:hover{opacity:.8}html{scroll-behavior:smooth}</style>
+</helmet>
+<div style="--paper:#f4f2ed;--tint:#ebe8e1;--panel:#fbfaf7;--ink:#1b1a18;--body:#4a4742;--muted:#75716a;--rule:#d5d1c8;--blue:oklch(0.45 0.09 250);--amber:oklch(0.45 0.09 70);--serif:'Source Serif 4',Georgia,serif;--sans:'IBM Plex Sans',sans-serif;--mono:'IBM Plex Mono',monospace;--g:clamp(20px,4cqw,56px);background:var(--paper);color:var(--ink);min-height:100vh;container-type:inline-size" data-screen-label="Services v2">
+
+  <header style="display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 32px;padding:20px var(--g);border-bottom:1px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:10">
+    <a href="Hopperlace Homepage v2.dc.html" style="text-decoration:none;color:var(--ink);font:600 19px var(--serif);letter-spacing:.01em;flex:1;white-space:nowrap">Hopperlace</a>
+    <nav style="display:flex;flex-wrap:wrap;gap:8px 24px;font:500 13px var(--sans)">
+      <a href="https://valuecompass.ai" style="text-decoration:none;color:var(--body)">ValueCompass ↗</a>
+      <a href="Hopperlace Homepage v2.dc.html#testing" style="text-decoration:none;color:var(--body)">Testing</a>
+      <a href="Services v2.dc.html" aria-current="page" style="text-decoration:none;color:var(--ink);border-bottom:1px solid var(--ink)">Services</a>
+    </nav>
+  </header>
+
+  <section id="svc-hero" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);border-bottom:1px solid var(--ink)">
+    <div style="padding:clamp(52px,7cqw,100px) var(--g) clamp(40px,5cqw,64px);min-width:0">
+      <p style="margin:0 0 26px;font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--blue)">Services</p>
+      <h1 style="margin:0 0 26px;font:400 clamp(36px,5cqw,64px)/1.05 var(--serif);letter-spacing:-.02em;max-width:15ch;text-wrap:pretty">Develop, test and improve AI products and features.</h1>
+      <p style="margin:0 0 30px;font:400 clamp(17px,1.5cqw,20px)/1.6 var(--sans);color:var(--body);max-width:54ch;text-wrap:pretty">Hopperlace helps teams turn promising ideas into working prototypes, find out what is holding existing AI experiences back, and use evidence to decide what to build or change next.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center">
+        <a href="mailto:hello@hopperlace.ai" style="text-decoration:none;font:500 15px var(--sans);color:var(--paper);background:var(--blue);padding:15px 26px">Discuss your project</a>
+        <span style="font:400 14px var(--sans);color:var(--muted)">hello@hopperlace.ai</span>
+      </div>
+    </div>
+    <div style="border-left:1px solid var(--ink);background:var(--tint);padding:clamp(28px,4cqw,56px) var(--g);min-width:0;display:grid;align-content:center;gap:12px">
+      <p style="margin:0;font:500 11px var(--mono);letter-spacing:.12em;color:var(--muted)">TWO KINDS OF PROJECT</p>
+      <a href="#develop" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;align-items:start;text-decoration:none;color:var(--ink);background:var(--panel);border:1px solid var(--ink);padding:18px 20px">
+        <span style="font:500 11px var(--mono);letter-spacing:.1em;color:var(--blue)">A NEW IDEA</span><span aria-hidden="true" style="grid-row:span 3;font:400 16px var(--mono);color:var(--muted)">↓</span>
+        <span style="font:500 20px/1.3 var(--serif)">Develop and test an AI idea</span>
+        <span style="font:400 14.5px/1.5 var(--sans);color:var(--body)">Work out what it should do, build it, and see whether it delivers.</span>
+      </a>
+      <a href="#improve" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;align-items:start;text-decoration:none;color:var(--ink);background:var(--panel);border:1px solid var(--ink);padding:18px 20px">
+        <span style="font:500 11px var(--mono);letter-spacing:.1em;color:var(--blue)">AN EXISTING FEATURE</span><span aria-hidden="true" style="grid-row:span 3;font:400 16px var(--mono);color:var(--muted)">↓</span>
+        <span style="font:500 20px/1.3 var(--serif)">Improve an existing AI experience</span>
+        <span style="font:400 14.5px/1.5 var(--sans);color:var(--body)">Find what is holding it back for real users, and test the changes.</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="offers" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:1px solid var(--ink)">
+    <article id="develop" style="padding:clamp(40px,5cqw,64px) var(--g);min-width:0;display:grid;grid-template-rows:auto auto auto 1fr auto;scroll-margin-top:64px">
+      <p style="margin:0 0 16px;font:500 12px var(--mono);letter-spacing:.12em;color:var(--blue)">01 / A NEW IDEA</p>
+      <h2 style="margin:0 0 18px;font:400 clamp(28px,3cqw,38px)/1.15 var(--serif);letter-spacing:-.015em;text-wrap:pretty">Develop and test an AI idea</h2>
+      <p style="margin:0 0 30px;font:italic 400 clamp(18px,1.6cqw,21px)/1.45 var(--serif);color:var(--body);max-width:40ch;text-wrap:pretty">“We see an opportunity for AI in our product or workflow, but need to work out what it should do and whether it can deliver.”</p>
+      <div>
+        <p style="margin:0 0 10px;font:500 11px var(--mono);letter-spacing:.12em;color:var(--muted)">THE WORK CAN INCLUDE</p>
+        <ol style="margin:0 0 28px;padding:0;list-style:none;border-top:1px solid var(--ink)">
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:11px 0;border-bottom:1px solid var(--rule);font:400 15px/1.5 var(--sans);color:var(--body)"><span style="font:400 13px var(--mono);color:var(--muted)">1</span><span>Understand the user’s task and how it is done today.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:11px 0;border-bottom:1px solid var(--rule);font:400 15px/1.5 var(--sans);color:var(--body)"><span style="font:400 13px var(--mono);color:var(--muted)">2</span><span>Define what a useful result would look like.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:11px 0;border-bottom:1px solid var(--rule);font:400 15px/1.5 var(--sans);color:var(--body)"><span style="font:400 13px var(--mono);color:var(--muted)">3</span><span>Explore suitable tools, models and system designs, including whether to build or buy.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:11px 0;border-bottom:1px solid var(--rule);font:400 15px/1.5 var(--sans);color:var(--body)"><span style="font:400 13px var(--mono);color:var(--muted)">4</span><span>Build a focused, working prototype.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:11px 0;border-bottom:1px solid var(--rule);font:400 15px/1.5 var(--sans);color:var(--body)"><span style="font:400 13px var(--mono);color:var(--muted)">5</span><span>Test it on cases that reflect real use.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:11px 0;border-bottom:1px solid var(--rule);font:400 15px/1.5 var(--sans);color:var(--body)"><span style="font:400 13px var(--mono);color:var(--muted)">6</span><span>Explain what works, what remains uncertain, and the next development step.</span></li>
+        </ol>
+      </div>
+      <span></span>
+      <div style="background:var(--tint);border:1px solid var(--rule);padding:18px 20px">
+        <p style="margin:0 0 6px;font:500 11px var(--mono);letter-spacing:.12em;color:var(--ink)">YOU RECEIVE</p>
+        <p style="margin:0;font:400 15.5px/1.55 var(--sans);color:var(--ink);text-wrap:pretty">A working prototype, findings from testing, and a practical recommendation for what to develop next.</p>
+      </div>
+    </article>
+    <article id="improve" style="padding:clamp(40px,5cqw,64px) var(--g);min-width:0;border-left:1px solid var(--ink);display:grid;grid-template-rows:auto auto auto 1fr auto;scroll-margin-top:64px">
+      <p style="margin:0 0 16px;font:500 12px var(--mono);letter-spacing:.12em;color:var(--blue)">02 / AN EXISTING FEATURE</p>
+      <h2 style="margin:0 0 18px;font:400 clamp(28px,3cqw,38px)/1.15 var(--serif);letter-spacing:-.015em;text-wrap:pretty">Improve an existing AI experience</h2>
+      <p style="margin:0 0 30px;font:italic 400 clamp(18px,1.6cqw,21px)/1.45 var(--serif);color:var(--body);max-width:40ch;text-wrap:pretty">“The demo looks promising, but real users still struggle, correct the output, or redo the work.”</p>
+      <div>
+        <p style="margin:0 0 10px;font:500 11px var(--mono);letter-spacing:.12em;color:var(--muted)">THE WORK CAN INCLUDE</p>
+        <ol style="margin:0 0 28px;padding:0;list-style:none;border-top:1px solid var(--ink)">
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:11px 0;border-bottom:1px solid var(--rule);font:400 15px/1.5 var(--sans);color:var(--body)"><span style="font:400 13px var(--mono);color:var(--muted)">1</span><span>Review real examples and where users run into trouble.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:11px 0;border-bottom:1px solid var(--rule);font:400 15px/1.5 var(--sans);color:var(--body)"><span style="font:400 13px var(--mono);color:var(--muted)">2</span><span>Agree what success should mean for the people using it.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:11px 0;border-bottom:1px solid var(--rule);font:400 15px/1.5 var(--sans);color:var(--body)"><span style="font:400 13px var(--mono);color:var(--muted)">3</span><span>Trace the problem across model behaviour, the information the system has, the workflow and the interface.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:11px 0;border-bottom:1px solid var(--rule);font:400 15px/1.5 var(--sans);color:var(--body)"><span style="font:400 13px var(--mono);color:var(--muted)">4</span><span>Prototype or implement selected improvements.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:11px 0;border-bottom:1px solid var(--rule);font:400 15px/1.5 var(--sans);color:var(--body)"><span style="font:400 13px var(--mono);color:var(--muted)">5</span><span>Compare results before and after on the same set of cases.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:11px 0;border-bottom:1px solid var(--rule);font:400 15px/1.5 var(--sans);color:var(--body)"><span style="font:400 13px var(--mono);color:var(--muted)">6</span><span>Hand over test cases your team can rerun, and clear next steps.</span></li>
+        </ol>
+      </div>
+      <span></span>
+      <div style="background:var(--tint);border:1px solid var(--rule);padding:18px 20px">
+        <p style="margin:0 0 6px;font:500 11px var(--mono);letter-spacing:.12em;color:var(--ink)">YOU RECEIVE</p>
+        <p style="margin:0;font:400 15.5px/1.55 var(--sans);color:var(--ink);text-wrap:pretty">A diagnosis supported by real examples, tested changes where agreed, and evidence of their effect.</p>
+      </div>
+    </article>
+  </section>
+
+  <section style="padding:clamp(40px,5cqw,64px) var(--g);border-bottom:1px solid var(--ink);background:var(--tint)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 32px;align-items:baseline;margin-bottom:24px">
+      <p style="margin:0;font:500 12px var(--mono);letter-spacing:.12em;color:var(--blue)">03 / WHAT A PROJECT CAN LOOK LIKE</p>
+    </div>
+    <div style="border:1px dashed var(--amber);background:var(--panel)">
+      <div style="padding:clamp(20px,2.5cqw,28px) clamp(18px,2.5cqw,28px);border-bottom:1px solid var(--rule);display:grid;gap:8px">
+        <p style="margin:0;font:500 11px var(--mono);letter-spacing:.12em;color:var(--amber)">ILLUSTRATIVE EXAMPLE</p>
+        <h2 style="margin:0;font:400 clamp(22px,2.4cqw,30px)/1.3 var(--serif);letter-spacing:-.01em;max-width:34ch;text-wrap:pretty">A team wants to help customers turn a collection of documents into an actionable plan.</h2>
+      </div>
+      <ol id="flow" style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))">
+        <li style="padding:20px clamp(16px,1.8cqw,24px) 24px;min-width:0;display:grid;align-content:start;gap:8px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 12px var(--mono);color:var(--muted)">1</span><span data-arrow="" aria-hidden="true" style="display:inline-block;font:400 14px var(--mono);color:var(--muted)">→</span></div>
+          <h3 style="margin:0;font:500 18px/1.3 var(--serif)">Understand the task</h3>
+          <p style="margin:0;font:400 14px/1.55 var(--sans);color:var(--body);text-wrap:pretty">Which documents customers start with, what the plan needs to help them decide, and what a good plan looks like to them.</p>
+        </li>
+        <li style="padding:20px clamp(16px,1.8cqw,24px) 24px;min-width:0;border-left:1px solid var(--rule);display:grid;align-content:start;gap:8px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 12px var(--mono);color:var(--muted)">2</span><span data-arrow="" aria-hidden="true" style="display:inline-block;font:400 14px var(--mono);color:var(--muted)">→</span></div>
+          <h3 style="margin:0;font:500 18px/1.3 var(--serif)">Prototype the experience</h3>
+          <p style="margin:0;font:400 14px/1.55 var(--sans);color:var(--body);text-wrap:pretty">A working version that reads a realistic set of documents and drafts a plan customers can review and edit.</p>
+        </li>
+        <li style="padding:20px clamp(16px,1.8cqw,24px) 24px;min-width:0;border-left:1px solid var(--rule);display:grid;align-content:start;gap:8px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 12px var(--mono);color:var(--muted)">3</span><span data-arrow="" aria-hidden="true" style="display:inline-block;font:400 14px var(--mono);color:var(--muted)">→</span></div>
+          <h3 style="margin:0;font:500 18px/1.3 var(--serif)">Test the plans</h3>
+          <p style="margin:0;font:400 14px/1.55 var(--sans);color:var(--body);text-wrap:pretty">Run it on representative document sets and check each plan: is it accurate, complete, and something a customer could act on?</p>
+        </li>
+        <li style="padding:20px clamp(16px,1.8cqw,24px) 24px;min-width:0;border-left:1px solid var(--rule);display:grid;align-content:start;gap:8px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 12px var(--mono);color:var(--muted)">4</span><span data-arrow="" aria-hidden="true" style="display:inline-block;font:400 14px var(--mono);color:var(--muted)">→</span></div>
+          <h3 style="margin:0;font:500 18px/1.3 var(--serif)">Find the review points</h3>
+          <p style="margin:0;font:400 14px/1.55 var(--sans);color:var(--body);text-wrap:pretty">Where plans tend to need correcting, and where a person should check before anything is acted on.</p>
+        </li>
+        <li style="padding:20px clamp(16px,1.8cqw,24px) 24px;min-width:0;border-left:1px solid var(--rule);display:grid;align-content:start;gap:8px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 12px var(--mono);color:var(--muted)">5</span></div>
+          <h3 style="margin:0;font:500 18px/1.3 var(--serif)">Recommend the next step</h3>
+          <p style="margin:0;font:400 14px/1.55 var(--sans);color:var(--body);text-wrap:pretty">What to build next, what to change, and which questions to answer before offering it more widely.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="padding:clamp(40px,5cqw,64px) var(--g);border-bottom:1px solid var(--ink)">
+    <p style="margin:0 0 14px;font:500 12px var(--mono);letter-spacing:.12em;color:var(--blue)">04 / HOW PROJECTS WORK</p>
+    <h2 style="margin:0 0 32px;font:400 clamp(26px,2.8cqw,34px)/1.2 var(--serif);letter-spacing:-.015em;max-width:28ch;text-wrap:pretty">Focused, hands-on, and set up for your team to carry on.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));border-top:1px solid var(--ink)">
+      <div style="padding:24px 28px 24px 0;border-bottom:1px solid var(--rule)"><p style="margin:0 0 10px;font:400 14px var(--mono);color:var(--muted)">i.</p><h3 style="margin:0 0 8px;font:500 20px/1.3 var(--serif)">An agreed question</h3><p style="margin:0;font:400 15px/1.6 var(--sans);color:var(--body);text-wrap:pretty">Each project starts with the question it needs to answer, a scope, and the outputs you’ll receive.</p></div>
+      <div style="padding:24px 28px;border-bottom:1px solid var(--rule);border-left:1px solid var(--rule)"><p style="margin:0 0 10px;font:400 14px var(--mono);color:var(--muted)">ii.</p><h3 style="margin:0 0 8px;font:500 20px/1.3 var(--serif)">Hands-on work</h3><p style="margin:0;font:400 15px/1.6 var(--sans);color:var(--body);text-wrap:pretty">Discovery, prototyping, testing and selected implementation, in whatever mix the question calls for.</p></div>
+      <div style="padding:24px 0 24px 28px;border-bottom:1px solid var(--rule);border-left:1px solid var(--rule)"><p style="margin:0 0 10px;font:400 14px var(--mono);color:var(--muted)">iii.</p><h3 style="margin:0 0 8px;font:500 20px/1.3 var(--serif)">A clear handoff</h3><p style="margin:0;font:400 15px/1.6 var(--sans);color:var(--body);text-wrap:pretty">Prototype, tests and findings are handed over so your team can continue the development.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px 32px;margin-top:28px;align-items:baseline">
+      <p style="margin:0;font:500 11px var(--mono);letter-spacing:.12em;color:var(--muted)">WHAT THE WORK DRAWS ON</p>
+      <p style="margin:0;grid-column:span 3;font:400 15px/1.7 var(--sans);color:var(--body);text-wrap:pretty">Customer and workflow discovery · AI product and interaction design · tool, model and build-versus-buy decisions · system architecture, including where people stay involved · functional prototyping and selected implementation · designing tests and interpreting the results</p>
+    </div>
+  </section>
+
+  <section id="experience" style="padding:clamp(40px,5cqw,64px) var(--g);border-bottom:1px solid var(--ink);scroll-margin-top:64px">
+    <p style="margin:0 0 28px;font:500 12px var(--mono);letter-spacing:.12em;color:var(--blue)">05 / WHO YOU’LL BE WORKING WITH</p>
+    <div id="founder-top" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:28px clamp(28px,4cqw,64px);align-items:start;margin-bottom:40px">
+      <div style="display:grid;gap:16px;align-content:start;min-width:0">
+        <img src="assets/yuyu-shen.jpg" alt="Portrait of Yuyu Shen" style="display:block;width:100%;max-width:220px;aspect-ratio:1/1;height:auto;object-fit:cover;border:1px solid var(--ink)">
+        <div>
+          <h2 style="margin:0 0 4px;font:400 clamp(28px,3cqw,36px)/1.15 var(--serif);letter-spacing:-.015em">Yuyu Shen</h2>
+          <p style="margin:0;font:500 12px var(--mono);letter-spacing:.1em;color:var(--muted)">FOUNDER, HOPPERLACE</p>
+        </div>
+      </div>
+      <div style="display:grid;gap:16px;max-width:64ch;min-width:0">
+        <p style="margin:0;font:400 clamp(19px,1.9cqw,23px)/1.5 var(--serif);text-wrap:pretty">Yuyu is a statistically trained data scientist turned product leader, with nearly a decade building and evaluating AI systems, including taking AI products from zero to one.</p>
+        <p style="margin:0;font:400 16px/1.65 var(--sans);color:var(--body);text-wrap:pretty">Her work has always sat between the technical and the commercial. She builds models and prototypes herself, then turns what they show into product decisions, keeping both tied to what customers actually need. That combination is what she brings to a project: judgment about what is worth building, the ability to build and measure it, and attention to how people will really use it.</p>
+        <p style="margin:0;font:400 16px/1.65 var(--sans);color:var(--body);text-wrap:pretty">She now builds independently through Hopperlace. That includes <a href="https://valuecompass.ai" style="text-underline-offset:2px">ValueCompass</a>, for comparing AI options against your values, and <a href="https://www.evidencesynthesisai.com/" style="text-underline-offset:2px">Evidence Synthesis AI</a>, which helps research teams use AI to screen studies for systematic reviews. Alongside building, she researches how AI systems should be evaluated and writes about technology, agency and better decisions.</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:20px 28px;margin-bottom:44px">
+      <div style="border-top:1px solid var(--ink);padding-top:14px;display:grid;gap:6px;align-content:start;min-width:0">
+        <p style="margin:0;font:500 11px var(--mono);letter-spacing:.12em;color:var(--muted)">RESEARCH</p>
+        <p style="margin:0;font:500 18px/1.3 var(--serif)">Deference-aware evaluation</p>
+        <p style="margin:0;font:400 14px/1.55 var(--sans);color:var(--body)">Paper accepted at the ICML 2026 Technical AI Governance workshop.</p>
+      </div>
+      <div style="border-top:1px solid var(--ink);padding-top:14px;display:grid;gap:6px;align-content:start;min-width:0">
+        <p style="margin:0;font:500 11px var(--mono);letter-spacing:.12em;color:var(--muted)">CERTIFICATIONS</p>
+        <div style="display:grid;gap:8px"><div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:center"><span style="font:500 14px var(--mono);letter-spacing:.04em;border:1px solid var(--ink);padding:5px 10px">CCA-F</span><span style="font:400 14px/1.4 var(--sans);color:var(--ink)">Certified Claude Architect – Foundational</span></div><div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:center"><span style="font:500 14px var(--mono);letter-spacing:.04em;border:1px solid var(--ink);padding:5px 10px">CCA-P</span><span style="font:400 14px/1.4 var(--sans);color:var(--ink)">Certified Claude Architect – Professional</span></div></div>
+        
+      </div>
+      <div style="border-top:1px solid var(--ink);padding-top:14px;display:grid;gap:6px;align-content:start;min-width:0">
+        <p style="margin:0;font:500 11px var(--mono);letter-spacing:.12em;color:var(--muted)">WRITING</p>
+        <p style="margin:0;font:500 18px/1.3 var(--serif)"><a href="https://buildwithwhy.com" style="color:var(--ink);text-underline-offset:3px">Build With Why ↗</a></p>
+        <p style="margin:0;font:400 14px/1.55 var(--sans);color:var(--body)">Essays on technology, agency and better decisions.</p>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;align-items:baseline;margin-bottom:12px">
+      <p style="margin:0;font:500 11px var(--mono);letter-spacing:.12em;color:var(--muted)">SELECTED EXPERIENCE FROM PREVIOUS ROLES</p>
+      <p style="margin:0;font:400 13px var(--sans);color:var(--muted)">Not Hopperlace client projects.</p>
+    </div>
+    <div id="cases" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px">
+      <article style="border:1px solid var(--ink);background:var(--panel);min-width:0">
+        <div style="padding:12px 20px;border-bottom:1px solid var(--rule);font:500 11px var(--mono);letter-spacing:.1em">ENJOY TECHNOLOGY</div>
+        <div style="padding:20px 20px 22px;display:grid;gap:16px">
+          <h3 style="margin:0;font:500 22px/1.25 var(--serif)">Last Mile Smart Routing</h3>
+          <div style="display:grid;gap:4px"><p style="margin:0;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muted)">WHAT YUYU DID</p><p style="margin:0;font:400 15px/1.6 var(--sans);color:var(--body);text-wrap:pretty">Personally built a Python proof-of-concept algorithm for adaptive delivery coverage, then led the work into product development.</p></div>
+          <div style="display:grid;gap:4px;padding-top:14px;border-top:1px solid var(--rule)"><p style="margin:0;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muted)">WHAT IT LED TO</p><p style="margin:0;font:400 15px/1.6 var(--sans);color:var(--ink);text-wrap:pretty">The feature, Last Mile Smart Routing, increased visits per vehicle by 8–13%.</p></div>
+        </div>
+      </article>
+      <article style="border:1px solid var(--ink);background:var(--panel);min-width:0">
+        <div style="padding:12px 20px;border-bottom:1px solid var(--rule);font:500 11px var(--mono);letter-spacing:.1em">BEAMERY</div>
+        <div style="padding:20px 20px 22px;display:grid;gap:16px">
+          <h3 style="margin:0;font:500 22px/1.25 var(--serif)">Dynamic Job Architecture</h3>
+          <div style="display:grid;gap:4px"><p style="margin:0;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muted)">WHAT YUYU DID</p><p style="margin:0;font:400 15px/1.6 var(--sans);color:var(--body);text-wrap:pretty">As hiring slowed, identified an opportunity to adapt Beamery’s existing AI capabilities into Dynamic Job Architecture. She persuaded leadership to explore the area, secured support for a team and found willing pilot customers.</p></div>
+          <div style="display:grid;gap:4px;padding-top:14px;border-top:1px solid var(--rule)"><p style="margin:0;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muted)">WHAT IT LED TO</p><p style="margin:0;font:400 15px/1.6 var(--sans);color:var(--ink);text-wrap:pretty">The work extended Beamery’s capabilities toward defining roles and skills for internal mobility and workforce planning.</p></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section style="padding:clamp(36px,4.5cqw,56px) var(--g);border-bottom:1px solid var(--ink);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px var(--g);align-items:start">
+    <div>
+      <p style="margin:0 0 14px;font:500 12px var(--mono);letter-spacing:.12em;color:var(--blue)">06 / WHY HOPPERLACE</p>
+      <h2 style="margin:0;font:400 clamp(22px,2.4cqw,28px)/1.3 var(--serif);letter-spacing:-.01em;max-width:24ch;text-wrap:pretty">The same questions behind our product work.</h2>
+    </div>
+    <div style="display:grid;gap:12px;max-width:60ch">
+      <p style="margin:0;font:400 16px/1.65 var(--sans);color:var(--body);text-wrap:pretty">Client projects and Hopperlace’s public tool testing, now in development, start from the same questions: what an AI system actually accomplishes, where it struggles, and what makes it right for a particular task and person. Client work stays confidential.</p>
+      <a href="Hopperlace Homepage v2.dc.html#testing" style="font:500 14px var(--sans);text-underline-offset:2px">How we’re approaching tool testing →</a>
+    </div>
+  </section>
+
+  <section id="contact" style="background:var(--ink);color:var(--paper);padding:clamp(56px,7cqw,96px) var(--g)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:32px var(--g);align-items:end">
+      <div>
+        <h2 style="margin:0 0 16px;font:400 clamp(32px,3.8cqw,48px)/1.1 var(--serif);letter-spacing:-.015em;max-width:18ch;text-wrap:pretty">Tell us what you’re working on.</h2>
+        <p style="margin:0;font:400 17px/1.6 var(--sans);color:#d9d5cc;max-width:50ch;text-wrap:pretty">A few sentences is plenty: what you want to build or improve, what is uncertain or not working yet, and any timing that matters.</p>
+      </div>
+      <div style="display:grid;gap:12px;justify-items:start">
+        <a href="mailto:hello@hopperlace.ai" style="text-decoration:none;font:500 16px var(--sans);color:var(--ink);background:var(--paper);padding:17px 30px">Discuss your project</a>
+        <span style="font:400 14px var(--sans);color:#b9b4aa">or email <a href="mailto:hello@hopperlace.ai" style="color:#f4f2ed;text-underline-offset:2px">hello@hopperlace.ai</a></span>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:32px var(--g) 40px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font:400 13px/1.5 var(--sans);color:var(--muted)">
+    <span>© 2026 Hopperlace · Independent. No placement fees, no sponsored results.</span>
+    <div style="display:flex;flex-wrap:wrap;gap:20px"><a href="Hopperlace Homepage v2.dc.html" style="color:var(--muted);text-underline-offset:2px">Home</a><a href="https://valuecompass.ai" style="color:var(--muted);text-underline-offset:2px">valuecompass.ai</a><a href="mailto:hello@hopperlace.ai" style="color:var(--muted);text-underline-offset:2px">hello@hopperlace.ai</a></div>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>
