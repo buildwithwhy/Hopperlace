@@ -14,6 +14,10 @@
   /* Rules */
   --color-rule: #d5d1c8;
 
+  /* Text on the dark `ink` band (services contact) */
+  --color-on-ink: #d9d5cc;
+  --color-on-ink-muted: #b9b4aa;
+
   /* Accents */
   --color-accent: oklch(0.45 0.09 250);
   --color-amber: oklch(0.45 0.09 70);

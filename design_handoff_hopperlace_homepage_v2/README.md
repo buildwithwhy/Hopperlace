@@ -8,7 +8,8 @@ testing and comparison work, with ValueCompass as the part you can use today:
 | File | Builds |
 | --- | --- |
 | `Hopperlace Homepage v2.dc.html` | `src/app/page.tsx` (`/`) |
-| `Services.dc.html` | `src/app/services/page.tsx` (`/services`) |
+| `Services v2.dc.html` | `src/app/services/page.tsx` (`/services`) — current |
+| `Services.dc.html` | The previous services page, superseded by v2 |
 | `screenshots/` | Reference renders of the example test scenario, open, on a narrow screen |
 
 Page order: hero with "Two parts of one decision" (tool testing, ValueCompass)
@@ -84,3 +85,31 @@ v1's hero crop (`vc-hero-priorities-v3.png`) is no longer used and was removed.
 - Founder credentials as written: nearly a decade, ICML 2026 Technical AI
   Governance workshop **acceptance**, CCA-F and CCA-P. Past employment must
   never read as Hopperlace client results.
+
+## Services v2
+
+`Services v2.dc.html` rebuilds `/services` around two kinds of project — develop
+and test a new AI idea, or improve an existing AI experience — followed by an
+illustrative example project, how projects work, the founder and selected past
+work, why Hopperlace, and a dark contact band.
+
+Translation notes:
+
+- **Breakpoints.** The prototype's `@container (max-width: 900px)` maps to
+  `hero` (hero columns, and the five-step example flow, whose arrows turn to
+  point down when it stacks); `(max-width: 760px)` maps to `vc` (the two
+  offers, founder block and past-work cards).
+- **"How projects work"** uses explicit columns at `split` so its vertical rules
+  become horizontal when stacked, like every other band. The prototype's
+  `auto-fit` grid would leave stray rules at intermediate widths.
+- **"What the work draws on"** is a label beside a three-column span at `split`
+  and stacks below it. The prototype's `grid-column: span 3` inside an
+  `auto-fit` grid forces extra implicit columns on narrow screens.
+- **Spelling.** "model behaviour" is rendered as "model behavior" (the site
+  uses US spelling). Every other word is verbatim.
+- **Contact band text colors** (`#d9d5cc`, `#b9b4aa`) are the `on-ink` and
+  `on-ink-muted` theme tokens.
+
+The "Selected experience from previous roles" cards describe work at Enjoy
+Technology and Beamery before Hopperlace, and must keep their "Not Hopperlace
+client projects." label.

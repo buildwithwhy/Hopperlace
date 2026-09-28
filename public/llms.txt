@@ -78,29 +78,85 @@ She also built Evidence Synthesis AI (https://www.evidencesynthesisai.com/), whi
 
 ## Services (https://hopperlace.ai/services)
 
-Need help choosing an AI tool or testing an idea?
+Develop, test and improve AI products and features.
 
-Hopperlace works with teams to understand a workflow, compare options and test promising approaches. You get findings and a recommendation to help you decide what to use, what to build, or what to investigate next.
+Hopperlace helps teams turn promising ideas into working prototypes, find out what is holding existing AI experiences back, and use evidence to decide what to build or change next.
 
-How it works:
+### 01 / A new idea: develop and test an AI idea
 
-1. Understand — establish how the workflow operates today and what a better outcome would mean for your customers or business.
-2. Compare and test — test promising approaches on your tasks, building a prototype where useful.
-3. Explain and recommend — present the findings, trade-offs and recommended next steps.
+"We see an opportunity for AI in our product or workflow, but need to work out what it should do and whether it can deliver."
 
-Questions this suits:
+The work can include:
 
-- "Which of these AI tools should our team use for this work?"
-- "Is this model good enough for our use case, and how would we know?"
-- "Should we build this ourselves, buy it, or wait?"
-- "A vendor is claiming this works. Can we check before we sign?"
+1. Understand the user's task and how it is done today.
+2. Define what a useful result would look like.
+3. Explore suitable tools, models and system designs, including whether to build or buy.
+4. Build a focused, working prototype.
+5. Test it on cases that reflect real use.
+6. Explain what works, what remains uncertain, and the next development step.
 
-What you get: projects end with findings, a recommendation and any agreed prototype or evaluation materials. Implementation and ongoing delivery remain with your team. You can reuse the evaluation tasks and criteria when your needs or the available tools change.
+You receive: a working prototype, findings from testing, and a practical recommendation for what to develop next.
+
+### 02 / An existing feature: improve an existing AI experience
+
+"The demo looks promising, but real users still struggle, correct the output, or redo the work."
+
+The work can include:
+
+1. Review real examples and where users run into trouble.
+2. Agree what success should mean for the people using it.
+3. Trace the problem across model behavior, the information the system has, the workflow and the interface.
+4. Prototype or implement selected improvements.
+5. Compare results before and after on the same set of cases.
+6. Hand over test cases your team can rerun, and clear next steps.
+
+You receive: a diagnosis supported by real examples, tested changes where agreed, and evidence of their effect.
+
+### 03 / What a project can look like (illustrative example)
+
+A team wants to help customers turn a collection of documents into an actionable plan.
+
+1. Understand the task — which documents customers start with, what the plan needs to help them decide, and what a good plan looks like to them.
+2. Prototype the experience — a working version that reads a realistic set of documents and drafts a plan customers can review and edit.
+3. Test the plans — run it on representative document sets and check each plan: is it accurate, complete, and something a customer could act on?
+4. Find the review points — where plans tend to need correcting, and where a person should check before anything is acted on.
+5. Recommend the next step — what to build next, what to change, and which questions to answer before offering it more widely.
+
+### 04 / How projects work
+
+Focused, hands-on, and set up for your team to carry on.
+
+1. An agreed question — each project starts with the question it needs to answer, a scope, and the outputs you'll receive.
+2. Hands-on work — discovery, prototyping, testing and selected implementation, in whatever mix the question calls for.
+3. A clear handoff — prototype, tests and findings are handed over so your team can continue the development.
+
+What the work draws on: customer and workflow discovery · AI product and interaction design · tool, model and build-versus-buy decisions · system architecture, including where people stay involved · functional prototyping and selected implementation · designing tests and interpreting the results.
+
+### 05 / Who you'll be working with: Yuyu Shen, founder
+
+Yuyu is a statistically trained data scientist turned product leader, with nearly a decade building and evaluating AI systems, including taking AI products from zero to one.
+
+Her work has always sat between the technical and the commercial. She builds models and prototypes herself, then turns what they show into product decisions, keeping both tied to what customers actually need. That combination is what she brings to a project: judgment about what is worth building, the ability to build and measure it, and attention to how people will really use it.
+
+She now builds independently through Hopperlace. That includes ValueCompass (https://valuecompass.ai), for comparing AI options against your values, and Evidence Synthesis AI (https://www.evidencesynthesisai.com/), which helps research teams use AI to screen studies for systematic reviews. Alongside building, she researches how AI systems should be evaluated and writes about technology, agency and better decisions.
+
+- Research: deference-aware evaluation. Paper accepted at the ICML 2026 Technical AI Governance workshop.
+- Certifications: CCA-F (Certified Claude Architect – Foundational); CCA-P (Certified Claude Architect – Professional).
+- Writing: Build With Why (https://buildwithwhy.com), essays on technology, agency and better decisions.
+
+Selected experience from previous roles (not Hopperlace client projects):
+
+- Enjoy Technology — Last Mile Smart Routing. Personally built a Python proof-of-concept algorithm for adaptive delivery coverage, then led the work into product development. The feature increased visits per vehicle by 8–13%.
+- Beamery — Dynamic Job Architecture. As hiring slowed, identified an opportunity to adapt Beamery's existing AI capabilities into Dynamic Job Architecture; persuaded leadership to explore the area, secured support for a team and found willing pilot customers. The work extended Beamery's capabilities toward defining roles and skills for internal mobility and workforce planning.
+
+### 06 / Why Hopperlace
+
+The same questions behind our product work. Client projects and Hopperlace's public tool testing, now in development, start from the same questions: what an AI system actually accomplishes, where it struggles, and what makes it right for a particular task and person. Client work stays confidential.
 
 ## Contact
 
 - Email: hello@hopperlace.ai
-- An AI decision: mailto:hello@hopperlace.ai?subject=An AI decision
+- Discuss your project: mailto:hello@hopperlace.ai
 - Website: https://hopperlace.ai
 - Product: https://valuecompass.ai
 - Founder's writing: https://buildwithwhy.com
