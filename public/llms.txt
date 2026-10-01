@@ -2,9 +2,9 @@
 
 > Choose AI for what you want to do — and what matters to you.
 
-We're developing independent, hands-on comparisons of AI tools: testing them on the same tasks, checking their outputs, and recording the effort needed to get a usable result.
+Hopperlace helps you choose AI tools and systems that fit your tasks, preferences and values, with evidence you can understand and inspect.
 
-ValueCompass, which you can use today, adds research on the companies behind those tools: their ownership, dependencies and policies.
+ValueCompass, which you can use today, adds research on the companies behind those tools: their ownership, dependencies and policies. We're also developing independent, hands-on comparisons of the tools themselves, starting with AI app builders.
 
 The aim is to bring these comparisons together with ValueCompass, so you can consider practical fit and values in the same decision.
 
@@ -12,8 +12,8 @@ Focus: independent testing · comparison · informed choice.
 
 ## Two parts of one decision
 
+- ValueCompass (available now, https://valuecompass.ai): who is behind it, and does that fit your values? Compare AI options on ownership, control and documented commitments, against the priorities you choose.
 - Tool testing (in development): can it do your task, and what will it take? Find out which tools suit a particular task, and what effort, expertise and compromises each one involves.
-- ValueCompass (live, https://valuecompass.ai): who is behind it, and does that fit your values? Compare AI options on ownership, control and documented commitments, against the priorities you choose.
 
 ## Tool testing — in development
 
