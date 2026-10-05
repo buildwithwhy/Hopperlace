@@ -1,0 +1,52 @@
+/* Hopperlace shared design tokens + base resets.
+   Every page links this file; change a value here to restyle the whole site. */
+:root{
+  /* Surfaces */
+  --paper:#FAF8F4;          /* page */
+  --panel:#FFFDF9;          /* raised cards on sage */
+  --sage:#EFF0E8;           /* section bands */
+  --selected:#E6ECDF;       /* selected state, "You receive" boxes */
+  --beige:#EFE6D8;          /* credentials panel */
+  --shot:#F8FAFC;           /* backdrop behind product screenshots */
+
+  /* Text */
+  --heading:#263D34;
+  --body:#465149;
+  --muted:#566158;          /* labels, captions — 5.9:1 on paper */
+
+  /* Actions & status */
+  --primary:#2E5140;
+  --primary-hover:#24412F;
+  --on-primary:#FAF8F4;
+  --live:#2E5140;           /* "Available now" */
+  --dev:oklch(0.47 0.09 65);/* "In development" — reads differently from green */
+
+  /* Lines */
+  --rule:rgba(38,61,52,.16);
+  --rule-strong:rgba(38,61,52,.32);
+  --focus:#2E5140;
+
+  /* Type */
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --sans:'IBM Plex Sans',ui-sans-serif,system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,monospace;
+
+  /* Space & shape */
+  --max:1200px;
+  --gutter:clamp(20px,5vw,64px);
+  --section-y:clamp(64px,9vw,120px);
+  --radius:4px;
+  --pill:999px;
+  --header-h:72px;
+}
+@media (max-width:760px){:root{--header-h:60px}}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 8px)}
+body{margin:0;background:var(--paper);color:var(--body);font-family:var(--sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+a{color:var(--primary);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--heading)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:2px}
+h1,h2,h3,h4,p,blockquote,dl,dd,figure{margin:0}
+ol,ul{margin:0;padding:0;list-style:none}
+summary{list-style:none}
+summary::-webkit-details-marker{display:none}
+details[open] .hl-chev{transform:rotate(180deg)}

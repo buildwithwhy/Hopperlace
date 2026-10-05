@@ -1,11 +1,21 @@
 import Image from "next/image";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
 import {
   BUILDWITHWHY_URL,
   EMAIL,
   EVIDENCE_SYNTHESIS_URL,
-  MAIL_HREF,
   VALUECOMPASS_URL,
 } from "@/lib/links";
+import {
+  frame,
+  label,
+  largeButton,
+  lead,
+  primaryButton,
+  proseLink,
+  sectionHeading,
+} from "@/lib/ui";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -44,9 +54,19 @@ const jsonLd = {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
+            name: "Choose an AI approach",
+            description:
+              "Decide which provider, tool or system design to use, based on evidence tested on your cases. You receive a comparison of the shortlisted options on your own cases, a recommended approach and system design, and integration prototypes where agreed.",
+            url: "https://hopperlace.ai/services#choose",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
             name: "Develop and test an AI idea",
             description:
-              "Work out what it should do, build it, and see whether it delivers. You receive a working prototype, findings from testing, and a practical recommendation for what to develop next.",
+              "Work out what it should do, build a working version, and see whether it delivers. You receive a working prototype, findings from testing, and a practical recommendation for what to develop next.",
             url: "https://hopperlace.ai/services#develop",
           },
         },
@@ -56,7 +76,7 @@ const jsonLd = {
             "@type": "Service",
             name: "Improve an existing AI experience",
             description:
-              "Find what is holding it back for real users, and test the changes. You receive a diagnosis supported by real examples, tested changes where agreed, and evidence of their effect.",
+              "Find what is holding it back for real users, then test and make the changes. You receive a diagnosis supported by real examples, a check on whether your metrics reflect useful outcomes, tested or implemented changes where agreed, and evidence of their effect.",
             url: "https://hopperlace.ai/services#improve",
           },
         },
@@ -109,22 +129,6 @@ const jsonLd = {
   ],
 };
 
-/* ─── Shared layout & type primitives ─── */
-
-/* Centered column with the fluid page gutter; every band uses it. */
-const frame = "mx-auto max-w-[var(--max)] px-[var(--gutter)]";
-const label =
-  "font-mono text-[12px] font-medium tracking-[0.1em] uppercase text-muted";
-const sectionHeading =
-  "font-serif text-[clamp(28px,2.8vw,38px)] leading-[1.18] font-normal tracking-[-0.015em] text-heading text-balance";
-const lead = "text-[clamp(17px,1.4vw,19px)] leading-[1.6] text-heading text-pretty";
-/* No display utility here: the header hides its copy below `vc`, and a shared
-   `inline-flex` would beat `hidden`. Call sites add `inline-flex`. */
-const primaryButton =
-  "items-center self-start rounded-full bg-primary font-medium text-on-primary no-underline hover:bg-primary-hover";
-const proseLink =
-  "text-primary underline decoration-1 underline-offset-[3px] hover:text-heading";
-
 /* ─── Assets ───
    Real captures of valuecompass.ai supplied by the founder, 22 Sep 2026. The
    `*-crop` files are crops prepared for on-page use; the numbered files are
@@ -139,15 +143,6 @@ const shots = {
 } as const;
 
 /* ─── Content ─── */
-
-/* `wideOnly` links drop out of the compact header below the `vc` breakpoint;
-   the homepage's own sections still cover them. */
-const navLinks = [
-  { href: "#testing", label: "Testing" },
-  { href: "#valuecompass", label: "ValueCompass" },
-  { href: "#founder", label: "Founder", wideOnly: true },
-  { href: "/services", label: "Services" },
-];
 
 const scenarioScope = [
   {
@@ -177,7 +172,10 @@ const recorded = [
     heading: "Fixes",
     body: "What errors occur, and how many attempts it takes to resolve them.",
   },
-  { heading: "Time", body: "From the initial instructions to a usable result." },
+  {
+    heading: "Time",
+    body: "From the initial instructions to a usable result.",
+  },
   {
     heading: "Cost",
     body: "What it costs to complete the task, including retries.",
@@ -204,72 +202,21 @@ const projectTypes = [
 
 export default function Home() {
   return (
-    /* Links here carry their own hover colors, so opt out of the base
-       layer's hover opacity. */
-    <div
-      id="top"
-      className="text-[17px] leading-[1.65] text-body [&_a:hover]:opacity-100"
-    >
+    <div id="top">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <a
-        href="#main"
-        className="absolute top-2 -left-[9999px] z-20 bg-primary px-4 py-2.5 text-on-primary focus:left-2"
-      >
-        Skip to content
-      </a>
-      <Header />
+      <SiteHeader current="home" />
       <main id="main">
         <Hero />
-        <Testing />
         <ValueCompass />
+        <Testing />
         <Founder />
         <ServicesInvitation />
       </main>
-      <Footer />
+      <SiteFooter />
     </div>
-  );
-}
-
-/* ─── Header (sticky) ─── */
-
-function Header() {
-  return (
-    <header className="sticky top-0 z-10 border-b border-rule bg-paper">
-      <div
-        className={`${frame} box-border flex h-[var(--header-h)] flex-nowrap items-center gap-3.5 vc:gap-x-7`}
-      >
-        <a
-          href="#top"
-          className="flex-none py-1.5 font-serif text-[19px] leading-none font-semibold tracking-[0.005em] whitespace-nowrap text-heading no-underline vc:flex-[1_0_auto] vc:text-[21px]"
-        >
-          Hopperlace
-        </a>
-        {/* On narrow screens the row scrolls sideways and fades at the edge. */}
-        <nav
-          aria-label="Primary"
-          className="flex min-w-0 flex-[0_1_auto] flex-nowrap items-center gap-x-3.5 overflow-x-auto text-[14px] font-medium whitespace-nowrap [mask-image:linear-gradient(90deg,#000_calc(100%-16px),transparent)] [scrollbar-width:none] vc:gap-x-[22px] vc:text-[15px] vc:[mask-image:none]"
-        >
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`py-3 text-body no-underline hover:text-heading ${link.wideOnly ? "hidden vc:inline" : ""}`}
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-        <a
-          href={VALUECOMPASS_URL}
-          className={`${primaryButton} hidden min-h-11 flex-none px-5 text-[15px] whitespace-nowrap vc:inline-flex`}
-        >
-          Try ValueCompass ↗
-        </a>
-      </div>
-    </header>
   );
 }
 
@@ -390,7 +337,7 @@ function DevStatus() {
   );
 }
 
-/* ─── 01 / Tool testing ─── */
+/* ─── 02 / Tool testing ─── */
 
 function Testing() {
   return (
@@ -398,8 +345,10 @@ function Testing() {
       <div className={`${frame} py-[var(--section-y)]`}>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] items-start gap-x-[clamp(40px,6vw,96px)] gap-y-10">
           <div className="flex min-w-0 flex-col gap-5">
-            <p className={`${label} flex flex-wrap items-center gap-x-3.5 gap-y-2`}>
-              <span>01 / Tool testing</span>
+            <p
+              className={`${label} flex flex-wrap items-center gap-x-3.5 gap-y-2`}
+            >
+              <span>02 / Tool testing</span>
               <span className="rounded-full border border-dev px-[11px] py-[3px] text-dev">
                 In development
               </span>
@@ -519,97 +468,101 @@ function Scenario() {
   );
 }
 
-/* ─── 02 / ValueCompass ─── */
+/* ─── 01 / ValueCompass ─── */
 
 function ValueCompass() {
   return (
     <section
       id="valuecompass"
       aria-labelledby="valuecompass-title"
-      className={`${frame} py-[var(--section-y)]`}
+      className="border-t border-rule"
     >
-      <div className="mb-6 flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
-        <p className={`${label} flex flex-wrap items-center gap-x-3.5 gap-y-2`}>
-          <span>02 / ValueCompass</span>
-          <span className="rounded-full bg-live px-[11px] py-[3px] text-on-primary">
-            Available now
-          </span>
-        </p>
-        <p className="text-[15px] text-muted">
-          Opens valuecompass.ai. No account needed.
-        </p>
-      </div>
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] items-center gap-x-[clamp(40px,6vw,88px)] gap-y-10">
-        <div className="flex min-w-0 flex-col gap-5">
-          <h2 id="valuecompass-title" className={sectionHeading}>
-            Explore the values behind your AI choices.
-          </h2>
-          <p className={lead}>
-            Who benefits from the money you spend on AI? What commitments do
-            providers make to the people affected by their technology?
-          </p>
-          <p className="text-pretty">
-            ValueCompass helps you examine the companies behind AI products and
-            compare options against your values. Explore ownership, control,
-            dependencies and documented policies, with sources and clear gaps in
-            the research.
-          </p>
-          <a
-            href={VALUECOMPASS_URL}
-            className={`${primaryButton} mt-2 inline-flex min-h-[52px] px-7 text-[17px]`}
+      <div className={`${frame} py-[var(--section-y)]`}>
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
+          <p
+            className={`${label} flex flex-wrap items-center gap-x-3.5 gap-y-2`}
           >
-            Try ValueCompass ↗
-          </a>
-        </div>
-        <figure className="flex min-w-0 flex-col gap-3 rounded-card bg-sage p-[clamp(14px,2vw,24px)]">
-          <a
-            href={shots.fullEvidence}
-            target="_blank"
-            rel="noopener"
-            className="relative block overflow-hidden rounded-card border border-rule bg-shot no-underline"
-          >
-            <Image
-              src={shots.cardsCrop}
-              alt="ValueCompass option cards showing who gets paid and what each runs on, documented alignment on nonprofit control with source links, and a separate ‘What we could not check’ note on the economic-stake question"
-              width={1998}
-              height={1590}
-              sizes="(min-width: 761px) 50vw, 100vw"
-              className="hidden h-auto max-h-[440px] w-full object-contain object-top vc:block"
-            />
-            <Image
-              src={shots.claudeCard}
-              alt="ValueCompass option card for Claude: who gets paid and what it runs on, documented alignment on nonprofit control, and a separate ‘What we could not check’ note on the economic-stake question"
-              width={1000}
-              height={1590}
-              sizes="100vw"
-              className="block h-auto max-h-[440px] w-full object-contain object-top vc:hidden"
-            />
-            <span className="absolute right-3 bottom-3 inline-flex min-h-9 items-center rounded-full bg-heading px-3.5 text-[14px] font-medium text-on-primary">
-              View example ↗
+            <span>01 / ValueCompass</span>
+            <span className="rounded-full bg-live px-[11px] py-[3px] text-on-primary">
+              Available now
             </span>
-          </a>
-          <figcaption className="flex flex-col gap-1.5">
-            <p className="text-[15px] leading-[1.55] text-pretty">
-              An example comparing nonprofit control and financial interests.
-              Confirmed findings and unanswered questions appear separately.
+          </p>
+          <p className="text-[15px] text-muted">
+            Opens valuecompass.ai. No account needed.
+          </p>
+        </div>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] items-center gap-x-[clamp(40px,6vw,88px)] gap-y-10">
+          <div className="flex min-w-0 flex-col gap-5">
+            <h2 id="valuecompass-title" className={sectionHeading}>
+              Explore the values behind your AI choices.
+            </h2>
+            <p className={lead}>
+              Who benefits from the money you spend on AI? What commitments do
+              providers make to the people affected by their technology?
             </p>
-            <p className="text-[14px] leading-[1.55] text-muted">
-              Full captures:{" "}
-              <CaptureLink href={shots.fullPriorities}>
-                choosing priorities
-              </CaptureLink>{" "}
-              &middot;{" "}
-              <CaptureLink href={shots.fullAdvice}>
-                summary of what was found
-              </CaptureLink>{" "}
-              &middot;{" "}
-              <CaptureLink href={shots.fullEvidence}>
-                evidence on the cards
-              </CaptureLink>
-              .
+            <p className="text-pretty">
+              ValueCompass helps you examine the companies behind AI products
+              and compare options against your values. Explore ownership,
+              control, dependencies and documented policies, with sources and
+              clear gaps in the research.
             </p>
-          </figcaption>
-        </figure>
+            <a
+              href={VALUECOMPASS_URL}
+              className={`${primaryButton} ${largeButton} mt-2`}
+            >
+              Try ValueCompass ↗
+            </a>
+          </div>
+          <figure className="flex min-w-0 flex-col gap-3 rounded-card bg-sage p-[clamp(14px,2vw,24px)]">
+            <a
+              href={shots.fullEvidence}
+              target="_blank"
+              rel="noopener"
+              className="relative block overflow-hidden rounded-card border border-rule bg-shot no-underline"
+            >
+              <Image
+                src={shots.cardsCrop}
+                alt="ValueCompass option cards showing who gets paid and what each runs on, documented alignment on nonprofit control with source links, and a separate ‘What we could not check’ note on the economic-stake question"
+                width={1998}
+                height={1590}
+                sizes="(min-width: 761px) 50vw, 100vw"
+                className="hidden h-auto max-h-[440px] w-full object-contain object-top vc:block"
+              />
+              <Image
+                src={shots.claudeCard}
+                alt="ValueCompass option card for Claude: who gets paid and what it runs on, documented alignment on nonprofit control, and a separate ‘What we could not check’ note on the economic-stake question"
+                width={1000}
+                height={1590}
+                sizes="100vw"
+                className="block h-auto max-h-[440px] w-full object-contain object-top vc:hidden"
+              />
+              <span className="absolute right-3 bottom-3 inline-flex min-h-9 items-center rounded-full bg-heading px-3.5 text-[14px] font-medium text-on-primary">
+                View example ↗
+              </span>
+            </a>
+            <figcaption className="flex flex-col gap-1.5">
+              <p className="text-[15px] leading-[1.55] text-pretty">
+                An example comparing nonprofit control and financial interests.
+                Confirmed findings and unanswered questions appear separately.
+              </p>
+              <p className="text-[14px] leading-[1.55] text-muted">
+                Full captures:{" "}
+                <CaptureLink href={shots.fullPriorities}>
+                  choosing priorities
+                </CaptureLink>{" "}
+                &middot;{" "}
+                <CaptureLink href={shots.fullAdvice}>
+                  summary of what was found
+                </CaptureLink>{" "}
+                &middot;{" "}
+                <CaptureLink href={shots.fullEvidence}>
+                  evidence on the cards
+                </CaptureLink>
+                .
+              </p>
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </section>
   );
@@ -717,10 +670,7 @@ function ServicesInvitation() {
               Hopperlace works with teams to compare options, test promising
               approaches and recommend what to use, build or investigate next.
             </p>
-            <a
-              href="/services"
-              className={`${primaryButton} inline-flex min-h-[52px] px-7 text-[17px]`}
-            >
+            <a href="/services" className={`${primaryButton} ${largeButton}`}>
               Services →
             </a>
           </div>
@@ -742,46 +692,5 @@ function ServicesInvitation() {
         </ul>
       </div>
     </section>
-  );
-}
-
-/* ─── Footer ─── */
-
-const footerLinks = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: VALUECOMPASS_URL, label: "valuecompass.ai" },
-  { href: BUILDWITHWHY_URL, label: "buildwithwhy.com" },
-  { href: MAIL_HREF, label: EMAIL },
-];
-
-function Footer() {
-  return (
-    <footer className="border-t border-rule">
-      <div
-        className={`${frame} flex flex-wrap items-baseline justify-between gap-x-8 gap-y-4 pt-8 pb-10 text-[14px] leading-[1.5] text-muted`}
-      >
-        <div className="flex flex-col gap-1">
-          <span className="font-serif text-[18px] leading-[1.2] font-semibold text-heading">
-            Hopperlace
-          </span>
-          <span>
-            &copy; 2026 Hopperlace &middot; Independent. No placement fees, no
-            sponsored results.
-          </span>
-        </div>
-        <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-1">
-          {footerLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="py-1.5 text-body underline decoration-1 underline-offset-[3px] hover:text-heading"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-      </div>
-    </footer>
   );
 }

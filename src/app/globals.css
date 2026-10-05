@@ -27,15 +27,6 @@
   /* Backdrop behind product screenshots (ValueCompass' own canvas). */
   --color-shot: #f8fafc;
 
-  /* Legacy names still used by the services page, mapped onto the palette
-     above until that page is rebuilt from its own handoff. */
-  --color-ink: var(--color-heading);
-  --color-tint: var(--color-sage);
-  --color-accent: var(--color-primary);
-  --color-amber: var(--color-dev);
-  --color-on-ink: #d9ded6;
-  --color-on-ink-muted: #b7c0b8;
-
   --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
@@ -43,14 +34,11 @@
   /* Space & shape */
   --radius-card: 4px;
 
-  /* Three breakpoints, each owned by particular grids. They are not a scale —
-     every value is the width at which those grids stop working. `vc` and
-     `hero` come straight from the handoff's container queries (760px and
-     900px); `split` is where the handoff's auto-fit bands settle into two
-     columns. `vc` is also where the header switches to its compact row. */
-  --breakpoint-vc: 761px; /* ValueCompass card splits 2fr / 3fr */
-  --breakpoint-split: 800px; /* Two- and three-column bands */
-  --breakpoint-hero: 901px; /* Hero text and the two part cards sit side by side */
+  /* One breakpoint, matching the handoff's 760px media queries: the header's
+     compact row, the ValueCompass preview swap and the project tabs' three
+     columns. Everything else reflows with auto-fit grids, so don't reach for
+     `sm:`/`md:`/`lg:`. */
+  --breakpoint-vc: 761px;
 }
 
 /* Page frame shared by every section: centered column and fluid gutter. */
@@ -77,10 +65,8 @@
 
   body {
     font-family: var(--font-sans);
-    /* The handoff sets a line-height on every element that needs one and leaves
-       the rest at `normal`. Preflight's `line-height: 1.5` on `html` would add
-       a few px to every button, label and nav link — reset it here. */
-    line-height: normal;
+    font-size: 17px;
+    line-height: 1.65;
     color: var(--color-body);
     background-color: var(--color-paper);
     -webkit-font-smoothing: antialiased;
@@ -89,12 +75,6 @@
 
   a {
     color: inherit;
-  }
-
-  /* The services page's only hover feedback. The homepage gives its links
-     explicit hover colors instead and opts out on its wrapper. */
-  a:hover {
-    opacity: 0.8;
   }
 
   :focus-visible {

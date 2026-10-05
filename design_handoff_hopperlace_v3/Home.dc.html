@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Hopperlace — AI tool comparison &amp; values-based choice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap">
+<link rel="stylesheet" href="hopperlace.css">
+</helmet>
+<div id="top" style="background:var(--paper);color:var(--body);font-family:var(--sans);font-size:17px;line-height:1.65">
+<a href="#main" style="position:absolute;left:-9999px;top:8px;background:var(--primary);color:var(--on-primary);padding:10px 16px;z-index:20" style-focus="left:8px">Skip to content</a>
+<dc-import name="SiteHeader" current="home" hint-size="100%,72px" style="position:sticky;top:0;z-index:10;display:block"></dc-import>
+
+<main id="main">
+<section aria-labelledby="hero-title" style="max-width:var(--max);margin:0 auto;padding:clamp(56px,8vw,112px) var(--gutter) clamp(56px,8vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:48px clamp(40px,6vw,96px);align-items:center">
+  <div style="display:flex;flex-direction:column;gap:22px;min-width:0">
+    <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Independent testing · Comparison · Informed choice</p>
+    <h1 id="hero-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.6vw,64px);line-height:1.1;letter-spacing:-.02em;color:var(--heading);max-width:18ch;text-wrap:balance">Choose AI for what you want to do — and what matters to you.</h1>
+    <p style="font-size:clamp(17px,1.4vw,19px);line-height:1.6;color:var(--heading);max-width:52ch;text-wrap:pretty">Hopperlace helps you choose AI tools and systems that fit your tasks, preferences and values, with evidence you can understand and inspect.</p>
+    <p style="max-width:52ch;text-wrap:pretty">ValueCompass, which you can use today, adds research on the companies behind those tools: their ownership, dependencies and policies. We’re also developing independent, hands-on comparisons of the tools themselves, starting with AI app builders.</p>
+  </div>
+  <div style="background:var(--sage);border-radius:var(--radius);padding:clamp(20px,2.6vw,32px);display:flex;flex-direction:column;gap:12px;min-width:0">
+    <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Two parts of one decision</p>
+    <article style="background:var(--panel);border-radius:var(--radius);padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase">
+        <span style="color:var(--heading)">ValueCompass</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;color:var(--live)"><span aria-hidden="true" style="width:8px;height:8px;border-radius:50%;background:var(--live)"></span>Available now</span>
+      </div>
+      <h2 style="font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.3;color:var(--heading);text-wrap:pretty">Who is behind it, and does that fit your values?</h2>
+      <p style="font-size:16px;line-height:1.55;text-wrap:pretty">Compare AI options on ownership, control and documented commitments, against the priorities you choose.</p>
+      <a href="https://valuecompass.ai" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;padding:0 20px;margin-top:4px;background:var(--primary);color:var(--on-primary);text-decoration:none;font-size:15px;font-weight:500;border-radius:var(--pill)" style-hover="background:var(--primary-hover);color:var(--on-primary)">Try ValueCompass ↗</a>
+    </article>
+    <article style="background:var(--panel);border-radius:var(--radius);padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase">
+        <span style="color:var(--heading)">Tool testing</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;color:var(--dev)"><span aria-hidden="true" style="width:8px;height:8px;border-radius:50%;border:1.5px solid var(--dev);box-sizing:border-box"></span>In development</span>
+      </div>
+      <h2 style="font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.3;color:var(--heading);text-wrap:pretty">Can it do your task, and what will it take?</h2>
+      <p style="font-size:16px;line-height:1.55;text-wrap:pretty">Find out which tools suit a particular task, and what effort, expertise and compromises each one involves.</p>
+      <a href="#testing" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;padding:0 20px;margin-top:4px;border:1px solid var(--primary);color:var(--primary);text-decoration:none;font-size:15px;font-weight:500;border-radius:var(--pill)" style-hover="background:var(--selected);color:var(--heading)">Explore our testing approach ↓</a>
+    </article>
+    <p style="font-size:15px;line-height:1.55;margin-top:4px;text-wrap:pretty">The aim is to bring these comparisons together with ValueCompass, so you can consider practical fit and values in the same decision.</p>
+  </div>
+</section>
+
+<div style="border-top:1px solid var(--rule)">
+<section id="valuecompass" aria-labelledby="vc-title" style="max-width:var(--max);margin:0 auto;padding:var(--section-y) var(--gutter)">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 24px;margin-bottom:24px">
+    <p style="display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)"><span>01 / ValueCompass</span><span style="color:var(--on-primary);background:var(--live);border-radius:var(--pill);padding:3px 11px;font-size:12px">Available now</span></p>
+    <p style="font-size:15px;color:var(--muted)">Opens valuecompass.ai. No account needed.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:40px clamp(40px,6vw,88px);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:20px;min-width:0">
+      <h2 id="vc-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;letter-spacing:-.015em;color:var(--heading);text-wrap:balance">Explore the values behind your AI choices.</h2>
+      <p style="font-size:clamp(17px,1.4vw,19px);color:var(--heading);text-wrap:pretty">Who benefits from the money you spend on AI? What commitments do providers make to the people affected by their technology?</p>
+      <p style="text-wrap:pretty">ValueCompass helps you examine the companies behind AI products and compare options against your values. Explore ownership, control, dependencies and documented policies, with sources and clear gaps in the research.</p>
+      <a href="https://valuecompass.ai" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:52px;padding:0 28px;margin-top:8px;background:var(--primary);color:var(--on-primary);text-decoration:none;font-size:17px;font-weight:500;border-radius:var(--pill)" style-hover="background:var(--primary-hover);color:var(--on-primary)">Try ValueCompass ↗</a>
+    </div>
+    <figure style="display:flex;flex-direction:column;gap:12px;min-width:0;background:var(--sage);border-radius:var(--radius);padding:clamp(14px,2vw,24px)">
+      <a href="public/assets/vc-03-evidence-on-the-cards.png" target="_blank" rel="noopener" style="position:relative;display:block;background:var(--shot);border:1px solid var(--rule);border-radius:var(--radius);overflow:hidden;text-decoration:none">
+        <picture>
+          <source media="(max-width: 760px)" srcset="public/assets/vc-card-claude.png">
+          <img src="public/assets/vc-cards-crop.png" alt="ValueCompass option cards showing who gets paid and what each runs on, documented alignment on nonprofit control with source links, and a separate ‘What we could not check’ note on the economic-stake question" style="display:block;width:100%;height:auto;max-height:440px;object-fit:contain;object-position:top">
+        </picture>
+        <span style="position:absolute;right:12px;bottom:12px;display:inline-flex;align-items:center;min-height:36px;padding:0 14px;background:var(--heading);color:var(--on-primary);font-size:14px;font-weight:500;border-radius:var(--pill)">View example ↗</span>
+      </a>
+      <figcaption style="display:flex;flex-direction:column;gap:6px">
+        <p style="font-size:15px;line-height:1.55;text-wrap:pretty">An example comparing nonprofit control and financial interests. Confirmed findings and unanswered questions appear separately.</p>
+        <p style="font-size:14px;line-height:1.55;color:var(--muted)">Full captures: <a href="public/assets/vc-01-choosing-priorities.png" target="_blank" rel="noopener" style="color:var(--muted)">choosing priorities</a> · <a href="public/assets/vc-02-seeing-the-advice.png" target="_blank" rel="noopener" style="color:var(--muted)">summary of what was found</a> · <a href="public/assets/vc-03-evidence-on-the-cards.png" target="_blank" rel="noopener" style="color:var(--muted)">evidence on the cards</a>.</p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+</div>
+
+<section id="testing" aria-labelledby="testing-title" style="background:var(--sage)">
+  <div style="max-width:var(--max);margin:0 auto;padding:var(--section-y) var(--gutter)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px clamp(40px,6vw,96px);align-items:start">
+      <div style="display:flex;flex-direction:column;gap:20px;min-width:0">
+        <p style="display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)"><span>02 / Tool testing</span><span style="color:var(--dev);border:1px solid var(--dev);border-radius:var(--pill);padding:3px 11px;font-size:12px">In development</span></p>
+        <h2 id="testing-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;letter-spacing:-.015em;color:var(--heading);text-wrap:balance">See how AI tools perform on the work you need done.</h2>
+        <p style="max-width:54ch;text-wrap:pretty">Our comparisons are meant to show which tools fit your work and circumstances, and what you’d be taking on with each.</p>
+        <p style="max-width:54ch;text-wrap:pretty">To get there, several tools receive comparable tasks, each task is run more than once, and we check the outputs independently rather than relying on what the tool reports.</p>
+        <p style="max-width:54ch;font-size:16px;color:var(--muted)">Our first comparisons will focus on AI app builders.</p>
+      </div>
+      <details style="background:var(--panel);border:1px dashed var(--dev);border-radius:var(--radius);min-width:0">
+        <summary style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;padding:20px 24px">
+          <span style="display:flex;flex-direction:column;gap:4px">
+            <span style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--dev)">Example test scenario · planned</span>
+            <span style="font-family:var(--sans);font-weight:600;font-size:19px;line-height:1.3;color:var(--heading)">Building and maintaining a booking app</span>
+          </span>
+          <span class="hl-chev" aria-hidden="true" style="flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--rule-strong);display:grid;place-items:center;color:var(--heading);font-size:15px">↓</span>
+        </summary>
+        <div style="padding:0 24px 24px;display:flex;flex-direction:column;gap:20px">
+          <div style="padding-top:18px;border-top:1px solid var(--rule)">
+            <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Decision</p>
+            <p style="font-family:var(--serif);font-weight:400;font-size:19px;line-height:1.4;color:var(--heading);text-wrap:pretty">Which AI app builder suits a small-business owner with limited technical experience?</p>
+          </div>
+          <div>
+            <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Evaluation scope</p>
+            <ul>
+              <li style="display:flex;flex-direction:column;gap:2px;padding:12px 0;border-top:1px solid var(--rule)"><strong style="font-size:16px;font-weight:600;color:var(--heading)">Functional reliability</strong><span style="font-size:16px;line-height:1.55">Booking and cancellation flows, including attempts to reserve the same slot.</span></li>
+              <li style="display:flex;flex-direction:column;gap:2px;padding:12px 0;border-top:1px solid var(--rule)"><strong style="font-size:16px;font-weight:600;color:var(--heading)">Maintainability</strong><span style="font-size:16px;line-height:1.55">Introducing a new requirement and checking that existing functionality still works.</span></li>
+              <li style="display:flex;flex-direction:column;gap:2px;padding:12px 0;border-top:1px solid var(--rule)"><strong style="font-size:16px;font-weight:600;color:var(--heading)">User effort</strong><span style="font-size:16px;line-height:1.55">Time, correction attempts and technical assistance needed to complete the task.</span></li>
+              <li style="display:flex;flex-direction:column;gap:2px;padding:12px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)"><strong style="font-size:16px;font-weight:600;color:var(--heading)">Portability</strong><span style="font-size:16px;line-height:1.55">Exporting the project and assessing what is required to run it with another provider.</span></li>
+            </ul>
+          </div>
+          <div>
+            <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Intended outcome</p>
+            <p style="font-size:16px;line-height:1.55;text-wrap:pretty">A comparison of which tools suit this user, where specialist help is needed, and the trade-offs involved.</p>
+          </div>
+        </div>
+      </details>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:40px clamp(40px,6vw,96px);margin-top:clamp(48px,6vw,80px)">
+      <div style="min-width:0">
+        <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:12px">What we’ll record</h3>
+        <dl style="border-top:1px solid var(--rule-strong)">
+          <div style="display:grid;grid-template-columns:minmax(110px,150px) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-family:var(--sans);font-weight:600;font-size:16px;line-height:1.55;color:var(--heading)">Does it work?</dt><dd>Whether the output does what the task asked.</dd></div>
+          <div style="display:grid;grid-template-columns:minmax(110px,150px) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-family:var(--sans);font-weight:600;font-size:16px;line-height:1.55;color:var(--heading)">Fixes</dt><dd>What errors occur, and how many attempts it takes to resolve them.</dd></div>
+          <div style="display:grid;grid-template-columns:minmax(110px,150px) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-family:var(--sans);font-weight:600;font-size:16px;line-height:1.55;color:var(--heading)">Time</dt><dd>From the initial instructions to a usable result.</dd></div>
+          <div style="display:grid;grid-template-columns:minmax(110px,150px) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-family:var(--sans);font-weight:600;font-size:16px;line-height:1.55;color:var(--heading)">Cost</dt><dd>What it costs to complete the task, including retries.</dd></div>
+          <div style="display:grid;grid-template-columns:minmax(110px,150px) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-family:var(--sans);font-weight:600;font-size:16px;line-height:1.55;color:var(--heading)">Assistance</dt><dd>The guidance and technical knowledge needed to reach a useful result.</dd></div>
+        </dl>
+      </div>
+      <div style="min-width:0">
+        <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:12px">What you’ll get</h3>
+        <ul style="border-top:1px solid var(--rule-strong)">
+          <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary)">→</span><span>Options worth trying for your kind of task.</span></li>
+          <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary)">→</span><span>The circumstances in which each tool struggles.</span></li>
+          <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary)">→</span><span>The effort and expertise you should expect to contribute.</span></li>
+          <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary)">→</span><span>The evidence behind the advice, including example outputs.</span></li>
+          <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary)">→</span><span>The trade-offs that could change the recommendation.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="founder" aria-labelledby="founder-title" style="border-top:1px solid var(--rule)">
+  <div style="max-width:var(--max);margin:0 auto;padding:var(--section-y) var(--gutter);display:flex;flex-wrap:wrap;gap:32px clamp(40px,6vw,88px);align-items:flex-start">
+    <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:24px">
+      <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">03 / Founder</p>
+      <img src="public/assets/yuyu-shen.jpg" alt="Yuyu Shen" style="width:clamp(140px,16vw,200px);aspect-ratio:1;object-fit:cover;border-radius:var(--radius);background:var(--sage);display:block">
+    </div>
+    <div style="flex:3 1 440px;display:flex;flex-direction:column;gap:20px;max-width:64ch;min-width:0">
+      <h2 id="founder-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;color:var(--heading)">Yuyu Shen</h2>
+      <p style="font-size:clamp(17px,1.4vw,19px);line-height:1.6;color:var(--heading);text-wrap:pretty">Hopperlace was founded by Yuyu Shen, a statistically trained data scientist turned product manager with nearly a decade building and evaluating AI systems, including taking AI products from zero to one.</p>
+      <p style="text-wrap:pretty">She also built <a href="https://www.evidencesynthesisai.com/">Evidence Synthesis AI</a>, which helps research teams use AI to screen studies for systematic reviews. Her research on deference-aware evaluation was accepted at the ICML 2026 Technical AI Governance workshop. She holds CCA-F and CCA-P certifications and writes about technology, agency and better decisions at <a href="https://buildwithwhy.com">buildwithwhy.com</a>.</p>
+      <a href="Services.dc.html#yuyu" style="align-self:flex-start;font-size:16px;font-weight:500;padding:6px 0">Full background and credentials →</a>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="services-title" style="background:var(--sage)">
+  <div style="max-width:var(--max);margin:0 auto;padding:clamp(56px,7vw,96px) var(--gutter);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:20px clamp(40px,6vw,88px);align-items:end">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Services</p>
+        <h2 id="services-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;letter-spacing:-.015em;color:var(--heading);text-wrap:balance">Have a specific AI decision to make?</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+        <p style="max-width:48ch;text-wrap:pretty">Hopperlace works with teams to compare options, test promising approaches and recommend what to use, build or investigate next.</p>
+        <a href="Services.dc.html" style="display:inline-flex;align-items:center;min-height:52px;padding:0 28px;background:var(--primary);color:var(--on-primary);text-decoration:none;font-size:17px;font-weight:500;border-radius:var(--pill)" style-hover="background:var(--primary-hover);color:var(--on-primary)">Services →</a>
+      </div>
+    </div>
+    <ul style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px">
+      <li><a href="Services.dc.html#choose" style="display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:72px;box-sizing:border-box;padding:16px 22px;background:var(--panel);border-radius:var(--radius);color:var(--heading);text-decoration:none;font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;line-height:1.15" style-hover="background:var(--selected);color:var(--heading)"><span>Choose an AI approach</span><span aria-hidden="true" style="font-family:var(--sans);font-size:16px;color:var(--primary)">→</span></a></li>
+      <li><a href="Services.dc.html#develop" style="display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:72px;box-sizing:border-box;padding:16px 22px;background:var(--panel);border-radius:var(--radius);color:var(--heading);text-decoration:none;font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;line-height:1.15" style-hover="background:var(--selected);color:var(--heading)"><span>Develop and test an AI idea</span><span aria-hidden="true" style="font-family:var(--sans);font-size:16px;color:var(--primary)">→</span></a></li>
+      <li><a href="Services.dc.html#improve" style="display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:72px;box-sizing:border-box;padding:16px 22px;background:var(--panel);border-radius:var(--radius);color:var(--heading);text-decoration:none;font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;line-height:1.15" style-hover="background:var(--selected);color:var(--heading)"><span>Improve an existing AI experience</span><span aria-hidden="true" style="font-family:var(--sans);font-size:16px;color:var(--primary)">→</span></a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<dc-import name="SiteFooter" hint-size="100%,120px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>
