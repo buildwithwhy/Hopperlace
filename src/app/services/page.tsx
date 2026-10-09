@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ProjectTabs, type ProjectTab } from "@/components/ProjectTabs";
+import { withDimensions } from "@/lib/dimensions";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import {
@@ -16,6 +17,7 @@ import {
   label,
   largeButton,
   lead,
+  marker,
   primaryButton,
   proseLink,
   sectionHeading,
@@ -46,8 +48,6 @@ export const metadata: Metadata = {
 /** Mono label used as a heading inside panels and cards. */
 const listHeading =
   "font-mono text-[12px] font-medium tracking-[0.1em] uppercase text-heading";
-const marker =
-  "font-mono text-[13px] font-medium tracking-[0.04em] text-primary";
 
 /* ─── Content ─── */
 
@@ -162,25 +162,19 @@ const projects = [
 
 /* "Choose an AI approach" only: what each option is compared on, and the
    four kinds of evidence a recommendation keeps apart. */
-const comparedOn = [
-  {
-    heading: "Functionality",
-    body: "Whether it does the task, on your cases.",
-  },
-  {
-    heading: "Cost",
-    body: "Usage and licensing, plus retries and review time.",
-  },
-  { heading: "Effort", body: "Setup, integration and upkeep for your team." },
-  {
-    heading: "Failures",
-    body: "How it goes wrong, how often, and how visibly.",
-  },
-  {
-    heading: "Dependencies",
-    body: "Lock-in, data handling, and what moving away would take.",
-  },
-];
+const comparedOn = withDimensions({
+  functionality:
+    "Whether it does the task on your cases, how consistently across repeated runs, and where it fails.",
+  effort:
+    "The setup, integration, checking and correction your team would take on.",
+  oversight:
+    "Whether your team can inspect outputs, approve consequential actions, intervene and recover from errors.",
+  maintainability:
+    "How readily it adapts as requirements change, without breaking what already works.",
+  portability:
+    "Lock-in, data handling, required services, and what switching would involve.",
+  cost: "Usage and licensing, retries, and the staff time spent reviewing and correcting.",
+});
 
 const evidenceKinds = [
   {
@@ -444,16 +438,21 @@ function ChooseEvidence() {
     <>
       <div>
         <h3 className={`${listHeading} mb-5`}>Each option is compared on</h3>
-        <dl className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,190px),1fr))] border-t border-rule-strong">
+        <dl className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,280px),1fr))] gap-x-8 border-t border-rule-strong">
           {comparedOn.map((item) => (
             <div
-              key={item.heading}
-              className="border-b border-rule py-[18px] pr-5"
+              key={item.id}
+              className="grid grid-cols-[32px_minmax(0,1fr)] content-start gap-x-3 gap-y-1 border-b border-rule py-[18px]"
             >
-              <dt className="mb-1.5 text-[18px] leading-[1.35] font-semibold text-heading">
-                {item.heading}
+              <span aria-hidden="true" className={`${marker} leading-[1.7]`}>
+                {item.number}
+              </span>
+              <dt className="text-[18px] leading-[1.35] font-semibold text-heading">
+                {item.name}
               </dt>
-              <dd className="text-[16px] leading-[1.55]">{item.body}</dd>
+              <dd className="col-start-2 text-[16px] leading-[1.55] text-pretty">
+                {item.body}
+              </dd>
             </div>
           ))}
         </dl>

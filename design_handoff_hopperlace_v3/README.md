@@ -1,6 +1,6 @@
 # Hopperlace handoff v3 — shared design system
 
-Source design for the current site, exported from Claude Design ("Hopperlace services page update", Oct 2026).
+Source design for the current site, exported from Claude Design ("Hopperlace services page update", Oct 2026; last refreshed 9 Oct with the six-dimension testing framework).
 
 - `Home.dc.html` → `src/app/page.tsx`
 - `Services.dc.html` → `src/app/services/page.tsx` (+ `src/components/ProjectTabs.tsx`)
@@ -12,3 +12,4 @@ Styles are inline; ignore the `<x-dc>` / `support.js` scaffolding (not committed
 Known deviations, by decision of the founder:
 - Services bio, third paragraph: the live wording ("She now builds independently through Hopperlace…") was kept instead of the handoff's rewrite.
 - The tab switcher's 760px container query is approximated with the `vc` viewport breakpoint.
+- Numbered dimension items (scenario checks, services "compared on") add `align-content: start`, so a one-line title doesn't open a gap above its description when a neighbour's title wraps.

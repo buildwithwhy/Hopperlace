@@ -17,6 +17,10 @@ export const sectionHeading =
 export const lead =
   "text-[clamp(17px,1.4vw,19px)] leading-[1.6] text-heading text-pretty";
 
+/** Mono step and list numbers (1, 01, i.). */
+export const marker =
+  "font-mono text-[13px] font-medium tracking-[0.04em] text-primary";
+
 /** Card titles in IBM Plex Sans. */
 export const cardTitle = "text-[21px] leading-[1.3] font-semibold text-heading";
 

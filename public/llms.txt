@@ -4,7 +4,7 @@
 
 Hopperlace helps you choose AI tools and systems that fit your tasks, preferences and values, with evidence you can understand and inspect.
 
-ValueCompass, which you can use today, adds research on the companies behind those tools: their ownership, dependencies and policies. We're also developing independent, hands-on comparisons of the tools themselves, starting with AI app builders.
+ValueCompass, which you can use today, adds research on the companies behind those tools: their ownership, dependencies and policies. We're also developing independent, hands-on comparisons of the tools themselves.
 
 The aim is to bring these comparisons together with ValueCompass, so you can consider practical fit and values in the same decision.
 
@@ -27,39 +27,52 @@ Opens valuecompass.ai. No account needed.
 
 ## Tool testing — in development
 
-See how AI tools perform on the work you need done.
+What makes an AI tool a good fit?
 
-Our comparisons are meant to show which tools fit your work and circumstances, and what you'd be taking on with each.
+Our comparisons will examine how well an option works for your task, what it asks of you, and the trade-offs involved in choosing it.
 
-To get there, several tools receive comparable tasks, each task is run more than once, and we check the outputs independently rather than relying on what the tool reports.
+### Six questions we ask of every tool
 
-Our first comparisons will focus on AI app builders.
+1. Functionality & reliability — does it accomplish your task to the quality you need? How consistently does it work across different cases and repeated attempts, and where does it fail?
+2. User effort & expertise — how much setup, guidance, checking and correction does it require? What can you manage yourself, and where is specialist help needed?
+3. Oversight & control — can you understand and check what it has done, approve consequential actions, intervene when needed, and recover from mistakes?
+4. Maintainability — can you adapt it as your needs change, diagnose problems and make improvements without breaking what already works?
+5. Portability & dependencies — what are you committing to? Can you move your data, work or setup elsewhere, and what would switching actually involve?
+6. Cost — what does a useful result cost, including subscriptions, usage, retries and the human time involved?
 
-### Example test scenario: building and maintaining a booking app
+Alongside these practical questions, ValueCompass (available now) helps you examine the ownership, relationships and documented practices behind your choices.
 
-- Decision: which AI app builder suits a small-business owner with limited technical experience?
-- Evaluation scope:
-  - Functional reliability — booking and cancellation flows, including attempts to reserve the same slot.
-  - Maintainability — introducing a new requirement and checking that existing functionality still works.
-  - User effort — time, correction attempts and technical assistance needed to complete the task.
-  - Portability — exporting the project and assessing what is required to run it with another provider.
-- Intended outcome: a comparison of which tools suit this user, where specialist help is needed, and the trade-offs involved.
+### How we'll test
 
-### What we'll record
+- Representative tasks, repeated — each tool gets comparable tasks that reflect real use, and each task is run more than once.
+- Independent checks — we check the outputs ourselves rather than relying on what the tool reports.
+- Successes, failures and repairs — what worked, what broke, and how many attempts it took to fix.
+- Money and time, kept apart — monetary cost is recorded separately from the time and human assistance a result required.
+- Inspectable evidence — example outputs and the limits of each test are published alongside the advice.
 
-1. Does it work? — whether the output does what the task asked.
-2. Fixes — what errors occur, and how many attempts it takes to resolve them.
-3. Time — from the initial instructions to a usable result.
-4. Cost — what it costs to complete the task, including retries.
-5. Assistance — the guidance and technical knowledge needed to reach a useful result.
+The specific tests depend on the task and the category of tool. The six dimensions are common questions, not an identical checklist or a universal score applied to every product.
 
 ### What you'll get
 
-- Options worth trying for your kind of task.
-- The circumstances in which each tool struggles.
-- The effort and expertise you should expect to contribute.
-- The evidence behind the advice, including example outputs.
+- Options suited to your kind of task.
 - The trade-offs that could change the recommendation.
+- The evidence behind the advice, so you can check it.
+
+### First planned category: AI app builders
+
+Our first comparisons will apply the framework to tools that build apps from natural-language instructions. The example below shows how each dimension becomes a concrete check.
+
+#### Example test scenario (planned): building and maintaining a booking app
+
+- Decision: which AI app builder suits a small-business owner with limited technical experience?
+- Intended outcome: a comparison of which tools suit this user, where specialist help is needed, and the trade-offs involved.
+- Proposed checks (not findings; no results yet):
+  1. Functionality & reliability — booking and cancellation flows, including conflicting attempts to reserve the same slot.
+  2. User effort & expertise — time, correction attempts and technical help needed.
+  3. Oversight & control — whether users can see what will change, test before publishing, approve consequential changes and restore an earlier working version.
+  4. Maintainability — introducing a new requirement and checking that existing functionality still works.
+  5. Portability & dependencies — exporting the project and data, identifying required services, and assessing what moving elsewhere involves.
+  6. Cost — tool charges and retries, with development and review time recorded separately.
 
 Note: this describes planned testing, not published results. No comparisons have been published yet.
 
@@ -105,7 +118,7 @@ The work can include:
 5. Build integration prototypes where a comparison on paper can't answer the question.
 6. Recommend an approach, with the trade-offs that could change the recommendation.
 
-Each option is compared on: functionality (whether it does the task, on your cases) · cost (usage and licensing, plus retries and review time) · effort (setup, integration and upkeep for your team) · failures (how it goes wrong, how often, and how visibly) · dependencies (lock-in, data handling, and what moving away would take).
+Each option is compared on: (1) functionality & reliability — whether it does the task on your cases, how consistently across repeated runs, and where it fails · (2) user effort & expertise — the setup, integration, checking and correction your team would take on · (3) oversight & control — whether your team can inspect outputs, approve consequential actions, intervene and recover from errors · (4) maintainability — how readily it adapts as requirements change, without breaking what already works · (5) portability & dependencies — lock-in, data handling, required services, and what switching would involve · (6) cost — usage and licensing, retries, and the staff time spent reviewing and correcting.
 
 How we treat evidence: we distinguish published terms and documentation, provider claims, our own test results, and the conclusions we draw from them. Recommendations make clear what the evidence supports, what remains uncertain, and which trade-offs could change the decision.
 

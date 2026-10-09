@@ -7,9 +7,11 @@ import {
   EVIDENCE_SYNTHESIS_URL,
   VALUECOMPASS_URL,
 } from "@/lib/links";
+import { withDimensions } from "@/lib/dimensions";
 import {
   frame,
   label,
+  marker,
   largeButton,
   lead,
   primaryButton,
@@ -41,7 +43,7 @@ const jsonLd = {
         availableLanguage: "English",
       },
       description:
-        "Hopperlace helps you choose AI tools and systems that fit your tasks, preferences and values, with evidence you can understand and inspect. ValueCompass, available today, adds research on the companies behind those tools: their ownership, dependencies and policies. Hopperlace is also developing independent, hands-on comparisons of the tools themselves, starting with AI app builders.",
+        "Hopperlace helps you choose AI tools and systems that fit your tasks, preferences and values, with evidence you can understand and inspect. ValueCompass, available today, adds research on the companies behind those tools: their ownership, dependencies and policies. Hopperlace is also developing independent, hands-on comparisons of the tools themselves.",
       email: EMAIL,
       founder: {
         "@type": "Person",
@@ -144,55 +146,63 @@ const shots = {
 
 /* ─── Content ─── */
 
-const scenarioScope = [
-  {
-    heading: "Functional reliability",
-    body: "Booking and cancellation flows, including attempts to reserve the same slot.",
-  },
-  {
-    heading: "Maintainability",
-    body: "Introducing a new requirement and checking that existing functionality still works.",
-  },
-  {
-    heading: "User effort",
-    body: "Time, correction attempts and technical assistance needed to complete the task.",
-  },
-  {
-    heading: "Portability",
-    body: "Exporting the project and assessing what is required to run it with another provider.",
-  },
-];
+/* The six questions, as the homepage asks them of every tool. */
+const questions = withDimensions({
+  functionality:
+    "Does it accomplish your task to the quality you need? How consistently does it work across different cases and repeated attempts, and where does it fail?",
+  effort:
+    "How much setup, guidance, checking and correction does it require? What can you manage yourself, and where is specialist help needed?",
+  oversight:
+    "Can you understand and check what it has done, approve consequential actions, intervene when needed, and recover from mistakes?",
+  maintainability:
+    "Can you adapt it as your needs change, diagnose problems and make improvements without breaking what already works?",
+  portability:
+    "What are you committing to? Can you move your data, work or setup elsewhere, and what would switching actually involve?",
+  cost: "What does a useful result cost—including subscriptions, usage, retries and the human time involved?",
+});
 
-const recorded = [
+const howWeTest = [
   {
-    heading: "Does it work?",
-    body: "Whether the output does what the task asked.",
+    heading: "Representative tasks, repeated",
+    body: "Each tool gets comparable tasks that reflect real use, and each task is run more than once.",
   },
   {
-    heading: "Fixes",
-    body: "What errors occur, and how many attempts it takes to resolve them.",
+    heading: "Independent checks",
+    body: "We check the outputs ourselves rather than relying on what the tool reports.",
   },
   {
-    heading: "Time",
-    body: "From the initial instructions to a usable result.",
+    heading: "Successes, failures and repairs",
+    body: "What worked, what broke, and how many attempts it took to fix.",
   },
   {
-    heading: "Cost",
-    body: "What it costs to complete the task, including retries.",
+    heading: "Money and time, kept apart",
+    body: "Monetary cost is recorded separately from the time and human assistance a result required.",
   },
   {
-    heading: "Assistance",
-    body: "The guidance and technical knowledge needed to reach a useful result.",
+    heading: "Inspectable evidence",
+    body: "Example outputs and the limits of each test are published alongside the advice.",
   },
 ];
 
 const outcomes = [
-  "Options worth trying for your kind of task.",
-  "The circumstances in which each tool struggles.",
-  "The effort and expertise you should expect to contribute.",
-  "The evidence behind the advice, including example outputs.",
+  "Options suited to your kind of task.",
   "The trade-offs that could change the recommendation.",
+  "The evidence behind the advice, so you can check it.",
 ];
+
+/* The example scenario's proposed checks — plans, not findings. */
+const scenarioChecks = withDimensions({
+  functionality:
+    "Booking and cancellation flows, including conflicting attempts to reserve the same slot.",
+  effort: "Time, correction attempts and technical help needed.",
+  oversight:
+    "Whether users can see what will change, test before publishing, approve consequential changes and restore an earlier working version.",
+  maintainability:
+    "Introducing a new requirement and checking that existing functionality still works.",
+  portability:
+    "Exporting the project and data, identifying required services, and assessing what moving elsewhere involves.",
+  cost: "Tool charges and retries, with development and review time recorded separately.",
+});
 
 const projectTypes = [
   { href: "/services#choose", label: "Choose an AI approach" },
@@ -246,7 +256,7 @@ function Hero() {
           ValueCompass, which you can use today, adds research on the companies
           behind those tools: their ownership, dependencies and policies.
           We&rsquo;re also developing independent, hands-on comparisons of the
-          tools themselves, starting with AI app builders.
+          tools themselves.
         </p>
       </div>
       <div className="flex min-w-0 flex-col gap-3 rounded-card bg-sage p-[clamp(20px,2.6vw,32px)]">
@@ -342,9 +352,11 @@ function DevStatus() {
 function Testing() {
   return (
     <section id="testing" aria-labelledby="testing-title" className="bg-sage">
-      <div className={`${frame} py-[var(--section-y)]`}>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] items-start gap-x-[clamp(40px,6vw,96px)] gap-y-10">
-          <div className="flex min-w-0 flex-col gap-5">
+      <div
+        className={`${frame} flex flex-col gap-[clamp(40px,5vw,64px)] py-[var(--section-y)]`}
+      >
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] items-end gap-x-[clamp(40px,6vw,96px)] gap-y-5">
+          <div className="flex min-w-0 flex-col gap-[18px]">
             <p
               className={`${label} flex flex-wrap items-center gap-x-3.5 gap-y-2`}
             >
@@ -354,49 +366,77 @@ function Testing() {
               </span>
             </p>
             <h2 id="testing-title" className={sectionHeading}>
-              See how AI tools perform on the work you need done.
+              What makes an AI tool a good fit?
             </h2>
-            <p className="max-w-[54ch] text-pretty">
-              Our comparisons are meant to show which tools fit your work and
-              circumstances, and what you&rsquo;d be taking on with each.
-            </p>
-            <p className="max-w-[54ch] text-pretty">
-              To get there, several tools receive comparable tasks, each task is
-              run more than once, and we check the outputs independently rather
-              than relying on what the tool reports.
-            </p>
-            <p className="max-w-[54ch] text-[16px] text-muted">
-              Our first comparisons will focus on AI app builders.
-            </p>
           </div>
-          <Scenario />
+          <p className={`${lead} max-w-[54ch]`}>
+            Our comparisons will examine how well an option works for your task,
+            what it asks of you, and the trade-offs involved in choosing it.
+          </p>
         </div>
-        <div className="mt-[clamp(48px,6vw,80px)] grid grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] gap-x-[clamp(40px,6vw,96px)] gap-y-10">
-          <div className="min-w-0">
-            <h3 className={`${label} mb-3 text-heading`}>
-              What we&rsquo;ll record
-            </h3>
+
+        <div className="flex flex-col gap-4">
+          <ol
+            aria-label="Six questions we ask of every tool"
+            className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] gap-3"
+          >
+            {questions.map((q) => (
+              <li
+                key={q.id}
+                className="grid grid-cols-[36px_minmax(0,1fr)] content-start gap-x-3.5 gap-y-1 rounded-card border-t-2 border-primary bg-panel px-6 pt-[22px] pb-6"
+              >
+                <span className={`${marker} leading-[1.6]`}>{q.number}</span>
+                <h3 className="text-[clamp(18px,1.5vw,20px)] leading-[1.35] font-semibold text-heading">
+                  {q.name}
+                </h3>
+                <p className="col-start-2 text-[16px] leading-[1.6] text-pretty">
+                  {q.body}
+                </p>
+              </li>
+            ))}
+          </ol>
+          <p className="flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-card border border-rule-strong px-6 py-[18px] text-[16px] leading-[1.6]">
+            <span className="text-pretty">
+              Alongside these practical questions, ValueCompass helps you
+              examine the ownership, relationships and documented practices
+              behind your choices.
+            </span>
+            <a
+              href="#valuecompass"
+              className={`${proseLink} font-medium whitespace-nowrap`}
+            >
+              ValueCompass &middot; available now ↑
+            </a>
+          </p>
+        </div>
+
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] items-start gap-x-[clamp(40px,6vw,96px)] gap-y-10">
+          <div className="flex min-w-0 flex-col gap-3.5">
+            <h3 className={`${label} text-heading`}>How we&rsquo;ll test</h3>
             <dl className="border-t border-rule-strong">
-              {recorded.map((item) => (
+              {howWeTest.map((item) => (
                 <div
                   key={item.heading}
-                  className="grid grid-cols-[minmax(110px,150px)_minmax(0,1fr)] gap-4 border-b border-rule py-3.5 text-[16px] leading-[1.55]"
+                  className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,180px),1fr))] gap-x-5 gap-y-0.5 border-b border-rule py-[13px] text-[16px] leading-[1.55]"
                 >
                   <dt className="font-semibold text-heading">{item.heading}</dt>
-                  <dd>{item.body}</dd>
+                  <dd className="text-pretty">{item.body}</dd>
                 </div>
               ))}
             </dl>
+            <p className="text-[15px] leading-[1.6] text-muted text-pretty">
+              The specific tests depend on the task and the category of tool.
+              The six dimensions are common questions, not an identical
+              checklist or a universal score applied to every product.
+            </p>
           </div>
-          <div className="min-w-0">
-            <h3 className={`${label} mb-3 text-heading`}>
-              What you&rsquo;ll get
-            </h3>
+          <div className="flex min-w-0 flex-col gap-3.5">
+            <h3 className={`${label} text-heading`}>What you&rsquo;ll get</h3>
             <ul className="border-t border-rule-strong">
               {outcomes.map((outcome) => (
                 <li
                   key={outcome}
-                  className="grid grid-cols-[24px_minmax(0,1fr)] gap-3 border-b border-rule py-3.5 text-[16px] leading-[1.55]"
+                  className="grid grid-cols-[24px_minmax(0,1fr)] gap-3 border-b border-rule py-[13px] text-[16px] leading-[1.55]"
                 >
                   <span aria-hidden="true" className="text-primary">
                     →
@@ -406,6 +446,23 @@ function Testing() {
               ))}
             </ul>
           </div>
+        </div>
+
+        <div className="flex flex-col gap-4 border-t border-rule-strong pt-[clamp(32px,4vw,48px)]">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] items-end gap-x-[clamp(40px,6vw,96px)] gap-y-3">
+            <div className="flex flex-col gap-2.5">
+              <p className={`${label} text-dev`}>First planned category</p>
+              <h3 className="font-serif text-[clamp(24px,2.2vw,30px)] leading-[1.2] font-normal text-heading">
+                AI app builders
+              </h3>
+            </div>
+            <p className="max-w-[54ch] text-[16px] leading-[1.6] text-pretty">
+              Our first comparisons will apply the framework to tools that build
+              apps from natural-language instructions. The example below shows
+              how each dimension becomes a concrete check.
+            </p>
+          </div>
+          <Scenario />
         </div>
       </div>
     </section>
@@ -432,36 +489,50 @@ function Scenario() {
           ↓
         </span>
       </summary>
-      <div className="flex flex-col gap-5 px-6 pb-6">
-        <div className="border-t border-rule pt-[18px]">
-          <p className={`${label} mb-1.5`}>Decision</p>
-          <p className="font-serif text-[19px] leading-[1.4] text-heading text-pretty">
-            Which AI app builder suits a small-business owner with limited
-            technical experience?
-          </p>
+      <div className="flex flex-col gap-[22px] px-6 pb-6">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] gap-x-12 gap-y-4 border-t border-rule pt-[18px]">
+          <div>
+            <p className={`${label} mb-1.5`}>Decision</p>
+            <p className="font-serif text-[19px] leading-[1.4] text-heading text-pretty">
+              Which AI app builder suits a small-business owner with limited
+              technical experience?
+            </p>
+          </div>
+          <div>
+            <p className={`${label} mb-1.5`}>Intended outcome</p>
+            <p className="text-[16px] leading-[1.55] text-pretty">
+              A comparison of which tools suit this user, where specialist help
+              is needed, and the trade-offs involved.
+            </p>
+          </div>
         </div>
         <div>
-          <p className={`${label} mb-1`}>Evaluation scope</p>
-          <ul className="border-b border-rule">
-            {scenarioScope.map((item) => (
+          <p
+            className={`${label} mb-1 flex flex-wrap justify-between gap-x-4 gap-y-1`}
+          >
+            <span>Proposed checks</span>
+            <span className="text-dev">
+              Not findings &middot; no results yet
+            </span>
+          </p>
+          <ol className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] gap-x-12">
+            {scenarioChecks.map((check) => (
               <li
-                key={item.heading}
-                className="flex flex-col gap-0.5 border-t border-rule py-3 text-[16px] leading-[1.55]"
+                key={check.id}
+                className="grid grid-cols-[36px_minmax(0,1fr)] content-start gap-x-3.5 gap-y-0.5 border-t border-rule py-[13px]"
               >
-                <strong className="font-semibold text-heading">
-                  {item.heading}
+                <span className={`${marker} leading-[1.55]`}>
+                  {check.number}
+                </span>
+                <strong className="text-[16px] leading-[1.45] font-semibold text-heading">
+                  {check.name}
                 </strong>
-                <span>{item.body}</span>
+                <span className="col-start-2 text-[16px] leading-[1.55] text-pretty">
+                  {check.body}
+                </span>
               </li>
             ))}
-          </ul>
-        </div>
-        <div>
-          <p className={`${label} mb-1.5`}>Intended outcome</p>
-          <p className="text-[16px] leading-[1.55] text-pretty">
-            A comparison of which tools suit this user, where specialist help is
-            needed, and the trade-offs involved.
-          </p>
+          </ol>
         </div>
       </div>
     </details>

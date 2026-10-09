@@ -24,7 +24,7 @@
     <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Independent testing · Comparison · Informed choice</p>
     <h1 id="hero-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.6vw,64px);line-height:1.1;letter-spacing:-.02em;color:var(--heading);max-width:18ch;text-wrap:balance">Choose AI for what you want to do — and what matters to you.</h1>
     <p style="font-size:clamp(17px,1.4vw,19px);line-height:1.6;color:var(--heading);max-width:52ch;text-wrap:pretty">Hopperlace helps you choose AI tools and systems that fit your tasks, preferences and values, with evidence you can understand and inspect.</p>
-    <p style="max-width:52ch;text-wrap:pretty">ValueCompass, which you can use today, adds research on the companies behind those tools: their ownership, dependencies and policies. We’re also developing independent, hands-on comparisons of the tools themselves, starting with AI app builders.</p>
+    <p style="max-width:52ch;text-wrap:pretty">ValueCompass, which you can use today, adds research on the companies behind those tools: their ownership, dependencies and policies. We’re also developing independent, hands-on comparisons of the tools themselves.</p>
   </div>
   <div style="background:var(--sage);border-radius:var(--radius);padding:clamp(20px,2.6vw,32px);display:flex;flex-direction:column;gap:12px;min-width:0">
     <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Two parts of one decision</p>
@@ -81,14 +81,56 @@
 </div>
 
 <section id="testing" aria-labelledby="testing-title" style="background:var(--sage)">
-  <div style="max-width:var(--max);margin:0 auto;padding:var(--section-y) var(--gutter)">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px clamp(40px,6vw,96px);align-items:start">
-      <div style="display:flex;flex-direction:column;gap:20px;min-width:0">
+  <div style="max-width:var(--max);margin:0 auto;padding:var(--section-y) var(--gutter);display:flex;flex-direction:column;gap:clamp(40px,5vw,64px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px clamp(40px,6vw,96px);align-items:end">
+      <div style="display:flex;flex-direction:column;gap:18px;min-width:0">
         <p style="display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)"><span>02 / Tool testing</span><span style="color:var(--dev);border:1px solid var(--dev);border-radius:var(--pill);padding:3px 11px;font-size:12px">In development</span></p>
-        <h2 id="testing-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;letter-spacing:-.015em;color:var(--heading);text-wrap:balance">See how AI tools perform on the work you need done.</h2>
-        <p style="max-width:54ch;text-wrap:pretty">Our comparisons are meant to show which tools fit your work and circumstances, and what you’d be taking on with each.</p>
-        <p style="max-width:54ch;text-wrap:pretty">To get there, several tools receive comparable tasks, each task is run more than once, and we check the outputs independently rather than relying on what the tool reports.</p>
-        <p style="max-width:54ch;font-size:16px;color:var(--muted)">Our first comparisons will focus on AI app builders.</p>
+        <h2 id="testing-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;letter-spacing:-.015em;color:var(--heading);text-wrap:balance">What makes an AI tool a good fit?</h2>
+      </div>
+      <p style="max-width:54ch;font-size:clamp(17px,1.4vw,19px);line-height:1.6;color:var(--heading);text-wrap:pretty">Our comparisons will examine how well an option works for your task, what it asks of you, and the trade-offs involved in choosing it.</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <ol aria-label="Six questions we ask of every tool" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:12px">
+        <li style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:4px 14px;align-content:start;padding:22px 24px 24px;background:var(--panel);border-radius:var(--radius);border-top:2px solid var(--primary)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.6;letter-spacing:.04em;color:var(--primary)">01</span><h3 style="font-family:var(--sans);font-weight:600;font-size:clamp(18px,1.5vw,20px);line-height:1.35;color:var(--heading)">Functionality &amp; reliability</h3><p style="grid-column:2;font-size:16px;line-height:1.6;text-wrap:pretty">Does it accomplish your task to the quality you need? How consistently does it work across different cases and repeated attempts, and where does it fail?</p></li>
+        <li style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:4px 14px;align-content:start;padding:22px 24px 24px;background:var(--panel);border-radius:var(--radius);border-top:2px solid var(--primary)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.6;letter-spacing:.04em;color:var(--primary)">02</span><h3 style="font-family:var(--sans);font-weight:600;font-size:clamp(18px,1.5vw,20px);line-height:1.35;color:var(--heading)">User effort &amp; expertise</h3><p style="grid-column:2;font-size:16px;line-height:1.6;text-wrap:pretty">How much setup, guidance, checking and correction does it require? What can you manage yourself, and where is specialist help needed?</p></li>
+        <li style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:4px 14px;align-content:start;padding:22px 24px 24px;background:var(--panel);border-radius:var(--radius);border-top:2px solid var(--primary)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.6;letter-spacing:.04em;color:var(--primary)">03</span><h3 style="font-family:var(--sans);font-weight:600;font-size:clamp(18px,1.5vw,20px);line-height:1.35;color:var(--heading)">Oversight &amp; control</h3><p style="grid-column:2;font-size:16px;line-height:1.6;text-wrap:pretty">Can you understand and check what it has done, approve consequential actions, intervene when needed, and recover from mistakes?</p></li>
+        <li style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:4px 14px;align-content:start;padding:22px 24px 24px;background:var(--panel);border-radius:var(--radius);border-top:2px solid var(--primary)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.6;letter-spacing:.04em;color:var(--primary)">04</span><h3 style="font-family:var(--sans);font-weight:600;font-size:clamp(18px,1.5vw,20px);line-height:1.35;color:var(--heading)">Maintainability</h3><p style="grid-column:2;font-size:16px;line-height:1.6;text-wrap:pretty">Can you adapt it as your needs change, diagnose problems and make improvements without breaking what already works?</p></li>
+        <li style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:4px 14px;align-content:start;padding:22px 24px 24px;background:var(--panel);border-radius:var(--radius);border-top:2px solid var(--primary)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.6;letter-spacing:.04em;color:var(--primary)">05</span><h3 style="font-family:var(--sans);font-weight:600;font-size:clamp(18px,1.5vw,20px);line-height:1.35;color:var(--heading)">Portability &amp; dependencies</h3><p style="grid-column:2;font-size:16px;line-height:1.6;text-wrap:pretty">What are you committing to? Can you move your data, work or setup elsewhere, and what would switching actually involve?</p></li>
+        <li style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:4px 14px;align-content:start;padding:22px 24px 24px;background:var(--panel);border-radius:var(--radius);border-top:2px solid var(--primary)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.6;letter-spacing:.04em;color:var(--primary)">06</span><h3 style="font-family:var(--sans);font-weight:600;font-size:clamp(18px,1.5vw,20px);line-height:1.35;color:var(--heading)">Cost</h3><p style="grid-column:2;font-size:16px;line-height:1.6;text-wrap:pretty">What does a useful result cost—including subscriptions, usage, retries and the human time involved?</p></li>
+      </ol>
+      <p style="display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;padding:18px 24px;border:1px solid var(--rule-strong);border-radius:var(--radius);font-size:16px;line-height:1.6"><span style="text-wrap:pretty">Alongside these practical questions, ValueCompass helps you examine the ownership, relationships and documented practices behind your choices.</span><a href="#valuecompass" style="font-weight:500;white-space:nowrap">ValueCompass · available now ↑</a></p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:40px clamp(40px,6vw,96px);align-items:start">
+      <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+        <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading)">How we’ll test</h3>
+        <dl style="border-top:1px solid var(--rule-strong)">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:2px 20px;padding:13px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-weight:600;color:var(--heading)">Representative tasks, repeated</dt><dd style="text-wrap:pretty">Each tool gets comparable tasks that reflect real use, and each task is run more than once.</dd></div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:2px 20px;padding:13px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-weight:600;color:var(--heading)">Independent checks</dt><dd style="text-wrap:pretty">We check the outputs ourselves rather than relying on what the tool reports.</dd></div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:2px 20px;padding:13px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-weight:600;color:var(--heading)">Successes, failures and repairs</dt><dd style="text-wrap:pretty">What worked, what broke, and how many attempts it took to fix.</dd></div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:2px 20px;padding:13px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-weight:600;color:var(--heading)">Money and time, kept apart</dt><dd style="text-wrap:pretty">Monetary cost is recorded separately from the time and human assistance a result required.</dd></div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:2px 20px;padding:13px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-weight:600;color:var(--heading)">Inspectable evidence</dt><dd style="text-wrap:pretty">Example outputs and the limits of each test are published alongside the advice.</dd></div>
+        </dl>
+        <p style="font-size:15px;line-height:1.6;color:var(--muted);text-wrap:pretty">The specific tests depend on the task and the category of tool. The six dimensions are common questions, not an identical checklist or a universal score applied to every product.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+        <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading)">What you’ll get</h3>
+        <ul style="border-top:1px solid var(--rule-strong)">
+          <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:13px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary)">→</span><span>Options suited to your kind of task.</span></li>
+          <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:13px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary)">→</span><span>The trade-offs that could change the recommendation.</span></li>
+          <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:13px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary)">→</span><span>The evidence behind the advice, so you can check it.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:16px;padding-top:clamp(32px,4vw,48px);border-top:1px solid var(--rule-strong)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:12px clamp(40px,6vw,96px);align-items:end">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--dev)">First planned category</p>
+          <h3 style="font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.2vw,30px);line-height:1.2;color:var(--heading)">AI app builders</h3>
+        </div>
+        <p style="font-size:16px;line-height:1.6;max-width:54ch;text-wrap:pretty">Our first comparisons will apply the framework to tools that build apps from natural-language instructions. The example below shows how each dimension becomes a concrete check.</p>
       </div>
       <details style="background:var(--panel);border:1px dashed var(--dev);border-radius:var(--radius);min-width:0">
         <summary style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;padding:20px 24px">
@@ -98,48 +140,30 @@
           </span>
           <span class="hl-chev" aria-hidden="true" style="flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--rule-strong);display:grid;place-items:center;color:var(--heading);font-size:15px">↓</span>
         </summary>
-        <div style="padding:0 24px 24px;display:flex;flex-direction:column;gap:20px">
-          <div style="padding-top:18px;border-top:1px solid var(--rule)">
-            <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Decision</p>
-            <p style="font-family:var(--serif);font-weight:400;font-size:19px;line-height:1.4;color:var(--heading);text-wrap:pretty">Which AI app builder suits a small-business owner with limited technical experience?</p>
+        <div style="padding:0 24px 24px;display:flex;flex-direction:column;gap:22px">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:16px 48px;padding-top:18px;border-top:1px solid var(--rule)">
+            <div>
+              <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Decision</p>
+              <p style="font-family:var(--serif);font-weight:400;font-size:19px;line-height:1.4;color:var(--heading);text-wrap:pretty">Which AI app builder suits a small-business owner with limited technical experience?</p>
+            </div>
+            <div>
+              <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Intended outcome</p>
+              <p style="font-size:16px;line-height:1.55;text-wrap:pretty">A comparison of which tools suit this user, where specialist help is needed, and the trade-offs involved.</p>
+            </div>
           </div>
           <div>
-            <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Evaluation scope</p>
-            <ul>
-              <li style="display:flex;flex-direction:column;gap:2px;padding:12px 0;border-top:1px solid var(--rule)"><strong style="font-size:16px;font-weight:600;color:var(--heading)">Functional reliability</strong><span style="font-size:16px;line-height:1.55">Booking and cancellation flows, including attempts to reserve the same slot.</span></li>
-              <li style="display:flex;flex-direction:column;gap:2px;padding:12px 0;border-top:1px solid var(--rule)"><strong style="font-size:16px;font-weight:600;color:var(--heading)">Maintainability</strong><span style="font-size:16px;line-height:1.55">Introducing a new requirement and checking that existing functionality still works.</span></li>
-              <li style="display:flex;flex-direction:column;gap:2px;padding:12px 0;border-top:1px solid var(--rule)"><strong style="font-size:16px;font-weight:600;color:var(--heading)">User effort</strong><span style="font-size:16px;line-height:1.55">Time, correction attempts and technical assistance needed to complete the task.</span></li>
-              <li style="display:flex;flex-direction:column;gap:2px;padding:12px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)"><strong style="font-size:16px;font-weight:600;color:var(--heading)">Portability</strong><span style="font-size:16px;line-height:1.55">Exporting the project and assessing what is required to run it with another provider.</span></li>
-            </ul>
-          </div>
-          <div>
-            <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Intended outcome</p>
-            <p style="font-size:16px;line-height:1.55;text-wrap:pretty">A comparison of which tools suit this user, where specialist help is needed, and the trade-offs involved.</p>
+            <p style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px"><span>Proposed checks</span><span style="color:var(--dev)">Not findings · no results yet</span></p>
+            <ol style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:0 48px">
+              <li style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:2px 14px;padding:13px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.55;letter-spacing:.04em;color:var(--primary)">01</span><strong style="font-size:16px;font-weight:600;line-height:1.45;color:var(--heading)">Functionality &amp; reliability</strong><span style="grid-column:2;font-size:16px;line-height:1.55;text-wrap:pretty">Booking and cancellation flows, including conflicting attempts to reserve the same slot.</span></li>
+              <li style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:2px 14px;padding:13px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.55;letter-spacing:.04em;color:var(--primary)">02</span><strong style="font-size:16px;font-weight:600;line-height:1.45;color:var(--heading)">User effort &amp; expertise</strong><span style="grid-column:2;font-size:16px;line-height:1.55;text-wrap:pretty">Time, correction attempts and technical help needed.</span></li>
+              <li style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:2px 14px;padding:13px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.55;letter-spacing:.04em;color:var(--primary)">03</span><strong style="font-size:16px;font-weight:600;line-height:1.45;color:var(--heading)">Oversight &amp; control</strong><span style="grid-column:2;font-size:16px;line-height:1.55;text-wrap:pretty">Whether users can see what will change, test before publishing, approve consequential changes and restore an earlier working version.</span></li>
+              <li style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:2px 14px;padding:13px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.55;letter-spacing:.04em;color:var(--primary)">04</span><strong style="font-size:16px;font-weight:600;line-height:1.45;color:var(--heading)">Maintainability</strong><span style="grid-column:2;font-size:16px;line-height:1.55;text-wrap:pretty">Introducing a new requirement and checking that existing functionality still works.</span></li>
+              <li style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:2px 14px;padding:13px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.55;letter-spacing:.04em;color:var(--primary)">05</span><strong style="font-size:16px;font-weight:600;line-height:1.45;color:var(--heading)">Portability &amp; dependencies</strong><span style="grid-column:2;font-size:16px;line-height:1.55;text-wrap:pretty">Exporting the project and data, identifying required services, and assessing what moving elsewhere involves.</span></li>
+              <li style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:2px 14px;padding:13px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.55;letter-spacing:.04em;color:var(--primary)">06</span><strong style="font-size:16px;font-weight:600;line-height:1.45;color:var(--heading)">Cost</strong><span style="grid-column:2;font-size:16px;line-height:1.55;text-wrap:pretty">Tool charges and retries, with development and review time recorded separately.</span></li>
+            </ol>
           </div>
         </div>
       </details>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:40px clamp(40px,6vw,96px);margin-top:clamp(48px,6vw,80px)">
-      <div style="min-width:0">
-        <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:12px">What we’ll record</h3>
-        <dl style="border-top:1px solid var(--rule-strong)">
-          <div style="display:grid;grid-template-columns:minmax(110px,150px) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-family:var(--sans);font-weight:600;font-size:16px;line-height:1.55;color:var(--heading)">Does it work?</dt><dd>Whether the output does what the task asked.</dd></div>
-          <div style="display:grid;grid-template-columns:minmax(110px,150px) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-family:var(--sans);font-weight:600;font-size:16px;line-height:1.55;color:var(--heading)">Fixes</dt><dd>What errors occur, and how many attempts it takes to resolve them.</dd></div>
-          <div style="display:grid;grid-template-columns:minmax(110px,150px) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-family:var(--sans);font-weight:600;font-size:16px;line-height:1.55;color:var(--heading)">Time</dt><dd>From the initial instructions to a usable result.</dd></div>
-          <div style="display:grid;grid-template-columns:minmax(110px,150px) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-family:var(--sans);font-weight:600;font-size:16px;line-height:1.55;color:var(--heading)">Cost</dt><dd>What it costs to complete the task, including retries.</dd></div>
-          <div style="display:grid;grid-template-columns:minmax(110px,150px) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><dt style="font-family:var(--sans);font-weight:600;font-size:16px;line-height:1.55;color:var(--heading)">Assistance</dt><dd>The guidance and technical knowledge needed to reach a useful result.</dd></div>
-        </dl>
-      </div>
-      <div style="min-width:0">
-        <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:12px">What you’ll get</h3>
-        <ul style="border-top:1px solid var(--rule-strong)">
-          <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary)">→</span><span>Options worth trying for your kind of task.</span></li>
-          <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary)">→</span><span>The circumstances in which each tool struggles.</span></li>
-          <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary)">→</span><span>The effort and expertise you should expect to contribute.</span></li>
-          <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary)">→</span><span>The evidence behind the advice, including example outputs.</span></li>
-          <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary)">→</span><span>The trade-offs that could change the recommendation.</span></li>
-        </ul>
-      </div>
     </div>
   </div>
 </section>
