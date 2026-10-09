@@ -1,5 +1,6 @@
 "use client";
 
+import { cardText, cardTitle, smallLabelType } from "@/lib/ui";
 import {
   useEffect,
   useRef,
@@ -90,14 +91,14 @@ export function ProjectTabs({ tabs }: { tabs: ProjectTab[] }) {
                   : "border-transparent bg-paper"
               }`}
             >
-              <span className="flex justify-between gap-3 font-mono text-[12px] font-medium tracking-[0.1em] text-muted uppercase">
+              <span
+                className={`${smallLabelType} flex justify-between gap-3 text-muted`}
+              >
                 <span>{tab.kicker}</span>
                 <span aria-hidden="true">{tab.marker}</span>
               </span>
-              <span className="text-[clamp(19px,1.6vw,22px)] leading-[1.3] font-semibold text-heading">
-                {tab.heading}
-              </span>
-              <span className="text-[16px] leading-[1.55]">{tab.summary}</span>
+              <span className={cardTitle}>{tab.heading}</span>
+              <span className={cardText}>{tab.summary}</span>
             </button>
           );
         })}

@@ -12,8 +12,10 @@ import {
   VALUECOMPASS_URL,
 } from "@/lib/links";
 import {
+  cardText,
   cardTitle,
   frame,
+  itemTitle,
   label,
   largeButton,
   lead,
@@ -21,6 +23,8 @@ import {
   primaryButton,
   proseLink,
   sectionHeading,
+  smallLabel,
+  smallLabelType,
 } from "@/lib/ui";
 
 const title = "Services — Hopperlace";
@@ -46,8 +50,7 @@ export const metadata: Metadata = {
 /* ─── Local primitives ─── */
 
 /** Mono label used as a heading inside panels and cards. */
-const listHeading =
-  "font-mono text-[12px] font-medium tracking-[0.1em] uppercase text-heading";
+const listHeading = `${smallLabelType} text-heading`;
 
 /* ─── Content ─── */
 
@@ -300,7 +303,7 @@ function Hero() {
       <p className={`${label} mb-6`}>Services</p>
       <h1
         id="hero-title"
-        className="max-w-[20ch] font-serif text-[clamp(36px,4.6vw,64px)] leading-[1.1] font-normal tracking-[-0.02em] text-heading text-balance"
+        className="max-w-[17ch] font-serif text-[clamp(36px,4.6vw,60px)] leading-[1.06] font-normal tracking-[-0.02em] text-heading text-pretty"
       >
         Develop, test and improve AI products and features.
       </h1>
@@ -320,7 +323,7 @@ function Hero() {
             <a href={MAIL_HREF} className={`${primaryButton} ${largeButton}`}>
               Discuss your project
             </a>
-            <a href={MAIL_HREF} className={`${proseLink} py-2 text-[16px]`}>
+            <a href={MAIL_HREF} className={`${proseLink} py-2 text-[14px]`}>
               {EMAIL}
             </a>
           </div>
@@ -338,9 +341,9 @@ function Hero() {
             className="size-[88px] rounded-full bg-sage object-cover"
           />
           <div className="flex flex-col gap-2.5">
-            <p className={label}>You&rsquo;ll work with</p>
+            <p className={smallLabel}>You&rsquo;ll work with</p>
             <p className={cardTitle}>Yuyu Shen, founder</p>
-            <p className="text-[16px] leading-[1.6] text-pretty">
+            <p className={cardText}>
               A statistically trained data scientist turned product leader, with
               nearly a decade building and evaluating AI systems &mdash;
               previously at Meta, Walmart, Beamery and Cleo. Claude Certified
@@ -348,7 +351,7 @@ function Hero() {
             </p>
             <a
               href="#yuyu"
-              className={`${proseLink} self-start py-1 text-[15px] font-medium`}
+              className={`${proseLink} self-start py-1 text-[14px] font-medium`}
             >
               Full background ↓
             </a>
@@ -405,12 +408,14 @@ function ProjectPanel({ project }: { project: (typeof projects)[number] }) {
           <p className={label}>
             {project.marker} / {project.heading}
           </p>
-          <blockquote className="font-serif text-[clamp(20px,1.8vw,24px)] leading-[1.4] font-normal text-heading italic text-pretty">
+          <blockquote className="max-w-[40ch] font-serif text-[clamp(18px,1.6vw,21px)] leading-[1.45] font-normal text-body italic text-pretty">
             {project.quote}
           </blockquote>
           <div className="rounded-card bg-selected px-[26px] py-6">
             <h3 className={`${listHeading} mb-2.5`}>You receive</h3>
-            <p className="text-pretty">{project.receive}</p>
+            <p className="text-[15.5px] leading-[1.55] text-heading text-pretty">
+              {project.receive}
+            </p>
           </div>
         </div>
         <div>
@@ -419,7 +424,7 @@ function ProjectPanel({ project }: { project: (typeof projects)[number] }) {
             {project.steps.map((step, i) => (
               <li
                 key={i}
-                className="grid grid-cols-[36px_1fr] gap-3 border-t border-rule py-3.5"
+                className="grid grid-cols-[28px_1fr] gap-2.5 border-t border-rule py-[11px] text-[15px] leading-[1.5]"
               >
                 <span className={marker}>{i + 1}</span>
                 <span>{step}</span>
@@ -447,12 +452,8 @@ function ChooseEvidence() {
               <span aria-hidden="true" className={`${marker} leading-[1.7]`}>
                 {item.number}
               </span>
-              <dt className="text-[18px] leading-[1.35] font-semibold text-heading">
-                {item.name}
-              </dt>
-              <dd className="col-start-2 text-[16px] leading-[1.55] text-pretty">
-                {item.body}
-              </dd>
+              <dt className={itemTitle}>{item.name}</dt>
+              <dd className={`${cardText} col-start-2`}>{item.body}</dd>
             </div>
           ))}
         </dl>
@@ -473,13 +474,9 @@ function ChooseEvidence() {
               key={kind.heading}
               className="flex flex-col gap-1 border-t border-rule-strong py-3.5"
             >
-              <span className="font-mono text-[12px] font-medium tracking-[0.04em] text-primary">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span className="text-[16px] leading-[1.4] font-semibold text-heading">
-                {kind.heading}
-              </span>
-              <span className="text-[15px] leading-[1.5]">{kind.body}</span>
+              <span className={marker}>{String(i + 1).padStart(2, "0")}</span>
+              <span className={`${itemTitle} text-[17px]`}>{kind.heading}</span>
+              <span className="text-[14px] leading-[1.5]">{kind.body}</span>
             </li>
           ))}
         </ol>
@@ -515,23 +512,19 @@ function Experience() {
               className="flex flex-col gap-5 rounded-card bg-sage px-[30px] py-8"
             >
               <div>
-                <p className={`${label} mb-2.5`}>{work.company}</p>
+                <p className={`${smallLabel} mb-2.5`}>{work.company}</p>
                 <h3 className={cardTitle}>{work.heading}</h3>
-                <p className="mt-2.5 text-[15px] leading-[1.5] font-medium text-primary text-pretty">
+                <p className="mt-2 text-[14px] leading-[1.5] font-medium text-primary text-pretty">
                   {work.tagline}
                 </p>
               </div>
               <div>
                 <h4 className={`${listHeading} mb-1.5`}>What Yuyu did</h4>
-                <p className="text-[16px] leading-[1.6] text-pretty">
-                  {work.did}
-                </p>
+                <p className={cardText}>{work.did}</p>
               </div>
               <div className="mt-auto border-t border-rule pt-4">
                 <h4 className={`${listHeading} mb-1.5`}>What it led to</h4>
-                <p className="text-[16px] leading-[1.6] text-pretty">
-                  {work.ledTo}
-                </p>
+                <p className={`${cardText} text-heading`}>{work.ledTo}</p>
               </div>
             </article>
           ))}
@@ -569,12 +562,8 @@ function Example() {
               className="flex flex-col gap-2.5 border-t-2 border-primary pt-[22px] pb-7"
             >
               <span className={marker}>{i + 1}</span>
-              <h3 className="text-[18px] font-semibold text-heading">
-                {step.heading}
-              </h3>
-              <p className="text-[16px] leading-[1.6] text-pretty">
-                {step.body}
-              </p>
+              <h3 className={itemTitle}>{step.heading}</h3>
+              <p className={cardText}>{step.body}</p>
             </li>
           ))}
         </ol>
@@ -614,10 +603,10 @@ function Founder() {
                       i < certifications.length - 1 ? "pb-3.5" : ""
                     }`}
                   >
-                    <span className="text-[19px] leading-[1.3] font-semibold text-heading">
+                    <span className={`${itemTitle} text-[19px]`}>
                       {cert.name}
                     </span>
-                    <span className="text-[14px] font-semibold tracking-[0.08em] text-muted">
+                    <span className="font-mono text-[12px] font-medium tracking-[0.08em] text-muted">
                       {cert.code}
                     </span>
                   </li>
@@ -627,15 +616,12 @@ function Founder() {
           </div>
           <div className="flex max-w-[64ch] flex-col gap-[22px]">
             <div>
-              <h2
-                id="yuyu-title"
-                className="font-serif text-[clamp(30px,3vw,40px)] leading-[1.1] font-normal tracking-[-0.02em] text-heading"
-              >
+              <h2 id="yuyu-title" className={sectionHeading}>
                 Yuyu Shen
               </h2>
-              <p className={`${label} mt-3.5`}>Founder, Hopperlace</p>
+              <p className={`${smallLabel} mt-2`}>Founder, Hopperlace</p>
             </div>
-            <p className="text-pretty">
+            <p className={lead}>
               Yuyu is a statistically trained data scientist turned product
               leader, with nearly a decade building and evaluating AI systems,
               including taking AI products from zero to one.
@@ -666,7 +652,7 @@ function Founder() {
             </p>
             <div className="mt-3 grid grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))] gap-x-8">
               <FounderFact heading="Research">
-                <p className="mb-1.5 text-[18px] leading-[1.35] font-semibold">
+                <p className={`${itemTitle} mb-1.5`}>
                   <a
                     href={RESEARCH_URL}
                     className="text-heading underline decoration-1 underline-offset-[3px]"
@@ -674,13 +660,13 @@ function Founder() {
                     Deference-aware evaluation ↗
                   </a>
                 </p>
-                <p className="text-[16px] leading-[1.55]">
+                <p className={cardText}>
                   Paper accepted at the ICML 2026 Technical AI Governance
                   workshop.
                 </p>
               </FounderFact>
               <FounderFact heading="Writing">
-                <p className="mb-1.5 text-[18px] leading-[1.35] font-semibold">
+                <p className={`${itemTitle} mb-1.5`}>
                   <a
                     href={BUILDWITHWHY_URL}
                     className="text-heading underline decoration-1 underline-offset-[3px]"
@@ -688,12 +674,12 @@ function Founder() {
                     Build With Why ↗
                   </a>
                 </p>
-                <p className="text-[16px] leading-[1.55]">
+                <p className={cardText}>
                   Essays on technology, agency and better decisions.
                 </p>
               </FounderFact>
               <FounderFact heading="Products">
-                <ul className="flex flex-col gap-1.5 text-[16px]">
+                <ul className="flex flex-col gap-1.5 text-[15px]">
                   <li>
                     <a href={VALUECOMPASS_URL} className={proseLink}>
                       ValueCompass ↗
@@ -707,7 +693,7 @@ function Founder() {
                 </ul>
               </FounderFact>
               <FounderFact heading="Previously">
-                <p className="text-[16px] leading-[1.55]">
+                <p className={cardText}>
                   Meta &middot; Walmart &middot; Beamery &middot; Cleo
                 </p>
               </FounderFact>
@@ -757,13 +743,13 @@ function HowProjectsWork() {
           >
             <span className={marker}>{item.marker}</span>
             <h3 className={cardTitle}>{item.heading}</h3>
-            <p className="text-pretty">{item.body}</p>
+            <p className={cardText}>{item.body}</p>
           </div>
         ))}
       </div>
       <div className="mt-[clamp(28px,4vw,40px)] border-t border-rule pt-6">
         <h3 className={`${listHeading} mb-2.5`}>What the work draws on</h3>
-        <p className="max-w-[90ch] text-[16px] text-pretty">
+        <p className="max-w-[90ch] text-[15px] leading-[1.7] text-pretty">
           Customer and workflow discovery &middot; AI product and interaction
           design &middot; provider, tool, model and build-versus-buy decisions
           &middot; system architecture, including where people stay involved
@@ -779,7 +765,7 @@ function HowProjectsWork() {
           </p>
         </div>
         <div className="flex flex-col gap-2.5">
-          <p className="text-[16px] leading-[1.6] text-pretty">
+          <p className="text-[15px] leading-[1.65] text-pretty">
             Client projects and Hopperlace&rsquo;s public tool testing, now in
             development, start from the same questions: what an AI system
             actually accomplishes, where it struggles, and what makes it right
@@ -787,7 +773,7 @@ function HowProjectsWork() {
           </p>
           <a
             href="/#testing"
-            className={`${proseLink} self-start text-[15px] font-medium`}
+            className={`${proseLink} self-start text-[14px] font-medium`}
           >
             How we&rsquo;re approaching tool testing →
           </a>
@@ -811,7 +797,7 @@ function Contact() {
       >
         <h2
           id="contact-title"
-          className="font-serif text-[clamp(30px,3.2vw,42px)] leading-[1.15] font-normal tracking-[-0.02em] text-balance"
+          className="font-serif text-[clamp(32px,3.8vw,48px)] leading-[1.1] font-normal tracking-[-0.015em] text-pretty"
         >
           Tell us what you&rsquo;re working on.
         </h2>

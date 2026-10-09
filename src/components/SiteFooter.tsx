@@ -18,10 +18,10 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-rule">
       <div
-        className={`${frame} flex flex-wrap items-baseline justify-between gap-x-8 gap-y-4 pt-8 pb-10 text-[14px] leading-[1.5] text-muted`}
+        className={`${frame} flex flex-wrap items-baseline justify-between gap-x-8 gap-y-4 pt-8 pb-10 text-[13px] leading-[1.5] text-muted`}
       >
         <div className="flex flex-col gap-1">
-          <span className="font-serif text-[18px] leading-[1.2] font-semibold text-heading">
+          <span className="font-serif text-[17px] leading-[1.2] font-semibold text-heading">
             Hopperlace
           </span>
           <span>

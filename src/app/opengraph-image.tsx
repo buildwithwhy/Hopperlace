@@ -7,14 +7,14 @@ export const alt =
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-/* Satori can't read the Tailwind theme, so the palette is repeated here. `ink`
-   and `paper` are the theme tokens; the two greys are the warm equivalents of
-   `muted` and `rule` at the contrast this dark card needs. Keep them in step
-   with the `@theme` block in globals.css. */
-const ink = "#1b1a18";
-const paper = "#f4f2ed";
-const mutedOnInk = "#8e8a82";
-const ruleOnInk = "#3a3833";
+/* Satori can't read the Tailwind theme, so the palette is repeated here.
+   Keep these in step with the `@theme` block in globals.css. */
+const paper = "#faf8f4";
+const heading = "#263d34";
+const muted = "#566158";
+const primary = "#2e5140";
+const sage = "#eff0e8";
+const beige = "#efe6d8";
 
 const font = (file: string) =>
   readFile(join(process.cwd(), "src/app/fonts", file));
@@ -27,74 +27,66 @@ export default async function OpengraphImage() {
   ]);
 
   return new ImageResponse(
-    (
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        backgroundColor: paper,
+        color: heading,
+        padding: "72px 80px",
+        fontFamily: "Source Serif 4",
+      }}
+    >
       <div
         style={{
-          width: "100%",
-          height: "100%",
           display: "flex",
-          flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: ink,
-          color: paper,
-          padding: 72,
-          fontFamily: "Source Serif 4",
+          alignItems: "center",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            fontWeight: 600,
-            fontSize: 34,
-            letterSpacing: "0.01em",
-          }}
-        >
+        <div style={{ display: "flex", fontWeight: 600, fontSize: 44 }}>
           Hopperlace
         </div>
-
         <div
           style={{
             display: "flex",
-            flexDirection: "column",
-            fontSize: 58,
-            lineHeight: 1.08,
-            letterSpacing: "-0.02em",
+            fontFamily: "IBM Plex Mono",
+            fontWeight: 500,
+            fontSize: 22,
+            letterSpacing: "0.1em",
+            color: muted,
           }}
         >
-          <div style={{ display: "flex" }}>Choose AI for what you want to do</div>
-          <div style={{ display: "flex", color: mutedOnInk }}>
-            &mdash; and what matters to you.
-          </div>
-        </div>
-
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <div
-            style={{
-              display: "flex",
-              height: 1,
-              backgroundColor: ruleOnInk,
-              marginBottom: 22,
-            }}
-          />
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              fontFamily: "IBM Plex Mono",
-              fontWeight: 500,
-              fontSize: 17,
-              letterSpacing: "0.12em",
-              color: mutedOnInk,
-            }}
-          >
-            <div style={{ display: "flex" }}>
-              INDEPENDENT TESTING &middot; COMPARISON &middot; INFORMED CHOICE
-            </div>
-            <div style={{ display: "flex" }}>HOPPERLACE.AI</div>
-          </div>
+          HOPPERLACE.AI
         </div>
       </div>
-    ),
+
+      <div
+        style={{
+          display: "flex",
+          maxWidth: 900,
+          fontSize: 80,
+          lineHeight: 1.12,
+          letterSpacing: "-0.02em",
+        }}
+      >
+        Choose AI for what you want to do &mdash; and what matters to you.
+      </div>
+
+      {/* Palette bar: forest green, sage, beige. */}
+      <div style={{ display: "flex", height: 12 }}>
+        <div
+          style={{ display: "flex", width: "40%", backgroundColor: primary }}
+        />
+        <div style={{ display: "flex", width: "30%", backgroundColor: sage }} />
+        <div
+          style={{ display: "flex", width: "30%", backgroundColor: beige }}
+        />
+      </div>
+    </div>,
     {
       ...size,
       fonts: [
