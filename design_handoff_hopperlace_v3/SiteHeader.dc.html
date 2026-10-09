@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link rel="stylesheet" href="hopperlace.css"></helmet>
+<header style="background:var(--paper);border-bottom:1px solid var(--rule)">
+  <div style="max-width:var(--max);margin:0 auto;padding:0 var(--gutter);height:var(--header-h);box-sizing:border-box;display:flex;flex-wrap:nowrap;align-items:center;gap:{{ rowGap }}">
+    <a href="{{ homeHref }}" style="flex:{{ logoFlex }};font-family:var(--serif);font-weight:600;font-size:{{ logoSize }};line-height:1;letter-spacing:.005em;color:var(--heading);text-decoration:none;padding:6px 0;white-space:nowrap">Hopperlace</a>
+    <nav aria-label="Primary" style="flex:0 1 auto;min-width:0;overflow-x:auto;display:flex;flex-wrap:nowrap;align-items:center;gap:0 {{ navGap }};font-size:{{ navSize }};font-weight:500;white-space:nowrap;scrollbar-width:none;-webkit-mask-image:{{ navMask }};mask-image:{{ navMask }}">
+      <a href="{{ testingHref }}" style="color:var(--body);text-decoration:none;padding:12px 0" style-hover="color:var(--heading)">Testing</a>
+      <a href="{{ vcHref }}" style="color:var(--body);text-decoration:none;padding:12px 0" style-hover="color:var(--heading)">ValueCompass</a>
+      <sc-if value="{{ showCta }}" hint-placeholder-val="{{ true }}"><a href="{{ founderHref }}" style="color:var(--body);text-decoration:none;padding:12px 0" style-hover="color:var(--heading)">Founder</a></sc-if>
+      <a href="Services.dc.html" aria-current="{{ servicesCurrent }}" style="color:{{ servicesColor }};text-decoration:{{ servicesDeco }};text-underline-offset:6px;padding:12px 0" style-hover="color:var(--heading)">Services</a>
+    </nav>
+    <sc-if value="{{ showCta }}" hint-placeholder-val="{{ true }}">
+      <a href="https://valuecompass.ai" style="flex:none;display:inline-flex;align-items:center;min-height:44px;padding:0 20px;background:var(--primary);color:var(--on-primary);text-decoration:none;font-size:15px;font-weight:500;border-radius:var(--pill);white-space:nowrap" style-hover="background:var(--primary-hover);color:var(--on-primary)">Try ValueCompass ↗</a>
+    </sc-if>
+  </div>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:80},&quot;current&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;services&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;'home' | 'services'&quot;}}">
+class Component extends DCLogic {
+  state = { wide: typeof window === 'undefined' ? true : window.matchMedia('(min-width: 761px)').matches };
+  componentDidMount() {
+    this.mq = window.matchMedia('(min-width: 761px)');
+    this.onMq = () => this.setState({ wide: this.mq.matches });
+    this.mq.addEventListener('change', this.onMq);
+    this.onMq();
+  }
+  componentWillUnmount() { this.mq && this.mq.removeEventListener('change', this.onMq); }
+  renderVals() {
+    const home = (this.props.current ?? 'home') === 'home';
+    const base = home ? '' : 'Home.dc.html';
+    const wide = this.state.wide;
+    return {
+      homeHref: home ? '#top' : 'Home.dc.html',
+      testingHref: base + '#testing',
+      vcHref: base + '#valuecompass',
+      founderHref: base + '#founder',
+      servicesCurrent: home ? undefined : 'page',
+      servicesColor: home ? 'var(--body)' : 'var(--heading)',
+      servicesDeco: home ? 'none' : 'underline',
+      showCta: wide,
+      logoFlex: wide ? '1 0 auto' : 'none',
+      logoSize: wide ? '21px' : '19px',
+      rowGap: wide ? '20px 28px' : '14px',
+      navGap: wide ? '22px' : '14px',
+      navSize: wide ? '15px' : '14px',
+      navMask: wide ? 'none' : 'linear-gradient(90deg,#000 calc(100% - 16px),transparent)'
+    };
+  }
+}
+</script>
+</body>
+</html>

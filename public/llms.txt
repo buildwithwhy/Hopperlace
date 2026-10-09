@@ -2,9 +2,9 @@
 
 > Choose AI for what you want to do — and what matters to you.
 
-We're developing independent, hands-on comparisons of AI tools: testing them on the same tasks, checking their outputs, and recording the effort needed to get a usable result.
+Hopperlace helps you choose AI tools and systems that fit your tasks, preferences and values, with evidence you can understand and inspect.
 
-ValueCompass, which you can use today, adds research on the companies behind those tools: their ownership, dependencies and policies.
+ValueCompass, which you can use today, adds research on the companies behind those tools: their ownership, dependencies and policies. We're also developing independent, hands-on comparisons of the tools themselves.
 
 The aim is to bring these comparisons together with ValueCompass, so you can consider practical fit and values in the same decision.
 
@@ -12,46 +12,8 @@ Focus: independent testing · comparison · informed choice.
 
 ## Two parts of one decision
 
+- ValueCompass (available now, https://valuecompass.ai): who is behind it, and does that fit your values? Compare AI options on ownership, control and documented commitments, against the priorities you choose.
 - Tool testing (in development): can it do your task, and what will it take? Find out which tools suit a particular task, and what effort, expertise and compromises each one involves.
-- ValueCompass (live, https://valuecompass.ai): who is behind it, and does that fit your values? Compare AI options on ownership, control and documented commitments, against the priorities you choose.
-
-## Tool testing — in development
-
-See how AI tools perform on the work you need done.
-
-Our comparisons are meant to show which tools fit your work and circumstances, and what you'd be taking on with each.
-
-To get there, several tools receive comparable tasks, each task is run more than once, and we check the outputs independently rather than relying on what the tool reports.
-
-Our first comparisons will focus on AI app builders.
-
-### Example test scenario: building and maintaining a booking app
-
-- Decision: which AI app builder suits a small-business owner with limited technical experience?
-- Evaluation scope:
-  - Functional reliability — booking and cancellation flows, including attempts to reserve the same slot.
-  - Maintainability — introducing a new requirement and checking that existing functionality still works.
-  - User effort — time, correction attempts and technical assistance needed to complete the task.
-  - Portability — exporting the project and assessing what is required to run it with another provider.
-- Intended outcome: a comparison of which tools suit this user, where specialist help is needed, and the trade-offs involved.
-
-### What we'll record
-
-1. Does it work? — whether the output does what the task asked.
-2. Fixes — what errors occur, and how many attempts it takes to resolve them.
-3. Time — from the initial instructions to a usable result.
-4. Cost — what it costs to complete the task, including retries.
-5. Assistance — the guidance and technical knowledge needed to reach a useful result.
-
-### What you'll get
-
-- Options worth trying for your kind of task.
-- The circumstances in which each tool struggles.
-- The effort and expertise you should expect to contribute.
-- The evidence behind the advice, including example outputs.
-- The trade-offs that could change the recommendation.
-
-Note: this describes planned testing, not published results. No comparisons have been published yet.
 
 ## ValueCompass — available now (https://valuecompass.ai)
 
@@ -62,6 +24,57 @@ Who benefits from the money you spend on AI? What commitments do providers make 
 ValueCompass helps you examine the companies behind AI products and compare options against your values. Explore ownership, control, dependencies and documented policies, with sources and clear gaps in the research.
 
 Opens valuecompass.ai. No account needed.
+
+## Tool testing — in development
+
+What makes an AI tool a good fit?
+
+Our comparisons will examine how well an option works for your task, what it asks of you, and the trade-offs involved in choosing it.
+
+### Six questions we ask of every tool
+
+1. Functionality & reliability — does it accomplish your task to the quality you need? How consistently does it work across different cases and repeated attempts, and where does it fail?
+2. User effort & expertise — how much setup, guidance, checking and correction does it require? What can you manage yourself, and where is specialist help needed?
+3. Oversight & control — can you understand and check what it has done, approve consequential actions, intervene when needed, and recover from mistakes?
+4. Maintainability — can you adapt it as your needs change, diagnose problems and make improvements without breaking what already works?
+5. Portability & dependencies — what are you committing to? Can you move your data, work or setup elsewhere, and what would switching actually involve?
+6. Cost — what does a useful result cost, including subscriptions, usage, retries and the human time involved?
+
+Alongside these practical questions, ValueCompass (available now) helps you examine the ownership, relationships and documented practices behind your choices.
+
+### How we'll test
+
+- Representative tasks, repeated — each tool gets comparable tasks that reflect real use, and each task is run more than once.
+- Independent checks — we check the outputs ourselves rather than relying on what the tool reports.
+- Successes, failures and repairs — what worked, what broke, and how many attempts it took to fix.
+- Money and time, kept apart — monetary cost is recorded separately from the time and human assistance a result required.
+- Inspectable evidence — example outputs and the limits of each test are published alongside the advice.
+
+The specific tests depend on the task and the category of tool. The six dimensions are common questions, not an identical checklist or a universal score applied to every product.
+
+### What you'll get
+
+- Options suited to your kind of task.
+- The trade-offs that could change the recommendation.
+- The evidence behind the advice, so you can check it.
+
+### First planned category: AI app builders
+
+Our first comparisons will apply the framework to tools that build apps from natural-language instructions. The example below shows how each dimension becomes a concrete check.
+
+#### Example test scenario (planned): building and maintaining a booking app
+
+- Decision: which AI app builder suits a small-business owner with limited technical experience?
+- Intended outcome: a comparison of which tools suit this user, where specialist help is needed, and the trade-offs involved.
+- Proposed checks (not findings; no results yet):
+  1. Functionality & reliability — booking and cancellation flows, including conflicting attempts to reserve the same slot.
+  2. User effort & expertise — time, correction attempts and technical help needed.
+  3. Oversight & control — whether users can see what will change, test before publishing, approve consequential changes and restore an earlier working version.
+  4. Maintainability — introducing a new requirement and checking that existing functionality still works.
+  5. Portability & dependencies — exporting the project and data, identifying required services, and assessing what moving elsewhere involves.
+  6. Cost — tool charges and retries, with development and review time recorded separately.
+
+Note: this describes planned testing, not published results. No comparisons have been published yet.
 
 ## Founder
 
@@ -80,9 +93,40 @@ She also built Evidence Synthesis AI (https://www.evidencesynthesisai.com/), whi
 
 Develop, test and improve AI products and features.
 
-Hopperlace helps teams turn promising ideas into working prototypes, find out what is holding existing AI experiences back, and use evidence to decide what to build or change next.
+Hopperlace helps teams choose an AI approach, turn ideas into working prototypes, and improve products and workflows that aren't delivering what users need.
 
-### 01 / A new idea: develop and test an AI idea
+We combine technical research, product judgment and hands-on testing to help you decide what to use, what to build and what to change next.
+
+You'll work with Yuyu Shen, founder: a statistically trained data scientist turned product leader, with nearly a decade building and evaluating AI systems — previously at Meta, Walmart, Beamery and Cleo. Claude Certified Architect, Professional and Foundations.
+
+### 01 / Three kinds of project
+
+Start from the question you need answered. Each project is hands-on. Prototyping and selected implementation are part of the work wherever they answer the question better than a document can.
+
+#### A / A provider or tool decision: choose an AI approach (https://hopperlace.ai/services#choose)
+
+Decide which provider, tool or system design to use, based on evidence tested on your cases.
+
+"There are several providers, tools and ways to build this. We need to know which will work for us, what it will cost, and what we'd be committing to."
+
+The work can include:
+
+1. Define the task, constraints and what a useful result looks like for your users.
+2. Shortlist providers, models and tools, and weigh building, buying or combining them.
+3. Outline candidate system designs: where information comes from, where people review, and what depends on what.
+4. Test the shortlisted options in practice, on cases that reflect real use, more than once.
+5. Build integration prototypes where a comparison on paper can't answer the question.
+6. Recommend an approach, with the trade-offs that could change the recommendation.
+
+Each option is compared on: (1) functionality & reliability — whether it does the task on your cases, how consistently across repeated runs, and where it fails · (2) user effort & expertise — the setup, integration, checking and correction your team would take on · (3) oversight & control — whether your team can inspect outputs, approve consequential actions, intervene and recover from errors · (4) maintainability — how readily it adapts as requirements change, without breaking what already works · (5) portability & dependencies — lock-in, data handling, required services, and what switching would involve · (6) cost — usage and licensing, retries, and the staff time spent reviewing and correcting.
+
+How we treat evidence: we distinguish published terms and documentation, provider claims, our own test results, and the conclusions we draw from them. Recommendations make clear what the evidence supports, what remains uncertain, and which trade-offs could change the decision.
+
+You receive: a comparison of the shortlisted options on your own cases, a recommended approach and system design, and integration prototypes where agreed.
+
+#### B / A new idea: develop and test an AI idea (https://hopperlace.ai/services#develop)
+
+Work out what it should do, build a working version, and see whether it delivers.
 
 "We see an opportunity for AI in our product or workflow, but need to work out what it should do and whether it can deliver."
 
@@ -97,22 +141,33 @@ The work can include:
 
 You receive: a working prototype, findings from testing, and a practical recommendation for what to develop next.
 
-### 02 / An existing feature: improve an existing AI experience
+#### C / An existing feature: improve an existing AI experience (https://hopperlace.ai/services#improve)
 
-"The demo looks promising, but real users still struggle, correct the output, or redo the work."
+Find what is holding it back for real users, then test and make the changes.
+
+"The demo looks promising, and the dashboard looks fine, but real users still struggle, correct the output, or redo the work."
 
 The work can include:
 
 1. Review real examples and where users run into trouble.
-2. Agree what success should mean for the people using it.
-3. Trace the problem across model behavior, the information the system has, the workflow and the interface.
-4. Prototype or implement selected improvements.
-5. Compare results before and after on the same set of cases.
-6. Hand over test cases your team can rerun, and clear next steps.
+2. Check whether current metrics represent useful outcomes, including failures they don't show and work quietly passed back to users.
+3. Agree what success should mean for the people using it.
+4. Trace the problem across model behavior, the information the system has, the workflow and the interface.
+5. Prototype or implement selected improvements.
+6. Compare results before and after on the same set of cases.
+7. Hand over test cases your team can rerun, and clear next steps.
 
-You receive: a diagnosis supported by real examples, tested changes where agreed, and evidence of their effect.
+You receive: a diagnosis supported by real examples, a check on whether your metrics reflect useful outcomes, tested or implemented changes where agreed, and evidence of their effect.
 
-### 03 / What a project can look like (illustrative example)
+### 02 / Experience from previous roles
+
+Work Yuyu led before Hopperlace. Selected examples from Yuyu's previous roles, not Hopperlace client projects.
+
+- Enjoy Technology — Last Mile Smart Routing. Built the technical proof of concept, then turned it into a product. Personally built a Python proof-of-concept algorithm for adaptive delivery coverage, then led the work into product development. The feature increased visits per vehicle by 8–13%.
+- Beamery — Dynamic Job Architecture. Spotted a new product opportunity and secured pilot customers. As hiring slowed, identified an opportunity to adapt Beamery's existing AI capabilities into Dynamic Job Architecture; persuaded leadership to explore the area, secured support for a team and found willing pilot customers. The work extended Beamery's capabilities toward defining roles and skills for internal mobility and workforce planning.
+- Cleo — Improving the data behind an AI financial assistant. Evaluated and improved an AI system already in use. Led the evaluation strategy for transaction enrichment, working with modeling and data-science teams to prioritize what to measure and improve. As the PM leading bank connections and transaction data, she also owned data-purchasing decisions, the Plaid relationship and evaluation of alternative providers. Transaction-enrichment accuracy increased from 56% to 89%.
+
+### 03 / What a project can look like (illustrative example, not a client project)
 
 A team wants to help customers turn a collection of documents into an actionable plan.
 
@@ -122,17 +177,7 @@ A team wants to help customers turn a collection of documents into an actionable
 4. Find the review points — where plans tend to need correcting, and where a person should check before anything is acted on.
 5. Recommend the next step — what to build next, what to change, and which questions to answer before offering it more widely.
 
-### 04 / How projects work
-
-Focused, hands-on, and set up for your team to carry on.
-
-1. An agreed question — each project starts with the question it needs to answer, a scope, and the outputs you'll receive.
-2. Hands-on work — discovery, prototyping, testing and selected implementation, in whatever mix the question calls for.
-3. A clear handoff — prototype, tests and findings are handed over so your team can continue the development.
-
-What the work draws on: customer and workflow discovery · AI product and interaction design · tool, model and build-versus-buy decisions · system architecture, including where people stay involved · functional prototyping and selected implementation · designing tests and interpreting the results.
-
-### 05 / Who you'll be working with: Yuyu Shen, founder
+### 04 / Who you'll be working with: Yuyu Shen, founder
 
 Yuyu is a statistically trained data scientist turned product leader, with nearly a decade building and evaluating AI systems, including taking AI products from zero to one.
 
@@ -140,18 +185,27 @@ Her work has always sat between the technical and the commercial. She builds mod
 
 She now builds independently through Hopperlace. That includes ValueCompass (https://valuecompass.ai), for comparing AI options against your values, and Evidence Synthesis AI (https://www.evidencesynthesisai.com/), which helps research teams use AI to screen studies for systematic reviews. Alongside building, she researches how AI systems should be evaluated and writes about technology, agency and better decisions.
 
-- Research: deference-aware evaluation. Paper accepted at the ICML 2026 Technical AI Governance workshop.
-- Certifications: CCA-F (Certified Claude Architect – Foundational); CCA-P (Certified Claude Architect – Professional).
+- Certifications (Anthropic): Claude Certified Architect — Professional (CCA-P); Claude Certified Architect — Foundations (CCA-F).
+- Research: deference-aware evaluation (https://doi.org/10.17605/OSF.IO/A69YH). Paper accepted at the ICML 2026 Technical AI Governance workshop.
 - Writing: Build With Why (https://buildwithwhy.com), essays on technology, agency and better decisions.
+- Products: ValueCompass (https://valuecompass.ai) · Evidence Synthesis AI (https://www.evidencesynthesisai.com/)
+- Previously: Meta · Walmart · Beamery · Cleo
 
-Selected experience from previous roles (not Hopperlace client projects):
+### 05 / How projects work
 
-- Enjoy Technology — Last Mile Smart Routing. Personally built a Python proof-of-concept algorithm for adaptive delivery coverage, then led the work into product development. The feature increased visits per vehicle by 8–13%.
-- Beamery — Dynamic Job Architecture. As hiring slowed, identified an opportunity to adapt Beamery's existing AI capabilities into Dynamic Job Architecture; persuaded leadership to explore the area, secured support for a team and found willing pilot customers. The work extended Beamery's capabilities toward defining roles and skills for internal mobility and workforce planning.
+Start with one provider decision, prototype or workflow.
 
-### 06 / Why Hopperlace
+1. Agreed before we start — scope, inputs, deliverables, timing and fee are agreed before work begins, around the question the project needs to answer.
+2. Hands-on work — research, prototyping, testing and selected implementation, in whatever mix the question calls for.
+3. A clear handoff — prototypes, tests and findings are handed over so your team can carry on. Projects can stand alone or be followed by a small advisory engagement.
 
-The same questions behind our product work. Client projects and Hopperlace's public tool testing, now in development, start from the same questions: what an AI system actually accomplishes, where it struggles, and what makes it right for a particular task and person. Client work stays confidential.
+What the work draws on: customer and workflow discovery · AI product and interaction design · provider, tool, model and build-versus-buy decisions · system architecture, including where people stay involved · functional prototyping and selected implementation · designing tests and interpreting the results.
+
+Why Hopperlace: the same questions behind our product work. Client projects and Hopperlace's public tool testing, now in development, start from the same questions: what an AI system actually accomplishes, where it struggles, and what makes it right for a particular task and person. Client work stays confidential.
+
+### Get in touch
+
+Tell us what you're working on. A few sentences is plenty: what you want to choose, build or improve, what is uncertain or not working yet, and any timing that matters.
 
 ## Contact
 
