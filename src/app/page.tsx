@@ -242,9 +242,9 @@ function Hero() {
   return (
     <section
       aria-labelledby="hero-title"
-      className={`${frame} grid grid-cols-[repeat(auto-fit,minmax(min(100%,440px),1fr))] items-center gap-x-[clamp(40px,6vw,96px)] gap-y-12 pt-[clamp(56px,8vw,112px)] pb-[clamp(56px,8vw,96px)]`}
+      className={`${frame} grid grid-cols-[repeat(auto-fit,minmax(min(100%,440px),1fr))] items-start gap-x-[clamp(40px,6vw,96px)] gap-y-10 pt-[clamp(40px,5vw,72px)] pb-[var(--section-y)]`}
     >
-      <div className="flex min-w-0 flex-col gap-[22px]">
+      <div className="flex min-w-0 flex-col gap-5 hero:pt-8">
         <p className={label}>
           Independent testing &middot; Comparison &middot; Informed choice
         </p>
@@ -357,7 +357,7 @@ function Testing() {
   return (
     <section id="testing" aria-labelledby="testing-title" className="bg-sage">
       <div
-        className={`${frame} flex flex-col gap-[clamp(40px,5vw,64px)] py-[var(--section-y)]`}
+        className={`${frame} flex flex-col gap-[clamp(32px,4vw,48px)] py-[var(--section-y)]`}
       >
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] items-end gap-x-[clamp(40px,6vw,96px)] gap-y-5">
           <div className="flex min-w-0 flex-col gap-[18px]">
@@ -412,14 +412,14 @@ function Testing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] items-start gap-x-[clamp(40px,6vw,96px)] gap-y-10">
+        <div className="grid grid-cols-1 items-start gap-x-[clamp(40px,6vw,88px)] gap-y-10 vc:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
           <div className="flex min-w-0 flex-col gap-3.5">
             <h3 className={smallLabel}>How we&rsquo;ll test</h3>
             <dl className="border-t border-rule-strong">
               {howWeTest.map((item) => (
                 <div
                   key={item.heading}
-                  className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,180px),1fr))] gap-x-5 gap-y-0.5 border-b border-rule py-3 text-[15px] leading-[1.5]"
+                  className="grid grid-cols-1 gap-x-6 gap-y-0.5 border-b border-rule py-3 text-[15px] leading-[1.5] vc:grid-cols-[minmax(150px,200px)_minmax(0,1fr)]"
                 >
                   <dt className="font-semibold text-heading">{item.heading}</dt>
                   <dd className="text-pretty">{item.body}</dd>
@@ -453,7 +453,7 @@ function Testing() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border-t border-rule-strong pt-[clamp(32px,4vw,48px)]">
+        <div className="flex flex-col gap-4 border-t border-rule-strong pt-[clamp(28px,3.5vw,40px)]">
           <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] items-end gap-x-[clamp(40px,6vw,96px)] gap-y-3">
             <div className="flex flex-col gap-2.5">
               <p className={`${labelType} text-dev`}>First planned category</p>
@@ -552,7 +552,7 @@ function ValueCompass() {
       className="border-t border-rule"
     >
       <div className={`${frame} py-[var(--section-y)]`}>
-        <div className="mb-6 flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
+        <div className="mb-8 flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
           <p
             className={`${label} flex flex-wrap items-center gap-x-3.5 gap-y-2`}
           >
@@ -565,7 +565,7 @@ function ValueCompass() {
             Opens valuecompass.ai. No account needed.
           </p>
         </div>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] items-center gap-x-[clamp(40px,6vw,88px)] gap-y-10">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] items-start gap-x-[clamp(40px,6vw,88px)] gap-y-8">
           <div className="flex min-w-0 flex-col gap-5">
             <h2 id="valuecompass-title" className={sectionHeading}>
               Explore the values behind your AI choices.
@@ -671,9 +671,9 @@ function Founder() {
       className="border-t border-rule"
     >
       <div
-        className={`${frame} flex flex-wrap items-start gap-x-[clamp(40px,6vw,88px)] gap-y-8 py-[var(--section-y)]`}
+        className={`${frame} flex flex-wrap items-start gap-x-[clamp(32px,5vw,72px)] gap-y-6 py-[var(--section-y)]`}
       >
-        <div className="flex flex-[1_1_220px] flex-col gap-6">
+        <div className="flex flex-none flex-col gap-5">
           <p className={label}>03 / Founder</p>
           <Image
             src="/assets/yuyu-shen.jpg"
@@ -727,7 +727,7 @@ function ServicesInvitation() {
   return (
     <section aria-labelledby="services-title" className="bg-sage">
       <div
-        className={`${frame} flex flex-col gap-[clamp(28px,4vw,40px)] py-[clamp(56px,7vw,96px)]`}
+        className={`${frame} flex flex-col gap-[clamp(24px,3vw,36px)] py-[var(--section-y)]`}
       >
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-end gap-x-[clamp(40px,6vw,88px)] gap-y-5">
           <div className="flex flex-col gap-3.5">
