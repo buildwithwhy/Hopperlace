@@ -45,7 +45,7 @@
 :root {
   --max: 1200px;
   --gutter: clamp(20px, 5vw, 64px);
-  --section-y: clamp(64px, 9vw, 120px);
+  --section-y: clamp(48px, 6vw, 80px);
   --header-h: 72px;
 }
 
@@ -65,7 +65,7 @@
 
   body {
     font-family: var(--font-sans);
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.65;
     color: var(--color-body);
     background-color: var(--color-paper);

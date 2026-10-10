@@ -32,14 +32,14 @@ export function SiteHeader({ current }: { current: Page }) {
         >
           <a
             href={home ? "#top" : "/"}
-            className="flex-none py-1.5 font-serif text-[19px] leading-none font-semibold tracking-[0.005em] whitespace-nowrap text-heading no-underline vc:flex-[1_0_auto] vc:text-[21px]"
+            className="flex-none py-1.5 font-serif text-[18px] leading-none font-semibold tracking-[0.01em] whitespace-nowrap text-heading no-underline vc:flex-[1_0_auto] vc:text-[19px]"
           >
             Hopperlace
           </a>
           {/* On narrow screens the row scrolls sideways and fades at the edge. */}
           <nav
             aria-label="Primary"
-            className="flex min-w-0 flex-[0_1_auto] flex-nowrap items-center gap-x-3.5 overflow-x-auto text-[14px] font-medium whitespace-nowrap [mask-image:linear-gradient(90deg,#000_calc(100%-16px),transparent)] [scrollbar-width:none] vc:gap-x-[22px] vc:text-[15px] vc:[mask-image:none]"
+            className="flex min-w-0 flex-[0_1_auto] flex-nowrap items-center gap-x-3.5 overflow-x-auto text-[13px] font-medium whitespace-nowrap [mask-image:linear-gradient(90deg,#000_calc(100%-16px),transparent)] [scrollbar-width:none] vc:gap-x-[22px] vc:[mask-image:none]"
           >
             {navLinks.map((link) => (
               <a
@@ -58,7 +58,7 @@ export function SiteHeader({ current }: { current: Page }) {
           </nav>
           <a
             href={VALUECOMPASS_URL}
-            className={`${primaryButton} hidden min-h-11 flex-none px-5 text-[15px] whitespace-nowrap vc:inline-flex`}
+            className={`${primaryButton} hidden min-h-10 flex-none px-[18px] text-[13px] whitespace-nowrap vc:inline-flex`}
           >
             Try ValueCompass ↗
           </a>

@@ -9,14 +9,20 @@ import {
 } from "@/lib/links";
 import { withDimensions } from "@/lib/dimensions";
 import {
+  cardText,
+  cardTitle,
   frame,
+  itemTitle,
   label,
-  marker,
+  labelType,
   largeButton,
   lead,
+  marker,
   primaryButton,
   proseLink,
   sectionHeading,
+  smallLabel,
+  smallLabelType,
 } from "@/lib/ui";
 
 const jsonLd = {
@@ -236,15 +242,15 @@ function Hero() {
   return (
     <section
       aria-labelledby="hero-title"
-      className={`${frame} grid grid-cols-[repeat(auto-fit,minmax(min(100%,440px),1fr))] items-center gap-x-[clamp(40px,6vw,96px)] gap-y-12 pt-[clamp(56px,8vw,112px)] pb-[clamp(56px,8vw,96px)]`}
+      className={`${frame} grid grid-cols-[repeat(auto-fit,minmax(min(100%,440px),1fr))] items-start gap-x-[clamp(40px,6vw,96px)] gap-y-10 pt-[clamp(40px,5vw,72px)] pb-[var(--section-y)]`}
     >
-      <div className="flex min-w-0 flex-col gap-[22px]">
+      <div className="flex min-w-0 flex-col gap-5 hero:pt-8">
         <p className={label}>
           Independent testing &middot; Comparison &middot; Informed choice
         </p>
         <h1
           id="hero-title"
-          className="max-w-[18ch] font-serif text-[clamp(36px,4.6vw,64px)] leading-[1.1] font-normal tracking-[-0.02em] text-heading text-balance"
+          className="max-w-[17ch] font-serif text-[clamp(36px,4.6vw,60px)] leading-[1.06] font-normal tracking-[-0.02em] text-heading text-pretty"
         >
           Choose AI for what you want to do &mdash; and what matters to you.
         </h1>
@@ -252,7 +258,7 @@ function Hero() {
           Hopperlace helps you choose AI tools and systems that fit your tasks,
           preferences and values, with evidence you can understand and inspect.
         </p>
-        <p className="max-w-[52ch] text-pretty">
+        <p className={`${lead} max-w-[52ch]`}>
           ValueCompass, which you can use today, adds research on the companies
           behind those tools: their ownership, dependencies and policies.
           We&rsquo;re also developing independent, hands-on comparisons of the
@@ -260,7 +266,7 @@ function Hero() {
         </p>
       </div>
       <div className="flex min-w-0 flex-col gap-3 rounded-card bg-sage p-[clamp(20px,2.6vw,32px)]">
-        <p className={`${label} mb-1`}>Two parts of one decision</p>
+        <p className={`${smallLabel} mb-1`}>Two parts of one decision</p>
         <PartCard
           name="ValueCompass"
           status={<LiveStatus />}
@@ -269,7 +275,7 @@ function Hero() {
           action={
             <a
               href={VALUECOMPASS_URL}
-              className={`${primaryButton} mt-1 inline-flex min-h-11 px-5 text-[15px]`}
+              className={`${primaryButton} mt-1 inline-flex min-h-11 self-start px-5 text-[14px]`}
             >
               Try ValueCompass ↗
             </a>
@@ -283,13 +289,13 @@ function Hero() {
           action={
             <a
               href="#testing"
-              className="mt-1 inline-flex min-h-11 items-center self-start rounded-full border border-primary px-5 text-[15px] font-medium text-primary no-underline hover:bg-selected hover:text-heading"
+              className="mt-1 inline-flex min-h-11 items-center self-start rounded-full border border-primary px-5 text-[14px] font-medium text-primary no-underline hover:bg-selected hover:text-heading"
             >
               Explore our testing approach ↓
             </a>
           }
         />
-        <p className="mt-1 text-[15px] leading-[1.55] text-pretty">
+        <p className="mt-1 text-[14px] leading-[1.55] text-pretty">
           The aim is to bring these comparisons together with ValueCompass, so
           you can consider practical fit and values in the same decision.
         </p>
@@ -313,14 +319,12 @@ function PartCard({
 }) {
   return (
     <article className="flex flex-col gap-2.5 rounded-card bg-panel px-6 pt-[22px] pb-6">
-      <div className="flex flex-wrap justify-between gap-3 font-mono text-[12px] font-medium tracking-[0.1em] uppercase">
+      <div className={`${smallLabelType} flex flex-wrap justify-between gap-3`}>
         <span className="text-heading">{name}</span>
         {status}
       </div>
-      <h2 className="text-[21px] leading-[1.3] font-semibold text-heading text-pretty">
-        {heading}
-      </h2>
-      <p className="text-[16px] leading-[1.55] text-pretty">{body}</p>
+      <h2 className={cardTitle}>{heading}</h2>
+      <p className={cardText}>{body}</p>
       {action}
     </article>
   );
@@ -353,7 +357,7 @@ function Testing() {
   return (
     <section id="testing" aria-labelledby="testing-title" className="bg-sage">
       <div
-        className={`${frame} flex flex-col gap-[clamp(40px,5vw,64px)] py-[var(--section-y)]`}
+        className={`${frame} flex flex-col gap-[clamp(32px,4vw,48px)] py-[var(--section-y)]`}
       >
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] items-end gap-x-[clamp(40px,6vw,96px)] gap-y-5">
           <div className="flex min-w-0 flex-col gap-[18px]">
@@ -385,17 +389,15 @@ function Testing() {
                 key={q.id}
                 className="grid grid-cols-[36px_minmax(0,1fr)] content-start gap-x-3.5 gap-y-1 rounded-card border-t-2 border-primary bg-panel px-6 pt-[22px] pb-6"
               >
-                <span className={`${marker} leading-[1.6]`}>{q.number}</span>
-                <h3 className="text-[clamp(18px,1.5vw,20px)] leading-[1.35] font-semibold text-heading">
+                <span className={`${marker} leading-[1.7]`}>{q.number}</span>
+                <h3 className={`${itemTitle} text-[clamp(18px,1.6vw,20px)]`}>
                   {q.name}
                 </h3>
-                <p className="col-start-2 text-[16px] leading-[1.6] text-pretty">
-                  {q.body}
-                </p>
+                <p className={`${cardText} col-start-2`}>{q.body}</p>
               </li>
             ))}
           </ol>
-          <p className="flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-card border border-rule-strong px-6 py-[18px] text-[16px] leading-[1.6]">
+          <p className="flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-card border border-rule-strong px-6 py-[18px] text-[15px] leading-[1.6]">
             <span className="text-pretty">
               Alongside these practical questions, ValueCompass helps you
               examine the ownership, relationships and documented practices
@@ -410,35 +412,38 @@ function Testing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] items-start gap-x-[clamp(40px,6vw,96px)] gap-y-10">
+        <div className="grid grid-cols-1 items-start gap-x-[clamp(40px,6vw,88px)] gap-y-10 vc:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
           <div className="flex min-w-0 flex-col gap-3.5">
-            <h3 className={`${label} text-heading`}>How we&rsquo;ll test</h3>
+            <h3 className={smallLabel}>How we&rsquo;ll test</h3>
             <dl className="border-t border-rule-strong">
               {howWeTest.map((item) => (
                 <div
                   key={item.heading}
-                  className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,180px),1fr))] gap-x-5 gap-y-0.5 border-b border-rule py-[13px] text-[16px] leading-[1.55]"
+                  className="grid grid-cols-1 gap-x-6 gap-y-0.5 border-b border-rule py-3 text-[15px] leading-[1.5] vc:grid-cols-[minmax(150px,200px)_minmax(0,1fr)]"
                 >
                   <dt className="font-semibold text-heading">{item.heading}</dt>
                   <dd className="text-pretty">{item.body}</dd>
                 </div>
               ))}
             </dl>
-            <p className="text-[15px] leading-[1.6] text-muted text-pretty">
+            <p className="text-[14px] leading-[1.6] text-muted text-pretty">
               The specific tests depend on the task and the category of tool.
               The six dimensions are common questions, not an identical
               checklist or a universal score applied to every product.
             </p>
           </div>
           <div className="flex min-w-0 flex-col gap-3.5">
-            <h3 className={`${label} text-heading`}>What you&rsquo;ll get</h3>
+            <h3 className={smallLabel}>What you&rsquo;ll get</h3>
             <ul className="border-t border-rule-strong">
               {outcomes.map((outcome) => (
                 <li
                   key={outcome}
-                  className="grid grid-cols-[24px_minmax(0,1fr)] gap-3 border-b border-rule py-[13px] text-[16px] leading-[1.55]"
+                  className="grid grid-cols-[20px_minmax(0,1fr)] gap-3 border-b border-rule py-3 text-[15px] leading-[1.5]"
                 >
-                  <span aria-hidden="true" className="text-primary">
+                  <span
+                    aria-hidden="true"
+                    className="font-mono text-[13px] text-muted"
+                  >
                     →
                   </span>
                   <span>{outcome}</span>
@@ -448,15 +453,15 @@ function Testing() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border-t border-rule-strong pt-[clamp(32px,4vw,48px)]">
+        <div className="flex flex-col gap-4 border-t border-rule-strong pt-[clamp(28px,3.5vw,40px)]">
           <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] items-end gap-x-[clamp(40px,6vw,96px)] gap-y-3">
             <div className="flex flex-col gap-2.5">
-              <p className={`${label} text-dev`}>First planned category</p>
+              <p className={`${labelType} text-dev`}>First planned category</p>
               <h3 className="font-serif text-[clamp(24px,2.2vw,30px)] leading-[1.2] font-normal text-heading">
                 AI app builders
               </h3>
             </div>
-            <p className="max-w-[54ch] text-[16px] leading-[1.6] text-pretty">
+            <p className="max-w-[54ch] text-[16px] leading-[1.65] text-pretty">
               Our first comparisons will apply the framework to tools that build
               apps from natural-language instructions. The example below shows
               how each dimension becomes a concrete check.
@@ -475,10 +480,10 @@ function Scenario() {
     <details className="group min-w-0 rounded-card border border-dashed border-dev bg-panel">
       <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 [&::-webkit-details-marker]:hidden">
         <span className="flex flex-col gap-1">
-          <span className="font-mono text-[12px] font-medium tracking-[0.1em] text-dev uppercase">
+          <span className={`${smallLabelType} text-dev`}>
             Example test scenario &middot; planned
           </span>
-          <span className="text-[19px] leading-[1.3] font-semibold text-heading">
+          <span className={cardTitle}>
             Building and maintaining a booking app
           </span>
         </span>
@@ -492,15 +497,15 @@ function Scenario() {
       <div className="flex flex-col gap-[22px] px-6 pb-6">
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] gap-x-12 gap-y-4 border-t border-rule pt-[18px]">
           <div>
-            <p className={`${label} mb-1.5`}>Decision</p>
+            <p className={`${smallLabel} mb-1.5`}>Decision</p>
             <p className="font-serif text-[19px] leading-[1.4] text-heading text-pretty">
               Which AI app builder suits a small-business owner with limited
               technical experience?
             </p>
           </div>
           <div>
-            <p className={`${label} mb-1.5`}>Intended outcome</p>
-            <p className="text-[16px] leading-[1.55] text-pretty">
+            <p className={`${smallLabel} mb-1.5`}>Intended outcome</p>
+            <p className={cardText}>
               A comparison of which tools suit this user, where specialist help
               is needed, and the trade-offs involved.
             </p>
@@ -508,7 +513,7 @@ function Scenario() {
         </div>
         <div>
           <p
-            className={`${label} mb-1 flex flex-wrap justify-between gap-x-4 gap-y-1`}
+            className={`${smallLabel} mb-1 flex flex-wrap justify-between gap-x-4 gap-y-1`}
           >
             <span>Proposed checks</span>
             <span className="text-dev">
@@ -524,12 +529,10 @@ function Scenario() {
                 <span className={`${marker} leading-[1.55]`}>
                   {check.number}
                 </span>
-                <strong className="text-[16px] leading-[1.45] font-semibold text-heading">
+                <strong className="text-[15px] leading-[1.45] font-semibold text-heading">
                   {check.name}
                 </strong>
-                <span className="col-start-2 text-[16px] leading-[1.55] text-pretty">
-                  {check.body}
-                </span>
+                <span className={`${cardText} col-start-2`}>{check.body}</span>
               </li>
             ))}
           </ol>
@@ -549,7 +552,7 @@ function ValueCompass() {
       className="border-t border-rule"
     >
       <div className={`${frame} py-[var(--section-y)]`}>
-        <div className="mb-6 flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
+        <div className="mb-8 flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
           <p
             className={`${label} flex flex-wrap items-center gap-x-3.5 gap-y-2`}
           >
@@ -558,11 +561,11 @@ function ValueCompass() {
               Available now
             </span>
           </p>
-          <p className="text-[15px] text-muted">
+          <p className="text-[13px] text-muted">
             Opens valuecompass.ai. No account needed.
           </p>
         </div>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] items-center gap-x-[clamp(40px,6vw,88px)] gap-y-10">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] items-start gap-x-[clamp(40px,6vw,88px)] gap-y-8">
           <div className="flex min-w-0 flex-col gap-5">
             <h2 id="valuecompass-title" className={sectionHeading}>
               Explore the values behind your AI choices.
@@ -579,7 +582,7 @@ function ValueCompass() {
             </p>
             <a
               href={VALUECOMPASS_URL}
-              className={`${primaryButton} ${largeButton} mt-2`}
+              className={`${primaryButton} ${largeButton} mt-2 self-start`}
             >
               Try ValueCompass ↗
             </a>
@@ -607,16 +610,16 @@ function ValueCompass() {
                 sizes="100vw"
                 className="block h-auto max-h-[440px] w-full object-contain object-top vc:hidden"
               />
-              <span className="absolute right-3 bottom-3 inline-flex min-h-9 items-center rounded-full bg-heading px-3.5 text-[14px] font-medium text-on-primary">
+              <span className="absolute right-3 bottom-3 inline-flex min-h-8 items-center rounded-full bg-heading px-3 text-[12px] font-medium text-on-primary">
                 View example ↗
               </span>
             </a>
             <figcaption className="flex flex-col gap-1.5">
-              <p className="text-[15px] leading-[1.55] text-pretty">
+              <p className="text-[13px] leading-[1.5] text-pretty">
                 An example comparing nonprofit control and financial interests.
                 Confirmed findings and unanswered questions appear separately.
               </p>
-              <p className="text-[14px] leading-[1.55] text-muted">
+              <p className="text-[12px] leading-[1.5] text-muted">
                 Full captures:{" "}
                 <CaptureLink href={shots.fullPriorities}>
                   choosing priorities
@@ -668,9 +671,9 @@ function Founder() {
       className="border-t border-rule"
     >
       <div
-        className={`${frame} flex flex-wrap items-start gap-x-[clamp(40px,6vw,88px)] gap-y-8 py-[var(--section-y)]`}
+        className={`${frame} flex flex-wrap items-start gap-x-[clamp(32px,5vw,72px)] gap-y-6 py-[var(--section-y)]`}
       >
-        <div className="flex flex-[1_1_220px] flex-col gap-6">
+        <div className="flex flex-none flex-col gap-5">
           <p className={label}>03 / Founder</p>
           <Image
             src="/assets/yuyu-shen.jpg"
@@ -682,10 +685,7 @@ function Founder() {
           />
         </div>
         <div className="flex max-w-[64ch] min-w-0 flex-[3_1_440px] flex-col gap-5">
-          <h2
-            id="founder-title"
-            className="font-serif text-[clamp(28px,2.8vw,38px)] leading-[1.18] font-normal text-heading"
-          >
+          <h2 id="founder-title" className={sectionHeading}>
             Yuyu Shen
           </h2>
           <p className={lead}>
@@ -711,7 +711,7 @@ function Founder() {
           </p>
           <a
             href="/services#yuyu"
-            className="self-start py-1.5 text-[16px] font-medium text-primary underline decoration-1 underline-offset-[3px] hover:text-heading"
+            className="self-start py-1.5 text-[15px] font-medium text-primary underline decoration-1 underline-offset-[3px] hover:text-heading"
           >
             Full background and credentials →
           </a>
@@ -727,7 +727,7 @@ function ServicesInvitation() {
   return (
     <section aria-labelledby="services-title" className="bg-sage">
       <div
-        className={`${frame} flex flex-col gap-[clamp(28px,4vw,40px)] py-[clamp(56px,7vw,96px)]`}
+        className={`${frame} flex flex-col gap-[clamp(24px,3vw,36px)] py-[var(--section-y)]`}
       >
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-end gap-x-[clamp(40px,6vw,88px)] gap-y-5">
           <div className="flex flex-col gap-3.5">
@@ -751,10 +751,13 @@ function ServicesInvitation() {
             <li key={type.href}>
               <a
                 href={type.href}
-                className="box-border flex min-h-[72px] items-center justify-between gap-4 rounded-card bg-panel px-[22px] py-4 text-[18px] leading-[1.15] font-semibold text-heading no-underline hover:bg-selected"
+                className={`${cardTitle} box-border flex min-h-[72px] items-center justify-between gap-4 rounded-card bg-panel px-[22px] py-4 no-underline hover:bg-selected`}
               >
                 <span>{type.label}</span>
-                <span aria-hidden="true" className="text-[16px] text-primary">
+                <span
+                  aria-hidden="true"
+                  className="font-mono text-[14px] text-primary"
+                >
                   →
                 </span>
               </a>
