@@ -34,10 +34,11 @@
   /* Space & shape */
   --radius-card: 4px;
 
-  /* One breakpoint, matching the handoff's 760px media queries: the header's
-     compact row, the ValueCompass preview swap and the project tabs' three
-     columns. Everything else reflows with auto-fit grids, so don't reach for
-     `sm:`/`md:`/`lg:`. */
+  /* One named breakpoint, matching the handoff's 760px media queries: the
+     header's compact row and the ValueCompass preview swap. (The services
+     page's project cards and stages use the handoff's own thresholds as
+     arbitrary `min-[…]:` variants.) Everything else reflows with auto-fit
+     grids, so don't reach for `sm:`/`md:`/`lg:`. */
   --breakpoint-vc: 761px;
 }
 

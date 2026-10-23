@@ -1,8 +1,9 @@
 /**
  * The six dimensions every tool comparison asks about, in display order.
  * They appear on the homepage (the six questions and the example scenario's
- * proposed checks) and on services ("Each option is compared on"), each with
- * its own wording — rename a dimension here, not at the call sites.
+ * proposed checks) and on services ("Across the experience and system, we
+ * assess"), each with its own wording — rename a dimension here, not at the
+ * call sites.
  */
 export const DIMENSIONS = [
   { id: "functionality", name: "Functionality & reliability" },

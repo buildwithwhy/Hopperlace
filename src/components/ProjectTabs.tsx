@@ -1,17 +1,13 @@
 "use client";
 
-import { cardText, cardTitle, smallLabelType } from "@/lib/ui";
-import {
-  useEffect,
-  useRef,
-  useState,
-  type KeyboardEvent,
-  type ReactNode,
-} from "react";
+import { cardTitle, smallLabelType } from "@/lib/ui";
+import { Fragment, useEffect, useRef, useState, type ReactNode } from "react";
 
 export type ProjectTab = {
-  /** Also the URL hash that opens this tab, e.g. `/services#improve`. */
+  /** Also the URL hash that opens this card, e.g. `/services#improve`. */
   id: string;
+  /** Older hashes that should still open this card. */
+  aliases?: string[];
   kicker: string;
   marker: string;
   heading: string;
@@ -20,75 +16,93 @@ export type ProjectTab = {
   panel: ReactNode;
 };
 
-/* The only client JavaScript on the site: selectable project cards with the
-   detailed scope underneath. Server-rendered with the first tab open, so the
-   page still reads correctly before (or without) hydration. */
-export function ProjectTabs({ tabs }: { tabs: ProjectTab[] }) {
-  const [selected, setSelected] = useState(tabs[0].id);
-  const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+/* From the handoff: three cards in a row from here up, one column below. */
+const WIDE = "(min-width: 861px)";
 
-  // Open the tab named in the URL hash (links from the homepage), and keep
+/* The only client JavaScript on the site: selectable project cards with the
+   scope underneath. In three columns one card is always selected and its
+   panel spans the row below; in one column each card toggles its own panel,
+   which follows it. Server-rendered with the first card open, so the page
+   still reads correctly before (or without) hydration. */
+export function ProjectTabs({ tabs }: { tabs: ProjectTab[] }) {
+  const [selected, setSelected] = useState<string | null>(tabs[0].id);
+  const buttonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+
+  // Open the card named in the URL hash (links from the homepage), and keep
   // following the hash if it changes while the page is open.
   useEffect(() => {
     const fromHash = () => {
-      const id = window.location.hash.slice(1);
-      if (!tabs.some((tab) => tab.id === id)) return;
-      setSelected(id);
+      const hash = window.location.hash.slice(1);
+      const tab = tabs.find(
+        (t) => t.id === hash || t.aliases?.includes(hash),
+      );
+      if (!tab) return;
+      setSelected(tab.id);
       document.getElementById("projects")?.scrollIntoView();
     };
     fromHash();
     window.addEventListener("hashchange", fromHash);
-    return () => window.removeEventListener("hashchange", fromHash);
+
+    // Widening after every card was closed: select the first again.
+    const wide = window.matchMedia(WIDE);
+    const onWide = () => {
+      if (wide.matches) setSelected((id) => id ?? tabs[0].id);
+    };
+    wide.addEventListener("change", onWide);
+
+    return () => {
+      window.removeEventListener("hashchange", fromHash);
+      wide.removeEventListener("change", onWide);
+    };
   }, [tabs]);
 
-  const select = (id: string, focus = false) => {
+  const pick = (id: string) => {
+    if (window.matchMedia(WIDE).matches) {
+      setSelected(id);
+      return;
+    }
+    if (selected === id) {
+      setSelected(null);
+      return;
+    }
     setSelected(id);
-    if (focus) tabRefs.current[id]?.focus();
-  };
-
-  const onKeyDown = (e: KeyboardEvent) => {
-    const i = tabs.findIndex((tab) => tab.id === selected);
-    const n = tabs.length;
-    const next = {
-      ArrowRight: (i + 1) % n,
-      ArrowDown: (i + 1) % n,
-      ArrowLeft: (i + n - 1) % n,
-      ArrowUp: (i + n - 1) % n,
-      Home: 0,
-      End: n - 1,
-    }[e.key];
-    if (next === undefined) return;
-    e.preventDefault();
-    select(tabs[next].id, true);
+    // A longer panel above may just have closed; bring the card back into
+    // view if it moved out of the upper part of the screen.
+    requestAnimationFrame(() => {
+      const el = buttonRefs.current[id];
+      if (!el) return;
+      const headerH =
+        parseInt(
+          getComputedStyle(document.documentElement).getPropertyValue(
+            "--header-h",
+          ),
+        ) || 72;
+      const top = el.getBoundingClientRect().top;
+      if (top < headerH + 8 || top > window.innerHeight * 0.6) {
+        el.scrollIntoView();
+      }
+    });
   };
 
   return (
-    <>
-      <div
-        role="tablist"
-        aria-label="Project types"
-        onKeyDown={onKeyDown}
-        className="grid grid-cols-1 gap-3 vc:grid-cols-3"
-      >
-        {tabs.map((tab) => {
-          const on = tab.id === selected;
-          return (
+    <div className="grid grid-flow-row-dense grid-cols-1 gap-3 min-[861px]:grid-cols-3">
+      {tabs.map((tab) => {
+        const on = tab.id === selected;
+        return (
+          <Fragment key={tab.id}>
             <button
-              key={tab.id}
               ref={(el) => {
-                tabRefs.current[tab.id] = el;
+                buttonRefs.current[tab.id] = el;
               }}
               type="button"
-              role="tab"
               id={`tab-${tab.id}`}
-              aria-selected={on}
+              aria-expanded={on}
               aria-controls={`panel-${tab.id}`}
-              tabIndex={on ? 0 : -1}
-              onClick={() => select(tab.id)}
-              className={`flex cursor-pointer flex-col gap-3 rounded-card border border-t-[3px] px-[clamp(20px,2.4vw,28px)] pt-[clamp(20px,2.4vw,28px)] pb-[clamp(22px,2.6vw,30px)] text-left ${
+              onClick={() => pick(tab.id)}
+              className={`flex cursor-pointer flex-col gap-2.5 rounded-card border border-t-[3px] p-[clamp(20px,2.4vw,26px)] text-left hover:border-rule-strong hover:border-t-primary ${
                 on
                   ? "border-rule-strong border-t-primary bg-selected"
-                  : "border-transparent bg-paper"
+                  : "border-rule border-t-rule bg-paper"
               }`}
             >
               <span
@@ -98,24 +112,41 @@ export function ProjectTabs({ tabs }: { tabs: ProjectTab[] }) {
                 <span aria-hidden="true">{tab.marker}</span>
               </span>
               <span className={cardTitle}>{tab.heading}</span>
-              <span className={cardText}>{tab.summary}</span>
+              <span className="flex-1 text-[15px] leading-[1.55] text-pretty">
+                {tab.summary}
+              </span>
+              <span className="mt-2 flex items-center gap-2.5 text-[14px] font-medium text-primary">
+                <span
+                  aria-hidden="true"
+                  className={`grid size-[26px] place-items-center rounded-full border text-[13px] leading-none ${
+                    on
+                      ? "border-primary bg-primary text-on-primary"
+                      : "border-rule-strong"
+                  }`}
+                >
+                  <span className="min-[861px]:hidden">{on ? "−" : "+"}</span>
+                  <span className="hidden min-[861px]:inline">↓</span>
+                </span>
+                <span className="min-[861px]:hidden">
+                  {on ? "Hide scope" : "View scope"}
+                </span>
+                <span className="hidden min-[861px]:inline">
+                  {on ? "Selected · scope below" : "View scope"}
+                </span>
+              </span>
             </button>
-          );
-        })}
-      </div>
-      {tabs.map((tab) => (
-        <div
-          key={tab.id}
-          role="tabpanel"
-          id={`panel-${tab.id}`}
-          aria-labelledby={`tab-${tab.id}`}
-          tabIndex={0}
-          hidden={tab.id !== selected}
-          className="mt-3 rounded-card bg-paper p-[clamp(28px,5vw,64px)]"
-        >
-          {tab.panel}
-        </div>
-      ))}
-    </>
+            <div
+              role="region"
+              id={`panel-${tab.id}`}
+              aria-labelledby={`tab-${tab.id}`}
+              hidden={!on}
+              className="col-span-full rounded-card bg-paper p-[clamp(22px,4.5vw,52px)]"
+            >
+              {tab.panel}
+            </div>
+          </Fragment>
+        );
+      })}
+    </div>
   );
 }

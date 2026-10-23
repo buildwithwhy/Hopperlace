@@ -91,55 +91,74 @@ She also built Evidence Synthesis AI (https://www.evidencesynthesisai.com/), whi
 
 ## Services (https://hopperlace.ai/services)
 
-Develop, test and improve AI products and features.
+Turn business goals into useful AI products.
 
-Hopperlace helps teams choose an AI approach, turn ideas into working prototypes, and improve products and workflows that aren't delivering what users need.
+Hopperlace helps teams clarify what they need to achieve, translate that into a product or system, and evaluate whether it delivers the intended results.
 
-We combine technical research, product judgment and hands-on testing to help you decide what to use, what to build and what to change next.
+We combine product discovery, system design, hands-on prototyping and meaningful measurement to help you decide what to build, how it should work and what to improve.
 
-You'll work with Yuyu Shen, founder: a statistically trained data scientist turned product leader, with nearly a decade building and evaluating AI systems — previously at Meta, Walmart, Beamery and Cleo. Claude Certified Architect, Professional and Foundations.
+You'll work with Yuyu Shen, founder: data science and product analytics at Meta, AI product leadership at Walmart and Beamery, and independent research on AI evaluation. That combination lets her connect business objectives, product decisions, technical design and measurement in a single project. Claude Certified Architect, Professional & Foundations. Paper accepted at the ICML 2026 Technical AI Governance workshop.
 
-### 01 / Three kinds of project
+### 01 / How we work
 
-Start from the question you need answered. Each project is hands-on. Prototyping and selected implementation are part of the work wherever they answer the question better than a document can.
+One method, whichever project you choose.
 
-#### A / A provider or tool decision: choose an AI approach (https://hopperlace.ai/services#choose)
+1. Define success — agree the intended outcomes, meaningful measures and baseline.
+2. Design the system — shape the product, workflow and roles for AI and people.
+3. Build and test — prototype the critical parts and test realistic cases.
+4. Evaluate and decide — assess results against the agreed measures and recommend next steps.
+
+### 02 / Three kinds of project
+
+Choose where to start. Pick the situation closest to yours to see what the project covers and what you receive. Scope is agreed for each project.
+
+#### A / A goal or problem: define and test an AI opportunity (https://hopperlace.ai/services#define)
+
+Arrive with a business goal or user problem. Work out where AI could help, what to build, and whether it's worthwhile.
+
+"We have a problem to solve or an opportunity to pursue. Where could AI help, what should we build, and how will we know whether it is worthwhile?"
+
+You receive:
+
+- Outcome and product brief: what success means, for whom, and what the product needs to do.
+- Workflow and system design: how it should work, what AI does, and where people stay involved.
+- Evaluation plan: a baseline, success measures, and how they'll be checked.
+- Prototype and findings: a working version tested on realistic cases, where appropriate.
+
+The work, step by step:
+
+1. Clarify the business objective, users' needs and how the work is done today.
+2. Define what success means, choose meaningful measures, establish a baseline and agree important constraints.
+3. Design the experience, workflow and system, including where AI is appropriate and where people remain involved.
+4. Build and test a focused prototype against those criteria, where useful.
+5. Recommend what to develop, change or investigate next.
+
+#### B / A provider or tool decision: choose an AI approach (https://hopperlace.ai/services#choose)
 
 Decide which provider, tool or system design to use, based on evidence tested on your cases.
 
 "There are several providers, tools and ways to build this. We need to know which will work for us, what it will cost, and what we'd be committing to."
 
-The work can include:
+You receive:
 
-1. Define the task, constraints and what a useful result looks like for your users.
-2. Shortlist providers, models and tools, and weigh building, buying or combining them.
-3. Outline candidate system designs: where information comes from, where people review, and what depends on what.
-4. Test the shortlisted options in practice, on cases that reflect real use, more than once.
-5. Build integration prototypes where a comparison on paper can't answer the question.
-6. Recommend an approach, with the trade-offs that could change the recommendation.
+- A comparison of the shortlisted options on your own cases.
+- A recommended approach and system design.
+- Integration prototypes, where agreed.
 
-Each option is compared on: (1) functionality & reliability — whether it does the task on your cases, how consistently across repeated runs, and where it fails · (2) user effort & expertise — the setup, integration, checking and correction your team would take on · (3) oversight & control — whether your team can inspect outputs, approve consequential actions, intervene and recover from errors · (4) maintainability — how readily it adapts as requirements change, without breaking what already works · (5) portability & dependencies — lock-in, data handling, required services, and what switching would involve · (6) cost — usage and licensing, retries, and the staff time spent reviewing and correcting.
+The work, step by step:
+
+1. Define the task, constraints and what a useful result looks like.
+2. Shortlist providers, tools and system designs, including whether to build, buy or combine.
+3. Test the shortlist on your cases, more than once, with integration prototypes where a paper comparison can't answer the question.
+4. Compare options across the six evaluation dimensions (see 04 / Evaluation).
+5. Recommend an approach, with the trade-offs that could change it.
 
 How we treat evidence: we distinguish published terms and documentation, provider claims, our own test results, and the conclusions we draw from them. Recommendations make clear what the evidence supports, what remains uncertain, and which trade-offs could change the decision.
 
-You receive: a comparison of the shortlisted options on your own cases, a recommended approach and system design, and integration prototypes where agreed.
-
-#### B / A new idea: develop and test an AI idea (https://hopperlace.ai/services#develop)
-
-Work out what it should do, build a working version, and see whether it delivers.
-
-"We see an opportunity for AI in our product or workflow, but need to work out what it should do and whether it can deliver."
-
-The work can include:
-
-1. Understand the user's task and how it is done today.
-2. Define what a useful result would look like.
-3. Explore suitable tools, models and system designs, including whether to build or buy.
-4. Build a focused, working prototype.
-5. Test it on cases that reflect real use.
-6. Explain what works, what remains uncertain, and the next development step.
-
-You receive: a working prototype, findings from testing, and a practical recommendation for what to develop next.
+- Published terms and documentation — pricing, limits and policies as the provider publishes them.
+- Provider claims — what providers say about capability and accuracy.
+- Our test results — what we observed running each option on your cases.
+- Our conclusions — what we infer from the evidence, marked as judgment.
 
 #### C / An existing feature: improve an existing AI experience (https://hopperlace.ai/services#improve)
 
@@ -147,43 +166,57 @@ Find what is holding it back for real users, then test and make the changes.
 
 "The demo looks promising, and the dashboard looks fine, but real users still struggle, correct the output, or redo the work."
 
-The work can include:
+You receive:
 
-1. Review real examples and where users run into trouble.
-2. Check whether current metrics represent useful outcomes, including failures they don't show and work quietly passed back to users.
-3. Agree what success should mean for the people using it.
-4. Trace the problem across model behavior, the information the system has, the workflow and the interface.
-5. Prototype or implement selected improvements.
-6. Compare results before and after on the same set of cases.
-7. Hand over test cases your team can rerun, and clear next steps.
+- A diagnosis supported by real examples.
+- A check on whether your metrics reflect useful outcomes.
+- Tested or implemented changes, where agreed.
+- Evidence of their effect.
 
-You receive: a diagnosis supported by real examples, a check on whether your metrics reflect useful outcomes, tested or implemented changes where agreed, and evidence of their effect.
+The work, step by step:
 
-### 02 / Experience from previous roles
+1. Review real examples, and agree what success should mean for the people using it.
+2. Check whether current metrics reflect useful outcomes, including hidden failures and work passed back to users.
+3. Trace the problem across model behavior, the information available, the workflow and the interface.
+4. Prototype or implement selected improvements, and compare before and after on the same cases.
+5. Hand over test cases your team can rerun, and clear next steps.
+
+### 03 / Experience from previous roles
 
 Work Yuyu led before Hopperlace. Selected examples from Yuyu's previous roles, not Hopperlace client projects.
 
-- Enjoy Technology — Last Mile Smart Routing. Built the technical proof of concept, then turned it into a product. Personally built a Python proof-of-concept algorithm for adaptive delivery coverage, then led the work into product development. The feature increased visits per vehicle by 8–13%.
-- Beamery — Dynamic Job Architecture. Spotted a new product opportunity and secured pilot customers. As hiring slowed, identified an opportunity to adapt Beamery's existing AI capabilities into Dynamic Job Architecture; persuaded leadership to explore the area, secured support for a team and found willing pilot customers. The work extended Beamery's capabilities toward defining roles and skills for internal mobility and workforce planning.
-- Cleo — Improving the data behind an AI financial assistant. Evaluated and improved an AI system already in use. Led the evaluation strategy for transaction enrichment, working with modeling and data-science teams to prioritize what to measure and improve. As the PM leading bank connections and transaction data, she also owned data-purchasing decisions, the Plaid relationship and evaluation of alternative providers. Transaction-enrichment accuracy increased from 56% to 89%.
+- Beamery — Defining a new product opportunity. Context: hiring had slowed, while Beamery's offering had focused mainly on recruitment. Yuyu's contribution: recognized that existing AI capabilities could also help companies define roles and skills, opening opportunities in internal mobility and workforce planning; persuaded leadership to explore the direction, secured support for a team and found willing pilot customers. Progress: a new product direction — Dynamic Job Architecture, with willing pilot customers.
+- Enjoy Technology — Turning an objective into a working system. Objective: improve delivery productivity by adapting coverage to changing demand and available delivery capacity. Yuyu's contribution: personally built a Python proof-of-concept algorithm for adaptive delivery coverage, then led it into product development as Last Mile Smart Routing. Result: +8–13% visits per vehicle from Last Mile Smart Routing.
+- Cleo — Evaluation that guides improvement. Objective: improve the quality of transaction data used by Cleo's AI financial assistant. Yuyu's contribution: led the evaluation strategy for transaction enrichment, working with modeling and data-science teams to prioritize what to measure and improve; as PM for bank connections and transaction data, also owned data-purchasing decisions, the Plaid relationship and evaluation of alternative providers. Result: transaction-enrichment accuracy rose from 56% to 89%.
 
-### 03 / What a project can look like (illustrative example, not a client project)
+### 04 / Evaluation
 
-A team wants to help customers turn a collection of documents into an actionable plan.
+Measure whether it works, and whether it matters. Evaluation covers the whole experience and system, not only the model. It answers two different questions, and a higher task score alone doesn't establish business impact.
 
-1. Understand the task — which documents customers start with, what the plan needs to help them decide, and what a good plan looks like to them.
-2. Prototype the experience — a working version that reads a realistic set of documents and drafts a plan customers can review and edit.
-3. Test the plans — run it on representative document sets and check each plan: is it accurate, complete, and something a customer could act on?
-4. Find the review points — where plans tend to need correcting, and where a person should check before anything is acted on.
-5. Recommend the next step — what to build next, what to change, and which questions to answer before offering it more widely.
+1. Does it do the job reliably? Whether the system performs its intended tasks well and consistently, across realistic cases and repeated attempts. Evidence from repeated, representative tests.
+2. Does that produce the outcome? Whether those tasks contribute to the outcomes that matter to users and the business. Evidence from real use.
 
-### 04 / Who you'll be working with: Yuyu Shen, founder
+Useful measurement involves: choosing the right metrics — measures that reflect the intended outcome, agreed before testing · spotting misleading proxies — numbers that can improve while users are no better off · counting checking and correction — the human time spent verifying, fixing or redoing the output · interpreting the results — what the evidence supports, and what remains uncertain.
+
+Across the experience and system, we assess: (1) functionality & reliability — whether it does the task on your cases, how consistently across repeated runs, and where it fails · (2) user effort & expertise — the setup, integration, checking and correction your team would take on · (3) oversight & control — whether your team can inspect outputs, approve consequential actions, intervene and recover from errors · (4) maintainability — how readily it adapts as requirements change, without breaking what already works · (5) portability & dependencies — lock-in, data handling, required services, and what switching would involve · (6) cost — usage and licensing, retries, and the staff time spent reviewing and correcting.
+
+### 05 / What a project can look like (illustrative example, not a client project)
+
+A small business wants to turn client briefs and meeting notes into useful project plans.
+
+1. Objective — reduce planning effort while preserving important client requirements.
+2. Product / system — drafts a project scope and task plan from the documents; links important details back to their sources; flags missing information; a person reviews and approves the plan.
+3. Evaluation — missed requirements; unsupported commitments; whether people can use the plan; total planning effort, including review and correction, compared with the existing process.
+
+Illustrative product behavior: each commitment in the draft points to where it came from. Gaps are flagged rather than filled in, and nothing is shared until a person approves it. Those same behaviors are what the evaluation checks.
+
+### 06 / Who you'll be working with: Yuyu Shen, founder
 
 Yuyu is a statistically trained data scientist turned product leader, with nearly a decade building and evaluating AI systems, including taking AI products from zero to one.
 
-Her work has always sat between the technical and the commercial. She builds models and prototypes herself, then turns what they show into product decisions, keeping both tied to what customers actually need. That combination is what she brings to a project: judgment about what is worth building, the ability to build and measure it, and attention to how people will really use it.
+Her career spans data science and product analytics at Meta, AI product leadership at Walmart and Beamery, and independent research on AI evaluation. Her work has always sat between the technical and the commercial: she builds models and prototypes herself, then turns what they show into product decisions tied to what customers actually need. That is what she brings to a project: judgment about what is worth building, the ability to build and measure it, and attention to how people will really use it.
 
-She now builds independently through Hopperlace. That includes ValueCompass (https://valuecompass.ai), for comparing AI options against your values, and Evidence Synthesis AI (https://www.evidencesynthesisai.com/), which helps research teams use AI to screen studies for systematic reviews. Alongside building, she researches how AI systems should be evaluated and writes about technology, agency and better decisions.
+She founded Hopperlace to help people choose AI tools and systems that fit their tasks, preferences and values. ValueCompass (https://valuecompass.ai) is available today, with independent tool comparisons in development. She has also built Evidence Synthesis AI (https://www.evidencesynthesisai.com/), which helps research teams use AI to screen studies for systematic reviews. Alongside building, she researches AI evaluation and writes about technology, agency and better decisions.
 
 - Certifications (Anthropic): Claude Certified Architect — Professional (CCA-P); Claude Certified Architect — Foundations (CCA-F).
 - Research: deference-aware evaluation (https://doi.org/10.17605/OSF.IO/A69YH). Paper accepted at the ICML 2026 Technical AI Governance workshop.
@@ -191,21 +224,19 @@ She now builds independently through Hopperlace. That includes ValueCompass (htt
 - Products: ValueCompass (https://valuecompass.ai) · Evidence Synthesis AI (https://www.evidencesynthesisai.com/)
 - Previously: Meta · Walmart · Beamery · Cleo
 
-### 05 / How projects work
+### 07 / Working together
 
-Start with one provider decision, prototype or workflow.
+Start with one objective, decision, prototype or workflow. Each project is built around a concrete decision, a tested direction or a working artifact your team can use.
 
 1. Agreed before we start — scope, inputs, deliverables, timing and fee are agreed before work begins, around the question the project needs to answer.
-2. Hands-on work — research, prototyping, testing and selected implementation, in whatever mix the question calls for.
+2. Hands-on work — discovery, system design, prototyping, evaluation and selected implementation, in whatever mix the question calls for.
 3. A clear handoff — prototypes, tests and findings are handed over so your team can carry on. Projects can stand alone or be followed by a small advisory engagement.
 
-What the work draws on: customer and workflow discovery · AI product and interaction design · provider, tool, model and build-versus-buy decisions · system architecture, including where people stay involved · functional prototyping and selected implementation · designing tests and interpreting the results.
-
-Why Hopperlace: the same questions behind our product work. Client projects and Hopperlace's public tool testing, now in development, start from the same questions: what an AI system actually accomplishes, where it struggles, and what makes it right for a particular task and person. Client work stays confidential.
+Why Hopperlace: the same questions behind our product work. Client projects and Hopperlace's public tool testing, now in development, start from the same questions: what an AI system actually accomplishes, what makes it useful for a particular task and person, and how people can make better choices about it. Client work stays confidential.
 
 ### Get in touch
 
-Tell us what you're working on. A few sentences is plenty: what you want to choose, build or improve, what is uncertain or not working yet, and any timing that matters.
+Tell us what you're working on. A few sentences is plenty: an objective or problem you want to clarify, or something you're choosing, building or improving. Add what's uncertain and any timing that matters.
 
 ## Contact
 

@@ -17,16 +17,16 @@
 <div style="background:var(--paper);color:var(--body);font-family:var(--sans);font-size:17px;line-height:1.65">
 <a href="#main" style="position:absolute;left:-9999px;top:8px;background:var(--primary);color:var(--on-primary);padding:10px 16px;z-index:20" style-focus="left:8px">Skip to content</a>
 
-<dc-import name="SiteHeader" current="services" hint-size="100%,73px" style="position:sticky;top:0;z-index:10;display:block"></dc-import>
+<dc-import name="SiteHeader" current="services" hint-size="100%,72px" style="position:sticky;top:0;z-index:10;display:block"></dc-import>
 
 <main id="main">
 <section aria-labelledby="hero-title" style="max-width:var(--max);margin:0 auto;padding:clamp(56px,9vw,120px) var(--gutter) clamp(56px,8vw,104px)">
   <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:24px">Services</p>
-  <h1 id="hero-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.6vw,64px);line-height:1.1;letter-spacing:-.02em;color:var(--heading);max-width:20ch;text-wrap:balance">Develop, test and improve AI products and features.</h1>
+  <h1 id="hero-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.6vw,64px);line-height:1.1;letter-spacing:-.02em;color:var(--heading);max-width:20ch;text-wrap:balance">Turn business goals into useful AI products.</h1>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:48px clamp(40px,7vw,112px);margin-top:clamp(40px,5vw,64px);align-items:start">
     <div style="display:flex;flex-direction:column;gap:20px;max-width:60ch">
-      <p style="font-size:clamp(17px,1.4vw,19px);line-height:1.6;color:var(--heading);text-wrap:pretty">Hopperlace helps teams choose an AI approach, turn ideas into working prototypes, and improve products and workflows that aren’t delivering what users need.</p>
-      <p style="text-wrap:pretty">We combine technical research, product judgment and hands-on testing to help you decide what to use, what to build and what to change next.</p>
+      <p style="font-size:clamp(17px,1.4vw,19px);line-height:1.6;color:var(--heading);text-wrap:pretty">Hopperlace helps teams clarify what they need to achieve, translate that into a product or system, and evaluate whether it delivers the intended results.</p>
+      <p style="text-wrap:pretty">We combine product discovery, system design, hands-on prototyping and meaningful measurement to help you decide what to build, how it should work and what to improve.</p>
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:12px">
         <a href="mailto:hello@hopperlace.ai" style="display:inline-flex;align-items:center;min-height:52px;padding:0 28px;background:var(--primary);color:var(--on-primary);text-decoration:none;font-weight:500;font-size:17px;border-radius:var(--pill)" style-hover="background:var(--primary-hover);color:var(--on-primary)">Discuss your project</a>
         <a href="mailto:hello@hopperlace.ai" style="font-size:16px;padding:8px 0">hello@hopperlace.ai</a>
@@ -37,139 +37,168 @@
       <div style="display:flex;flex-direction:column;gap:10px">
         <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">You’ll work with</p>
         <p style="font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.3;color:var(--heading)">Yuyu Shen, founder</p>
-        <p style="font-size:16px;line-height:1.6;text-wrap:pretty">A statistically trained data scientist turned product leader, with nearly a decade building and evaluating AI systems — previously at Meta, Walmart, Beamery and Cleo. Claude Certified Architect, Professional and Foundations.</p>
+        <p style="font-size:16px;line-height:1.6;text-wrap:pretty">Data science and product analytics at Meta, AI product leadership at Walmart and Beamery, and independent research on AI evaluation. That combination lets her connect business objectives, product decisions, technical design and measurement in a single project.</p>
+        <ul style="display:flex;flex-direction:column;gap:6px;padding-top:12px;border-top:1px solid var(--rule)">
+          <li style="font-size:14px;line-height:1.45;color:var(--heading)"><span style="font-weight:600">Claude Certified Architect</span> · Professional &amp; Foundations</li>
+          <li style="font-size:14px;line-height:1.45;color:var(--heading)">Paper accepted at the ICML 2026 Technical AI Governance workshop</li>
+        </ul>
         <a href="#yuyu" style="font-size:15px;font-weight:500;padding:4px 0">Full background ↓</a>
       </div>
     </aside>
   </div>
 </section>
 
+<section id="method" aria-labelledby="method-title">
+  <div style="max-width:var(--max);margin:0 auto;padding:0 var(--gutter) var(--section-y)">
+    <div style="display:flex;flex-direction:column;gap:clamp(28px,3.5vw,40px);padding-top:clamp(40px,5vw,64px);border-top:1px solid var(--rule-strong)">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">01 / How we work</p>
+        <h2 id="method-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;letter-spacing:-.015em;color:var(--heading);text-wrap:balance">One method, whichever project you choose.</h2>
+      </div>
+      <ol style="display:grid;grid-template-columns:{{ stageCols }};gap:28px 32px">
+        <li style="display:flex;flex-direction:column;gap:8px"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary)">01</span><h3 style="font-family:var(--sans);font-weight:600;font-size:19px;line-height:1.3;color:var(--heading)">Define success</h3><p style="font-size:16px;line-height:1.6;text-wrap:pretty">Agree the intended outcomes, meaningful measures and baseline.</p></li>
+        <li style="display:flex;flex-direction:column;gap:8px"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary)">02</span><h3 style="font-family:var(--sans);font-weight:600;font-size:19px;line-height:1.3;color:var(--heading)">Design the system</h3><p style="font-size:16px;line-height:1.6;text-wrap:pretty">Shape the product, workflow and roles for AI and people.</p></li>
+        <li style="display:flex;flex-direction:column;gap:8px"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary)">03</span><h3 style="font-family:var(--sans);font-weight:600;font-size:19px;line-height:1.3;color:var(--heading)">Build and test</h3><p style="font-size:16px;line-height:1.6;text-wrap:pretty">Prototype the critical parts and test realistic cases.</p></li>
+        <li style="display:flex;flex-direction:column;gap:8px"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary)">04</span><h3 style="font-family:var(--sans);font-weight:600;font-size:19px;line-height:1.3;color:var(--heading)">Evaluate and decide</h3><p style="font-size:16px;line-height:1.6;text-wrap:pretty">Assess results against the agreed measures and recommend next steps.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
 <section id="projects" aria-labelledby="projects-title" style="background:var(--sage);padding:var(--section-y) 0">
   <div style="max-width:var(--max);margin:0 auto;padding:0 var(--gutter)">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px 64px;align-items:end;margin-bottom:clamp(32px,4vw,48px)">
-      <div>
-        <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px">01 / Three kinds of project</p>
-        <h2 id="projects-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;letter-spacing:-.015em;color:var(--heading);text-wrap:balance">Start from the question you need answered.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:14px 64px;align-items:end;margin-bottom:clamp(28px,3.5vw,40px)">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">02 / Three kinds of project</p>
+        <h2 id="projects-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;letter-spacing:-.015em;color:var(--heading);text-wrap:balance">Choose where to start.</h2>
       </div>
-      <p style="max-width:52ch;text-wrap:pretty">Each project is hands-on. Prototyping and selected implementation are part of the work wherever they answer the question better than a document can.</p>
+      <p style="max-width:48ch;font-size:16px;line-height:1.6;text-wrap:pretty">Pick the situation closest to yours to see what the project covers and what you receive.</p>
     </div>
-
-    <div role="tablist" aria-label="Project types" onKeyDown="{{ onTabKey }}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(clamp(calc((100% - 24px) / 3),(760px - 100%) * 999,100%),1fr));gap:12px">
-      <button role="tab" id="tab-choose" aria-selected="{{ selChoose }}" aria-controls="panel-choose" tabindex="{{ tiChoose }}" ref="{{ refChoose }}" onClick="{{ pickChoose }}" style="text-align:left;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2.4vw,28px) clamp(20px,2.4vw,28px) clamp(22px,2.6vw,30px);border:1px solid {{ bdChoose }};border-top:3px solid {{ topChoose }};background:{{ bgChoose }};border-radius:var(--radius);min-height:0">
-        <span style="display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)"><span>A provider or tool decision</span><span aria-hidden="true">A</span></span>
-        <span style="font-family:var(--sans);font-weight:600;font-size:clamp(19px,1.6vw,22px);line-height:1.3;color:var(--heading)">Choose an AI approach</span>
-        <span style="font-size:16px;line-height:1.55">Decide which provider, tool or system design to use, based on evidence tested on your cases.</span>
+    <div style="display:grid;grid-template-columns:{{ gridCols }};grid-auto-flow:row dense;gap:12px">
+      <button type="button" id="tab-define" aria-expanded="{{ expDefine }}" aria-controls="panel-define" ref="{{ refDefine }}" onClick="{{ pickDefine }}" style="text-align:left;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:10px;padding:clamp(20px,2.4vw,26px);border:1px solid {{ bdDefine }};border-top:3px solid {{ topDefine }};background:{{ bgDefine }};border-radius:var(--radius);min-height:0" style-hover="border-color:var(--rule-strong);border-top-color:var(--primary)">
+        <span style="display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)"><span>A goal or problem</span><span aria-hidden="true">A</span></span>
+        <span style="font-family:var(--sans);font-weight:600;font-size:clamp(19px,1.6vw,21px);line-height:1.3;color:var(--heading)">Define and test an AI opportunity</span>
+        <span style="font-size:16px;line-height:1.55;flex:1">Arrive with a business goal or user problem. Work out where AI could help, what to build, and whether it’s worthwhile.</span>
+        <span style="display:flex;align-items:center;gap:10px;margin-top:8px;font-size:14px;font-weight:500;color:var(--primary)"><span aria-hidden="true" style="display:grid;place-items:center;width:26px;height:26px;border-radius:50%;border:1px solid {{ ringDefine }};background:{{ dotDefine }};color:{{ inkDefine }};font-size:13px;line-height:1">{{ iconDefine }}</span><span>{{ cueDefine }}</span></span>
       </button>
-      <button role="tab" id="tab-develop" aria-selected="{{ selDevelop }}" aria-controls="panel-develop" tabindex="{{ tiDevelop }}" ref="{{ refDevelop }}" onClick="{{ pickDevelop }}" style="text-align:left;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2.4vw,28px) clamp(20px,2.4vw,28px) clamp(22px,2.6vw,30px);border:1px solid {{ bdDevelop }};border-top:3px solid {{ topDevelop }};background:{{ bgDevelop }};border-radius:var(--radius);min-height:0">
-        <span style="display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)"><span>A new idea</span><span aria-hidden="true">B</span></span>
-        <span style="font-family:var(--sans);font-weight:600;font-size:clamp(19px,1.6vw,22px);line-height:1.3;color:var(--heading)">Develop and test an AI idea</span>
-        <span style="font-size:16px;line-height:1.55">Work out what it should do, build a working version, and see whether it delivers.</span>
+    <sc-if value="{{ showDefine }}" hint-placeholder-val="{{ true }}">
+    <div role="region" id="panel-define" aria-labelledby="tab-define" style="grid-column:1 / -1;background:var(--paper);border-radius:var(--radius);padding:clamp(22px,4.5vw,52px);display:flex;flex-direction:column;gap:clamp(24px,3vw,36px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:28px clamp(40px,6vw,88px);align-items:start">
+        <blockquote style="margin:0;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(20px,1.9vw,25px);line-height:1.4;color:var(--heading);text-wrap:pretty;max-width:34ch">“We have a problem to solve or an opportunity to pursue. Where could AI help, what should we build, and how will we know whether it is worthwhile?”</blockquote>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px"><h3 style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.3;color:var(--heading)">You receive</h3><span style="font-size:14px;color:var(--muted)">Scope agreed for each project</span></div>
+          <ul style="display:flex;flex-direction:column;gap:10px">
+            <li style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary);font-weight:600">✓</span><span style="text-wrap:pretty"><strong style="font-weight:600;color:var(--heading)">Outcome and product brief</strong>: what success means, for whom, and what the product needs to do.</span></li>
+            <li style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary);font-weight:600">✓</span><span style="text-wrap:pretty"><strong style="font-weight:600;color:var(--heading)">Workflow and system design</strong>: how it should work, what AI does, and where people stay involved.</span></li>
+            <li style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary);font-weight:600">✓</span><span style="text-wrap:pretty"><strong style="font-weight:600;color:var(--heading)">Evaluation plan</strong>: a baseline, success measures, and how they’ll be checked.</span></li>
+            <li style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary);font-weight:600">✓</span><span style="text-wrap:pretty"><strong style="font-weight:600;color:var(--heading)">Prototype and findings</strong>: a working version tested on realistic cases, where appropriate.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+      <details style="border-top:1px solid var(--rule)">
+        <summary style="cursor:pointer;display:flex;align-items:center;gap:14px;min-height:44px;padding:16px 0 4px">
+          <span style="font-weight:500;font-size:16px;color:var(--heading)">The work, step by step</span><span style="font-size:14px;color:var(--muted)">5 steps</span>
+          <span class="hl-chev" aria-hidden="true" style="margin-left:auto;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid var(--rule-strong);color:var(--heading);font-size:13px;transition:transform .2s">↓</span>
+        </summary>
+        <div style="padding:14px 0 6px"><ol style="display:flex;flex-direction:column;gap:12px;max-width:72ch">
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">1</span><span style="text-wrap:pretty">Clarify the business objective, users’ needs and how the work is done today.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">2</span><span style="text-wrap:pretty">Define what success means, choose meaningful measures, establish a baseline and agree important constraints.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">3</span><span style="text-wrap:pretty">Design the experience, workflow and system, including where AI is appropriate and where people remain involved.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">4</span><span style="text-wrap:pretty">Build and test a focused prototype against those criteria, where useful.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">5</span><span style="text-wrap:pretty">Recommend what to develop, change or investigate next.</span></li>
+        </ol></div>
+      </details>
+      </div>
+    </div>
+    </sc-if>
+      <button type="button" id="tab-choose" aria-expanded="{{ expChoose }}" aria-controls="panel-choose" ref="{{ refChoose }}" onClick="{{ pickChoose }}" style="text-align:left;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:10px;padding:clamp(20px,2.4vw,26px);border:1px solid {{ bdChoose }};border-top:3px solid {{ topChoose }};background:{{ bgChoose }};border-radius:var(--radius);min-height:0" style-hover="border-color:var(--rule-strong);border-top-color:var(--primary)">
+        <span style="display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)"><span>A provider or tool decision</span><span aria-hidden="true">B</span></span>
+        <span style="font-family:var(--sans);font-weight:600;font-size:clamp(19px,1.6vw,21px);line-height:1.3;color:var(--heading)">Choose an AI approach</span>
+        <span style="font-size:16px;line-height:1.55;flex:1">Decide which provider, tool or system design to use, based on evidence tested on your cases.</span>
+        <span style="display:flex;align-items:center;gap:10px;margin-top:8px;font-size:14px;font-weight:500;color:var(--primary)"><span aria-hidden="true" style="display:grid;place-items:center;width:26px;height:26px;border-radius:50%;border:1px solid {{ ringChoose }};background:{{ dotChoose }};color:{{ inkChoose }};font-size:13px;line-height:1">{{ iconChoose }}</span><span>{{ cueChoose }}</span></span>
       </button>
-      <button role="tab" id="tab-improve" aria-selected="{{ selImprove }}" aria-controls="panel-improve" tabindex="{{ tiImprove }}" ref="{{ refImprove }}" onClick="{{ pickImprove }}" style="text-align:left;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2.4vw,28px) clamp(20px,2.4vw,28px) clamp(22px,2.6vw,30px);border:1px solid {{ bdImprove }};border-top:3px solid {{ topImprove }};background:{{ bgImprove }};border-radius:var(--radius);min-height:0">
+    <sc-if value="{{ showChoose }}" hint-placeholder-val="{{ false }}">
+    <div role="region" id="panel-choose" aria-labelledby="tab-choose" style="grid-column:1 / -1;background:var(--paper);border-radius:var(--radius);padding:clamp(22px,4.5vw,52px);display:flex;flex-direction:column;gap:clamp(24px,3vw,36px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:28px clamp(40px,6vw,88px);align-items:start">
+        <blockquote style="margin:0;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(20px,1.9vw,25px);line-height:1.4;color:var(--heading);text-wrap:pretty;max-width:34ch">“There are several providers, tools and ways to build this. We need to know which will work for us, what it will cost, and what we’d be committing to.”</blockquote>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px"><h3 style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.3;color:var(--heading)">You receive</h3><span style="font-size:14px;color:var(--muted)">Scope agreed for each project</span></div>
+          <ul style="display:flex;flex-direction:column;gap:10px">
+            <li style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary);font-weight:600">✓</span><span style="text-wrap:pretty">A comparison of the shortlisted options on your own cases.</span></li>
+            <li style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary);font-weight:600">✓</span><span style="text-wrap:pretty">A recommended approach and system design.</span></li>
+            <li style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary);font-weight:600">✓</span><span style="text-wrap:pretty">Integration prototypes, where agreed.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+      <details style="border-top:1px solid var(--rule)">
+        <summary style="cursor:pointer;display:flex;align-items:center;gap:14px;min-height:44px;padding:16px 0 4px">
+          <span style="font-weight:500;font-size:16px;color:var(--heading)">The work, step by step</span><span style="font-size:14px;color:var(--muted)">5 steps</span>
+          <span class="hl-chev" aria-hidden="true" style="margin-left:auto;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid var(--rule-strong);color:var(--heading);font-size:13px;transition:transform .2s">↓</span>
+        </summary>
+        <div style="padding:14px 0 6px"><ol style="display:flex;flex-direction:column;gap:12px;max-width:72ch">
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">1</span><span style="text-wrap:pretty">Define the task, constraints and what a useful result looks like.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">2</span><span style="text-wrap:pretty">Shortlist providers, tools and system designs, including whether to build, buy or combine.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">3</span><span style="text-wrap:pretty">Test the shortlist on your cases, more than once, with integration prototypes where a paper comparison can’t answer the question.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">4</span><span style="text-wrap:pretty">Compare options across the <a href="#evaluation">six evaluation dimensions</a>.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">5</span><span style="text-wrap:pretty">Recommend an approach, with the trade-offs that could change it.</span></li>
+        </ol></div>
+      </details>
+      <details style="border-top:1px solid var(--rule)">
+        <summary style="cursor:pointer;display:flex;align-items:center;gap:14px;min-height:44px;padding:16px 0 4px">
+          <span style="font-weight:500;font-size:16px;color:var(--heading)">How we treat evidence</span><span style="font-size:14px;color:var(--muted)">4 kinds</span>
+          <span class="hl-chev" aria-hidden="true" style="margin-left:auto;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid var(--rule-strong);color:var(--heading);font-size:13px;transition:transform .2s">↓</span>
+        </summary>
+        <div style="padding:14px 0 6px"><p style="font-size:16px;line-height:1.6;max-width:72ch;text-wrap:pretty;margin-bottom:16px">We distinguish published terms and documentation, provider claims, our own test results, and the conclusions we draw from them. Recommendations make clear what the evidence supports, what remains uncertain, and which trade-offs could change the decision.</p>
+        <dl style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px 28px">
+          <div><dt style="font-weight:600;font-size:15px;line-height:1.4;color:var(--heading)">Published terms and documentation</dt><dd style="font-size:15px;line-height:1.5">Pricing, limits and policies as the provider publishes them.</dd></div>
+          <div><dt style="font-weight:600;font-size:15px;line-height:1.4;color:var(--heading)">Provider claims</dt><dd style="font-size:15px;line-height:1.5">What providers say about capability and accuracy.</dd></div>
+          <div><dt style="font-weight:600;font-size:15px;line-height:1.4;color:var(--heading)">Our test results</dt><dd style="font-size:15px;line-height:1.5">What we observed running each option on your cases.</dd></div>
+          <div><dt style="font-weight:600;font-size:15px;line-height:1.4;color:var(--heading)">Our conclusions</dt><dd style="font-size:15px;line-height:1.5">What we infer from the evidence, marked as judgment.</dd></div>
+        </dl></div>
+      </details>
+      </div>
+    </div>
+    </sc-if>
+      <button type="button" id="tab-improve" aria-expanded="{{ expImprove }}" aria-controls="panel-improve" ref="{{ refImprove }}" onClick="{{ pickImprove }}" style="text-align:left;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:10px;padding:clamp(20px,2.4vw,26px);border:1px solid {{ bdImprove }};border-top:3px solid {{ topImprove }};background:{{ bgImprove }};border-radius:var(--radius);min-height:0" style-hover="border-color:var(--rule-strong);border-top-color:var(--primary)">
         <span style="display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)"><span>An existing feature</span><span aria-hidden="true">C</span></span>
-        <span style="font-family:var(--sans);font-weight:600;font-size:clamp(19px,1.6vw,22px);line-height:1.3;color:var(--heading)">Improve an existing AI experience</span>
-        <span style="font-size:16px;line-height:1.55">Find what is holding it back for real users, then test and make the changes.</span>
+        <span style="font-family:var(--sans);font-weight:600;font-size:clamp(19px,1.6vw,21px);line-height:1.3;color:var(--heading)">Improve an existing AI experience</span>
+        <span style="font-size:16px;line-height:1.55;flex:1">Find what is holding it back for real users, then test and make the changes.</span>
+        <span style="display:flex;align-items:center;gap:10px;margin-top:8px;font-size:14px;font-weight:500;color:var(--primary)"><span aria-hidden="true" style="display:grid;place-items:center;width:26px;height:26px;border-radius:50%;border:1px solid {{ ringImprove }};background:{{ dotImprove }};color:{{ inkImprove }};font-size:13px;line-height:1">{{ iconImprove }}</span><span>{{ cueImprove }}</span></span>
       </button>
-    </div>
-
-    <sc-if value="{{ showChoose }}" hint-placeholder-val="{{ true }}">
-    <div role="tabpanel" id="panel-choose" aria-labelledby="tab-choose" tabindex="0" style="margin-top:12px;background:var(--paper);border-radius:var(--radius);padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;gap:clamp(40px,5vw,56px)">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px clamp(40px,6vw,88px)">
-        <div style="display:flex;flex-direction:column;gap:28px">
-          <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">A / Choose an AI approach</p>
-          <blockquote style="margin:0;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(20px,1.8vw,24px);line-height:1.4;color:var(--heading);text-wrap:pretty">“There are several providers, tools and ways to build this. We need to know which will work for us, what it will cost, and what we’d be committing to.”</blockquote>
-          <div style="background:var(--selected);padding:24px 26px;border-radius:var(--radius)">
-            <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:10px">You receive</h3>
-            <p style="text-wrap:pretty">A comparison of the shortlisted options on your own cases, a recommended approach and system design, and integration prototypes where agreed.</p>
-          </div>
-        </div>
-        <div>
-          <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:8px">The work can include</h3>
-          <ol>
-            <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">1</span><span>Define the task, constraints and what a useful result looks like for your users.</span></li>
-            <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">2</span><span>Shortlist providers, models and tools, and weigh building, buying or combining them.</span></li>
-            <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">3</span><span>Outline candidate system designs: where information comes from, where people review, and what depends on what.</span></li>
-            <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">4</span><span>Test the shortlisted options in practice, on cases that reflect real use, more than once.</span></li>
-            <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">5</span><span>Build integration prototypes where a comparison on paper can’t answer the question.</span></li>
-            <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">6</span><span>Recommend an approach, with the trade-offs that could change the recommendation.</span></li>
-          </ol>
-        </div>
-      </div>
-      <div>
-        <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:20px">Each option is compared on</h3>
-        <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:0 32px;border-top:1px solid var(--rule-strong)">
-          <div style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--rule)"><span aria-hidden="true" style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.7;letter-spacing:.04em;color:var(--primary)">01</span><dt style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;color:var(--heading)">Functionality &amp; reliability</dt><dd style="grid-column:2;margin:0;font-size:16px;line-height:1.55;text-wrap:pretty">Whether it does the task on your cases, how consistently across repeated runs, and where it fails.</dd></div>
-          <div style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--rule)"><span aria-hidden="true" style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.7;letter-spacing:.04em;color:var(--primary)">02</span><dt style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;color:var(--heading)">User effort &amp; expertise</dt><dd style="grid-column:2;margin:0;font-size:16px;line-height:1.55;text-wrap:pretty">The setup, integration, checking and correction your team would take on.</dd></div>
-          <div style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--rule)"><span aria-hidden="true" style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.7;letter-spacing:.04em;color:var(--primary)">03</span><dt style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;color:var(--heading)">Oversight &amp; control</dt><dd style="grid-column:2;margin:0;font-size:16px;line-height:1.55;text-wrap:pretty">Whether your team can inspect outputs, approve consequential actions, intervene and recover from errors.</dd></div>
-          <div style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--rule)"><span aria-hidden="true" style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.7;letter-spacing:.04em;color:var(--primary)">04</span><dt style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;color:var(--heading)">Maintainability</dt><dd style="grid-column:2;margin:0;font-size:16px;line-height:1.55;text-wrap:pretty">How readily it adapts as requirements change, without breaking what already works.</dd></div>
-          <div style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--rule)"><span aria-hidden="true" style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.7;letter-spacing:.04em;color:var(--primary)">05</span><dt style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;color:var(--heading)">Portability &amp; dependencies</dt><dd style="grid-column:2;margin:0;font-size:16px;line-height:1.55;text-wrap:pretty">Lock-in, data handling, required services, and what switching would involve.</dd></div>
-          <div style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--rule)"><span aria-hidden="true" style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.7;letter-spacing:.04em;color:var(--primary)">06</span><dt style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;color:var(--heading)">Cost</dt><dd style="grid-column:2;margin:0;font-size:16px;line-height:1.55;text-wrap:pretty">Usage and licensing, retries, and the staff time spent reviewing and correcting.</dd></div>
-        </dl>
-      </div>
-      <div style="background:var(--selected);border-radius:var(--radius);padding:clamp(22px,3vw,32px);display:flex;flex-direction:column;gap:20px">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:12px 48px;align-items:start">
-          <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);padding-top:4px">How we treat evidence</h3>
-          <p style="text-wrap:pretty;max-width:62ch">We distinguish published terms and documentation, provider claims, our own test results, and the conclusions we draw from them. Recommendations make clear what the evidence supports, what remains uncertain, and which trade-offs could change the decision.</p>
-        </div>
-        <ol style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:0 24px">
-          <li style="display:flex;flex-direction:column;gap:4px;padding:14px 0;border-top:1px solid var(--rule-strong)"><span style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--primary)">01</span><span style="font-weight:600;font-size:16px;line-height:1.4;color:var(--heading)">Published terms and documentation</span><span style="font-size:15px;line-height:1.5">Pricing, limits and policies as the provider publishes them.</span></li>
-          <li style="display:flex;flex-direction:column;gap:4px;padding:14px 0;border-top:1px solid var(--rule-strong)"><span style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--primary)">02</span><span style="font-weight:600;font-size:16px;line-height:1.4;color:var(--heading)">Provider claims</span><span style="font-size:15px;line-height:1.5">What providers say about capability and accuracy.</span></li>
-          <li style="display:flex;flex-direction:column;gap:4px;padding:14px 0;border-top:1px solid var(--rule-strong)"><span style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--primary)">03</span><span style="font-weight:600;font-size:16px;line-height:1.4;color:var(--heading)">Our test results</span><span style="font-size:15px;line-height:1.5">What we observed running each option on your cases.</span></li>
-          <li style="display:flex;flex-direction:column;gap:4px;padding:14px 0;border-top:1px solid var(--rule-strong)"><span style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--primary)">04</span><span style="font-weight:600;font-size:16px;line-height:1.4;color:var(--heading)">Our conclusions</span><span style="font-size:15px;line-height:1.5">What we infer from the evidence, marked as judgment.</span></li>
-        </ol>
-      </div>
-      </div>
-    </div>
-    </sc-if>
-
-    <sc-if value="{{ showDevelop }}" hint-placeholder-val="{{ false }}">
-    <div role="tabpanel" id="panel-develop" aria-labelledby="tab-develop" tabindex="0" style="margin-top:12px;background:var(--paper);border-radius:var(--radius);padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px clamp(40px,6vw,88px)">
-      <div style="display:flex;flex-direction:column;gap:28px">
-        <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">B / Develop and test an AI idea</p>
-        <blockquote style="margin:0;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(20px,1.8vw,24px);line-height:1.4;color:var(--heading);text-wrap:pretty">“We see an opportunity for AI in our product or workflow, but need to work out what it should do and whether it can deliver.”</blockquote>
-        <div style="background:var(--selected);padding:24px 26px;border-radius:var(--radius)">
-          <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:10px">You receive</h3>
-          <p style="text-wrap:pretty">A working prototype, findings from testing, and a practical recommendation for what to develop next.</p>
-        </div>
-      </div>
-      <div>
-        <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:8px">The work can include</h3>
-        <ol>
-          <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">1</span><span>Understand the user’s task and how it is done today.</span></li>
-          <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">2</span><span>Define what a useful result would look like.</span></li>
-          <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">3</span><span>Explore suitable tools, models and system designs, including whether to build or buy.</span></li>
-          <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">4</span><span>Build a focused, working prototype.</span></li>
-          <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">5</span><span>Test it on cases that reflect real use.</span></li>
-          <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">6</span><span>Explain what works, what remains uncertain, and the next development step.</span></li>
-        </ol>
-      </div>
-    </div>
-    </sc-if>
-
     <sc-if value="{{ showImprove }}" hint-placeholder-val="{{ false }}">
-    <div role="tabpanel" id="panel-improve" aria-labelledby="tab-improve" tabindex="0" style="margin-top:12px;background:var(--paper);border-radius:var(--radius);padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px clamp(40px,6vw,88px)">
-      <div style="display:flex;flex-direction:column;gap:28px">
-        <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">C / Improve an existing AI experience</p>
-        <blockquote style="margin:0;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(20px,1.8vw,24px);line-height:1.4;color:var(--heading);text-wrap:pretty">“The demo looks promising, and the dashboard looks fine, but real users still struggle, correct the output, or redo the work.”</blockquote>
-        <div style="background:var(--selected);padding:24px 26px;border-radius:var(--radius)">
-          <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:10px">You receive</h3>
-          <p style="text-wrap:pretty">A diagnosis supported by real examples, a check on whether your metrics reflect useful outcomes, tested or implemented changes where agreed, and evidence of their effect.</p>
+    <div role="region" id="panel-improve" aria-labelledby="tab-improve" style="grid-column:1 / -1;background:var(--paper);border-radius:var(--radius);padding:clamp(22px,4.5vw,52px);display:flex;flex-direction:column;gap:clamp(24px,3vw,36px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:28px clamp(40px,6vw,88px);align-items:start">
+        <blockquote style="margin:0;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(20px,1.9vw,25px);line-height:1.4;color:var(--heading);text-wrap:pretty;max-width:34ch">“The demo looks promising, and the dashboard looks fine, but real users still struggle, correct the output, or redo the work.”</blockquote>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px"><h3 style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.3;color:var(--heading)">You receive</h3><span style="font-size:14px;color:var(--muted)">Scope agreed for each project</span></div>
+          <ul style="display:flex;flex-direction:column;gap:10px">
+            <li style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary);font-weight:600">✓</span><span style="text-wrap:pretty">A diagnosis supported by real examples.</span></li>
+            <li style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary);font-weight:600">✓</span><span style="text-wrap:pretty">A check on whether your metrics reflect useful outcomes.</span></li>
+            <li style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary);font-weight:600">✓</span><span style="text-wrap:pretty">Tested or implemented changes, where agreed.</span></li>
+            <li style="display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span aria-hidden="true" style="color:var(--primary);font-weight:600">✓</span><span style="text-wrap:pretty">Evidence of their effect.</span></li>
+          </ul>
         </div>
       </div>
       <div>
-        <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:8px">The work can include</h3>
-        <ol>
-          <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">1</span><span>Review real examples and where users run into trouble.</span></li>
-          <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">2</span><span>Check whether current metrics represent useful outcomes, including failures they don’t show and work quietly passed back to users.</span></li>
-          <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">3</span><span>Agree what success should mean for the people using it.</span></li>
-          <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">4</span><span>Trace the problem across model behavior, the information the system has, the workflow and the interface.</span></li>
-          <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">5</span><span>Prototype or implement selected improvements.</span></li>
-          <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">6</span><span>Compare results before and after on the same set of cases.</span></li>
-          <li style="display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">7</span><span>Hand over test cases your team can rerun, and clear next steps.</span></li>
-        </ol>
+      <details style="border-top:1px solid var(--rule)">
+        <summary style="cursor:pointer;display:flex;align-items:center;gap:14px;min-height:44px;padding:16px 0 4px">
+          <span style="font-weight:500;font-size:16px;color:var(--heading)">The work, step by step</span><span style="font-size:14px;color:var(--muted)">5 steps</span>
+          <span class="hl-chev" aria-hidden="true" style="margin-left:auto;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid var(--rule-strong);color:var(--heading);font-size:13px;transition:transform .2s">↓</span>
+        </summary>
+        <div style="padding:14px 0 6px"><ol style="display:flex;flex-direction:column;gap:12px;max-width:72ch">
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">1</span><span style="text-wrap:pretty">Review real examples, and agree what success should mean for the people using it.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">2</span><span style="text-wrap:pretty">Check whether current metrics reflect useful outcomes, including hidden failures and work passed back to users.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">3</span><span style="text-wrap:pretty">Trace the problem across model behavior, the information available, the workflow and the interface.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">4</span><span style="text-wrap:pretty">Prototype or implement selected improvements, and compare before and after on the same cases.</span></li>
+          <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.55"><span style="font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--primary);line-height:1.7">5</span><span style="text-wrap:pretty">Hand over test cases your team can rerun, and clear next steps.</span></li>
+        </ol></div>
+      </details>
       </div>
     </div>
     </sc-if>
+    </div>
   </div>
 </section>
 
@@ -177,63 +206,137 @@
   <div style="max-width:var(--max);margin:0 auto;padding:var(--section-y) var(--gutter)">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px 64px;align-items:end;margin-bottom:clamp(36px,5vw,56px)">
       <div>
-        <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px">02 / Experience from previous roles</p>
+        <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px">03 / Experience from previous roles</p>
         <h2 id="experience-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;letter-spacing:-.015em;color:var(--heading);text-wrap:balance">Work Yuyu led before Hopperlace.</h2>
       </div>
       <p style="max-width:48ch;text-wrap:pretty">Selected examples from Yuyu’s previous roles, not Hopperlace client projects.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:12px">
-      <article style="display:flex;flex-direction:column;gap:20px;background:var(--sage);border-radius:var(--radius);padding:32px 30px">
-        <div>
-          <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Enjoy Technology</p>
-          <h3 style="font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.3;color:var(--heading)">Last Mile Smart Routing</h3>
-          <p style="font-size:15px;line-height:1.5;color:var(--primary);font-weight:500;margin-top:10px;text-wrap:pretty">Built the technical proof of concept, then turned it into a product</p>
-        </div>
-        <div><h4 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">What Yuyu did</h4><p style="font-size:16px;line-height:1.6;text-wrap:pretty">Personally built a Python proof-of-concept algorithm for adaptive delivery coverage, then led the work into product development.</p></div>
-        <div style="margin-top:auto;padding-top:16px;border-top:1px solid var(--rule)"><h4 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">What it led to</h4><p style="font-size:16px;line-height:1.6;text-wrap:pretty">The feature increased visits per vehicle by 8–13%.</p></div>
-      </article>
-      <article style="display:flex;flex-direction:column;gap:20px;background:var(--sage);border-radius:var(--radius);padding:32px 30px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(clamp(calc((100% - 24px) / 3),(760px - 100%) * 999,100%),1fr));gap:12px">
+      <article style="display:flex;flex-direction:column;gap:20px;background:var(--sage);border-radius:var(--radius);padding:clamp(20px,2.4vw,32px)">
         <div>
           <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Beamery</p>
-          <h3 style="font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.3;color:var(--heading)">Dynamic Job Architecture</h3>
-          <p style="font-size:15px;line-height:1.5;color:var(--primary);font-weight:500;margin-top:10px;text-wrap:pretty">Spotted a new product opportunity and secured pilot customers</p>
+          <h3 style="font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.3;color:var(--heading);text-wrap:balance">Defining a new product opportunity</h3>
         </div>
-        <div><h4 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">What Yuyu did</h4><p style="font-size:16px;line-height:1.6;text-wrap:pretty">As hiring slowed, identified an opportunity to adapt Beamery’s existing AI capabilities into Dynamic Job Architecture. She persuaded leadership to explore the area, secured support for a team and found willing pilot customers.</p></div>
-        <div style="margin-top:auto;padding-top:16px;border-top:1px solid var(--rule)"><h4 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">What it led to</h4><p style="font-size:16px;line-height:1.6;text-wrap:pretty">The work extended Beamery’s capabilities toward defining roles and skills for internal mobility and workforce planning.</p></div>
+        <dl style="display:flex;flex-direction:column;gap:16px;flex:1">
+          <div><dt style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">Context</dt><dd style="font-size:16px;line-height:1.6;text-wrap:pretty">Hiring had slowed, while Beamery’s offering had focused mainly on recruitment.</dd></div>
+          <div><dt style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">Yuyu’s contribution</dt><dd style="font-size:16px;line-height:1.6;text-wrap:pretty">Recognized that existing AI capabilities could also help companies define roles and skills, opening opportunities in internal mobility and workforce planning. Persuaded leadership to explore the direction, secured support for a team and found willing pilot customers.</dd></div>
+          <div style="margin-top:auto;padding-top:16px;border-top:1px solid var(--rule-strong)"><dt style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">Progress</dt><dd style="display:flex;flex-direction:column;gap:4px"><span style="font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.2vw,28px);line-height:1.15;color:var(--heading)">A new product direction</span><span style="font-size:15px;line-height:1.5;text-wrap:pretty">Dynamic Job Architecture, with willing pilot customers.</span></dd></div>
+        </dl>
       </article>
-      <article style="display:flex;flex-direction:column;gap:20px;background:var(--sage);border-radius:var(--radius);padding:32px 30px">
+      <article style="display:flex;flex-direction:column;gap:20px;background:var(--sage);border-radius:var(--radius);padding:clamp(20px,2.4vw,32px)">
+        <div>
+          <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Enjoy Technology</p>
+          <h3 style="font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.3;color:var(--heading);text-wrap:balance">Turning an objective into a working system</h3>
+        </div>
+        <dl style="display:flex;flex-direction:column;gap:16px;flex:1">
+          <div><dt style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">Objective</dt><dd style="font-size:16px;line-height:1.6;text-wrap:pretty">Improve delivery productivity by adapting coverage to changing demand and available delivery capacity.</dd></div>
+          <div><dt style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">Yuyu’s contribution</dt><dd style="font-size:16px;line-height:1.6;text-wrap:pretty">Personally built a Python proof-of-concept algorithm for adaptive delivery coverage, then led it into product development as Last Mile Smart Routing.</dd></div>
+          <div style="margin-top:auto;padding-top:16px;border-top:1px solid var(--rule-strong)"><dt style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">Result</dt><dd style="display:flex;flex-direction:column;gap:4px"><span style="font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.2vw,28px);line-height:1.15;color:var(--heading)">+8–13%</span><span style="font-size:15px;line-height:1.5;text-wrap:pretty">visits per vehicle from Last Mile Smart Routing.</span></dd></div>
+        </dl>
+      </article>
+      <article style="display:flex;flex-direction:column;gap:20px;background:var(--sage);border-radius:var(--radius);padding:clamp(20px,2.4vw,32px)">
         <div>
           <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Cleo</p>
-          <h3 style="font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.3;color:var(--heading)">Improving the data behind an AI financial assistant</h3>
-          <p style="font-size:15px;line-height:1.5;color:var(--primary);font-weight:500;margin-top:10px;text-wrap:pretty">Evaluated and improved an AI system already in use</p>
+          <h3 style="font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.3;color:var(--heading);text-wrap:balance">Evaluation that guides improvement</h3>
         </div>
-        <div><h4 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">What Yuyu did</h4><p style="font-size:16px;line-height:1.6;text-wrap:pretty">Led the evaluation strategy for transaction enrichment, working with modeling and data-science teams to prioritize what to measure and improve. As the PM leading bank connections and transaction data, she also owned data-purchasing decisions, the Plaid relationship and evaluation of alternative providers.</p></div>
-        <div style="margin-top:auto;padding-top:16px;border-top:1px solid var(--rule)"><h4 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">What it led to</h4><p style="font-size:16px;line-height:1.6;text-wrap:pretty">Transaction-enrichment accuracy increased from 56% to 89%.</p></div>
+        <dl style="display:flex;flex-direction:column;gap:16px;flex:1">
+          <div><dt style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">Objective</dt><dd style="font-size:16px;line-height:1.6;text-wrap:pretty">Improve the quality of transaction data used by Cleo’s AI financial assistant.</dd></div>
+          <div><dt style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">Yuyu’s contribution</dt><dd style="font-size:16px;line-height:1.6;text-wrap:pretty">Led the evaluation strategy for transaction enrichment, working with modeling and data-science teams to prioritize what to measure and improve. As PM for bank connections and transaction data, also owned data-purchasing decisions, the Plaid relationship and evaluation of alternative providers.</dd></div>
+          <div style="margin-top:auto;padding-top:16px;border-top:1px solid var(--rule-strong)"><dt style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:6px">Result</dt><dd style="display:flex;flex-direction:column;gap:4px"><span style="font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.2vw,28px);line-height:1.15;color:var(--heading)">56% → 89%</span><span style="font-size:15px;line-height:1.5;text-wrap:pretty">transaction-enrichment accuracy.</span></dd></div>
+        </dl>
       </article>
+    </div>
+  </div>
+</section>
+
+<section id="evaluation" aria-labelledby="evaluation-title" style="border-top:1px solid var(--rule)">
+  <div style="max-width:var(--max);margin:0 auto;padding:var(--section-y) var(--gutter);display:flex;flex-direction:column;gap:clamp(36px,4.5vw,56px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px 64px;align-items:end">
+      <div>
+        <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px">04 / Evaluation</p>
+        <h2 id="evaluation-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;letter-spacing:-.015em;color:var(--heading);text-wrap:balance">Measure whether it works, and whether it matters.</h2>
+      </div>
+      <p style="max-width:52ch;text-wrap:pretty">Evaluation covers the whole experience and system, not only the model. It answers two different questions, and a higher task score alone doesn’t establish business impact.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:12px">
+      <div style="display:flex;flex-direction:column;gap:12px;padding:clamp(22px,2.6vw,30px);background:var(--sage);border-radius:var(--radius)">
+        <span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">01</span>
+        <h3 style="font-family:var(--sans);font-weight:600;font-size:clamp(19px,1.6vw,22px);line-height:1.3;color:var(--heading)">Does it do the job reliably?</h3>
+        <p style="font-size:16px;line-height:1.6;text-wrap:pretty">Whether the system performs its intended tasks well and consistently, across realistic cases and repeated attempts.</p>
+        <p style="margin-top:auto;padding-top:14px;border-top:1px solid var(--rule-strong);font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--primary)">Evidence from repeated, representative tests</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;padding:clamp(22px,2.6vw,30px);background:var(--sage);border-radius:var(--radius)">
+        <span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">02</span>
+        <h3 style="font-family:var(--sans);font-weight:600;font-size:clamp(19px,1.6vw,22px);line-height:1.3;color:var(--heading)">Does that produce the outcome?</h3>
+        <p style="font-size:16px;line-height:1.6;text-wrap:pretty">Whether those tasks contribute to the outcomes that matter to users and the business.</p>
+        <p style="margin-top:auto;padding-top:14px;border-top:1px solid var(--rule-strong);font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--dev)">Evidence from real use</p>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:12px">Useful measurement involves</h3>
+      <ul style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:0 28px">
+        <li style="display:flex;flex-direction:column;gap:4px;padding:16px 0;border-top:1px solid var(--rule-strong)"><span style="font-weight:600;font-size:16px;line-height:1.4;color:var(--heading)">Choosing the right metrics</span><span style="font-size:15px;line-height:1.55;text-wrap:pretty">Measures that reflect the intended outcome, agreed before testing.</span></li>
+        <li style="display:flex;flex-direction:column;gap:4px;padding:16px 0;border-top:1px solid var(--rule-strong)"><span style="font-weight:600;font-size:16px;line-height:1.4;color:var(--heading)">Spotting misleading proxies</span><span style="font-size:15px;line-height:1.55;text-wrap:pretty">Numbers that can improve while users are no better off.</span></li>
+        <li style="display:flex;flex-direction:column;gap:4px;padding:16px 0;border-top:1px solid var(--rule-strong)"><span style="font-weight:600;font-size:16px;line-height:1.4;color:var(--heading)">Counting checking and correction</span><span style="font-size:15px;line-height:1.55;text-wrap:pretty">The human time spent verifying, fixing or redoing the output.</span></li>
+        <li style="display:flex;flex-direction:column;gap:4px;padding:16px 0;border-top:1px solid var(--rule-strong)"><span style="font-weight:600;font-size:16px;line-height:1.4;color:var(--heading)">Interpreting the results</span><span style="font-size:15px;line-height:1.55;text-wrap:pretty">What the evidence supports, and what remains uncertain.</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:20px">Across the experience and system, we assess</h3>
+      <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:0 32px;border-top:1px solid var(--rule-strong)">
+          <div style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--rule)"><span aria-hidden="true" style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.7;letter-spacing:.04em;color:var(--primary)">01</span><dt style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;color:var(--heading)">Functionality &amp; reliability</dt><dd style="grid-column:2;margin:0;font-size:16px;line-height:1.55;text-wrap:pretty">Whether it does the task on your cases, how consistently across repeated runs, and where it fails.</dd></div>
+          <div style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--rule)"><span aria-hidden="true" style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.7;letter-spacing:.04em;color:var(--primary)">02</span><dt style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;color:var(--heading)">User effort &amp; expertise</dt><dd style="grid-column:2;margin:0;font-size:16px;line-height:1.55;text-wrap:pretty">The setup, integration, checking and correction your team would take on.</dd></div>
+          <div style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--rule)"><span aria-hidden="true" style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.7;letter-spacing:.04em;color:var(--primary)">03</span><dt style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;color:var(--heading)">Oversight &amp; control</dt><dd style="grid-column:2;margin:0;font-size:16px;line-height:1.55;text-wrap:pretty">Whether your team can inspect outputs, approve consequential actions, intervene and recover from errors.</dd></div>
+          <div style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--rule)"><span aria-hidden="true" style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.7;letter-spacing:.04em;color:var(--primary)">04</span><dt style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;color:var(--heading)">Maintainability</dt><dd style="grid-column:2;margin:0;font-size:16px;line-height:1.55;text-wrap:pretty">How readily it adapts as requirements change, without breaking what already works.</dd></div>
+          <div style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--rule)"><span aria-hidden="true" style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.7;letter-spacing:.04em;color:var(--primary)">05</span><dt style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;color:var(--heading)">Portability &amp; dependencies</dt><dd style="grid-column:2;margin:0;font-size:16px;line-height:1.55;text-wrap:pretty">Lock-in, data handling, required services, and what switching would involve.</dd></div>
+          <div style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--rule)"><span aria-hidden="true" style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.7;letter-spacing:.04em;color:var(--primary)">06</span><dt style="font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35;color:var(--heading)">Cost</dt><dd style="grid-column:2;margin:0;font-size:16px;line-height:1.55;text-wrap:pretty">Usage and licensing, retries, and the staff time spent reviewing and correcting.</dd></div>
+        </dl>
     </div>
   </div>
 </section>
 
 <div style="border-top:1px solid var(--rule)">
-<section aria-labelledby="example-title" style="max-width:var(--max);margin:0 auto;padding:var(--section-y) var(--gutter)">
-  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-bottom:20px">
-    <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">03 / What a project can look like</p>
-    <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);border:1px solid var(--rule-strong);border-radius:var(--pill);padding:4px 12px">Illustrative example · not a client project</p>
+<section aria-labelledby="example-title" style="max-width:var(--max);margin:0 auto;padding:var(--section-y) var(--gutter);display:flex;flex-direction:column;gap:clamp(28px,4vw,44px)">
+  <div style="display:flex;flex-direction:column;gap:18px">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px">
+      <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">05 / What a project can look like</p>
+      <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);border:1px solid var(--rule-strong);border-radius:var(--pill);padding:4px 12px">Illustrative example · not a client project</p>
+    </div>
+    <h2 id="example-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;letter-spacing:-.015em;color:var(--heading);max-width:30ch;text-wrap:balance">A small business wants to turn client briefs and meeting notes into useful project plans.</h2>
   </div>
-  <h2 id="example-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;letter-spacing:-.015em;color:var(--heading);max-width:30ch;text-wrap:balance;margin-bottom:clamp(36px,5vw,56px)">A team wants to help customers turn a collection of documents into an actionable plan.</h2>
-  <ol style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:0 28px">
-    <li style="display:flex;flex-direction:column;gap:10px;padding:22px 0 28px;border-top:2px solid var(--primary)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">1</span><h3 style="font-size:18px;font-weight:600;color:var(--heading)">Understand the task</h3><p style="font-size:16px;line-height:1.6;text-wrap:pretty">Which documents customers start with, what the plan needs to help them decide, and what a good plan looks like to them.</p></li>
-    <li style="display:flex;flex-direction:column;gap:10px;padding:22px 0 28px;border-top:2px solid var(--primary)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">2</span><h3 style="font-size:18px;font-weight:600;color:var(--heading)">Prototype the experience</h3><p style="font-size:16px;line-height:1.6;text-wrap:pretty">A working version that reads a realistic set of documents and drafts a plan customers can review and edit.</p></li>
-    <li style="display:flex;flex-direction:column;gap:10px;padding:22px 0 28px;border-top:2px solid var(--primary)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">3</span><h3 style="font-size:18px;font-weight:600;color:var(--heading)">Test the plans</h3><p style="font-size:16px;line-height:1.6;text-wrap:pretty">Run it on representative document sets and check each plan: is it accurate, complete, and something a customer could act on?</p></li>
-    <li style="display:flex;flex-direction:column;gap:10px;padding:22px 0 28px;border-top:2px solid var(--primary)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">4</span><h3 style="font-size:18px;font-weight:600;color:var(--heading)">Find the review points</h3><p style="font-size:16px;line-height:1.6;text-wrap:pretty">Where plans tend to need correcting, and where a person should check before anything is acted on.</p></li>
-    <li style="display:flex;flex-direction:column;gap:10px;padding:22px 0 28px;border-top:2px solid var(--primary)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">5</span><h3 style="font-size:18px;font-weight:600;color:var(--heading)">Recommend the next step</h3><p style="font-size:16px;line-height:1.6;text-wrap:pretty">What to build next, what to change, and which questions to answer before offering it more widely.</p></li>
+  <ol style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:12px">
+    <li style="display:flex;flex-direction:column;gap:14px;padding:clamp(20px,2.4vw,28px);background:var(--sage);border-radius:var(--radius);border-top:3px solid var(--primary)"><span style="display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">01</span><span>Objective</span><span aria-hidden="true" style="margin-left:auto;font-family:var(--sans);font-size:16px;color:var(--primary)">→</span></span><p style="font-family:var(--serif);font-weight:400;font-size:clamp(20px,1.8vw,23px);line-height:1.35;color:var(--heading);text-wrap:pretty">Reduce planning effort while preserving important client requirements.</p></li>
+    <li style="display:flex;flex-direction:column;gap:14px;padding:clamp(20px,2.4vw,28px);background:var(--sage);border-radius:var(--radius);border-top:3px solid var(--primary)"><span style="display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">02</span><span>Product / system</span><span aria-hidden="true" style="margin-left:auto;font-family:var(--sans);font-size:16px;color:var(--primary)">→</span></span><ul><li style="display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px;padding:9px 0;border-top:1px solid var(--rule-strong);font-size:16px;line-height:1.5"><span aria-hidden="true" style="color:var(--primary)">·</span><span>Drafts a project scope and task plan from the documents.</span></li><li style="display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px;padding:9px 0;border-top:1px solid var(--rule-strong);font-size:16px;line-height:1.5"><span aria-hidden="true" style="color:var(--primary)">·</span><span>Links important details back to their sources.</span></li><li style="display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px;padding:9px 0;border-top:1px solid var(--rule-strong);font-size:16px;line-height:1.5"><span aria-hidden="true" style="color:var(--primary)">·</span><span>Flags missing information.</span></li><li style="display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px;padding:9px 0;border-top:1px solid var(--rule-strong);font-size:16px;line-height:1.5"><span aria-hidden="true" style="color:var(--primary)">·</span><span>A person reviews and approves the plan.</span></li></ul></li>
+    <li style="display:flex;flex-direction:column;gap:14px;padding:clamp(20px,2.4vw,28px);background:var(--sage);border-radius:var(--radius);border-top:3px solid var(--primary)"><span style="display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">03</span><span>Evaluation</span></span><ul><li style="display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px;padding:9px 0;border-top:1px solid var(--rule-strong);font-size:16px;line-height:1.5"><span aria-hidden="true" style="color:var(--primary)">·</span><span>Missed requirements.</span></li><li style="display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px;padding:9px 0;border-top:1px solid var(--rule-strong);font-size:16px;line-height:1.5"><span aria-hidden="true" style="color:var(--primary)">·</span><span>Unsupported commitments.</span></li><li style="display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px;padding:9px 0;border-top:1px solid var(--rule-strong);font-size:16px;line-height:1.5"><span aria-hidden="true" style="color:var(--primary)">·</span><span>Whether people can use the plan.</span></li><li style="display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px;padding:9px 0;border-top:1px solid var(--rule-strong);font-size:16px;line-height:1.5"><span aria-hidden="true" style="color:var(--primary)">·</span><span>Total planning effort, including review and correction, compared with the existing process.</span></li></ul></li>
   </ol>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px clamp(32px,5vw,72px);align-items:center">
+    <figure aria-label="Illustration of a draft plan awaiting review" style="background:var(--panel);border:1px solid var(--rule-strong);border-radius:var(--radius);padding:20px 22px 22px;box-shadow:0 1px 0 rgba(38,61,52,.04),0 10px 30px rgba(38,61,52,.08)">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;margin-bottom:6px">
+        <span style="font-weight:600;font-size:16px;color:var(--heading)">Draft plan · Website refresh</span>
+        <span style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:11px;color:var(--dev);border:1px solid var(--dev);border-radius:var(--pill);padding:3px 10px">Awaiting review</span>
+      </div>
+      <ul>
+        <li style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 12px;padding:11px 0;border-top:1px solid var(--rule)"><span style="font-size:15px;line-height:1.45;color:var(--heading)">Homepage and three service pages</span><span style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.04em;color:var(--primary);border:1px solid var(--rule-strong);border-radius:var(--pill);padding:2px 9px;white-space:nowrap">↳ Client brief, §2</span></li>
+        <li style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 12px;padding:11px 0;border-top:1px solid var(--rule)"><span style="font-size:15px;line-height:1.45;color:var(--heading)">Two rounds of copy revisions</span><span style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.04em;color:var(--primary);border:1px solid var(--rule-strong);border-radius:var(--pill);padding:2px 9px;white-space:nowrap">↳ Meeting notes, 3 Oct</span></li>
+        <li style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 12px;padding:11px 0;border-top:1px solid var(--rule)"><span style="font-size:15px;line-height:1.45;color:var(--heading)">Launch before the spring campaign</span><span style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.04em;color:var(--primary);border:1px solid var(--rule-strong);border-radius:var(--pill);padding:2px 9px;white-space:nowrap">↳ Meeting notes, 3 Oct</span></li>
+        <li style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 12px;margin-top:6px;padding:11px 12px;border:1px dashed var(--dev);border-radius:var(--radius)"><span style="font-size:15px;line-height:1.45;color:var(--heading)"><strong style="font-weight:600">Missing:</strong> who signs off the final copy?</span><span style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.04em;color:var(--dev)">Not in brief or notes</span></li>
+      </ul>
+      <div aria-hidden="true" style="display:flex;gap:10px;margin-top:16px">
+        <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 16px;background:var(--primary);color:var(--on-primary);font-size:14px;font-weight:500;border-radius:var(--pill)">Approve plan</span>
+        <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 16px;border:1px solid var(--rule-strong);color:var(--heading);font-size:14px;font-weight:500;border-radius:var(--pill)">Edit</span>
+      </div>
+    </figure>
+    <div style="display:flex;flex-direction:column;gap:10px;max-width:46ch">
+      <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Illustrative product behavior</p>
+      <p style="text-wrap:pretty">Each commitment in the draft points to where it came from. Gaps are flagged rather than filled in, and nothing is shared until a person approves it. Those same behaviors are what the evaluation checks.</p>
+    </div>
+  </div>
 </section>
 </div>
 
 <section id="yuyu" aria-labelledby="yuyu-title" style="background:var(--sage)">
   <div style="max-width:var(--max);margin:0 auto;padding:var(--section-y) var(--gutter)">
-    <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:clamp(28px,4vw,48px)">04 / Who you’ll be working with</p>
+    <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:clamp(28px,4vw,48px)">06 / Who you’ll be working with</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:40px clamp(40px,6vw,88px);align-items:start">
       <div style="display:flex;flex-direction:column;gap:24px;max-width:420px">
         <img src="public/assets/yuyu-shen.jpg" alt="Portrait of Yuyu Shen" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);background:var(--selected);display:block">
@@ -251,7 +354,7 @@
           <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:14px">Founder, Hopperlace</p>
         </div>
         <p style="text-wrap:pretty">Yuyu is a statistically trained data scientist turned product leader, with nearly a decade building and evaluating AI systems, including taking AI products from zero to one.</p>
-        <p style="text-wrap:pretty">Her work has always sat between the technical and the commercial. She builds models and prototypes herself, then turns what they show into product decisions, keeping both tied to what customers actually need. That combination is what she brings to a project: judgment about what is worth building, the ability to build and measure it, and attention to how people will really use it.</p>
+        <p style="text-wrap:pretty">Her career spans data science and product analytics at Meta, AI product leadership at Walmart and Beamery, and independent research on AI evaluation. Her work has always sat between the technical and the commercial: she builds models and prototypes herself, then turns what they show into product decisions tied to what customers actually need. That is what she brings to a project: judgment about what is worth building, the ability to build and measure it, and attention to how people will really use it.</p>
         <p style="text-wrap:pretty">She founded Hopperlace to help people choose AI tools and systems that fit their tasks, preferences and values. <a href="https://valuecompass.ai">ValueCompass</a> is available today, with independent tool comparisons in development. She has also built <a href="https://www.evidencesynthesisai.com/">Evidence Synthesis AI</a>, which helps research teams use AI to screen studies for systematic reviews. Alongside building, she researches AI evaluation and writes about technology, agency and better decisions.</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:0 32px;margin-top:12px">
           <div style="padding:20px 0;border-top:1px solid var(--rule-strong)">
@@ -282,24 +385,22 @@
 </section>
 
 <section aria-labelledby="engage-title" style="max-width:var(--max);margin:0 auto;padding:var(--section-y) var(--gutter)">
-  <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px">05 / How projects work</p>
-  <h2 id="engage-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;letter-spacing:-.015em;color:var(--heading);max-width:28ch;text-wrap:balance;margin-bottom:clamp(36px,5vw,56px)">Start with one provider decision, prototype or workflow.</h2>
+  <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px">07 / Working together</p>
+  <h2 id="engage-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.18;letter-spacing:-.015em;color:var(--heading);max-width:28ch;text-wrap:balance;margin-bottom:16px">Start with one objective, decision, prototype or workflow.</h2>
+  <p style="max-width:60ch;text-wrap:pretty;margin-bottom:clamp(32px,4vw,48px)">Each project is built around a concrete decision, a tested direction or a working artifact your team can use.</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:0 32px">
     <div style="display:flex;flex-direction:column;gap:10px;padding:24px 0 32px;border-top:1px solid var(--rule-strong)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">i.</span><h3 style="font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.3;color:var(--heading)">Agreed before we start</h3><p style="font-size:17px;text-wrap:pretty">Scope, inputs, deliverables, timing and fee are agreed before work begins, around the question the project needs to answer.</p></div>
-    <div style="display:flex;flex-direction:column;gap:10px;padding:24px 0 32px;border-top:1px solid var(--rule-strong)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">ii.</span><h3 style="font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.3;color:var(--heading)">Hands-on work</h3><p style="font-size:17px;text-wrap:pretty">Research, prototyping, testing and selected implementation, in whatever mix the question calls for.</p></div>
+    <div style="display:flex;flex-direction:column;gap:10px;padding:24px 0 32px;border-top:1px solid var(--rule-strong)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">ii.</span><h3 style="font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.3;color:var(--heading)">Hands-on work</h3><p style="font-size:17px;text-wrap:pretty">Discovery, system design, prototyping, evaluation and selected implementation, in whatever mix the question calls for.</p></div>
     <div style="display:flex;flex-direction:column;gap:10px;padding:24px 0 32px;border-top:1px solid var(--rule-strong)"><span style="font-family:var(--mono);font-weight:500;font-size:13px;line-height:inherit;letter-spacing:.04em;color:var(--primary)">iii.</span><h3 style="font-family:var(--sans);font-weight:600;font-size:21px;line-height:1.3;color:var(--heading)">A clear handoff</h3><p style="font-size:17px;text-wrap:pretty">Prototypes, tests and findings are handed over so your team can carry on. Projects can stand alone or be followed by a small advisory engagement.</p></div>
   </div>
-  <div style="margin-top:clamp(28px,4vw,40px);padding:24px 0 0;border-top:1px solid var(--rule)">
-    <h3 style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--heading);margin-bottom:10px">What the work draws on</h3>
-    <p style="font-size:16px;max-width:90ch;text-wrap:pretty">Customer and workflow discovery · AI product and interaction design · provider, tool, model and build-versus-buy decisions · system architecture, including where people stay involved · functional prototyping and selected implementation · designing tests and interpreting the results</p>
-  </div>
+  
   <div style="margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:16px 64px;padding:32px clamp(24px,4vw,40px);background:var(--sage);border-radius:var(--radius);align-items:center">
     <div>
       <p style="font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Why Hopperlace</p>
       <p style="font-family:var(--serif);font-weight:400;font-size:clamp(22px,2vw,26px);line-height:1.3;color:var(--heading)">The same questions behind our product work.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px">
-      <p style="font-size:16px;line-height:1.6;text-wrap:pretty">Client projects and Hopperlace’s public tool testing, now in development, start from the same questions: what an AI system actually accomplishes, where it struggles, and what makes it right for a particular task and person. Client work stays confidential.</p>
+      <p style="font-size:16px;line-height:1.6;text-wrap:pretty">Client projects and Hopperlace’s public tool testing, now in development, start from the same questions: what an AI system actually accomplishes, what makes it useful for a particular task and person, and how people can make better choices about it. Client work stays confidential.</p>
       <a href="Home.dc.html#testing" style="font-size:15px;font-weight:500">How we’re approaching tool testing →</a>
     </div>
   </div>
@@ -311,7 +412,7 @@
       <h2 id="contact-title" style="font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.2vw,42px);line-height:1.15;letter-spacing:-.02em;color:var(--on-primary);text-wrap:balance">Tell us what you’re working on.</h2>
     </div>
     <div style="display:flex;flex-direction:column;gap:24px">
-      <p style="text-wrap:pretty;color:var(--on-primary)">A few sentences is plenty: what you want to choose, build or improve, what is uncertain or not working yet, and any timing that matters.</p>
+      <p style="text-wrap:pretty;color:var(--on-primary)">A few sentences is plenty: an objective or problem you want to clarify, or something you’re choosing, building or improving. Add what’s uncertain and any timing that matters.</p>
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px">
         <a href="mailto:hello@hopperlace.ai" style="display:inline-flex;align-items:center;min-height:52px;padding:0 28px;background:var(--paper);color:var(--heading);text-decoration:none;font-weight:500;font-size:17px;border-radius:var(--pill)" style-hover="background:var(--selected);color:var(--heading)">Discuss your project</a>
         <a href="mailto:hello@hopperlace.ai" style="color:var(--on-primary);font-size:16px;padding:8px 0">hello@hopperlace.ai</a>
@@ -324,48 +425,59 @@
 <dc-import name="SiteFooter" hint-size="100%,120px"></dc-import>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;defaultProject&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Choose an AI approach&quot;,&quot;Develop and test an AI idea&quot;,&quot;Improve an existing AI experience&quot;],&quot;default&quot;:&quot;Choose an AI approach&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
-const KEYS = ['choose', 'develop', 'improve'];
+<script type="text/x-dc" data-dc-script data-props="{&quot;defaultProject&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Define and test an AI opportunity&quot;,&quot;Choose an AI approach&quot;,&quot;Improve an existing AI experience&quot;],&quot;default&quot;:&quot;Define and test an AI opportunity&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const KEYS = ['define', 'choose', 'improve'];
+const ALIAS = { develop: 'define' };
+const MQ = '(min-width: 861px)';
+const MQ4 = '(min-width: 1024px)', MQ2 = '(min-width: 600px)';
+const mm = q => typeof window === 'undefined' || window.matchMedia(q).matches;
+const headerH = () => parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 72;
 class Component extends DCLogic {
-  state = { sel: null };
-  refs_ = { choose: React.createRef(), develop: React.createRef(), improve: React.createRef() };
+  state = { sel: null, wide: mm(MQ), w4: mm(MQ4), w2: mm(MQ2) };
+  refs_ = { define: React.createRef(), choose: React.createRef(), improve: React.createRef() };
   componentDidMount() {
-    const h = (location.hash || '').slice(1);
-    if (KEYS.includes(h)) { this.setState({ sel: h }); requestAnimationFrame(() => { const el = document.getElementById('projects'); if (el) window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 72) - 8); }); }
+    this.mqs = [MQ, MQ4, MQ2].map(q => window.matchMedia(q));
+    this.onMq = () => this.setState({ wide: this.mqs[0].matches, w4: this.mqs[1].matches, w2: this.mqs[2].matches });
+    this.mqs.forEach(m => m.addEventListener('change', this.onMq));
+    const raw = (location.hash || '').slice(1); const h = ALIAS[raw] || raw;
+    if (KEYS.includes(h)) { this.setState({ sel: h }); requestAnimationFrame(() => { const el = document.getElementById('projects'); if (el) window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - headerH() - 8); }); }
   }
-  pick = (k, focus) => {
-    this.setState({ sel: k });
-    if (focus) this.refs_[k].current && this.refs_[k].current.focus();
-  };
-  onTabKey = (e) => {
-    const cur = KEYS.indexOf(this.current());
-    let n = null;
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') n = (cur + 1) % 3;
-    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') n = (cur + 2) % 3;
-    else if (e.key === 'Home') n = 0;
-    else if (e.key === 'End') n = 2;
-    if (n === null) return;
-    e.preventDefault();
-    this.pick(KEYS[n], true);
+  componentWillUnmount() { (this.mqs || []).forEach(m => m.removeEventListener('change', this.onMq)); }
+  pick = (k) => {
+    const wide = this.state.wide;
+    const next = !wide && this.current() === k ? '' : k;
+    this.setState({ sel: next }, () => {
+      if (wide || !next) return;
+      const el = this.refs_[k].current; if (!el) return;
+      const top = el.getBoundingClientRect().top;
+      if (top < headerH() + 8 || top > window.innerHeight * 0.6) window.scrollTo(0, top + window.scrollY - headerH() - 8);
+    });
   };
   current() {
-    const d = { 'Choose an AI approach': 'choose', 'Develop and test an AI idea': 'develop', 'Improve an existing AI experience': 'improve' }[this.props.defaultProject] || 'choose';
-    return this.state.sel || d;
+    const d = { 'Define and test an AI opportunity': 'define', 'Choose an AI approach': 'choose', 'Improve an existing AI experience': 'improve' }[this.props.defaultProject] || 'define';
+    const s = this.state.sel;
+    if (s === null) return d;
+    if (s === '') return this.state.wide ? d : '';
+    return s;
   }
   renderVals() {
-    const s = this.current();
-    const v = { onTabKey: this.onTabKey };
-    const cap = { choose: 'Choose', develop: 'Develop', improve: 'Improve' };
+    const s = this.current(), wide = this.state.wide;
+    const v = { gridCols: wide ? 'repeat(3,minmax(0,1fr))' : 'minmax(0,1fr)', stageCols: this.state.w4 ? 'repeat(4,minmax(0,1fr))' : this.state.w2 ? 'repeat(2,minmax(0,1fr))' : 'minmax(0,1fr)' };
+    const cap = { define: 'Define', choose: 'Choose', improve: 'Improve' };
     KEYS.forEach(k => {
       const on = s === k, C = cap[k];
-      v['sel' + C] = on ? 'true' : 'false';
-      v['ti' + C] = on ? 0 : -1;
+      v['exp' + C] = on ? 'true' : 'false';
       v['ref' + C] = this.refs_[k];
       v['pick' + C] = () => this.pick(k);
       v['show' + C] = on;
       v['bg' + C] = on ? 'var(--selected)' : 'var(--paper)';
-      v['bd' + C] = on ? 'var(--rule-strong)' : 'transparent';
-      v['top' + C] = on ? 'var(--primary)' : 'transparent';
+      v['bd' + C] = on ? 'var(--rule-strong)' : 'var(--rule)';
+      v['top' + C] = on ? 'var(--primary)' : 'var(--rule)';
+      v['cue' + C] = wide ? (on ? 'Selected · scope below' : 'View scope') : (on ? 'Hide scope' : 'View scope');
+      v['icon' + C] = wide ? '↓' : (on ? '−' : '+');
+      v['ring' + C] = on ? 'var(--primary)' : 'var(--rule-strong)';
+      v['dot' + C] = on ? 'var(--primary)' : 'transparent';
+      v['ink' + C] = on ? 'var(--on-primary)' : 'var(--primary)';
     });
     return v;
   }
