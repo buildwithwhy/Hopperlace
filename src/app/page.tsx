@@ -62,20 +62,20 @@ const jsonLd = {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Choose an AI approach",
+            name: "Define and test an AI opportunity",
             description:
-              "Decide which provider, tool or system design to use, based on evidence tested on your cases. You receive a comparison of the shortlisted options on your own cases, a recommended approach and system design, and integration prototypes where agreed.",
-            url: "https://hopperlace.ai/services#choose",
+              "Arrive with a business goal or user problem. Work out where AI could help, what to build, and whether it’s worthwhile. You receive an outcome and product brief, a workflow and system design, an evaluation plan, and a prototype and findings where appropriate.",
+            url: "https://hopperlace.ai/services#define",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Develop and test an AI idea",
+            name: "Choose an AI approach",
             description:
-              "Work out what it should do, build a working version, and see whether it delivers. You receive a working prototype, findings from testing, and a practical recommendation for what to develop next.",
-            url: "https://hopperlace.ai/services#develop",
+              "Decide which provider, tool or system design to use, based on evidence tested on your cases. You receive a comparison of the shortlisted options on your own cases, a recommended approach and system design, and integration prototypes where agreed.",
+            url: "https://hopperlace.ai/services#choose",
           },
         },
         {
@@ -211,8 +211,8 @@ const scenarioChecks = withDimensions({
 });
 
 const projectTypes = [
+  { href: "/services#define", label: "Define and test an AI opportunity" },
   { href: "/services#choose", label: "Choose an AI approach" },
-  { href: "/services#develop", label: "Develop and test an AI idea" },
   { href: "/services#improve", label: "Improve an existing AI experience" },
 ];
 
