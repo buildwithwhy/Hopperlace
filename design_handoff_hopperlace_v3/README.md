@@ -10,7 +10,6 @@ Source design for the current site, exported from Claude Design ("Hopperlace ser
 Styles are inline; ignore the `<x-dc>` / `support.js` scaffolding (not committed). Assets are the ones already in `public/assets/`.
 
 Known deviations, by decision of the founder:
-- Services bio, third paragraph: the live wording ("She now builds independently through Hopperlace…") was kept instead of the handoff's rewrite.
 - The project cards' JS media queries (861px for three across; 600px/1024px for the "How we work" stages) are CSS viewport variants (`min-[861px]:` etc.); the component only checks the 861px query on click.
 - The draft-plan illustration in the services example drops its box shadow — the site uses none — and the chevrons don't animate.
 - Numbered dimension items (scenario checks, services "compared on") add `align-content: start`, so a one-line title doesn't open a gap above its description when a neighbour's title wraps.

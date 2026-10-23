@@ -61,7 +61,7 @@ Base element styles (`html`, `body`, `a`) in `globals.css` **must stay inside `@
 - Import alias `@/*` maps to `src/*` (e.g. `@/lib/links`).
 - Use HTML entities for apostrophes/quotes/dashes in JSX text (`&rsquo;`, `&ldquo;`, `&mdash;`) — existing copy does this throughout.
 - Copy uses US spelling (`organizations`, `behavior`, `recognize`).
-- **Past roles stay labelled as past roles.** The services page's "Selected experience from previous roles" cards (Enjoy, Beamery) describe work before Hopperlace and carry "Not Hopperlace client projects." Keep that label wherever they appear, including `llms.txt`. The services bio's third paragraph ("She now builds independently through Hopperlace…") was kept from the earlier version at the founder's request — don't swap in the v3 handoff's rewrite.
+- **Past roles stay labelled as past roles.** The services page's "Selected experience from previous roles" cards (Enjoy, Beamery) describe work before Hopperlace and carry "Not Hopperlace client projects." Keep that label wherever they appear, including `llms.txt`.
 - **The site copy is approved, sentence by sentence, and comes verbatim from the handoff.** It went through several rounds of the founder's own editing, and specific phrasings were asked for by name. Don't rewrite it as a side effect of a layout change, don't add explanatory sentences that restate the heading above them, and keep the claims honest: ValueCompass exists, the tool testing does not yet, the example scenario's proposed checks and "How we'll test" are plans rather than results, and missing research is not a negative finding.
 
 ## Design handoff

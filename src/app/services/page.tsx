@@ -1023,21 +1023,21 @@ function Founder() {
               build and measure it, and attention to how people will really use
               it.
             </p>
-            {/* Kept from the live site at the founder's request, in place of
-                the handoff's rewrite. */}
             <p className="text-pretty">
-              She now builds independently through Hopperlace. That includes{" "}
+              She founded Hopperlace to help people choose AI tools and systems
+              that fit their tasks, preferences and values.{" "}
               <a href={VALUECOMPASS_URL} className={proseLink}>
                 ValueCompass
-              </a>
-              , for comparing AI options against your values, and{" "}
+              </a>{" "}
+              is available today, with independent tool comparisons in
+              development. She has also built{" "}
               <a href={EVIDENCE_SYNTHESIS_URL} className={proseLink}>
                 Evidence Synthesis AI
               </a>
               , which helps research teams use AI to screen studies for
-              systematic reviews. Alongside building, she researches how AI
-              systems should be evaluated and writes about technology, agency
-              and better decisions.
+              systematic reviews. Alongside building, she researches AI
+              evaluation and writes about technology, agency and better
+              decisions.
             </p>
             <div className="mt-3 grid grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))] gap-x-8">
               <FounderFact heading="Research">

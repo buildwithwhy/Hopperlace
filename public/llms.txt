@@ -216,7 +216,7 @@ Yuyu is a statistically trained data scientist turned product leader, with nearl
 
 Her career spans data science and product analytics at Meta, AI product leadership at Walmart and Beamery, and independent research on AI evaluation. Her work has always sat between the technical and the commercial: she builds models and prototypes herself, then turns what they show into product decisions tied to what customers actually need. That is what she brings to a project: judgment about what is worth building, the ability to build and measure it, and attention to how people will really use it.
 
-She now builds independently through Hopperlace. That includes ValueCompass (https://valuecompass.ai), for comparing AI options against your values, and Evidence Synthesis AI (https://www.evidencesynthesisai.com/), which helps research teams use AI to screen studies for systematic reviews. Alongside building, she researches how AI systems should be evaluated and writes about technology, agency and better decisions.
+She founded Hopperlace to help people choose AI tools and systems that fit their tasks, preferences and values. ValueCompass (https://valuecompass.ai) is available today, with independent tool comparisons in development. She has also built Evidence Synthesis AI (https://www.evidencesynthesisai.com/), which helps research teams use AI to screen studies for systematic reviews. Alongside building, she researches AI evaluation and writes about technology, agency and better decisions.
 
 - Certifications (Anthropic): Claude Certified Architect — Professional (CCA-P); Claude Certified Architect — Foundations (CCA-F).
 - Research: deference-aware evaluation (https://doi.org/10.17605/OSF.IO/A69YH). Paper accepted at the ICML 2026 Technical AI Governance workshop.
