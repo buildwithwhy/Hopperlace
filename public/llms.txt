@@ -2,9 +2,9 @@
 
 > Choose AI for what you want to do — and what matters to you.
 
-Hopperlace helps you choose AI tools and systems that fit your tasks, preferences and values, with evidence you can understand and inspect.
+Hopperlace helps people choose and use AI through systematic, practical evaluation. Our product studio also builds products for discovery, connection and better decisions.
 
-ValueCompass, which you can use today, adds research on the companies behind those tools: their ownership, dependencies and policies. We're also developing independent, hands-on comparisons of the tools themselves.
+ValueCompass, which you can use today, adds research on the companies behind AI tools: their ownership, dependencies and policies. We're also developing independent, hands-on comparisons of the tools themselves.
 
 The aim is to bring these comparisons together with ValueCompass, so you can consider practical fit and values in the same decision.
 
@@ -14,6 +14,34 @@ Focus: independent testing · comparison · informed choice.
 
 - ValueCompass (available now, https://valuecompass.ai): who is behind it, and does that fit your values? Compare AI options on ownership, control and documented commitments, against the priorities you choose.
 - Tool testing (in development): can it do your task, and what will it take? Find out which tools suit a particular task, and what effort, expertise and compromises each one involves.
+
+## Products by Hopperlace (https://hopperlace.ai/products)
+
+Products for discovery, connection and better decisions — each made for the people who use it. They stand on their own, and building them also informs Hopperlace's core work: systematic AI evaluation.
+
+### Connection & belonging — finding your place, and the people in it
+
+- MyCorner (iOS & Android, https://mycorner.place): find a neighbourhood that feels like you. Discover local places and plan an exploration through curated recommendations. Where it's heading: from discovering a place to taking part in it and feeling at home.
+- Same Wonder (preview, https://wonder.hopperlace.ai): meet new people. Discover something together. Small local gatherings built around shared curiosity, with activities that give conversation somewhere to start. Coffee tables and discovery walks. Choose a date, neighbourhood and interest; arrangements follow once a group is confirmed.
+
+### Stories & discovery — small, everyday ways to remember, notice and wonder
+
+- Once & Ours: turn memories and everyday moments into keepsakes worth sharing. Start with a conversation, a photograph or your own words, then shape your story into a newspaper, booklet or personal letter.
+- Post from the Past: a daily escape into vintage travel. Discover archival images and their stories, save favourites in your shoebox, and turn a find into a personal digital postcard.
+- A Little Music (https://music.hopperlace.ai): one interesting piece of music each day, with its story and something to listen for. Choose your categories and explore beyond your usual listening. Listening happens through each provider's official player.
+
+### Evidence & decisions — clearer evidence for choices that matter
+
+- ValueCompass (available now, https://valuecompass.ai): understand the companies behind your AI choices. Compare ownership, control and documented practices against what matters to you, with sources and clear gaps in the evidence.
+- Evidence Synthesis AI (https://www.evidencesynthesisai.com/): help your research team work through studies for systematic reviews, with AI-assisted screening and researcher review.
+
+### Products and evaluation
+
+Building our own products gives us firsthand experience of choosing tools, designing workflows, checking results and maintaining what we ship. That experience helps us identify the questions worth testing.
+
+### Product help & billing (https://hopperlace.ai/products#support)
+
+Hopperlace operates the products on this page and handles billing for those sold through us. Email hello@hopperlace.ai with the product's name and, for a purchase, the email address you used. We'll reply from Hopperlace.
 
 ## ValueCompass — available now (https://valuecompass.ai)
 
@@ -80,7 +108,9 @@ Note: this describes planned testing, not published results. No comparisons have
 
 Hopperlace was founded by Yuyu Shen, a statistically trained data scientist turned product manager with nearly a decade building and evaluating AI systems, including taking AI products from zero to one.
 
-She also built Evidence Synthesis AI (https://www.evidencesynthesisai.com/), which helps research teams use AI to screen studies for systematic reviews. Her research on deference-aware evaluation was accepted at the ICML 2026 Technical AI Governance workshop. She holds CCA-F and CCA-P certifications and writes about technology, agency and better decisions at https://buildwithwhy.com.
+Her research on deference-aware evaluation was accepted at the ICML 2026 Technical AI Governance workshop. She holds CCA-F and CCA-P certifications and writes about technology, agency and better decisions at https://buildwithwhy.com.
+
+Through Hopperlace's product studio, she also designs, builds and operates the company's own products (https://hopperlace.ai/products).
 
 ### Deference-Aware Evaluation for Human-in-the-Loop AI Systems
 - Author: Yuyu Shen
@@ -90,6 +120,8 @@ She also built Evidence Synthesis AI (https://www.evidencesynthesisai.com/), whi
 - Venue: Technical AI Governance workshop, ICML 2026
 
 ## Services (https://hopperlace.ai/services)
+
+From the objective to a system that works. Define what success means, explore what to build or use, and test whether it delivers.
 
 Turn business goals into useful AI products.
 
@@ -243,6 +275,8 @@ Tell us what you're working on. A few sentences is plenty: an objective or probl
 - Email: hello@hopperlace.ai
 - Discuss your project: mailto:hello@hopperlace.ai
 - Website: https://hopperlace.ai
+- Products: https://hopperlace.ai/products
+- Product help & billing: hello@hopperlace.ai
 - Product: https://valuecompass.ai
 - Founder's writing: https://buildwithwhy.com
 

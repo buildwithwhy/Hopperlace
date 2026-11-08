@@ -9,6 +9,7 @@ import {
 } from "@/lib/links";
 import { withDimensions } from "@/lib/dimensions";
 import {
+  cardButton,
   cardText,
   cardTitle,
   frame,
@@ -18,6 +19,7 @@ import {
   largeButton,
   lead,
   marker,
+  outlineButton,
   primaryButton,
   proseLink,
   sectionHeading,
@@ -49,7 +51,7 @@ const jsonLd = {
         availableLanguage: "English",
       },
       description:
-        "Hopperlace helps you choose AI tools and systems that fit your tasks, preferences and values, with evidence you can understand and inspect. ValueCompass, available today, adds research on the companies behind those tools: their ownership, dependencies and policies. Hopperlace is also developing independent, hands-on comparisons of the tools themselves.",
+        "Hopperlace helps people choose and use AI through systematic, practical evaluation. Its product studio also builds products for discovery, connection and better decisions. ValueCompass, available today, adds research on the companies behind AI tools: their ownership, dependencies and policies. Hopperlace is also developing independent, hands-on comparisons of the tools themselves.",
       email: EMAIL,
       founder: {
         "@type": "Person",
@@ -210,10 +212,74 @@ const scenarioChecks = withDimensions({
   cost: "Tool charges and retries, with development and review time recorded separately.",
 });
 
-const projectTypes = [
-  { href: "/services#define", label: "Define and test an AI opportunity" },
-  { href: "/services#choose", label: "Choose an AI approach" },
-  { href: "/services#improve", label: "Improve an existing AI experience" },
+/* The product studio's list, grouped as on /products. Each entry links to
+   its card there; `thumb` is a capture or, where no capture exists yet, a
+   small typographic motif matching the card's panel. */
+const productGroups = [
+  {
+    name: "Connection & belonging",
+    products: [
+      {
+        id: "mycorner",
+        name: "MyCorner",
+        blurb: "Find a neighbourhood that feels like you, and the places that make it.",
+        thumb: <PhotoThumb src="/assets/products/thumb-mycorner.jpg" />,
+      },
+      {
+        id: "same-wonder",
+        name: "Same Wonder",
+        blurb: "Small local gatherings built around shared curiosity.",
+        thumb: <PhotoThumb src="/assets/products/thumb-same-wonder.jpg" />,
+      },
+    ],
+  },
+  {
+    name: "Stories & discovery",
+    products: [
+      {
+        id: "once-and-ours",
+        name: "Once & Ours",
+        blurb: "Turn memories and everyday moments into keepsakes worth sharing.",
+        thumb: <KeepsakeThumb />,
+      },
+      {
+        id: "post-from-the-past",
+        name: "Post from the Past",
+        blurb: "A daily escape into vintage travel.",
+        thumb: <PostcardThumb />,
+      },
+      {
+        id: "a-little-music",
+        name: "A Little Music",
+        blurb: "One interesting piece of music each day, with its story.",
+        thumb: <PhotoThumb src="/assets/products/thumb-a-little-music.jpg" />,
+      },
+    ],
+  },
+  {
+    name: "Evidence & decisions",
+    products: [
+      {
+        id: "valuecompass",
+        name: "ValueCompass",
+        blurb: "Understand the companies behind your AI choices.",
+        thumb: (
+          <PhotoThumb
+            src={shots.claudeCard}
+            width={1000}
+            height={1590}
+            className="object-top"
+          />
+        ),
+      },
+      {
+        id: "evidence-synthesis-ai",
+        name: "Evidence Synthesis AI",
+        blurb: "AI-assisted screening for systematic reviews, with researcher review.",
+        thumb: <EvidenceThumb />,
+      },
+    ],
+  },
 ];
 
 export default function Home() {
@@ -226,6 +292,7 @@ export default function Home() {
       <SiteHeader current="home" />
       <main id="main">
         <Hero />
+        <Products />
         <ValueCompass />
         <Testing />
         <Founder />
@@ -254,16 +321,23 @@ function Hero() {
         >
           Choose AI for what you want to do &mdash; and what matters to you.
         </h1>
-        <p className={`${lead} max-w-[52ch]`}>
-          Hopperlace helps you choose AI tools and systems that fit your tasks,
-          preferences and values, with evidence you can understand and inspect.
+        <p className="max-w-[52ch] text-[clamp(17px,1.5vw,20px)] leading-[1.55] text-heading text-pretty">
+          Hopperlace helps people choose and use AI through systematic,
+          practical evaluation. Our product studio also builds products for
+          discovery, connection and better decisions.
         </p>
-        <p className={`${lead} max-w-[52ch]`}>
+        <p className="max-w-[52ch] text-[clamp(16px,1.3vw,18px)] leading-[1.6] text-pretty">
           ValueCompass, which you can use today, adds research on the companies
-          behind those tools: their ownership, dependencies and policies.
+          behind AI tools: their ownership, dependencies and policies.
           We&rsquo;re also developing independent, hands-on comparisons of the
           tools themselves.
         </p>
+        <a
+          href="#products"
+          className={`${proseLink} self-start py-1 text-[15px] font-medium`}
+        >
+          See what we build ↓
+        </a>
       </div>
       <div className="flex min-w-0 flex-col gap-3 rounded-card bg-sage p-[clamp(20px,2.6vw,32px)]">
         <p className={`${smallLabel} mb-1`}>Two parts of one decision</p>
@@ -275,7 +349,7 @@ function Hero() {
           action={
             <a
               href={VALUECOMPASS_URL}
-              className={`${primaryButton} mt-1 inline-flex min-h-11 self-start px-5 text-[14px]`}
+              className={`${primaryButton} ${cardButton} mt-1 self-start`}
             >
               Try ValueCompass ↗
             </a>
@@ -289,7 +363,7 @@ function Hero() {
           action={
             <a
               href="#testing"
-              className="mt-1 inline-flex min-h-11 items-center self-start rounded-full border border-primary px-5 text-[14px] font-medium text-primary no-underline hover:bg-selected hover:text-heading"
+              className={`${outlineButton} ${cardButton} mt-1 self-start`}
             >
               Explore our testing approach ↓
             </a>
@@ -351,7 +425,143 @@ function DevStatus() {
   );
 }
 
-/* ─── 02 / Tool testing ─── */
+/* ─── 01 / Product studio ─── */
+
+function Products() {
+  return (
+    <section
+      id="products"
+      aria-labelledby="products-title"
+      className="border-t border-rule"
+    >
+      <div
+        className={`${frame} flex flex-col gap-[clamp(24px,3vw,36px)] py-[var(--section-y)]`}
+      >
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] items-end gap-x-[clamp(40px,6vw,96px)] gap-y-4">
+          <div className="flex min-w-0 flex-col gap-4">
+            <p className={`${label} flex items-center gap-2.5`}>
+              <span
+                aria-hidden="true"
+                className="size-[7px] rounded-full bg-coral"
+              />
+              01 / Product studio
+            </p>
+            <h2 id="products-title" className={sectionHeading}>
+              Products by Hopperlace
+            </h2>
+          </div>
+          <p className="max-w-[50ch] min-w-0 text-[clamp(16px,1.4vw,18px)] leading-[1.6] text-pretty">
+            Alongside our evaluation work, we build products for discovery,
+            connection and better decisions &mdash; each with its own purpose
+            and the people it serves. Building and running them also shows us
+            which questions are worth testing.
+          </p>
+        </div>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-x-[clamp(24px,3.5vw,48px)] gap-y-2">
+          {productGroups.map((group) => (
+            <div key={group.name} className="flex min-w-0 flex-col">
+              <h3 className={`${smallLabel} border-b border-rule-strong pb-2.5`}>
+                {group.name}
+              </h3>
+              <ul>
+                {group.products.map((product) => (
+                  <li key={product.id}>
+                    <a
+                      href={`/products#${product.id}`}
+                      className="grid grid-cols-[56px_minmax(0,1fr)] items-center gap-3.5 border-b border-rule py-3.5 text-body no-underline hover:bg-sage"
+                    >
+                      {product.thumb}
+                      <span className="flex min-w-0 flex-col gap-0.5">
+                        <span className="font-serif text-[19px] leading-[1.25] font-medium text-heading">
+                          {product.name}
+                        </span>
+                        <span className="text-[14px] leading-[1.45] text-pretty">
+                          {product.blurb}
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <a
+          href="/products"
+          className={`${primaryButton} ${largeButton} self-start`}
+        >
+          Explore all products →
+        </a>
+      </div>
+    </section>
+  );
+}
+
+/* 56px list thumbnails. Captures are cropped square; the three products
+   without a capture get a motif drawn from their card on /products. */
+const thumbBox = "box-border size-14 rounded-md border border-rule";
+
+function PhotoThumb({
+  src,
+  width = 160,
+  height = 160,
+  className = "",
+}: {
+  src: string;
+  width?: number;
+  height?: number;
+  className?: string;
+}) {
+  return (
+    <Image
+      src={src}
+      alt=""
+      width={width}
+      height={height}
+      sizes="56px"
+      className={`${thumbBox} block object-cover ${className}`}
+    />
+  );
+}
+
+function KeepsakeThumb() {
+  return (
+    <span
+      aria-hidden="true"
+      className={`${thumbBox} grid place-items-center border-t-[3px] border-t-heading/55 bg-keepsake font-serif text-[30px] leading-none text-keepsake-ink italic`}
+    >
+      &amp;
+    </span>
+  );
+}
+
+function PostcardThumb() {
+  return (
+    <span
+      aria-hidden="true"
+      className="box-border grid size-14 place-items-center rounded-md bg-postcard"
+    >
+      <span className="perforated box-border grid h-10 w-[34px] -rotate-4 place-items-center bg-postcard-paper p-[3px] [--perf-hole:2px] [--perf-pitch:6px]">
+        <span className="box-border size-full border border-postcard-ink/50" />
+      </span>
+    </span>
+  );
+}
+
+function EvidenceThumb() {
+  return (
+    <span
+      aria-hidden="true"
+      className={`${thumbBox} flex flex-col justify-center gap-1.5 bg-evidence px-3`}
+    >
+      <span className="h-[3px] rounded-[2px] bg-navy" />
+      <span className="h-[3px] w-[70%] rounded-[2px] bg-navy/45" />
+      <span className="h-[3px] w-[85%] rounded-[2px] bg-navy/45" />
+    </span>
+  );
+}
+
+/* ─── 03 / Tool testing ─── */
 
 function Testing() {
   return (
@@ -364,7 +574,7 @@ function Testing() {
             <p
               className={`${label} flex flex-wrap items-center gap-x-3.5 gap-y-2`}
             >
-              <span>02 / Tool testing</span>
+              <span>03 / Tool testing</span>
               <span className="rounded-full border border-dev px-[11px] py-[3px] text-dev">
                 In development
               </span>
@@ -542,7 +752,7 @@ function Scenario() {
   );
 }
 
-/* ─── 01 / ValueCompass ─── */
+/* ─── 02 / ValueCompass ─── */
 
 function ValueCompass() {
   return (
@@ -556,7 +766,7 @@ function ValueCompass() {
           <p
             className={`${label} flex flex-wrap items-center gap-x-3.5 gap-y-2`}
           >
-            <span>01 / ValueCompass</span>
+            <span>02 / ValueCompass</span>
             <span className="rounded-full bg-live px-[11px] py-[3px] text-on-primary">
               Available now
             </span>
@@ -661,7 +871,7 @@ function CaptureLink({
   );
 }
 
-/* ─── 03 / Founder ─── */
+/* ─── 04 / Founder ─── */
 
 function Founder() {
   return (
@@ -674,7 +884,7 @@ function Founder() {
         className={`${frame} flex flex-wrap items-start gap-x-[clamp(32px,5vw,72px)] gap-y-6 py-[var(--section-y)]`}
       >
         <div className="flex flex-none flex-col gap-5">
-          <p className={label}>03 / Founder</p>
+          <p className={label}>04 / Founder</p>
           <Image
             src="/assets/yuyu-shen.jpg"
             alt="Yuyu Shen"
@@ -695,17 +905,20 @@ function Founder() {
             one.
           </p>
           <p className="text-pretty">
-            She also built{" "}
-            <a href={EVIDENCE_SYNTHESIS_URL} className={proseLink}>
-              Evidence Synthesis AI
-            </a>
-            , which helps research teams use AI to screen studies for systematic
-            reviews. Her research on deference-aware evaluation was accepted at
-            the ICML 2026 Technical AI Governance workshop. She holds CCA-F and
-            CCA-P certifications and writes about technology, agency and better
+            Her research on deference-aware evaluation was accepted at the ICML
+            2026 Technical AI Governance workshop. She holds CCA-F and CCA-P
+            certifications and writes about technology, agency and better
             decisions at{" "}
             <a href={BUILDWITHWHY_URL} className={proseLink}>
               buildwithwhy.com
+            </a>
+            .
+          </p>
+          <p className="text-pretty">
+            Through Hopperlace&rsquo;s product studio, she also designs, builds
+            and operates the company&rsquo;s own products.{" "}
+            <a href="/products" className={proseLink}>
+              See our products
             </a>
             .
           </p>
@@ -727,43 +940,23 @@ function ServicesInvitation() {
   return (
     <section aria-labelledby="services-title" className="bg-sage">
       <div
-        className={`${frame} flex flex-col gap-[clamp(24px,3vw,36px)] py-[var(--section-y)]`}
+        className={`${frame} grid grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-end gap-x-[clamp(40px,6vw,88px)] gap-y-5 py-[var(--section-y)]`}
       >
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-end gap-x-[clamp(40px,6vw,88px)] gap-y-5">
-          <div className="flex flex-col gap-3.5">
-            <p className={label}>Services</p>
-            <h2 id="services-title" className={sectionHeading}>
-              Have a specific AI decision to make?
-            </h2>
-          </div>
-          <div className="flex flex-col items-start gap-5">
-            <p className="max-w-[48ch] text-pretty">
-              Hopperlace works with teams to compare options, test promising
-              approaches and recommend what to use, build or investigate next.
-            </p>
-            <a href="/services" className={`${primaryButton} ${largeButton}`}>
-              Services →
-            </a>
-          </div>
+        <div className="flex flex-col gap-3.5">
+          <p className={label}>Services</p>
+          <h2 id="services-title" className={sectionHeading}>
+            From the objective to a system that works.
+          </h2>
         </div>
-        <ul className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))] gap-3">
-          {projectTypes.map((type) => (
-            <li key={type.href}>
-              <a
-                href={type.href}
-                className={`${cardTitle} box-border flex min-h-[72px] items-center justify-between gap-4 rounded-card bg-panel px-[22px] py-4 no-underline hover:bg-selected`}
-              >
-                <span>{type.label}</span>
-                <span
-                  aria-hidden="true"
-                  className="font-mono text-[14px] text-primary"
-                >
-                  →
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex flex-col items-start gap-5">
+          <p className="max-w-[46ch] text-[clamp(16px,1.4vw,18px)] leading-[1.6] text-pretty">
+            Define what success means, explore what to build or use, and test
+            whether it delivers.
+          </p>
+          <a href="/services" className={`${primaryButton} ${largeButton}`}>
+            Services →
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import "./globals.css";
 const title = "Hopperlace — AI tool comparison & values-based choice";
 
 const description =
-  "Hopperlace helps you choose AI tools and systems that fit your tasks, preferences and values, with evidence you can understand and inspect. ValueCompass, which you can use today, adds research on the companies behind those tools.";
+  "Hopperlace helps people choose and use AI through systematic, practical evaluation. Our product studio also builds products for discovery, connection and better decisions. ValueCompass, which you can use today, adds research on the companies behind AI tools.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hopperlace.ai"),

@@ -48,6 +48,14 @@ export const cardText = "text-[15px] leading-[1.55] text-pretty";
 export const primaryButton =
   "items-center rounded-full bg-primary font-medium text-on-primary no-underline hover:bg-primary-hover";
 
+/** Secondary, outlined button. Like `primaryButton`, call sites add display,
+    size and self-alignment. */
+export const outlineButton =
+  "items-center rounded-full border border-primary font-medium text-primary no-underline hover:bg-selected hover:text-heading";
+
+/** The smaller button size used inside cards. */
+export const cardButton = "inline-flex min-h-11 px-5 text-[14px]";
+
 /** The larger button size used for each section's main action. */
 export const largeButton = "inline-flex min-h-12 px-6 text-[15px]";
 

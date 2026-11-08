@@ -1,21 +1,36 @@
+import { HopperlaceMark } from "@/components/HopperlaceMark";
+import { SiteMenu } from "@/components/SiteMenu";
 import { VALUECOMPASS_URL } from "@/lib/links";
-import { frame, primaryButton } from "@/lib/ui";
+import { cardButton, frame, primaryButton } from "@/lib/ui";
 
-type Page = "home" | "services";
+type Page = "home" | "products" | "services";
 
-/* Skip link plus the sticky header shared by both pages. On the homepage the
-   section links stay in-page; elsewhere they point back to `/`. */
+/* Skip link plus the sticky header shared by every page. On the homepage the
+   section links stay in-page; elsewhere they point back to `/`. From the
+   `vc` breakpoint the nav sits in the header row; below it, the row keeps
+   only the logo and a Menu button that opens the same links. */
 export function SiteHeader({ current }: { current: Page }) {
   const home = current === "home";
   const base = home ? "" : "/";
 
-  /* `wideOnly` links drop out of the compact header below the `vc`
-     breakpoint; the homepage's own sections still cover them. */
+  /* `page` links go to another route; the compact menu marks them with an
+     arrow unless they are the current page. */
   const navLinks = [
-    { href: `${base}#testing`, label: "Testing" },
+    {
+      href: "/products",
+      label: "Products",
+      page: true,
+      current: current === "products",
+    },
     { href: `${base}#valuecompass`, label: "ValueCompass" },
-    { href: `${base}#founder`, label: "Founder", wideOnly: true },
-    { href: "/services", label: "Services", current: current === "services" },
+    { href: `${base}#testing`, label: "Testing" },
+    { href: `${base}#founder`, label: "Founder" },
+    {
+      href: "/services",
+      label: "Services",
+      page: true,
+      current: current === "services",
+    },
   ];
 
   return (
@@ -32,14 +47,15 @@ export function SiteHeader({ current }: { current: Page }) {
         >
           <a
             href={home ? "#top" : "/"}
-            className="flex-none py-1.5 font-serif text-[18px] leading-none font-semibold tracking-[0.01em] whitespace-nowrap text-heading no-underline vc:flex-[1_0_auto] vc:text-[19px]"
+            aria-label="Hopperlace home"
+            className="inline-flex flex-none items-center gap-2.5 py-1.5 font-serif text-[18px] leading-none font-semibold tracking-[0.01em] whitespace-nowrap text-heading no-underline vc:flex-[1_0_auto] vc:text-[19px]"
           >
-            Hopperlace
+            <HopperlaceMark className="h-6 vc:h-7" />
+            <span>Hopperlace</span>
           </a>
-          {/* On narrow screens the row scrolls sideways and fades at the edge. */}
           <nav
             aria-label="Primary"
-            className="flex min-w-0 flex-[0_1_auto] flex-nowrap items-center gap-x-3.5 overflow-x-auto text-[13px] font-medium whitespace-nowrap [mask-image:linear-gradient(90deg,#000_calc(100%-16px),transparent)] [scrollbar-width:none] vc:gap-x-[22px] vc:[mask-image:none]"
+            className="hidden min-w-0 flex-[0_1_auto] flex-nowrap items-center gap-x-[22px] overflow-x-auto text-[13px] font-medium whitespace-nowrap [scrollbar-width:none] vc:flex"
           >
             {navLinks.map((link) => (
               <a
@@ -50,7 +66,7 @@ export function SiteHeader({ current }: { current: Page }) {
                   link.current
                     ? "text-heading underline decoration-1 underline-offset-[6px]"
                     : "text-body no-underline"
-                } ${link.wideOnly ? "hidden vc:inline" : ""}`}
+                }`}
               >
                 {link.label}
               </a>
@@ -62,6 +78,41 @@ export function SiteHeader({ current }: { current: Page }) {
           >
             Try ValueCompass ↗
           </a>
+          <SiteMenu>
+            <nav
+              aria-label="Primary"
+              className={`${frame} flex flex-col pt-1 pb-5`}
+            >
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  aria-current={link.current ? "page" : undefined}
+                  className={`flex justify-between border-b border-rule py-[13px] text-[15px] font-medium ${
+                    link.current
+                      ? "text-heading underline decoration-1 underline-offset-[6px]"
+                      : "text-body no-underline"
+                  }`}
+                >
+                  <span>{link.label}</span>
+                  {link.page && !link.current && (
+                    <span
+                      aria-hidden="true"
+                      className="font-mono text-[13px] text-primary"
+                    >
+                      →
+                    </span>
+                  )}
+                </a>
+              ))}
+              <a
+                href={VALUECOMPASS_URL}
+                className={`${primaryButton} ${cardButton} mt-[18px] self-start`}
+              >
+                Try ValueCompass ↗
+              </a>
+            </nav>
+          </SiteMenu>
         </div>
       </header>
     </>
