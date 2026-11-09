@@ -213,8 +213,7 @@ const scenarioChecks = withDimensions({
 });
 
 /* The product studio's list, grouped as on /products. Each entry links to
-   its card there; `thumb` is a capture or, where no capture exists yet, a
-   small typographic motif matching the card's panel. */
+   its card there; `thumb` is a square crop of the product's captures. */
 const productGroups = [
   {
     name: "Connection & belonging",
@@ -246,7 +245,7 @@ const productGroups = [
         id: "post-from-the-past",
         name: "Post from the Past",
         blurb: "A daily escape into vintage travel.",
-        thumb: <PostcardThumb />,
+        thumb: <PhotoThumb src="/assets/products/thumb-post-from-the-past.jpg" />,
       },
       {
         id: "a-little-music",
@@ -276,7 +275,7 @@ const productGroups = [
         id: "evidence-synthesis-ai",
         name: "Evidence Synthesis AI",
         blurb: "AI-assisted screening for systematic reviews, with researcher review.",
-        thumb: <EvidenceThumb />,
+        thumb: <PhotoThumb src="/assets/products/thumb-evidence-synthesis.jpg" />,
       },
     ],
   },
@@ -497,8 +496,7 @@ function Products() {
   );
 }
 
-/* 56px list thumbnails. Captures are cropped square; the two products
-   without a capture get a motif drawn from their card on /products. */
+/* 56px list thumbnails, cropped square from each product's captures. */
 const thumbBox = "box-border size-14 rounded-md border border-rule";
 
 function PhotoThumb({
@@ -521,32 +519,6 @@ function PhotoThumb({
       sizes="56px"
       className={`${thumbBox} block object-cover ${className}`}
     />
-  );
-}
-
-function PostcardThumb() {
-  return (
-    <span
-      aria-hidden="true"
-      className="box-border grid size-14 place-items-center rounded-md bg-postcard"
-    >
-      <span className="perforated box-border grid h-10 w-[34px] -rotate-4 place-items-center bg-postcard-paper p-[3px] [--perf-hole:2px] [--perf-pitch:6px]">
-        <span className="box-border size-full border border-postcard-ink/50" />
-      </span>
-    </span>
-  );
-}
-
-function EvidenceThumb() {
-  return (
-    <span
-      aria-hidden="true"
-      className={`${thumbBox} flex flex-col justify-center gap-1.5 bg-evidence px-3`}
-    >
-      <span className="h-[3px] rounded-[2px] bg-navy" />
-      <span className="h-[3px] w-[70%] rounded-[2px] bg-navy/45" />
-      <span className="h-[3px] w-[85%] rounded-[2px] bg-navy/45" />
-    </span>
   );
 }
 

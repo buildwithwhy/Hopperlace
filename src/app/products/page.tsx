@@ -55,9 +55,6 @@ const shot =
 const shotSizes = (pct: number) =>
   `(min-width: 1040px) ${Math.round(pct * 5.4)}px, ${pct}vw`;
 
-/** Mono kicker inside a motif panel. */
-const motifLabel = "font-mono text-[11px] tracking-[0.14em] uppercase";
-
 /* ─── Content ─── */
 
 type Product = {
@@ -192,7 +189,28 @@ const categories: {
         name: "Post from the Past",
         body: "A daily escape into vintage travel. Discover archival images and their stories, save favourites in your shoebox, and turn a find into a personal digital postcard.",
         panel: "bg-postcard",
-        visual: <PostcardMotif />,
+        /* Captured from the app on 9 Nov 2026: that day's archival find with
+           its Library of Congress attribution, and a postcard back. */
+        visual: (
+          <>
+            <Image
+              src="/assets/products/post-from-the-past-today.jpg"
+              alt="Post from the Past’s discovery for 9 November: a photochrom of Stalden Railway Station and Hotel in Valais, Switzerland, c. 1890s, with its story and Library of Congress attribution"
+              width={640}
+              height={1487}
+              sizes={shotSizes(40)}
+              className={`${shot} top-[8%] left-[8%] w-[40%] rounded-xl`}
+            />
+            <Image
+              src="/assets/products/post-from-the-past-postcard.jpg"
+              alt="The back of a digital postcard made from that find: ‘Dear Sam, Wish you were here…’, signed Alex, with a One Penny stamp and the image’s source"
+              width={720}
+              height={504}
+              sizes={shotSizes(54)}
+              className={`${shot} top-[40%] left-[40%] z-[1] w-[54%] rounded-lg`}
+            />
+          </>
+        ),
       },
       {
         id: "a-little-music",
@@ -280,7 +298,29 @@ const categories: {
           label: "Visit Evidence Synthesis AI ↗",
         },
         panel: "bg-evidence",
-        visual: <ScreeningMotif />,
+        /* Frames from the founder's demo walkthrough (Nov 2026), using
+           demonstration studies: the model defers a title-only record to a
+           human, and the reviewer records why they exclude it. */
+        visual: (
+          <>
+            <Image
+              src="/assets/products/evidence-synthesis-screening.jpg"
+              alt="Evidence Synthesis AI adjudication view for a demonstration study: the model deferred to a human at 20% confidence, with its reasoning for population, intervention, comparator, outcome and study design"
+              width={1070}
+              height={570}
+              sizes={shotSizes(90)}
+              className={`${shot} top-[9%] left-[5%] w-[90%] rounded-lg`}
+            />
+            <Image
+              src="/assets/products/evidence-synthesis-decision.jpg"
+              alt="The reviewer’s decision, Exclude, with the required reason: ‘Title-only record with no abstract: cannot verify population, design, or outcomes against the protocol at abstract level.’"
+              width={1038}
+              height={136}
+              sizes={shotSizes(86)}
+              className={`${shot} top-[66%] left-[10%] z-[1] w-[86%] rounded-md`}
+            />
+          </>
+        ),
       },
     ],
   },
@@ -574,48 +614,6 @@ function Action({
     >
       {label}
     </a>
-  );
-}
-
-/* ─── Motif panels ───
-   Placeholders for products without a public capture yet (Post from the
-   Past has no public site; Evidence Synthesis AI's screening view is behind
-   sign-in). They describe the product rather than imitate an interface. */
-
-function PostcardMotif() {
-  return (
-    <div
-      aria-hidden="true"
-      className="perforated absolute top-1/2 left-1/2 box-border aspect-[4/5] w-[58%] -translate-x-1/2 -translate-y-[52%] -rotate-3 bg-postcard-paper p-2.5 drop-shadow-[0_8px_18px_rgba(74,52,24,0.18)]"
-    >
-      <div className="box-border flex h-full flex-col justify-between gap-2 border-[1.5px] border-postcard-ink/45 p-[clamp(12px,1.8vw,20px)]">
-        <span className={`${motifLabel} text-postcard-ink`}>
-          Today&rsquo;s find
-        </span>
-        <span className="font-serif text-[clamp(20px,2.4vw,28px)] leading-[1.15] text-postcard-deep text-balance">
-          Archival travel photographs, postcards &amp; posters
-        </span>
-        <span className="self-end font-serif text-[14px] text-postcard-ink italic">
-          from the past
-        </span>
-      </div>
-    </div>
-  );
-}
-
-function ScreeningMotif() {
-  const line = "font-serif text-[clamp(30px,3.8vw,46px)] leading-[1.08] text-navy";
-  return (
-    <div
-      aria-hidden="true"
-      className="absolute inset-0 flex flex-col justify-center gap-1 bg-[linear-gradient(rgba(23,40,73,0.07)_1px,transparent_1px)] bg-[length:100%_28px] px-[12%]"
-    >
-      <span className={`${motifLabel} mb-2.5 text-evidence-ink`}>
-        Systematic review screening
-      </span>
-      <span className={line}>AI assists.</span>
-      <span className={`${line} italic`}>Researchers decide.</span>
-    </div>
   );
 }
 

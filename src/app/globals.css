@@ -32,18 +32,14 @@
   --color-navy: #172849;
   --color-coral: #ff5853;
 
-  /* Product panels: the backdrop behind each product's screenshots or
-     typographic motif on /products, reused by the homepage thumbnails. */
+  /* Product panels: the backdrop behind each product's captures on
+     /products. */
   --color-mycorner: #dce5e1;
   --color-wonder: #efe4d6;
   --color-music: #e5e9dc;
   --color-keepsake: #f3ebdd; /* Once & Ours */
   --color-postcard: #e6d9c1; /* Post from the Past */
-  --color-postcard-paper: #fbf6ec;
-  --color-postcard-ink: #6e4a28;
-  --color-postcard-deep: #4a3420;
   --color-evidence: #e2e8ea; /* Evidence Synthesis AI */
-  --color-evidence-ink: #3e4f62;
 
   --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
@@ -72,20 +68,6 @@
   :root {
     --header-h: 60px;
   }
-}
-
-/* Stamp-edge perforation for the Post from the Past postcard motif. Set the
-   hole radius and spacing with `[--perf-hole:…]` / `[--perf-pitch:…]`. */
-@utility perforated {
-  --perf-mask: radial-gradient(
-      circle var(--perf-hole, 5px) at 50% 50%,
-      transparent 98%,
-      #000
-    )
-    calc(var(--perf-pitch, 14px) / -2) calc(var(--perf-pitch, 14px) / -2) /
-    var(--perf-pitch, 14px) var(--perf-pitch, 14px);
-  -webkit-mask: var(--perf-mask);
-  mask: var(--perf-mask);
 }
 
 /* Base layer, so color utilities on links still win. */
