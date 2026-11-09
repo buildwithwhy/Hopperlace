@@ -27,6 +27,20 @@
   /* Backdrop behind product screenshots (ValueCompass' own canvas). */
   --color-shot: #f8fafc;
 
+  /* The brand mark (SiteHeader, SiteFooter, icon.svg). Coral appears only
+     on the mark and as the small dot in the product-studio eyebrows. */
+  --color-navy: #172849;
+  --color-coral: #ff5853;
+
+  /* Product panels: the backdrop behind each product's captures on
+     /products. */
+  --color-mycorner: #dce5e1;
+  --color-wonder: #efe4d6;
+  --color-music: #e5e9dc;
+  --color-keepsake: #f3ebdd; /* Once & Ours */
+  --color-postcard: #e6d9c1; /* Post from the Past */
+  --color-evidence: #e2e8ea; /* Evidence Synthesis AI */
+
   --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;

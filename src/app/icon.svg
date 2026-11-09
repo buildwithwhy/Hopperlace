@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#2e5140"/>
-  <text x="16" y="23" text-anchor="middle" font-family="'Source Serif 4', Georgia, 'Times New Roman', serif" font-weight="600" font-size="21" fill="#faf8f4">H</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-51.5 0 514 514">
+  <g transform="translate(-394 -343)">
+    <rect x="394" y="343" width="100.5" height="514" rx="32" fill="#172849"/>
+    <rect x="705" y="343" width="100.5" height="514" rx="32" fill="#172849"/>
+    <path d="M493 557 L600 636.5 L706 557 L706 654 L493 654 Z" fill="#172849"/>
+    <path d="M512.5 548 L687.5 548 L600 614 Z" fill="#FF5853"/>
+    <circle cx="600" cy="779.5" r="11.2" fill="#FF5853"/>
+  </g>
 </svg>
