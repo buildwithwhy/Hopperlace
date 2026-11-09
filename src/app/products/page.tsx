@@ -164,7 +164,28 @@ const categories: {
         name: <>Once &amp; Ours</>,
         body: "Turn memories and everyday moments into keepsakes worth sharing. Start with a conversation, a photograph or your own words, then shape your story into a newspaper, booklet or personal letter.",
         panel: "bg-keepsake",
-        visual: <KeepsakeMotif />,
+        /* Captured from the live app on 9 Nov 2026: its fictional sample
+           story as a newspaper, and the first question of the conversation. */
+        visual: (
+          <>
+            <Image
+              src="/assets/products/once-and-ours-newspaper.jpg"
+              alt="Once & Ours fictional sample keepsake: a personal-edition newspaper front page headed ‘One small room. A whole new world.’, about a family watching the 1969 Moon landing on a grandmother’s television"
+              width={720}
+              height={1204}
+              sizes={shotSizes(44)}
+              className={`${shot} top-[9%] left-[7%] w-[44%] rounded-sm`}
+            />
+            <Image
+              src="/assets/products/once-and-ours-question.jpg"
+              alt="The Once & Ours conversation opening with ‘What is a memory you would love to keep?’ and a box to start writing"
+              width={640}
+              height={656}
+              sizes={shotSizes(48)}
+              className={`${shot} top-[34%] left-[46%] z-[1] w-[48%] rounded-[10px]`}
+            />
+          </>
+        ),
       },
       {
         id: "post-from-the-past",
@@ -177,7 +198,13 @@ const categories: {
         id: "a-little-music",
         name: "A Little Music",
         body: "One interesting piece of music each day, with its story and something to listen for. Choose your categories and explore beyond your usual listening.",
-        note: <>Listening happens through each provider&rsquo;s official player.</>,
+        note: (
+          <>
+            It isn&rsquo;t personalised: listeners who choose the same category
+            hear the same piece that day. Listening happens through each
+            provider&rsquo;s official player.
+          </>
+        ),
         action: { href: A_LITTLE_MUSIC_URL, label: "Today’s piece ↗" },
         panel: "bg-music",
         feature: true,
@@ -301,7 +328,7 @@ const jsonLd = {
         name: "A Little Music",
         url: A_LITTLE_MUSIC_URL,
         description:
-          "One interesting piece of music each day, with its story and something to listen for.",
+          "One interesting piece of music each day, with its story and something to listen for. Not personalised: listeners who choose the same category hear the same piece that day.",
       },
       {
         name: "ValueCompass",
@@ -551,24 +578,9 @@ function Action({
 }
 
 /* ─── Motif panels ───
-   Typographic stand-ins for products without a capture yet; they describe
-   the product rather than imitate an interface. */
-
-function KeepsakeMotif() {
-  const line =
-    "font-serif text-[clamp(26px,3.4vw,40px)] leading-[1.1] italic";
-  return (
-    <div
-      aria-hidden="true"
-      className="absolute inset-x-[12%] inset-y-[11%] flex flex-col justify-center gap-[clamp(6px,1.2vw,12px)] border-t-2 border-b border-t-heading/55 border-b-heading/35"
-    >
-      <span className={`${motifLabel} text-muted`}>Your story, kept as</span>
-      <span className={`${line} text-heading`}>a newspaper,</span>
-      <span className={`${line} text-heading`}>a booklet,</span>
-      <span className={`${line} text-keepsake-ink`}>or a letter.</span>
-    </div>
-  );
-}
+   Placeholders for products without a public capture yet (Post from the
+   Past has no public site; Evidence Synthesis AI's screening view is behind
+   sign-in). They describe the product rather than imitate an interface. */
 
 function PostcardMotif() {
   return (

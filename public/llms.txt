@@ -28,7 +28,7 @@ Products for discovery, connection and better decisions — each made for the pe
 
 - Once & Ours: turn memories and everyday moments into keepsakes worth sharing. Start with a conversation, a photograph or your own words, then shape your story into a newspaper, booklet or personal letter.
 - Post from the Past: a daily escape into vintage travel. Discover archival images and their stories, save favourites in your shoebox, and turn a find into a personal digital postcard.
-- A Little Music (https://music.hopperlace.ai): one interesting piece of music each day, with its story and something to listen for. Choose your categories and explore beyond your usual listening. Listening happens through each provider's official player.
+- A Little Music (https://music.hopperlace.ai): one interesting piece of music each day, with its story and something to listen for. Choose your categories and explore beyond your usual listening. It isn't personalised: listeners who choose the same category hear the same piece that day. Listening happens through each provider's official player.
 
 ### Evidence & decisions — clearer evidence for choices that matter
 

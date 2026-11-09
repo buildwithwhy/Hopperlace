@@ -240,7 +240,7 @@ const productGroups = [
         id: "once-and-ours",
         name: "Once & Ours",
         blurb: "Turn memories and everyday moments into keepsakes worth sharing.",
-        thumb: <KeepsakeThumb />,
+        thumb: <PhotoThumb src="/assets/products/thumb-once-and-ours.jpg" />,
       },
       {
         id: "post-from-the-past",
@@ -497,7 +497,7 @@ function Products() {
   );
 }
 
-/* 56px list thumbnails. Captures are cropped square; the three products
+/* 56px list thumbnails. Captures are cropped square; the two products
    without a capture get a motif drawn from their card on /products. */
 const thumbBox = "box-border size-14 rounded-md border border-rule";
 
@@ -521,17 +521,6 @@ function PhotoThumb({
       sizes="56px"
       className={`${thumbBox} block object-cover ${className}`}
     />
-  );
-}
-
-function KeepsakeThumb() {
-  return (
-    <span
-      aria-hidden="true"
-      className={`${thumbBox} grid place-items-center border-t-[3px] border-t-heading/55 bg-keepsake font-serif text-[30px] leading-none text-keepsake-ink italic`}
-    >
-      &amp;
-    </span>
   );
 }
 
